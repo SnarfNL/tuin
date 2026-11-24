@@ -14,8 +14,8 @@ header::before{content:'';position:absolute;inset:0;background:url("data:image/s
 header h1{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:400;position:relative}
 header h1 em{font-style:italic;color:#b8d4a8}
 header p{margin-top:.5rem;font-size:.85rem;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:#a8c498;position:relative}
-.tabs{display:flex;background:var(--parchment);border-bottom:2px solid var(--clay);overflow-x:auto;flex-wrap:nowrap}
-.tab{padding:.8rem 1.2rem;cursor:pointer;font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--stone);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s}
+.tabs{display:flex;background:var(--parchment);border-bottom:2px solid var(--clay);overflow-x:auto;flex-wrap:nowrap;position:sticky;top:0;z-index:50;-webkit-overflow-scrolling:touch}
+.tab{display:block;text-decoration:none;-webkit-tap-highlight-color:transparent;flex:0 0 auto;padding:.8rem 1.2rem;cursor:pointer;font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--stone);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s}
 .tab:hover{color:var(--moss)}.tab.active{color:var(--moss);border-bottom-color:var(--moss);background:var(--cream)}
 .content{display:none;padding:1.8rem;max-width:980px;margin:0 auto}.content.active{display:block}
 h2.st{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--moss);margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:1px solid var(--parchment)}
@@ -193,6 +193,28 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
 .zshot{margin:0 0 1.4rem}
 .zshot img{width:100%;height:auto;border-radius:10px;cursor:zoom-in;box-shadow:0 2px 10px rgba(0,0,0,.2);display:block;background:#fff}
 .zshot figcaption{font-size:.78rem;color:var(--stone);margin-top:.4rem}
+
+/* LEVENSDUUR, IRRIGATIE, PLANNING */
+.life{display:inline-block;margin-left:.3rem;font-size:.7em;line-height:1;cursor:help;vertical-align:baseline}
+.lifeleg{font-size:.76rem;color:#555;background:white;border-left:4px solid var(--clay);border-radius:6px;padding:.6rem .8rem;margin-top:1rem;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.lifeleg b{font-weight:700}
+.sub{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:400;color:var(--moss);margin:1.6rem 0 .6rem}
+.prose p{font-size:.85rem;margin-bottom:.7rem;max-width:760px}
+.plist{font-size:.82rem;padding-left:1.3rem;margin:.3rem 0 1rem;max-width:760px}.plist li{margin-bottom:.35rem}
+.tbl{width:100%;min-width:680px;border-collapse:collapse;font-size:.74rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);background:white}
+.tbl thead th{background:var(--moss);color:white;padding:.5rem .55rem;font-weight:700;font-size:.67rem;text-align:left;letter-spacing:.03em}
+.tbl td{padding:.5rem .55rem;border-bottom:1px solid #eee;vertical-align:top;line-height:1.45}
+.tbl tbody tr:nth-child(even){background:#f8f5f0}
+.tbl td:first-child{font-weight:700;color:var(--moss);white-space:nowrap}
+.st-open,.st-gepland{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.15rem .5rem;border-radius:20px;white-space:nowrap}
+.st-open{background:#ece8e0;color:var(--stone)}.st-gepland{background:#e0f0d8;color:#3a6e30}
+.st-gedaan{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.15rem .5rem;border-radius:20px;white-space:nowrap;background:var(--moss);color:white}
+code{background:var(--parchment);padding:.05rem .3rem;border-radius:4px;font-size:.9em}
+.thumb.missing,.thumb-s.missing{visibility:hidden}
+.plant-icon-block img.missing{display:none}
+.plant-icon-block.nofoto::after{content:'foto volgt';font-size:.62rem;color:#777;letter-spacing:.05em}
+.rthumb{width:64px;height:64px;border-radius:8px;object-fit:cover;flex-shrink:0;cursor:zoom-in;box-shadow:0 1px 4px rgba(0,0,0,.25);background:#ddd}
+.rname{display:flex;align-items:center;gap:.6rem}
 </style>
 </head>
 <body>
@@ -202,15 +224,18 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
   <p>Vijf zones · Drie thema's · Vier seizoenen · Vogels &amp; Bijen</p>
 </header>
 
-<div class="tabs">
-  <div class="tab active" onclick="showTab('overzicht',this)">Overzicht &amp; Zones</div>
-  <div class="tab" onclick="showTab('planten',this)">Planten &amp; Links</div>
-  <div class="tab" onclick="showTab('bomen',this)">Bomen</div>
-  <div class="tab" onclick="showTab('seizoenen',this)">Seizoensindrukken</div>
-  <div class="tab" onclick="showTab('kalender',this)">Jaarkalender</div>
-  <div class="tab" onclick="showTab('tips',this)">Aanleg &amp; Tips</div>
-  <div class="tab" onclick="showTab('onderhoud',this)">Onderhoud</div>
-</div>
+<nav class="tabs" id="tabs" aria-label="Menu">
+  <a class="tab active" href="#overzicht" data-tab="overzicht">Overzicht &amp; Zones</a>
+  <a class="tab" href="#planten" data-tab="planten">Planten &amp; Links</a>
+  <a class="tab" href="#bomen" data-tab="bomen">Bomen</a>
+  <a class="tab" href="#seizoenen" data-tab="seizoenen">Seizoensindrukken</a>
+  <a class="tab" href="#kalender" data-tab="kalender">Jaarkalender</a>
+  <a class="tab" href="#tips" data-tab="tips">Aanleg &amp; Tips</a>
+  <a class="tab" href="#onderhoud" data-tab="onderhoud">Onderhoud</a>
+  <a class="tab" href="#water" data-tab="water">Mulchen &amp; verlichting</a>
+  <a class="tab" href="#planning" data-tab="planning">Planning</a>
+  <a class="tab" href="#reserve" data-tab="reserve">Reservelijst</a>
+</nav>
 
 <!-- OVERZICHT -->
 <div class="content active" id="overzicht">
@@ -221,13 +246,14 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
     <div class="tip-card" style="border-left-color:#8b6844"><h3>🌾 Jardin Sauvage</h3><p style="font-size:.8rem">Wilde schoonheid, veel inheemse en wilde soorten, zaadhoofden. Paradijs voor bijen en vogels. Zones <strong>D</strong> en <strong>S</strong>.</p></div>
   </div>
   <h2 class="st" style="margin-top:2rem">Zones — Planten &amp; Grondsoort</h2>
-  <p style="font-size:.75rem;color:var(--stone);margin-bottom:1rem">Klik op een foto om die te vergroten.</p>
+  <p style="font-size:.75rem;color:var(--stone);margin-bottom:1rem">Klik op een foto om die te vergroten. Zon in dit plan: volle zon = ±6 uur of meer directe zon per dag in het groeiseizoen, halfschaduw (half-zon) = ±3–6 uur, schaduw = minder dan ±3 uur. De uren zijn aannames en worden in het groeiseizoen gemeten.</p>
   <div class="zone-grid" id="zone-grid"></div>
 </div>
 
 <!-- PLANTEN & LINKS -->
 <div class="content" id="planten">
   <h2 class="st">Alle Planten — Beschrijving &amp; Wikipedia-links</h2>
+  <div class="lifeleg"><b>Levensduur:</b> <span class="life" style="margin:0 .2rem 0 0;font-size:1em">⏳</span> verwacht korter dan 3 jaar (eenjarig of tweejarig; blijft in het plan, zaait zich meestal uit of moet worden herzaaid) &nbsp;·&nbsp; <span class="life" style="margin:0 .2rem 0 0;font-size:1em">⏱</span> kortlevend, ongeveer 2–4 jaar (grensgeval; op klei vaak korter). Beweeg over het symbool voor de toelichting. Besluit 18 oktober 2026: de ⏳-soorten in zone D (Centaurea en de tweejarigen) blijven; eenjarigen worden herzaaid en tweejarigen mogen uitzaaien. De ⏱-soorten blijven ook; in jaar 3–4 worden ze gecontroleerd en zo nodig gedeeld of bijgeplant.</div>
   <div class="filters" id="filters"></div>
   <div class="plant-gallery" id="gallery"></div>
 </div>
@@ -240,7 +266,7 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
     <div class="tree-card">
       <div class="tree-icon-block" id="tree-am" style="background:linear-gradient(135deg,#e0f0d0,#c0d8a0);position:relative;overflow:hidden"><span>🌸</span></div>
       <div class="tree-top" style="background:#4a7040">
-        <div class="zt">Zone C · Volle zon · Landelijk · Half stam</div>
+        <div class="zt">Zone C · Half-zon · Landelijk · Half stam</div>
         <h3>Krentenboom</h3>
         <div class="lat">Amelanchier lamarckii</div>
       </div>
@@ -252,6 +278,8 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
         <dt>Winter</dt><dd>Elegant vertakt silhouet</dd>
         <dt>Bijen</dt><dd>⭐⭐⭐⭐⭐</dd>
         <dt>Vogels</dt><dd>⭐⭐⭐⭐⭐ (bessen)</dd>
+        <dt>Vorm</dt><dd>Halfstam (besloten 22 oktober 2026)</dd>
+        <dt>Plantmoment</dt><dd>Half november tot eind april (kluitboom; niet bij vorst of op natte klei). <strong>Geplant op 21 november 2026</strong>, met boomsteun en een ring van schors.</dd>
         <dt>Grond</dt><dd>Klei + compost, licht vochtig prima</dd>
       </dl></div>
       <a class="tree-link" href="https://nl.wikipedia.org/wiki/Amelanchier_lamarckii" target="_blank">Wikipedia — Amelanchier lamarckii</a>
@@ -260,25 +288,31 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
     <div class="tree-card">
       <div class="tree-icon-block" id="tree-co" style="background:linear-gradient(135deg,#fbe4ea,#f0b8c8,#c8607a);position:relative;overflow:hidden"><span>🌸</span></div>
       <div class="tree-top" style="background:#a04060">
-        <div class="zt">Zone A · Half-zon · Natuurlijk · Half-stam</div>
+        <div class="zt">Zone A · Half-zon · Natuurlijk · Struikvorm</div>
         <h3>Amerikaanse kornoelje</h3>
         <div class="lat">Cornus florida 'Rubra'</div>
       </div>
       <div class="tree-body"><dl>
-        <dt>Hoogte</dt><dd>4–7 m (compacte, vrij langzame groeier)</dd>
+        <dt>Hoogte</dt><dd>±5 m (Directplant: groeit eerst in de hoogte, later rond; langzaam)</dd>
         <dt>Lente</dt><dd>🌸 Indrukwekkende grote witte of roze schutbladeren rond kleine bloemknopjes</dd>
         <dt>Zomer</dt><dd>Frisgroen blad met sierlijke, licht golvende randen</dd>
         <dt>Herfst</dt><dd>🍁 Diep wijnrode tot purperen herfstkleur + glanzend rode bessen</dd>
         <dt>Winter</dt><dd>Horizontale etagevertakking met opvallende knoppen</dd>
         <dt>Bijen</dt><dd>⭐⭐⭐⭐</dd>
         <dt>Vogels</dt><dd>⭐⭐⭐⭐⭐ (de scharlakenrode bessen zijn een magneet voor vogels)</dd>
-        <dt>Grond</dt><dd>Zuur tot neutraal, humusrijk, vochthoudend maar goed doorlatend (geen kalk)</dd>
+        <dt>Vorm</dt><dd>Struikvorm van Directplant, geen halfstam (besloten 14 november 2026); takken vanaf de grond, houd rekening met de afstand tot het pad</dd>
+        <dt>Plantmoment</dt><dd><strong>Geplant in november 2026</strong> op een zure plantplek (DCM Vivimus Rhodo), met boomsteun en een ring van schors. De grond eromheen meet pH 7 en bevat vrije kalk.</dd>
+        <dt>Grond</dt><dd>Zuur tot neutraal, humusrijk, vochthoudend maar goed doorlatend (geen kalk). De pH wordt zelf op de juiste waarde gebracht en bijgehouden (streefwaarde 5,5–6,5), zie hieronder.</dd>
         <dt>Tip</dt><dd>Bescherm tegen felle middagzon en droge wind om bladverbranding te voorkomen</dd>
       </dl></div>
       <a class="tree-link" href="https://en.wikipedia.org/wiki/Cornus_florida" target="_blank">Wikipedia — Cornus florida</a>
     </div>
 
   </div>
+
+  <h3 class="sub" style="margin-top:1.6rem">pH-beheer kornoelje (zone A)</h3>
+  <div class="prose"><p>Besloten 22 oktober 2026: de pH van de plantplek wordt zelf op de juiste waarde gebracht en bijgehouden. Alleen de kornoelje krijgt pH-beheer; de krentenboom is aanpasbaar. Het blijvend verlagen van de pH van kalkrijke klei lukt nauwelijks, daarom gaat het om de plantplek. Streefwaarde pH 5,5–6,5 (bronnen lopen uiteen).</p></div>
+  <ol class="plist"><li><strong>Meten vóór het bestellen:</strong> 3–4 monsters in zone A op 15–25 cm diepte, bij voorkeur door een bodemlab (pH én kalk), nadat de tegels weg zijn.</li><li><strong>Beslissen op de uitkomst:</strong> tot pH 6,5 en geen vrije kalk: niets aanpassen. pH 6,5–7,0 zonder kalk: zwavel mogelijk. Boven pH 7,0 of kalkrijk: geen zwavel, maar een zure plantplek van ±1 m doorsnee en 40–50 cm diep met bladcompost of schorscompost, en geen kalkhoudend materiaal in zone A.</li><li><strong>Zwavel (alleen als de uitkomst dat toelaat):</strong> ±30 g/m² per pH-eenheid in niet-kalkrijke grond, door de bovenste laag mengen, 2–3 maanden wachten en opnieuw meten.</li><li><strong>Water en mulch:</strong> regenwater in plaats van hard kraanwater; mulch met 5–10 cm schors of bladcompost in een ring, vrij van de stam.</li><li><strong>Bijhouden:</strong> meten in voorjaar en najaar in de eerste twee jaar, daarna jaarlijks. Gele bladeren met groene nerven wijzen op een te hoge pH: ijzerchelaat EDDHA.</li><li><strong>Plantmoment:</strong> pas planten als de pH op de streefwaarde zit. <strong>Uitgevoerd (november 2026):</strong> de meting gaf pH 7 en vrije kalk, dus geen zwavel maar een zure plantplek met DCM Vivimus Rhodo; de kornoelje is daarin geplant. Meet in het voorjaar de pH van de plantplek.</li></ol>
 </div>
 
 <!-- SEIZOENSINDRUKKEN -->
@@ -288,7 +322,7 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
     <strong>🌸</strong> in bloei &nbsp;·&nbsp; <strong>🍃</strong> mooi blad / structuur &nbsp;·&nbsp; <strong>🫘</strong> bessen / zaad / vrucht &nbsp;·&nbsp; <strong>🌿</strong> groenblijvend &nbsp;·&nbsp; <strong>↑</strong> klimplant &nbsp;·&nbsp; <strong>🌳</strong> boom
   </p>
   <div class="season-matrix" id="season-matrix"></div>
-<div class="zshots"><h3>Impressies per zone — vier seizoenen</h3><p>Illustraties van de beplanting per zone, in lente, zomer, herfst en winter. Klik op een afbeelding om te vergroten.</p><figure class="zshot"><img src="images/zone-A-seizoenen.jpg" data-full="images/zone-A-seizoenen.jpg" data-cap="Zone A — Half-zon · Natuurlijk" alt="Zone A — Half-zon · Natuurlijk: lente, zomer, herfst en winter" loading="lazy"><figcaption>Zone A — Half-zon · Natuurlijk</figcaption></figure><figure class="zshot"><img src="images/zone-B-seizoenen.jpg" data-full="images/zone-B-seizoenen.jpg" data-cap="Zone B — Half-zon · Klimplanten muur · Landelijk" alt="Zone B — Half-zon · Klimplanten muur · Landelijk: lente, zomer, herfst en winter" loading="lazy"><figcaption>Zone B — Half-zon · Klimplanten muur · Landelijk</figcaption></figure><figure class="zshot"><img src="images/zone-C-seizoenen.jpg" data-full="images/zone-C-seizoenen.jpg" data-cap="Zone C — Volle zon · Klimplanten · Landelijk" alt="Zone C — Volle zon · Klimplanten · Landelijk: lente, zomer, herfst en winter" loading="lazy"><figcaption>Zone C — Volle zon · Klimplanten · Landelijk</figcaption></figure><figure class="zshot"><img src="images/zone-D-seizoenen.jpg" data-full="images/zone-D-seizoenen.jpg" data-cap="Zone D — Volle zon · Jardin Sauvage" alt="Zone D — Volle zon · Jardin Sauvage: lente, zomer, herfst en winter" loading="lazy"><figcaption>Zone D — Volle zon · Jardin Sauvage</figcaption></figure><figure class="zshot"><img src="images/zone-S-seizoenen.jpg" data-full="images/zone-S-seizoenen.jpg" data-cap="Zone S — Schaduw · Klimplanten muur · Jardin Sauvage" alt="Zone S — Schaduw · Klimplanten muur · Jardin Sauvage: lente, zomer, herfst en winter" loading="lazy"><figcaption>Zone S — Schaduw · Klimplanten muur · Jardin Sauvage</figcaption></figure></div>
+<div class="zshots"><h3>Impressies van de tuin — vier seizoenen</h3><p>Gemaakt met Gemini op basis van een foto van de tuin (18 november 2026) en de beplanting uit dit plan. Het zijn impressies: posities, aantallen en kleuren zijn indicatief. Klik op een afbeelding om te vergroten.</p><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem"><figure class="zshot" style="margin:0"><img src="images/tuin-impressie-lente.jpg" data-full="images/tuin-impressie-lente.jpg" data-cap="Lente (begin april) — bollen, bloesem van de krentenboom, kornoelje met schutbladeren" alt="De tuin in de lente: narcissen, sterhyacinten en krokussen, bloeiende krentenboom en kornoelje" loading="lazy"><figcaption>Lente (begin april)</figcaption></figure><figure class="zshot" style="margin:0"><img src="images/tuin-impressie-zomer.jpg" data-full="images/tuin-impressie-zomer.jpg" data-cap="Zomer (begin juli) — klimroos, nepeta, salvia, echinacea, lavendel" alt="De tuin in de zomer: klimroos tegen de muur, nepeta, salvia, echinacea en lavendel in bloei" loading="lazy"><figcaption>Zomer (begin juli)</figcaption></figure><figure class="zshot" style="margin:0"><img src="images/tuin-impressie-herfst.jpg" data-full="images/tuin-impressie-herfst.jpg" data-cap="Herfst (begin oktober) — herfstkleur van de bomen, sedum, asters, rudbeckia en siergras" alt="De tuin in de herfst: oranje-rode herfstkleur, sedum, asters, rudbeckia en pluimen van siergras" loading="lazy"><figcaption>Herfst (begin oktober)</figcaption></figure><figure class="zshot" style="margin:0"><img src="images/tuin-impressie-winter.jpg" data-full="images/tuin-impressie-winter.jpg" data-cap="Winter — rijp op de borders, kale bomen, siergras en zaadhoofden" alt="De tuin in de winter: rijp op de borders, kale bomen en zaadhoofden" loading="lazy"><figcaption>Winter</figcaption></figure></div></div>
 </div>
 
 <!-- KALENDER -->
@@ -309,12 +343,12 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
 <div class="content" id="tips">
   <h2 class="st">Aanleg, Onderhoud &amp; Vogels &amp; Bijen</h2>
   <div class="tips-grid">
-    <div class="tip-card"><h3>🏗️ Volgorde van aanleg</h3><ul><li>Stap 1: Alle tegels verwijderen</li><li>Stap 2: Kleibodem per zone behandelen</li><li>Stap 3: Bomen planten (okt–nov)</li><li>Stap 4: Klimplanten planten (mrt–apr)</li><li>Stap 5: Vaste planten inplanten (apr–mei)</li><li>Stap 6: Mulchen met schors of compost</li></ul></div>
-    <div class="tip-card"><h3>🐝 Bijen-tips</h3><ul><li>Kies waar mogelijk enkelbloeiende soorten (niet gevuld) — let op: 'Rose Barlow' en 'Double Ellen Red' zijn dubbelbloemig</li><li>Phacelia = beste bijenmagneet-zaaisel</li><li>Campsis &amp; Trachelospermum trekken honingbijen</li><li>Laat zaadhoofden staan tot maart</li><li>Maak 1–2 insectenhotels in zone D of S</li><li>Vermijd pesticiden volledig</li></ul></div>
-    <div class="tip-card"><h3>🐦 Vogel-tips</h3><ul><li>Amelanchier (zone C) = bessen in juni–juli</li><li>Cornus florida (zone A) = rode bessen in de herfst</li><li>Klimop in zone S = nestplaats</li><li>Waterbassin in zone D = ideaal</li><li>Dipsacus = topvoer voor distelvink</li></ul></div>
-    <div class="tip-card"><h3>🌸 Nieuwe klimmers</h3><ul><li>Campsis radicans bloeit pas na 2–3 jaar goed</li><li>Trachelospermum: plant tegen de beschutte muur van de woning</li><li>Lonicera heckrottii en periclymenum: snoei na de bloei (aug)</li><li>Klimroos, Campsis en Clematis 'Ville de Lyon': snoei in feb–mrt</li><li>Druif (Vitis): snoei in dec–jan, niet in maart (bloedt)</li></ul></div>
-    <div class="tip-card"><h3>🪱 Klei — advies</h3><ul><li>Nooit op natte klei werken</li><li>Jaarlijks mulchen verbetert klei langzaam</li><li>Regenwormen zijn jouw beste vriend</li><li>Geen diepploegen — bodemlagen intact</li></ul></div>
-    <div class="tip-card"><h3>📅 Jaarlijks onderhoud</h3><ul><li><strong>Dec–jan:</strong> Druif snoeien; verder vogels genieten</li><li><strong>Feb–mrt:</strong> Klimroos, Campsis en Clematis 'Ville de Lyon' snoeien; vaste planten terugknippen, mulchen</li><li><strong>April–mei:</strong> Planten, zaaien zone D</li><li><strong>Jun–aug:</strong> Genieten, water bij droogte; kamperfoelie en klimhortensia snoeien na de bloei</li><li><strong>September:</strong> Bollen poten</li><li><strong>Okt–dec:</strong> Bomen planten (okt–nov), blad laten liggen in sauvage</li></ul></div>
+    <div class="tip-card"><h3>🏗️ Volgorde van aanleg</h3><ul><li>Stap 1: Alle tegels verwijderen (za 31 oktober 2026) ✅</li><li>Stap 2: Ondergrond beoordelen en zones uitzetten ✅</li><li>Stap 3: Eventueel een lege kabelbuis voor verlichting leggen (vóór de grondverbetering)</li><li>Stap 4: Kleibodem per zone behandelen ✅</li><li>Stap 5: Bomen planten (half nov–eind apr, kluitbomen) ✅</li><li>Stap 6: Klimsteun plaatsen en klimplanten planten (mrt–apr)</li><li>Stap 7: Vaste planten inplanten en zone D zaaien (apr–mei)</li><li>Stap 8: Mulchen en met de hand water geven volgens het onderhoudsplan</li></ul><p style="font-size:.74rem;color:var(--stone);margin-top:.5rem">Zie tab Planning voor de volledige stappenlijst met data.</p></div>
+    <div class="tip-card"><h3>🐝 Bijen-tips</h3><ul><li>Kies waar mogelijk enkelbloeiende soorten (niet gevuld); de dubbelbloemige 'Rose Barlow' en 'Double Ellen Red' staan daarom op de reservelijst</li><li>Trachelospermum trekt honingbijen</li><li>Laat zaadhoofden staan tot maart</li><li>Maak 1–2 insectenhotels in zone D of S</li><li>Vermijd pesticiden volledig</li></ul></div>
+    <div class="tip-card"><h3>🐦 Vogel-tips</h3><ul><li>Amelanchier (zone C) = bessen in juni–juli</li><li>Cornus florida (zone A) = rode bessen in de herfst</li><li>Klimop in zone S = nestplaats</li><li>Waterbassin in zone D = ideaal</li></ul></div>
+    <div class="tip-card"><h3>🌸 Nieuwe klimmers</h3><ul><li>Trachelospermum: plant tegen de beschutte muur van de woning</li><li>Lonicera periclymenum: snoei na de bloei (aug)</li><li>Klimroos en Clematis 'Ville de Lyon': snoei in feb–mrt</li><li>Druif (Vitis, zone D tegen de schutting): snoei in dec–jan, niet in maart (bloedt)</li></ul></div>
+    <div class="tip-card"><h3>🪱 Klei — advies</h3><ul><li>Nooit op natte klei werken</li><li>Jaarlijks mulchen (de bodem afdekken met een mulchlaag, zie tab Mulchen &amp; verlichting) verbetert klei langzaam</li><li>Regenwormen zijn jouw beste vriend</li><li>Geen diepploegen — bodemlagen intact</li></ul></div>
+    <div class="tip-card"><h3>📅 Jaarlijks onderhoud</h3><ul><li><strong>Dec–jan:</strong> Druif snoeien; verder vogels genieten</li><li><strong>Feb–mrt:</strong> Klimroos en Clematis 'Ville de Lyon' snoeien; vaste planten terugknippen, mulchen</li><li><strong>April–mei:</strong> Planten, zaaien zone D</li><li><strong>Jun–aug:</strong> Genieten, met de hand water geven bij droogte volgens het onderhoudsplan (tab Onderhoud); kamperfoelie en klimhortensia snoeien na de bloei</li><li><strong>September:</strong> Bollen poten</li><li><strong>Okt–dec:</strong> Blad laten liggen in sauvage</li><li><strong>Half nov–apr:</strong> Bomen planten (kluitbomen; niet bij vorst of op natte klei)</li></ul></div>
   </div>
 </div>
 
@@ -328,25 +362,86 @@ footer{background:var(--shadow-deep);color:#a0978a;text-align:center;padding:1re
     <div class="ond-row"><span class="ond-l">Taak</span><div class="filters" id="ond-t"></div></div>
   </div>
   <div id="ond-out"></div>
+  <h2 class="st" style="margin-top:2rem">Water geven (indicatie per zone)</h2>
+  <div class="prose"><p>Er wordt in de eerste fases geen irrigatie aangelegd: water geven gebeurt met de hand (tuinslang of gieter). De hoeveelheden zijn eigen richtwaarden voor de eerste twee jaar na het planten, in droge weken (apr–sept); vanaf jaar 3 is ongeveer de helft genoeg.</p>
+  <p><strong>Regels:</strong> één diepe beurt per week in plaats van elke dag een beetje (klei houdt water lang vast). Geef alleen water als er die week minder dan ±10 mm regen is gevallen <strong>en</strong> de grond op 5 cm diepte droog aanvoelt (vingertest). Onder een mulchlaag van 5 cm blijft de grond langer vochtig. Water aan de voet van de plant, niet over het blad.</p></div>
+  <div class="kal-wrap"><table class="tbl"><thead><tr><th>Zone</th><th>Waterbehoefte</th><th>Per week (droge weken, jaar 1–2)</th><th>Opmerking</th></tr></thead><tbody>
+  <tr><td>B (8 m²)</td><td>Hoog: droge muurzone</td><td>15–20 l/m² = 120–160 l, plus 15–20 l per klimplant (3 stuks) = 45–60 l</td><td>Meest watergevoelige zone.</td></tr>
+  <tr><td>A (4,5 m²)</td><td>Medium</td><td>12–15 l/m² = 54–68 l</td><td>Kornoelje apart, zie Bomen.</td></tr>
+  <tr><td>S (2–3 m²)</td><td>Medium, moet vochtig blijven</td><td>12–15 l/m² = 30–38 l (gerekend met 2,5 m²)</td><td>Varens en Astilbe mogen niet uitdrogen.</td></tr>
+  <tr><td>C (8 m²)</td><td>Laag tot medium</td><td>Eerste 6–8 weken na planten ±10 l/m² = ±80 l, plus Clematis 15 l; daarna nauwelijks</td><td>Aster amellus en Salvia nemorosa zijn droogtetolerant: alleen laten aanslaan.</td></tr>
+  <tr><td>D (4 m²)</td><td>Geen</td><td>Geen regulier water</td><td>Alleen bij zaaien en aanslaan (nieuwe lavendel, Agastache). De druif (Vitis) de eerste jaren ongeveer 15–20 l per week in droge perioden.</td></tr>
+  <tr><td>Bomen</td><td>Eerste jaren regelmatig</td><td>40–60 l per boom per week in droge perioden</td><td>Kornoelje bij voorkeur met regenwater (pH).</td></tr>
+  </tbody></table></div>
+  <div class="prose" style="margin-top:.7rem"><p>Totaal in een droge week in jaar 1–2: ongeveer 400–600 l voor de hele tuin (schatting).</p></div>
+</div>
+
+<!-- MULCHEN & VERLICHTING -->
+<div class="content" id="water">
+<h2 class="st" style="margin-top:2rem">Mulchen (de bodem afdekken)</h2>
+<div class="prose"><p><strong>Mulchen</strong> is het afdekken van de grond met een laag materiaal, de <strong>mulchlaag</strong> (bodemafdekking). "Mulchen" is zelf het gangbare Nederlandse woord; een omschrijving is "de bodem afdekken". Niet verwarren met bodembedekkers: dat zijn planten (zoals Vinca minor), geen afdeklaag.</p></div>
+<h3 class="sub">Waarom</h3>
+<ul class="plist"><li>Minder verdamping: de grond blijft vochtiger en je hoeft minder water te geven (zie Water geven (indicatie per zone) in het tabblad Onderhoud).</li><li>Minder onkruid, vooral eenjarig onkruid dat licht nodig heeft om te kiemen.</li><li>Op klei: de regen slaat de grond minder dicht (verslemping) en de grond droogt minder hard uit en scheurt minder.</li><li>Bodemleven: wormen trekken het materiaal naar beneden. Zo verbetert de klei langzaam, zonder te spitten.</li></ul>
+<h3 class="sub">Hoe</h3>
+<ol class="plist"><li>Haal eerst het onkruid weg. Hardnekkig onkruid kun je platdrukken en afdekken met bruin karton.</li><li>Breng de laag aan op <strong>vochtige</strong> grond (na regen), nooit op droge grond. Loop niet op natte klei.</li><li>Dikte: in dit plan <strong>±5 cm</strong>. Compost mag 2–10 cm, houtsnippers of schors 4–10 cm, vers gras hooguit 2–5 cm (anders gaat het rotten en leveren ze te veel stikstof).</li><li>Houd de laag <strong>vrij van stengels en stammen</strong> (zo'n 5–10 cm afstand), zeker bij jonge planten, rozen en bomen. Anders kunnen ze gaan schimmelen of verbranden.</li><li>Langs de woning niet hoger tegen de muur opbouwen dan de bestaande grondhoogte.</li><li><strong>Niet door de grond mengen</strong>; laat de wormen dat doen.</li><li>Vul elk jaar aan, want compost verteert. De momenten in dit plan zijn december (kale grond afdekken voor de winter) en feb–mrt (na het terugknippen).</li></ol>
+<h3 class="sub">Wat per zone</h3>
+<div class="kal-wrap"><table class="tbl"><thead><tr><th>Zone</th><th>Materiaal (voorstel)</th><th>Opmerking</th></tr></thead><tbody><tr><td>A, B</td><td>Compost of bladcompost, ±5 cm</td><td>Voedt de borders; dit is de standaard voor de rijkere zones.</td></tr><tr><td>S</td><td>Bladcompost, ±5 cm</td><td>Volgens het plan. Een dikke laag trekt slakken aan: houd de laag niet dikker dan nodig.</td></tr><tr><td>C</td><td>Compost, ±5 cm</td><td>Halfschaduw: de laag houdt de klei vochtig. Voor Echinacea en Sedum een dunnere laag houden. Rond Aster amellus en Salvia nemorosa (zonnige plek midden in de tuin) geen compostlaag: houd de plantenhals vrij, hooguit een dunne laag of grof zand.</td></tr><tr><td>D</td><td>Niet mulchen met compost</td><td>Schrale grond is de bedoeling, en het zaaisel (Centaurea) heeft kale grond nodig. Rond lavendel, Anijsnetel en Pennisetum 'Little Bunny' eventueel grof zand of split, zodat de plantenhals droog blijft; in de winter droog mulchen bij 'Little Bunny'. Uitzondering: rond de druif (Vitis) tegen de schutting de eerste winter 5 cm schors of compost, in het voorjaar bij de stam weghalen. (Eigen advies, niet uit een bron, behalve de druif: RHS.)</td></tr><tr><td>Bomen</td><td>Schors of houtsnippers, 5–10 cm in een ring</td><td>Vrij van de stam. Voor de kornoelje, die zuur tot neutraal wil, is schors geschikt.</td></tr></tbody></table></div>
+<div class="prose" style="margin-top:.7rem"><p>Hoeveelheid: 5 cm over 27 m² is ongeveer 1,35 m³ per ronde (ongeveer 1,15 m³ zonder zone D). Reken op een jaarlijkse aanvulling.</p></div>
+<h2 class="st" style="margin-top:2rem">Verlichting</h2>
+<div class="prose"><p>Nog uit te werken. Hieronder staan de uitgangspunten en de vragen die eerst beantwoord moeten worden. Kabels moeten ook vóór het planten in de grond.</p></div>
+<h3 class="sub">Uitgangspunten</h3>
+<ul class="plist"><li>Warm-wit (≤2700 K), laag en gericht, met timer of schemerschakelaar: weinig verstoring voor insecten, vleermuizen en vogels.</li><li>Mogelijke accenten: bomen (kornoelje, krentenboom), de muurklimmers in B en S, het pad en de zitplek.</li><li>Nu al meenemen bij het graven: een lege kabelbuis (32–40 mm) zodat later geen bestrating of border open hoeft.</li></ul>
+<h3 class="sub">Gewenste sfeer en lichtbron</h3>
+<ul class="plist"><li><strong>Gewenste sfeer:</strong> wandlantaarns met gekleurd glas (amber en rood) en een kaarsvlameffect, naar het voorbeeld van de lampen in Symbolica (Efteling). Dat zijn waarschijnlijk maatwerk-armaturen. Nog geen lantaarn gekozen.</li><li><strong>Lichtbron:</strong> led-lampen met vlameffect van <strong>Segula</strong>, serie <em>LED Fire Flame Line</em>: 1800 K (warm wit), niet dimbaar, ±15.000 uur. Opties: E27 1 W G125 helder (art. 10050839 staand, 10050840 hangend, ±€25,90) en E14 0,2 W kaars (art. 10050813 twisted candle, 10050811 wind blast, ±€13,90). Prijzen zijn de zakelijke prijs incl. btw bij pro.lights.ie; vergelijk bij een Nederlandse of Belgische webshop.</li><li><strong>Tweede merk:</strong> Ampoule (serie Fire) is door de eigenaar genoemd. De productpagina's bij Lampen24 waren niet te openen, dus de specificaties moeten nog gecontroleerd worden.</li><li><strong>Let op buiten:</strong> de Segula-pagina's noemen gebruik binnen en buiten, maar geen IP-klasse. Gebruik de lamp alleen in een gesloten, regenbestendige armatuur en controleer de datasheet. Kies staand of hangend passend bij de stand van de lamp in de armatuur (zo omschrijft de verkoper het; de variant wordt niet verder uitgelegd).</li></ul>
+<h3 class="sub">Armaturen (kandidaten)</h3>
+<ul class="plist"><li>Dichtst bij het voorbeeld: Marlow Amber Diamond Leaded Stained Glass Outdoor Wall Lantern (Universal Lighting, VK, £179,99): gesmeed ijzer, met de hand gesoldeerd glas in lood met amber, IP43, fitting B22. Levering naar Nederland is niet bevestigd.</li><li>Andere kandidaten voldoen minder: River of Goods (VS, rood en amber glas, waarschijnlijk 120 V, dus niet bruikbaar op 230 V) en Vintage Gothic Chateau (Etsy, ongekleurd glas, tweedehands).</li><li>Alternatief: maatwerk via een smid voor het frame en een glazenier voor het glas in lood.</li></ul>
+<h3 class="sub">Eerst beantwoorden</h3>
+<ul class="plist"><li>Stroom is er bij de ton. Is er ook stroom bij de zones waar verlichting komt, of loopt de kabel vanaf de ton (lege kabelbuis meenemen)?</li><li>Laagspanning (12/24 V, eenvoudig en veilig) of 230 V (installateur nodig)?</li><li>Welke elementen moeten verlicht worden en welke sfeer is gewenst?</li></ul>
+</div>
+
+<!-- PLANNING -->
+<div class="content" id="planning">
+  <h2 class="st">Planning &amp; stappen vanaf 31 oktober</h2>
+<div class="prose"><p><strong>Stand 24 november 2026:</strong> de tegels zijn weg, de zones zijn uitgezet als licht verhoogde plantvakken met een rand en gevuld, en beide bomen staan erin met boomsteun en een ring van schors. Stap 1, 2, 3, 5 en 6 zijn gedaan. De overige data zijn een voorstel en hangen af van het weer (nooit op natte klei werken) en van de levertijden.</p></div>
+<div class="kal-wrap"><table class="tbl"><thead><tr><th>#</th><th>Stap</th><th>Wanneer</th><th>Afhankelijk van</th><th>Bestellen / regelen</th><th>Status</th></tr></thead><tbody><tr><td>0</td><td>Resterende besluiten nemen: maximale hoogte van de grassen, stroom voor verlichting, verlichting</td><td>Nu t/m 30 okt</td><td>—</td><td>—</td><td><span class="st-open">Open</span></td></tr><tr><td>1</td><td>Zones uitzetten en de m² per zone controleren (nagerekend 22 okt: A 4,5, S 2–3, B 8, C 8, D 4 = ±27 m²), afschot; de zonnigste plek midden in de tuin aanwijzen voor Aster en Salvia (zone C)</td><td>Nu t/m 30 okt</td><td>Besluiten</td><td>—</td><td><span class="st-gedaan">Gedaan</span><br><small>plantvakken met rand, 16 nov</small></td></tr><tr><td>2</td><td>Bestaande tegels verwijderen</td><td>Za 31 okt</td><td>Droog weer, afvoer geregeld</td><td>—</td><td><span class="st-gedaan">Gedaan</span><br><small>tegels weg</small></td></tr><tr><td>3</td><td>Ondergrond beoordelen: zandlaag en fundering, verdichting, waterafvoer en afschot; pH en kalkgehalte van zone A laten meten</td><td>1–8 nov</td><td>Stap 2</td><td>Hoeveelheden compost, zand, perliet bepalen; bodemlab voor pH en kalk</td><td><span class="st-gedaan">Gedaan</span><br><small>pH 7 met vrije kalk (azijntest), 21 nov</small></td></tr><tr><td>4</td><td>Alleen als verlichting wordt gekozen: lege kabelbuis leggen</td><td>9–15 nov</td><td>Stap 3, besluit verlichting</td><td>Kabelbuis</td><td><span class="st-open">Open</span></td></tr><tr><td>5</td><td>Kleibodem per zone behandelen, alleen op droge dagen (A, B, C, D, S)</td><td>16–30 nov</td><td>Stap 4</td><td>Compost, scherp zand, perliet, potgrond, bladcompost</td><td><span class="st-gedaan">Gedaan</span><br><small>alle plantvakken gevuld</small></td></tr><tr><td>6</td><td>Krentenboom planten met boompaal en ring in C; kornoelje (struikvorm, Directplant) in A zodra de pH op de streefwaarde zit</td><td>Krentenboom half nov – begin dec; kornoelje half nov – eind apr, verwacht mrt–apr als zwavel en hermeten nodig zijn</td><td>Stap 5; pH-meting en -correctie (kornoelje)</td><td>Krentenboom nu te bestellen; kornoelje (Directplant, struikvorm; maat nog te kiezen) pas na de pH-meting</td><td><span class="st-gedaan">Gedaan</span><br><small>beide bomen geplant met boomsteun en schorsring; kornoelje op een zure plantplek</small></td></tr><tr><td>7</td><td>Voorjaarsbollen planten (Allium, Hyacinthoides)</td><td>Nov – half dec</td><td>Stap 5</td><td>Bollen bestellen</td><td><span class="st-open">Open</span></td></tr><tr><td>8</td><td>Kale grond afdekken met bladcompost of mulch voor de winter</td><td>Dec</td><td>Stap 5–7</td><td>Mulch</td><td><span class="st-open">Open</span></td></tr><tr><td>9</td><td>Steun plaatsen: rankdraden of rooster op de muur in zone C (besloten), rankdraden in B en S, rankdraden op de schutting in D voor de druif</td><td>Jan–feb</td><td>Stap 5</td><td>Roestvrijstalen draad, muurbeugels of rooster</td><td><span class="st-open">Open</span></td></tr><tr><td>10</td><td>Klimplanten en vaste planten en zaad bestellen</td><td>Jan–feb</td><td>Plantkeuze en levensduur-check</td><td>Alle planten en zaden</td><td><span class="st-open">Open</span></td></tr><tr><td>11</td><td>Klimplanten planten (de druif in D met een schep compost in het plantgat)</td><td>Mrt–apr</td><td>Stap 9</td><td>—</td><td><span class="st-open">Open</span></td></tr><tr><td>12</td><td>Vaste planten planten; zone D zaaien (Centaurea, Myosotis aan de voet van de druif)</td><td>Apr–mei</td><td>Stap 11</td><td>—</td><td><span class="st-open">Open</span></td></tr><tr><td>13</td><td>5 cm mulchen (niet in zone D)</td><td>Apr–mei</td><td>Stap 12</td><td>Mulch</td><td><span class="st-open">Open</span></td></tr><tr><td>14</td><td>Verlichting plaatsen (kabel ligt er al)</td><td>Apr–mei of later</td><td>Besluit verlichting</td><td>Armaturen, trafo of stroompunt</td><td><span class="st-open">Open</span></td></tr><tr><td>15</td><td>Eerste jaar: met de hand water geven volgens het onderhoudsplan (tab Onderhoud)</td><td>Apr–sept</td><td>Stap 13</td><td>—</td><td><span class="st-open">Open</span></td></tr><tr><td>16</td><td>Zone D onderhouden: Centaurea herzaaien, tweejarigen laten uitzaaien (zaadhoofden laten staan)</td><td>Jaarlijks vanaf 2028</td><td>Stap 12</td><td>Zaad</td><td><span class="st-open">Open</span></td></tr><tr><td>17</td><td>Levensduur-check van de ⏱-soorten (Aquilegia, Knautia, Verbena, Agastache, Echinacea): delen, bijplanten of laten uitzaaien</td><td>Herfst 2029</td><td>Stap 12</td><td>Planten of zaad</td><td><span class="st-open">Open</span></td></tr></tbody></table></div>
+<h2 class="st" style="margin-top:2rem">Open punten</h2>
+<ul class="plist"><li>Actiepunt: meet de zonuren in het groeiseizoen (aanname: alleen de tuinkas en zone D hebben meer dan 6 uur zon).</li><li>Actiepunt: controleer hoogte, zonbehoefte en bijen- en vogelwaarde per soort in de definitieve lijst (nu indicatief uit eigen kennis) en voeg een hoogtekolom met bronnen toe.</li><li>Zone D (9 soorten op 4 m²), zone S (9 op 2–3 m²) en zone A (9 incl. boom op 4,5 m²) zijn nog te vol: beoordeel de plantafstanden bij het uitzetten.</li><li>Actiepunt: meet de zonuren op de plek midden in de tuin waar Aster amellus en Salvia nemorosa komen (zone C).</li><li>Myosotis staat in zone D en wil wat meer vocht en lichte schaduw; valt hij tegen, dan terug naar zone B.</li><li>Stroom voor verlichting: bij de ton is stroom aanwezig; bij de zones zelf nog uit te werken.</li><li>pH kornoelje (24 november 2026): gemeten pH 7 met vrije kalk; de kornoelje staat op een zure plantplek. Nog te doen: in het voorjaar de pH van de plantplek meten (streefwaarde 5,5–6,5), regenwater geven, en bij Vitens navragen hoe hard het water in Dronten is.</li><li>Actiepunt: beslis over de fasering in drie stappen. Herfst 2026 het skelet (tegels weg, ondergrond, bomen, eventueel een kabelbuis, klimsteun, kale grond afdekken). Voorjaar 2027 de beplanting (klimplanten en vaste planten in A, B en C, zone D zaaien, mulch). Najaar 2027 en 2028 de rest (zone S, aanvullen, verlichting). Daarna de planning aanpassen.</li><li>De zones zijn uitgezet en de plantvakken gevuld (24 november 2026); de oppervlaktes van 22 oktober (A 4,5, B 8, C 8, D 4, S 2–3 m²) blijven het uitgangspunt.</li><li>Verlichting (voorlopig geparkeerd): kies de armatuur (maatwerk of een kant-en-klare lantaarn zoals de Marlow, levering naar Nederland navragen), controleer de Ampoule-lampen en kies laagspanning of 230 V.</li></ul>
+</div>
+
+<!-- RESERVELIJST -->
+<div class="content" id="reserve">
+  <h2 class="st">Reservelijst (afgevallen soorten)</h2>
+<div class="prose"><p>Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 2026: 44 soorten in plaats van 58; op 22 oktober 2026 is de judaspenning teruggekomen in zone B en is hartjesgras vervallen, zonder reserveplek, is steppesalie teruggekomen in zone C en zijn kaardenbol en druifhyacint naar de reservelijst gegaan; op 14 november 2026 zijn Phacelia (bijenvoer), de Japanse anemoon en Campsis vervallen, zonder reserveplek; nu 40 soorten). Ze blijven hier bewaard als reserve, bijvoorbeeld om later bij te planten of om een soort te vervangen. Per soort staat de reden en de zone waar hij oorspronkelijk stond.</p></div>
+<div class="kal-wrap"><table class="tbl"><thead><tr><th>Nederlandse naam</th><th>Latijnse naam</th><th>Zone (was)</th><th>Reden</th><th>Link</th></tr></thead><tbody><tr><td><div class="rname"><img class="rthumb" src="images/B-zomer-lonicera.jpg" alt="Goud-kamperfoelie" data-ph="B-zomer-lonicera" data-cap="Goud-kamperfoelie — Lonicera heckrottii"><span>Goud-kamperfoelie</span></div></td><td><em>Lonicera heckrottii</em></td><td>B</td><td>Dubbel met Lonicera periclymenum, dat beter scoort bij vogels (4 sterren, tegen 3).</td><td><a href="https://en.wikipedia.org/wiki/Lonicera_%C3%97_heckrottii" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/B-zomer-rosa.jpg" alt="Struikroos" data-ph="B-zomer-rosa" data-cap="Struikroos — Rosa 'Lilly Rose Wonder'"><span>Struikroos</span></div></td><td><em>Rosa 'Lilly Rose Wonder'</em></td><td>B</td><td>Op verzoek van de eigenaar verwijderd. Wil bovendien meer zon, en de klimroos staat er al.</td><td><a href="https://en.wikipedia.org/wiki/Rose" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/S-zomer-hosta.jpg" alt="Hartlelie" data-ph="S-zomer-hosta" data-cap="Hartlelie — Hosta (divers)"><span>Hartlelie</span></div></td><td><em>Hosta (divers)</em></td><td>S</td><td>Op verzoek van de eigenaar verwijderd. Weinig bijen- en vogelwaarde, slakken, neemt veel ruimte in 4 m².</td><td><a href="https://nl.wikipedia.org/wiki/Hartlelie" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/B-lente-aquilegia.jpg" alt="Akelei" data-ph="B-lente-aquilegia" data-cap="Akelei — Aquilegia vulgaris 'Rose Barlow'"><span>Akelei</span></div></td><td><em>Aquilegia vulgaris 'Rose Barlow'</em></td><td>B</td><td>Dubbelbloemig (minder bijvriendelijk); de wilde akelei staat al in zone A.</td><td><a href="https://en.wikipedia.org/wiki/Aquilegia_vulgaris" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/D-zomer-verbascum.jpg" alt="Koningskaars" data-ph="D-zomer-verbascum" data-cap="Koningskaars — Verbascum thapsus"><span>Koningskaars</span></div></td><td><em>Verbascum thapsus</em></td><td>D</td><td>Wordt 2 m en is tweejarig; Echium houdt zone D wild genoeg.</td><td><a href="https://nl.wikipedia.org/wiki/Koningskaars" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/A-lente-geranium.jpg" alt="Ooievaarsbek" data-ph="A-lente-geranium" data-cap="Ooievaarsbek — Geranium macrorrhizum"><span>Ooievaarsbek</span></div></td><td><em>Geranium macrorrhizum</em></td><td>A</td><td>Dubbel met 'Rozanne' en woekert.</td><td><a href="https://en.wikipedia.org/wiki/Geranium_macrorrhizum" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/A-herfst-persicaria.jpg" alt="Bergduizendknoop" data-ph="A-herfst-persicaria" data-cap="Bergduizendknoop — Persicaria amplexicaulis"><span>Bergduizendknoop</span></div></td><td><em>Persicaria amplexicaulis</em></td><td>A</td><td>Te groot voor 6 m².</td><td><a href="https://en.wikipedia.org/wiki/Persicaria_amplexicaulis" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/A-herfst-helenium.jpg" alt="Zonnekruid" data-ph="A-herfst-helenium" data-cap="Zonnekruid — Helenium"><span>Zonnekruid</span></div></td><td><em>Helenium</em></td><td>A</td><td>Wil zon, wordt 1–1,5 m en valt snel om bij 3–6 uur zon.</td><td><a href="https://en.wikipedia.org/wiki/Helenium" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/C-lente-allium.jpg" alt="Reuzensierui" data-ph="C-lente-allium" data-cap="Reuzensierui — Allium giganteum"><span>Reuzensierui</span></div></td><td><em>Allium giganteum</em></td><td>C</td><td>Wil zon; zone C is halfschaduw.</td><td><a href="https://en.wikipedia.org/wiki/Allium_giganteum" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/C-lente-iris.jpg" alt="Baardiris" data-ph="C-lente-iris" data-cap="Baardiris — Iris germanica"><span>Baardiris</span></div></td><td><em>Iris germanica</em></td><td>C</td><td>Bloeit slecht in halfschaduw en rot op klei.</td><td><a href="https://en.wikipedia.org/wiki/Iris_germanica" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/C-zomer-salvia.jpg" alt="Salie" data-ph="C-zomer-salvia" data-cap="Salie — Salvia officinalis"><span>Salie</span></div></td><td><em>Salvia officinalis</em></td><td>C</td><td>Wil zon en rot op natte klei in halfschaduw.</td><td><a href="https://en.wikipedia.org/wiki/Salvia_officinalis" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/S-herfst-tricyrtis.jpg" alt="Paddenlelie" data-ph="S-herfst-tricyrtis" data-cap="Paddenlelie — Tricyrtis"><span>Paddenlelie</span></div></td><td><em>Tricyrtis</em></td><td>S</td><td>Voegt weinig toe in 4 m².</td><td><a href="https://en.wikipedia.org/wiki/Tricyrtis" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/S-winter-vinca.jpg" alt="Kleine maagdenpalm" data-ph="S-winter-vinca" data-cap="Kleine maagdenpalm — Vinca minor"><span>Kleine maagdenpalm</span></div></td><td><em>Vinca minor</em></td><td>S</td><td>Woekert.</td><td><a href="https://en.wikipedia.org/wiki/Vinca_minor" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/D-herfst-stipa.jpg" alt="Vedergras" data-ph="D-herfst-stipa" data-cap="Vedergras — Stipa"><span>Vedergras</span></div></td><td><em>Stipa</em></td><td>B, D</td><td>Wil zon en droge grond. Vervangen door bermzegge (B).</td><td><a href="https://en.wikipedia.org/wiki/Stipa" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/D-herfst-dipsacus.jpg" alt="Kaardenbol" data-ph="D-herfst-dipsacus" data-cap="Kaardenbol — Dipsacus fullonum"><span>Kaardenbol</span></div></td><td><em>Dipsacus fullonum</em></td><td>D</td><td>Op verzoek van de eigenaar verwijderd (22 oktober 2026); zone D is te vol. Tweejarig, de zaadhoofden zijn topvoer voor distelvinken.</td><td><a href="https://en.wikipedia.org/wiki/Dipsacus_fullonum" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/D-lente-muscari.jpg" alt="Druifhyacint" data-ph="D-lente-muscari" data-cap="Druifhyacint — Muscari armeniacum"><span>Druifhyacint</span></div></td><td><em>Muscari armeniacum</em></td><td>D</td><td>Op verzoek van de eigenaar verwijderd (22 oktober 2026); zone D is te vol. Blauwe lentebol.</td><td><a href="https://en.wikipedia.org/wiki/Muscari_armeniacum" target="_blank" rel="noopener">Wikipedia</a></td></tr><tr><td><div class="rname"><img class="rthumb" src="images/A-winter-helleborus.jpg" alt="Kerstroos (oosterse)" data-ph="A-winter-helleborus" data-cap="Kerstroos (oosterse) — Helleborus orientalis 'Double Ellen Red'"><span>Kerstroos (oosterse)</span></div></td><td><em>Helleborus orientalis 'Double Ellen Red'</em></td><td>A, B</td><td>Dubbelbloemig (minder bijvriendelijk). Vervangen door de enkelbloemige oosterse kerstroos.</td><td><a href="https://en.wikipedia.org/wiki/Helleborus_orientalis" target="_blank" rel="noopener">Wikipedia</a></td></tr></tbody></table></div>
 </div>
 
 <footer>Tuinplan · Landelijk · Natuurlijk · Jardin Sauvage · Vijf zones · Kleibodem Nederland</footer>
 
-<div id="lb" onclick="this.classList.remove('on')"><img alt=""><div class="cap"></div></div>
+<div id="lb"><img alt=""><div class="cap"></div></div>
 
 <script>
-const IMG={"ids": {"A-herfst-helenium": "b4cde93ff2048716e39b3e1f5852642f", "A-herfst-anemone": "4233772546aad5bcc63b3edfb526c1f7", "A-herfst-persicaria": "764c90128a538a679be629267e3a2fc2", "A-lente-pulmonaria": "3654c1541538e8973c1a2f9fbe197dee", "A-lente-aquilegia": "5c75d54f8e8cf44f38b2a9990c9d0614", "A-lente-geranium": "2be0ea97401f21e3f02e2f5233167a72", "A-lente-heuchera": "75645b4d485dc38e7403746fa96a397f", "A-winter-helleborus": "6516ba63669dca73b4ae9ed5d6b90284", "A-zomer-astrantia": "641c1e32c430c90a04548d42881f7550", "A-zomer-geranium": "b976b35f455d343203de8056e9c3a05e", "B-herfst-aster": "0eb3904fde4e8e446e4a38e0ff0ce3ae", "B-herfst-echinacea": "e9416ba5110e5c42ce15e38459c28abd", "B-herfst-rudbeckia": "90773a770b550528a65cebdf2e7f8421", "B-lente-aquilegia": "f358f1dbba532ed4d0ada093a1ca83d1", "B-lente-myosotis": "7c55658c2dd1e650d09ee30f72fb9a5e", "B-lente-allium": "2059759983fca75ae712cc2cdb43cfca", "B-lente-salvia": "23080b6331bf9c7979e3241a6dbf78b2", "B-winter-stipa": "9348a50d89b1c29c28bc50e685fec8b2", "B-zomer-geranium": "77d784d40b494db03b8efdfdaa08c5a0", "B-zomer-lonicera": "1f60e9314703430a19b990ae5141352a", "B-zomer-nepeta": "8dc1559111467a2d4308505bf45926f4", "B-zomer-rosa": "93a5616f8d962e4662dd0fdefe22e3c3", "B-zomer-trachelospermum": "646e5d54efd795e64c2349ebfc9ac4aa", "C-herfst-agastache": "b23407e7b0f6044de1ff33c23f491390", "C-herfst-rudbeckia": "5e3ac43c13fdd454dbdca8443f8773e9", "C-herfst-sedum": "f9e56590f59a7585aa1c85e3b481152f", "C-herfst-vitis": "ef1b846991197ec6e2de97af50409be9", "C-lente-allium": "8af479b2fe4fcb7c03f4bf2467f64df3", "C-lente-iris": "964f0de5f9b3addb3082ea5ac2665ac9", "C-lente-nepeta": "b84042333bec7aab568bb12c69b8ef63", "C-winter-pennisetum": "77b9e2ba4e797042d6a906c4a19c9ce2", "C-zomer-echinacea": "4b0b8b73eb6eff1f42de0340bdde80da", "C-zomer-salvia": "9db1163e837db111b8a480483b906576", "C-zomer-verbena": "8470f794690db96a97948b4c40edae60", "C-zomer-lavandula": "34072013266909e766299e7d46a9684d", "C-zomer-campsis": "4a9f9b6dee57c3375fea0c4eebae6d10", "D-herfst-verbena": "8470f794690db96a97948b4c40edae60", "D-herfst-dipsacus": "6298555f9122da69ededbc8e33e7bc6e", "D-herfst-stipa": "9348a50d89b1c29c28bc50e685fec8b2", "D-lente-centaurea": "13b4427e889d07fa0f8d137d0fb552ea", "D-lente-muscari": "a9463ac4afd202528688a8c30ebd4c57", "D-lente-phacelia": "b817be493cab2cd59f7b3379aad74c1d", "D-zomer-knautia": "512fa01f2424b75096eb8f57e3d30556", "D-zomer-echium": "cc28e16255c725b16c0d1853b58a73c1", "D-zomer-verbascum": "03080a6a231d15cd050be92571f1cb8a", "S-herfst-anemone": "33deddb52afac071fd103c852f7166c1", "S-herfst-dryopteris": "17f8a13f6ab09a8762126dd2828e5372", "S-herfst-tricyrtis": "fc3595b0fc9c5b89e6755b1f215fe215", "S-lente-dryopteris": "17f8a13f6ab09a8762126dd2828e5372", "S-lente-hyacinthoides": "f510f4afb4f888993709a53a78eb50f6", "S-lente-primula": "ee92cf218fbeff961e323982d5a6c85f", "S-lente-pulmonaria": "d36d3aaf8afd4cac921ece890c877011", "S-winter-dryopteris": "17f8a13f6ab09a8762126dd2828e5372", "S-winter-helleborus": "35e59339ba32f8c2ee3fc1773d4d0a53", "S-winter-sarcococca": "7785069a984a589edae96287a76e7c25", "S-winter-vinca": "35cae6117379c9e8ad0b5ad09eae30c6", "S-zomer-astilbe": "47a6eae472bea2706cac685fd102db06", "S-zomer-digitalis": "966d9731119c02c18e8ef74b127abdf0", "S-zomer-hosta": "dfb00da5845279a7159c3f4277e75150", "S-zomer-hydrangea": "a2f09c8bc9cbe44b32e3a9d71baed2e9", "X-x-newdawn": "79e202e3766259619ebe8d1cbaf417ec", "X-x-hedera": "8540460a518d32d04b574cc04600b82c", "A-winter-carex": "10d4236e7dbb79eddc69f9686e4b4edf", "C-lente-amelanchier": "60b1e93d8c60ab943b39c2f8b3007c93", "X-x-clematis": "441bf35b6f133449369f5fac0eaf9d3f", "B-zomer-periclymenum": "f2fb8cf56791ed636c6bbddc722b7ee9", "B-lente-lunaria": "3358c07db31094aca1499dcea468f1ef", "A-lente-cornus": "98c0a79189884f181f947865ba46ddac"}, "blobs": {"b4cde93ff2048716e39b3e1f5852642f": "images/A-herfst-helenium.jpg", "4233772546aad5bcc63b3edfb526c1f7": "images/A-herfst-anemone.jpg", "764c90128a538a679be629267e3a2fc2": "images/A-herfst-persicaria.jpg", "3654c1541538e8973c1a2f9fbe197dee": "images/A-lente-pulmonaria.jpg", "5c75d54f8e8cf44f38b2a9990c9d0614": "images/A-lente-aquilegia.jpg", "2be0ea97401f21e3f02e2f5233167a72": "images/A-lente-geranium.jpg", "75645b4d485dc38e7403746fa96a397f": "images/A-lente-heuchera.jpg", "6516ba63669dca73b4ae9ed5d6b90284": "images/A-winter-helleborus.jpg", "641c1e32c430c90a04548d42881f7550": "images/A-zomer-astrantia.jpg", "b976b35f455d343203de8056e9c3a05e": "images/A-zomer-geranium.jpg", "0eb3904fde4e8e446e4a38e0ff0ce3ae": "images/B-herfst-aster.jpg", "e9416ba5110e5c42ce15e38459c28abd": "images/B-herfst-echinacea.jpg", "90773a770b550528a65cebdf2e7f8421": "images/B-herfst-rudbeckia.jpg", "f358f1dbba532ed4d0ada093a1ca83d1": "images/B-lente-aquilegia.jpg", "7c55658c2dd1e650d09ee30f72fb9a5e": "images/B-lente-myosotis.jpg", "2059759983fca75ae712cc2cdb43cfca": "images/B-lente-allium.jpg", "23080b6331bf9c7979e3241a6dbf78b2": "images/B-lente-salvia.jpg", "9348a50d89b1c29c28bc50e685fec8b2": "images/D-herfst-stipa.jpg", "77d784d40b494db03b8efdfdaa08c5a0": "images/B-zomer-geranium.jpg", "1f60e9314703430a19b990ae5141352a": "images/B-zomer-lonicera.jpg", "8dc1559111467a2d4308505bf45926f4": "images/B-zomer-nepeta.jpg", "93a5616f8d962e4662dd0fdefe22e3c3": "images/B-zomer-rosa.jpg", "646e5d54efd795e64c2349ebfc9ac4aa": "images/B-zomer-trachelospermum.jpg", "b23407e7b0f6044de1ff33c23f491390": "images/C-herfst-agastache.jpg", "5e3ac43c13fdd454dbdca8443f8773e9": "images/C-herfst-rudbeckia.jpg", "f9e56590f59a7585aa1c85e3b481152f": "images/C-herfst-sedum.jpg", "ef1b846991197ec6e2de97af50409be9": "images/C-herfst-vitis.jpg", "8af479b2fe4fcb7c03f4bf2467f64df3": "images/C-lente-allium.jpg", "964f0de5f9b3addb3082ea5ac2665ac9": "images/C-lente-iris.jpg", "b84042333bec7aab568bb12c69b8ef63": "images/C-lente-nepeta.jpg", "77b9e2ba4e797042d6a906c4a19c9ce2": "images/C-winter-pennisetum.jpg", "4b0b8b73eb6eff1f42de0340bdde80da": "images/C-zomer-echinacea.jpg", "9db1163e837db111b8a480483b906576": "images/C-zomer-salvia.jpg", "8470f794690db96a97948b4c40edae60": "images/D-herfst-verbena.jpg", "34072013266909e766299e7d46a9684d": "images/C-zomer-lavandula.jpg", "4a9f9b6dee57c3375fea0c4eebae6d10": "images/C-zomer-campsis.jpg", "6298555f9122da69ededbc8e33e7bc6e": "images/D-herfst-dipsacus.jpg", "13b4427e889d07fa0f8d137d0fb552ea": "images/D-lente-centaurea.jpg", "a9463ac4afd202528688a8c30ebd4c57": "images/D-lente-muscari.jpg", "b817be493cab2cd59f7b3379aad74c1d": "images/D-lente-phacelia.jpg", "512fa01f2424b75096eb8f57e3d30556": "images/D-zomer-knautia.jpg", "cc28e16255c725b16c0d1853b58a73c1": "images/D-zomer-echium.jpg", "03080a6a231d15cd050be92571f1cb8a": "images/D-zomer-verbascum.jpg", "33deddb52afac071fd103c852f7166c1": "images/S-herfst-anemone.jpg", "17f8a13f6ab09a8762126dd2828e5372": "images/S-winter-dryopteris.jpg", "fc3595b0fc9c5b89e6755b1f215fe215": "images/S-herfst-tricyrtis.jpg", "f510f4afb4f888993709a53a78eb50f6": "images/S-lente-hyacinthoides.jpg", "ee92cf218fbeff961e323982d5a6c85f": "images/S-lente-primula.jpg", "d36d3aaf8afd4cac921ece890c877011": "images/S-lente-pulmonaria.jpg", "35e59339ba32f8c2ee3fc1773d4d0a53": "images/S-winter-helleborus.jpg", "7785069a984a589edae96287a76e7c25": "images/S-winter-sarcococca.jpg", "35cae6117379c9e8ad0b5ad09eae30c6": "images/S-winter-vinca.jpg", "47a6eae472bea2706cac685fd102db06": "images/S-zomer-astilbe.jpg", "966d9731119c02c18e8ef74b127abdf0": "images/S-zomer-digitalis.jpg", "dfb00da5845279a7159c3f4277e75150": "images/S-zomer-hosta.jpg", "a2f09c8bc9cbe44b32e3a9d71baed2e9": "images/S-zomer-hydrangea.jpg", "79e202e3766259619ebe8d1cbaf417ec": "images/X-x-newdawn.jpg", "8540460a518d32d04b574cc04600b82c": "images/X-x-hedera.jpg", "10d4236e7dbb79eddc69f9686e4b4edf": "images/A-winter-carex.jpg", "60b1e93d8c60ab943b39c2f8b3007c93": "images/C-lente-amelanchier.jpg", "441bf35b6f133449369f5fac0eaf9d3f": "images/X-x-clematis.jpg", "f2fb8cf56791ed636c6bbddc722b7ee9": "images/B-zomer-periclymenum.jpg", "3358c07db31094aca1499dcea468f1ef": "images/B-lente-lunaria.jpg", "98c0a79189884f181f947865ba46ddac": "images/A-lente-cornus.jpg"}};
+const IMG={"ids": {"A-herfst-helenium": "b4cde93ff2048716e39b3e1f5852642f", "A-herfst-anemone": "4233772546aad5bcc63b3edfb526c1f7", "A-herfst-persicaria": "764c90128a538a679be629267e3a2fc2", "A-lente-pulmonaria": "3654c1541538e8973c1a2f9fbe197dee", "A-lente-aquilegia": "5c75d54f8e8cf44f38b2a9990c9d0614", "A-lente-geranium": "2be0ea97401f21e3f02e2f5233167a72", "A-lente-heuchera": "75645b4d485dc38e7403746fa96a397f", "A-winter-helleborus": "6516ba63669dca73b4ae9ed5d6b90284", "A-zomer-astrantia": "641c1e32c430c90a04548d42881f7550", "A-zomer-geranium": "b976b35f455d343203de8056e9c3a05e", "B-herfst-aster": "0eb3904fde4e8e446e4a38e0ff0ce3ae", "B-herfst-echinacea": "e9416ba5110e5c42ce15e38459c28abd", "B-herfst-rudbeckia": "90773a770b550528a65cebdf2e7f8421", "B-lente-aquilegia": "f358f1dbba532ed4d0ada093a1ca83d1", "B-lente-myosotis": "7c55658c2dd1e650d09ee30f72fb9a5e", "B-lente-allium": "2059759983fca75ae712cc2cdb43cfca", "B-lente-salvia": "23080b6331bf9c7979e3241a6dbf78b2", "B-winter-stipa": "9348a50d89b1c29c28bc50e685fec8b2", "B-zomer-geranium": "77d784d40b494db03b8efdfdaa08c5a0", "B-zomer-lonicera": "1f60e9314703430a19b990ae5141352a", "B-zomer-nepeta": "8dc1559111467a2d4308505bf45926f4", "B-zomer-rosa": "93a5616f8d962e4662dd0fdefe22e3c3", "B-zomer-trachelospermum": "646e5d54efd795e64c2349ebfc9ac4aa", "C-herfst-agastache": "b23407e7b0f6044de1ff33c23f491390", "C-herfst-rudbeckia": "5e3ac43c13fdd454dbdca8443f8773e9", "C-herfst-sedum": "f9e56590f59a7585aa1c85e3b481152f", "C-herfst-vitis": "ef1b846991197ec6e2de97af50409be9", "C-lente-allium": "8af479b2fe4fcb7c03f4bf2467f64df3", "C-lente-iris": "964f0de5f9b3addb3082ea5ac2665ac9", "C-lente-nepeta": "b84042333bec7aab568bb12c69b8ef63", "C-winter-pennisetum": "77b9e2ba4e797042d6a906c4a19c9ce2", "C-zomer-echinacea": "4b0b8b73eb6eff1f42de0340bdde80da", "C-zomer-salvia": "9db1163e837db111b8a480483b906576", "C-zomer-verbena": "8470f794690db96a97948b4c40edae60", "C-zomer-lavandula": "34072013266909e766299e7d46a9684d", "C-zomer-campsis": "4a9f9b6dee57c3375fea0c4eebae6d10", "D-herfst-verbena": "8470f794690db96a97948b4c40edae60", "D-herfst-dipsacus": "6298555f9122da69ededbc8e33e7bc6e", "D-herfst-stipa": "9348a50d89b1c29c28bc50e685fec8b2", "D-lente-centaurea": "13b4427e889d07fa0f8d137d0fb552ea", "D-lente-muscari": "a9463ac4afd202528688a8c30ebd4c57", "D-lente-phacelia": "b817be493cab2cd59f7b3379aad74c1d", "D-zomer-knautia": "512fa01f2424b75096eb8f57e3d30556", "D-zomer-echium": "cc28e16255c725b16c0d1853b58a73c1", "D-zomer-verbascum": "03080a6a231d15cd050be92571f1cb8a", "S-herfst-anemone": "33deddb52afac071fd103c852f7166c1", "S-herfst-dryopteris": "17f8a13f6ab09a8762126dd2828e5372", "S-herfst-tricyrtis": "fc3595b0fc9c5b89e6755b1f215fe215", "S-lente-dryopteris": "17f8a13f6ab09a8762126dd2828e5372", "S-lente-hyacinthoides": "f510f4afb4f888993709a53a78eb50f6", "S-lente-primula": "ee92cf218fbeff961e323982d5a6c85f", "S-lente-pulmonaria": "d36d3aaf8afd4cac921ece890c877011", "S-winter-dryopteris": "17f8a13f6ab09a8762126dd2828e5372", "S-winter-helleborus": "35e59339ba32f8c2ee3fc1773d4d0a53", "S-winter-sarcococca": "7785069a984a589edae96287a76e7c25", "S-winter-vinca": "35cae6117379c9e8ad0b5ad09eae30c6", "S-zomer-astilbe": "47a6eae472bea2706cac685fd102db06", "S-zomer-digitalis": "966d9731119c02c18e8ef74b127abdf0", "S-zomer-hosta": "dfb00da5845279a7159c3f4277e75150", "S-zomer-hydrangea": "a2f09c8bc9cbe44b32e3a9d71baed2e9", "X-x-newdawn": "79e202e3766259619ebe8d1cbaf417ec", "X-x-hedera": "8540460a518d32d04b574cc04600b82c", "A-winter-carex": "10d4236e7dbb79eddc69f9686e4b4edf", "C-lente-amelanchier": "60b1e93d8c60ab943b39c2f8b3007c93", "X-x-clematis": "441bf35b6f133449369f5fac0eaf9d3f", "B-zomer-periclymenum": "f2fb8cf56791ed636c6bbddc722b7ee9", "B-lente-lunaria": "3358c07db31094aca1499dcea468f1ef", "A-lente-cornus": "98c0a79189884f181f947865ba46ddac", "A-herfst-liriope": "nieuw-liriope"}, "blobs": {"b4cde93ff2048716e39b3e1f5852642f": "images/A-herfst-helenium.jpg", "4233772546aad5bcc63b3edfb526c1f7": "images/A-herfst-anemone.jpg", "764c90128a538a679be629267e3a2fc2": "images/A-herfst-persicaria.jpg", "3654c1541538e8973c1a2f9fbe197dee": "images/A-lente-pulmonaria.jpg", "5c75d54f8e8cf44f38b2a9990c9d0614": "images/A-lente-aquilegia.jpg", "2be0ea97401f21e3f02e2f5233167a72": "images/A-lente-geranium.jpg", "75645b4d485dc38e7403746fa96a397f": "images/A-lente-heuchera.jpg", "6516ba63669dca73b4ae9ed5d6b90284": "images/A-winter-helleborus.jpg", "641c1e32c430c90a04548d42881f7550": "images/A-zomer-astrantia.jpg", "b976b35f455d343203de8056e9c3a05e": "images/A-zomer-geranium.jpg", "0eb3904fde4e8e446e4a38e0ff0ce3ae": "images/B-herfst-aster.jpg", "e9416ba5110e5c42ce15e38459c28abd": "images/B-herfst-echinacea.jpg", "90773a770b550528a65cebdf2e7f8421": "images/B-herfst-rudbeckia.jpg", "f358f1dbba532ed4d0ada093a1ca83d1": "images/B-lente-aquilegia.jpg", "7c55658c2dd1e650d09ee30f72fb9a5e": "images/B-lente-myosotis.jpg", "2059759983fca75ae712cc2cdb43cfca": "images/B-lente-allium.jpg", "23080b6331bf9c7979e3241a6dbf78b2": "images/B-lente-salvia.jpg", "9348a50d89b1c29c28bc50e685fec8b2": "images/D-herfst-stipa.jpg", "77d784d40b494db03b8efdfdaa08c5a0": "images/B-zomer-geranium.jpg", "1f60e9314703430a19b990ae5141352a": "images/B-zomer-lonicera.jpg", "8dc1559111467a2d4308505bf45926f4": "images/B-zomer-nepeta.jpg", "93a5616f8d962e4662dd0fdefe22e3c3": "images/B-zomer-rosa.jpg", "646e5d54efd795e64c2349ebfc9ac4aa": "images/B-zomer-trachelospermum.jpg", "b23407e7b0f6044de1ff33c23f491390": "images/C-herfst-agastache.jpg", "5e3ac43c13fdd454dbdca8443f8773e9": "images/C-herfst-rudbeckia.jpg", "f9e56590f59a7585aa1c85e3b481152f": "images/C-herfst-sedum.jpg", "ef1b846991197ec6e2de97af50409be9": "images/C-herfst-vitis.jpg", "8af479b2fe4fcb7c03f4bf2467f64df3": "images/C-lente-allium.jpg", "964f0de5f9b3addb3082ea5ac2665ac9": "images/C-lente-iris.jpg", "b84042333bec7aab568bb12c69b8ef63": "images/C-lente-nepeta.jpg", "77b9e2ba4e797042d6a906c4a19c9ce2": "images/C-winter-pennisetum.jpg", "4b0b8b73eb6eff1f42de0340bdde80da": "images/C-zomer-echinacea.jpg", "9db1163e837db111b8a480483b906576": "images/C-zomer-salvia.jpg", "8470f794690db96a97948b4c40edae60": "images/D-herfst-verbena.jpg", "34072013266909e766299e7d46a9684d": "images/C-zomer-lavandula.jpg", "4a9f9b6dee57c3375fea0c4eebae6d10": "images/C-zomer-campsis.jpg", "6298555f9122da69ededbc8e33e7bc6e": "images/D-herfst-dipsacus.jpg", "13b4427e889d07fa0f8d137d0fb552ea": "images/D-lente-centaurea.jpg", "a9463ac4afd202528688a8c30ebd4c57": "images/D-lente-muscari.jpg", "b817be493cab2cd59f7b3379aad74c1d": "images/D-lente-phacelia.jpg", "512fa01f2424b75096eb8f57e3d30556": "images/D-zomer-knautia.jpg", "cc28e16255c725b16c0d1853b58a73c1": "images/D-zomer-echium.jpg", "03080a6a231d15cd050be92571f1cb8a": "images/D-zomer-verbascum.jpg", "33deddb52afac071fd103c852f7166c1": "images/S-herfst-anemone.jpg", "17f8a13f6ab09a8762126dd2828e5372": "images/S-winter-dryopteris.jpg", "fc3595b0fc9c5b89e6755b1f215fe215": "images/S-herfst-tricyrtis.jpg", "f510f4afb4f888993709a53a78eb50f6": "images/S-lente-hyacinthoides.jpg", "ee92cf218fbeff961e323982d5a6c85f": "images/S-lente-primula.jpg", "d36d3aaf8afd4cac921ece890c877011": "images/S-lente-pulmonaria.jpg", "35e59339ba32f8c2ee3fc1773d4d0a53": "images/S-winter-helleborus.jpg", "7785069a984a589edae96287a76e7c25": "images/S-winter-sarcococca.jpg", "35cae6117379c9e8ad0b5ad09eae30c6": "images/S-winter-vinca.jpg", "47a6eae472bea2706cac685fd102db06": "images/S-zomer-astilbe.jpg", "966d9731119c02c18e8ef74b127abdf0": "images/S-zomer-digitalis.jpg", "dfb00da5845279a7159c3f4277e75150": "images/S-zomer-hosta.jpg", "a2f09c8bc9cbe44b32e3a9d71baed2e9": "images/S-zomer-hydrangea.jpg", "79e202e3766259619ebe8d1cbaf417ec": "images/X-x-newdawn.jpg", "8540460a518d32d04b574cc04600b82c": "images/X-x-hedera.jpg", "10d4236e7dbb79eddc69f9686e4b4edf": "images/A-winter-carex.jpg", "60b1e93d8c60ab943b39c2f8b3007c93": "images/C-lente-amelanchier.jpg", "441bf35b6f133449369f5fac0eaf9d3f": "images/X-x-clematis.jpg", "f2fb8cf56791ed636c6bbddc722b7ee9": "images/B-zomer-periclymenum.jpg", "3358c07db31094aca1499dcea468f1ef": "images/B-lente-lunaria.jpg", "98c0a79189884f181f947865ba46ddac": "images/A-lente-cornus.jpg", "nieuw-liriope": "images/A-herfst-liriope.jpg"}};
 
-function showTab(id,el){
-  document.querySelectorAll('.content').forEach(c=>c.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  el.classList.add('active');
+function showTab(id,push){
+  const target=document.getElementById(id);
+  if(!target||!target.classList.contains('content'))id='overzicht';
+  document.querySelectorAll('.content').forEach(c=>c.classList.toggle('active',c.id===id));
+  let act=null;
+  document.querySelectorAll('.tab').forEach(t=>{const on=t.dataset.tab===id;t.classList.toggle('active',on);if(on)act=t});
+  const bar=document.getElementById('tabs');
+  if(act&&bar)bar.scrollTo({left:act.offsetLeft-(bar.clientWidth-act.offsetWidth)/2});
+  const hd=document.querySelector('header');const top=hd?hd.offsetHeight:0;if(window.scrollY>top)window.scrollTo(0,top);
+  if(push){try{history.replaceState(null,'','#'+id)}catch(e){}}
 }
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',e=>{e.preventDefault();showTab(t.dataset.tab,true)}));
+window.addEventListener('hashchange',()=>showTab(location.hash.slice(1)));
+if(location.hash)showTab(location.hash.slice(1));
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const src=id=>IMG.blobs[IMG.ids[id]];
+document.addEventListener('error',e=>{const t=e.target;if(t&&t.tagName==='IMG'&&t.dataset&&t.dataset.ph){t.classList.add('missing');const b=t.closest('.plant-icon-block');if(b)b.classList.add('nofoto')}},true);
 const anyId=(k,z)=>{if(IMG.ids[k])return k;const m=Object.keys(IMG.ids).filter(i=>i.endsWith('-'+k));return (z&&m.find(i=>i.startsWith(z+'-')))||m[0]};
 document.addEventListener('click',e=>{
+  if(e.target.closest('#lb')){document.getElementById('lb').classList.remove('on');return}
   const t=e.target.closest('[data-ph],[data-full]'); if(!t)return;
   const lb=document.getElementById('lb');
   const li=lb.querySelector('img'); li.classList.toggle('wide',!!t.dataset.full); li.src=t.dataset.full||src(t.dataset.ph);
@@ -359,41 +454,15 @@ document.addEventListener('click',e=>{
    type: b=bloei l=blad/structuur e=bes/zaad g=groenblijvend · vlag: u=klimplant t=boom */
 const SEAS=[['lente','🌱 Lente','sl'],['zomer','☀️ Zomer','sz'],['herfst','🍂 Herfst','sh'],['winter','❄️ Winter','sw']];
 const ICON={b:'🌸',l:'🍃',e:'🫘',g:'🌿'};
+/* levensduur: ⏳ korter dan 3 jaar, ⏱ kortlevend (±2–4 jaar); sleutel = geslachtsnaam (bron: tuinplan.md) */
+const LVG={"Centaurea": {"c": "⏳", "t": "eenjarig, jaarlijks herzaaien"}, "Digitalis": {"c": "⏳", "t": "tweejarig, laat uitzaaien"}, "Lunaria": {"c": "⏳", "t": "tweejarig, laat uitzaaien"}, "Verbascum": {"c": "⏳", "t": "tweejarig, laat uitzaaien"}, "Echium": {"c": "⏳", "t": "tweejarig, laat uitzaaien"}, "Dipsacus": {"c": "⏳", "t": "tweejarig, laat uitzaaien"}, "Myosotis": {"c": "⏳", "t": "tweejarig, laat uitzaaien"}, "Aquilegia": {"c": "⏱", "t": "kortlevend (±2–4 jaar), op klei vaak korter"}, "Knautia": {"c": "⏱", "t": "kortlevend (±2–4 jaar), op klei vaak korter"}, "Verbena": {"c": "⏱", "t": "kortlevend (±2–4 jaar), op klei vaak korter"}, "Agastache": {"c": "⏱", "t": "kortlevend (±2–4 jaar), op klei vaak korter"}, "Echinacea": {"c": "⏱", "t": "kortlevend (±2–4 jaar), op klei vaak korter"}};
+const lvl=g=>LVG[g]?`<span class="life" title="${esc(LVG[g].t)}">${LVG[g].c}</span>`:'';
 const ZONES={
-A:{cls:'halfzon',meta:'Half-zon',badge:['bn','Natuurlijk'],mt:'Half-zon · Natuurlijk',mc:['al','az','ah','aw'],zl:'zl-a',
-  soil:'30 cm mengsel: 50% lichte tuinaarde + 30% compost + 20% perliet. Verbetert doorlatendheid, houdt vocht vast.',
-  s:{lente:[['Pulmonaria','officinalis','','b','pulmonaria'],['Aquilegia','vulgaris','','b','aquilegia'],['Geranium','macrorrhizum','','b','geranium'],['Heuchera','','(blad)','l','heuchera'],['Cornus','florida','(boom: schutbladeren)','b','cornus','t']],
-     zomer:[['Heuchera','','(blad + bloei)','b','heuchera'],['Astrantia',"major 'Rubra'","of 'Sparkling Stars Red'",'b','astrantia'],['Geranium',"'Rozanne'",'','b','geranium'],['Digitalis','purpurea','','b','digitalis'],['Cornus','florida','(boom: blad)','l','','t']],
-     herfst:[['Anemone',"japonica 'Rubra' / 'Pamina'",'','b','anemone'],['Persicaria','amplexicaulis','','b','persicaria'],['Helenium','','','b','helenium'],['Heuchera','','(blad)','l','heuchera'],['Cornus','florida','(boom: herfstkleur + bessen)','e','','t']],
-     winter:[['Helleborus',"orientalis 'Double Ellen Red'",'','b','helleborus'],['Heuchera','','(groenblijvend)','g','heuchera'],['Carex','','(siergras)','l','carex'],['Cornus','florida','(boom: etagevertakking)','l','','t']]},
-  note:"<strong>🌳 Boom:</strong> <em>Cornus florida 'Rubra'</em> (Amerikaanse kornoelje), half-stam."},
-B:{cls:'halfzon',meta:'Half-zon · Klimplanten muur',badge:['bl','Landelijk'],mt:'Half-zon · Landelijk',mc:['bl2','bz','bh','bw'],zl:'zl-b',
-  soil:'60% potgrond/compost, 30% lichte klei, 10% organische mest. Muren zijn droog — extra compost essentieel.',
-  s:{lente:[['Myosotis','','(vergeet-mij-niet)','b','myosotis'],['Allium','hollandicum','','b','allium'],['Salvia','nemorosa','','b','salvia'],['Aquilegia',"'Rose Barlow'",'','b','aquilegia'],['Lunaria','annua','(judaspenning)','b','lunaria']],
-     zomer:[['Geranium',"'Rozanne'",'','b','geranium'],['Rosa',"'Lilly Rose Wonder'",'(struikroos)','b','rosa'],['Nepeta',"'Six Hills Giant'",'','b','nepeta'],['Lonicera','periclymenum','','b','periclymenum','u'],['Lonicera','heckrottii','','b','lonicera','u'],['Trachelospermum','','','b','trachelospermum','u']],
-     herfst:[['Echinacea','purpurea','','b','echinacea'],['Rudbeckia','fulgida','','b','rudbeckia'],['Aster','amellus','','b','aster']],
-     winter:[['Helleborus','','','b','helleborus'],['Stipa','','(siergras)','l','stipa'],['Trachelospermum','','(groen)','g','trachelospermum','u']]},
-  note:"<strong>🌿 Klimplanten muur:</strong> Rosa 'New Dawn', Lonicera periclymenum, Lonicera heckrottii, Trachelospermum jasminoides (geurig, semi-evergreen; tegen de beschutte woningmuur)."},
-C:{cls:'zon',meta:'Volle zon · Klimplanten',badge:['bl','Landelijk'],mt:'Volle zon · Landelijk',mc:['cl','cz','ch','cw'],zl:'zl-c',
-  soil:'40% scherp zand + 30% compost door kleibodem. Klimplanten minimaal 60 cm diep planten.',
-  s:{lente:[['Nepeta','','(kattenkruid)','b','nepeta'],['Allium','giganteum','','b','allium'],['Iris','germanica','','b','iris'],['Amelanchier','lamarckii','(boom: bloesem)','b','amelanchier','t']],
-     zomer:[['Lavandula','angustifolia','','b','lavandula'],['Salvia','officinalis','','b','salvia'],['Echinacea',"'Magnus'",'','b','echinacea'],['Verbena','bonariensis','','b','verbena'],['Campsis','radicans','','b','campsis','u'],['Amelanchier','lamarckii','(boom: bessen)','e','','t']],
-     herfst:[['Sedum',"'Herbstfreude'",'','b','sedum'],['Rudbeckia','','','b','rudbeckia'],['Agastache','','','b','agastache'],['Vitis','vinifera','(druiven)','e','vitis','u'],['Amelanchier','lamarckii','(boom: herfstkleur)','l','','t']],
-     winter:[['Pennisetum','','(siergras)','l','pennisetum'],['Echinacea','','(zaadhoofden)','e','echinacea'],['Amelanchier','lamarckii','(boom: silhouet)','l','','t']]},
-  note:"<strong>🌿 Klimplanten zone C:</strong> Campsis radicans (oranje trompetten), Vitis vinifera, Clematis 'Ville de Lyon'. Boom: <em>Amelanchier lamarckii</em>. Let op: de pergola vervalt, dus voor de klimmers is nog een steun nodig (muur, rankdraad of frame)."},
-D:{cls:'zon',meta:'Volle zon',badge:['bs','Jardin Sauvage'],mt:'Volle zon · Sauvage',mc:['dl','dz','dh','dw'],zl:'zl-d',
-  soil:'40% grof zand door klei. Geen extra mest — wilde planten bloeien beter in schrale, goed gedraineerde grond.',
-  s:{lente:[['Phacelia','tanacetifolia','','b','phacelia'],['Muscari','armeniacum','','b','muscari'],['Centaurea','cyanus','','b','centaurea']],
-     zomer:[['Verbascum','thapsus','','b','verbascum'],['Knautia','macedonica','','b','knautia'],['Echium','vulgare','','b','echium']],
-     herfst:[['Verbena','bonariensis','','b','verbena'],['Stipa','gigantea','','l','stipa'],['Dipsacus','fullonum','','e','dipsacus']],
-     winter:[['Dipsacus','','(zaadhoofden)','e','dipsacus'],['Pennisetum','','(siergras)','l','pennisetum']]}},
-S:{cls:'schaduw',meta:'Schaduw · Klimplanten muur',badge:['bs','Jardin Sauvage'],mt:'Schaduw · Sauvage',mc:['sl2','sz2','sh2','sw2'],zl:'zl-s',wide:true,
-  soil:'50% blad- of tuincompost toevoegen. Humusrijke, vochtige grond. Mulch jaarlijks met bladcompost. Geen drainage-zand.',
-  s:{lente:[['Primula','vulgaris','','b','primula'],['Pulmonaria','officinalis','','b','pulmonaria'],['Hyacinthoides','non-scripta','(wilde hyacint)','b','hyacinthoides'],['Dryopteris',"affinis 'Crispa'",'','l','dryopteris']],
-     zomer:[['Hosta','','(divers)','l','hosta'],['Astilbe',"'Fanal'",'','b','astilbe'],['Digitalis','purpurea','','b','digitalis'],['Dryopteris',"'Crispa'",'(blad)','l','dryopteris'],['Hydrangea','petiolaris','','b','hydrangea','u']],
-     herfst:[['Anemone','japonica','','b','anemone'],['Hosta','','(geel)','l','hosta'],['Tricyrtis','','','b','tricyrtis'],['Dryopteris','','(semi-evergreen)','l','dryopteris']],
-     winter:[['Helleborus','niger','','b','helleborus'],['Sarcococca','','(geur!)','b','sarcococca'],['Vinca','minor','(groen)','g','vinca'],['Dryopteris','','(semi-evergreen)','g','dryopteris']]},
-  note:"<strong>🌿 Klimplanten schaduwmuur:</strong> Hydrangea anomala petiolaris (bloeit in diepe schaduw), Hedera helix (klimop, klimmende vorm)."}
+A:{"cls": "halfzon", "meta": "Half-zon", "badge": ["bn", "Natuurlijk"], "mt": "Half-zon · Natuurlijk", "mc": ["al", "az", "ah", "aw"], "zl": "zl-a", "sun": "Halfschaduw: ±3–6 uur directe zon per dag (aanname, nog te meten). De esdoorn wordt verwijderd; daarna kan zone A meer zon krijgen, dus opnieuw meten.", "soil": "30 cm mengsel: 50% lichte tuinaarde + 30% compost + 20% perliet. Verbetert doorlatendheid, houdt vocht vast.", "s": {"lente": [["Aquilegia", "vulgaris", "", "b", "aquilegia"], ["Heuchera", "", "(blad)", "l", "heuchera"], ["Cornus", "florida", "(boom: schutbladeren)", "b", "cornus", "t"]], "zomer": [["Heuchera", "", "(blad + bloei)", "b", "heuchera"], ["Astrantia", "major 'Rubra'", "of 'Sparkling Stars Red'", "b", "astrantia"], ["Geranium", "'Rozanne'", "", "b", "geranium"], ["Digitalis", "purpurea", "", "b", "digitalis"], ["Cornus", "florida", "(boom: blad)", "l", "", "t"]], "herfst": [["Liriope", "muscari", "(leliegras)", "b", "liriope"], ["Heuchera", "", "(blad)", "l", "heuchera"], ["Cornus", "florida", "(boom: herfstkleur + bessen)", "e", "", "t"]], "winter": [["Helleborus", "orientalis", "(enkelbloemig)", "b", "helleborus"], ["Heuchera", "", "(groenblijvend)", "g", "heuchera"], ["Carex", "divulsa", "(siergras)", "l", "carex"], ["Liriope", "muscari", "(groenblijvend)", "g", "liriope"], ["Cornus", "florida", "(boom: etagevertakking)", "l", "", "t"]]}, "note": "<strong>🌳 Boom:</strong> <em>Cornus florida 'Rubra'</em> (Amerikaanse kornoelje), struikvorm (Directplant, geen halfstam).<br><strong>📍 Plantplek en mest:</strong> kornoelje op een eigen zure plantplek (geen kalk), compost of bladcompost in het plantgat, geen verse mest. Vaste planten op de halfschaduwplekken in het zone-A-mengsel (compost, geen extra mest). Astrantia wil vochtige grond; Digitalis en Aquilegia zonder mest, anders vallen ze om."},
+B:{"cls": "halfzon", "meta": "Half-zon · Klimplanten muur", "badge": ["bl", "Landelijk"], "mt": "Half-zon · Landelijk", "mc": ["bl2", "bz", "bh", "bw"], "zl": "zl-b", "sun": "Halfschaduw: ±3–6 uur directe zon per dag (aanname, nog te meten).", "soil": "60% potgrond/compost, 30% lichte klei, 10% organische mest. Muren zijn droog — extra compost essentieel.", "s": {"lente": [["Lunaria", "annua", "(judaspenning)", "b", "lunaria"], ["Allium", "hollandicum", "", "b", "allium"]], "zomer": [["Geranium", "'Rozanne'", "", "b", "geranium"], ["Nepeta", "'Six Hills Giant'", "", "b", "nepeta"], ["Rosa", "'New Dawn'", "(klimroos)", "b", "newdawn", "u"], ["Lonicera", "periclymenum", "", "b", "periclymenum", "u"], ["Trachelospermum", "", "", "b", "trachelospermum", "u"]], "herfst": [["Rudbeckia", "fulgida", "", "b", "rudbeckia"]], "winter": [["Helleborus", "orientalis", "(enkelbloemig)", "b", "helleborus"], ["Carex", "divulsa", "(siergras)", "l", "carex"], ["Trachelospermum", "", "(groen)", "g", "trachelospermum", "u"]]}, "note": "<strong>🌿 Klimplanten muur:</strong> Rosa 'New Dawn', Lonicera periclymenum, Trachelospermum jasminoides (geurig, semi-evergreen; tegen de beschutte woningmuur).<br><strong>📍 Plantplek en mest:</strong> de enige zone met organische mest (10% in het mengsel; de muurgrond is droog en arm). Klimplanten 30–40 cm van de muur. Klimroos en kamperfoelie: rijke grond en koele, vochtige wortels (mulch); de roos krijgt extra organische mest in het plantgat, niet waar eerder een roos stond. Trachelospermum tegen de beschutte, zonnigste muur, liever geen extra mest. Nepeta, Geranium en Rudbeckia voorin de rand zonder extra mest. Salvia nemorosa staat niet in B (alleen in C)."},
+C:{"cls": "halfzon", "meta": "Half-zon · Klimplanten", "badge": ["bl", "Landelijk"], "mt": "Half-zon · Landelijk", "mc": ["cl", "cz", "ch", "cw"], "zl": "zl-c", "sun": "Halfschaduw: ±3–6 uur directe zon per dag (aanname, nog te meten; was volle zon, aangepast). De zonnigste plek is midden in de tuin: daar komen Aster amellus en Salvia nemorosa.", "soil": "40% scherp zand + 30% compost door kleibodem. Klimplanten minimaal 60 cm diep planten.", "s": {"lente": [["Nepeta", "", "(kattenkruid)", "b", "nepeta"], ["Amelanchier", "lamarckii", "(boom: bloesem)", "b", "amelanchier", "t"]], "zomer": [["Echinacea", "'Magnus'", "", "b", "echinacea"], ["Salvia", "nemorosa", "(steppesalie)", "b", "B-lente-salvia"], ["Amelanchier", "lamarckii", "(boom: bessen)", "e", "", "t"]], "herfst": [["Sedum", "'Herbstfreude'", "", "b", "sedum"], ["Rudbeckia", "", "", "b", "rudbeckia"], ["Aster", "amellus", "(Bergaster)", "b", "aster"], ["Amelanchier", "lamarckii", "(boom: herfstkleur)", "l", "", "t"]], "winter": [["Echinacea", "", "(zaadhoofden)", "e", "echinacea"], ["Amelanchier", "lamarckii", "(boom: silhouet)", "l", "", "t"]]}, "note": "<strong>🌿 Klimplanten zone C:</strong> Clematis 'Ville de Lyon'. Boom: <em>Amelanchier lamarckii</em>. De pergola vervalt. Besloten: de klimmers krijgen rankdraden of een rooster op de muur (zie Planning, stap 9).<br><strong>📍 Plantplek en mest:</strong> <em>Aster amellus</em> en <em>Salvia nemorosa</em> komen op de zonnigste plek midden in de tuin (de eigenaar zorgt daarvoor), op goed gedraineerde grond met een iets verhoogde plantkuil, <strong>zonder mest</strong> en zonder dikke compostlaag. Clematis: plantgat minimaal 60 cm diep, wat compost in de plantkuil, geen verse mest; met de voet in de schaduw. Vitis staat niet meer in C maar in D."},
+D:{"cls": "zon", "meta": "Volle zon", "badge": ["bs", "Jardin Sauvage"], "mt": "Volle zon · Sauvage", "mc": ["dl", "dz", "dh", "dw"], "zl": "zl-d", "sun": "Volle zon: ±6 uur of meer directe zon per dag (aanname, nog te meten).", "soil": "40% grof zand door klei. Geen extra mest — wilde planten bloeien beter in schrale, goed gedraineerde grond.", "s": {"lente": [["Centaurea", "cyanus", "", "b", "centaurea"], ["Myosotis", "", "(vergeet-mij-niet)", "b", "myosotis"]], "zomer": [["Lavandula", "angustifolia", "", "b", "lavandula"], ["Knautia", "macedonica", "", "b", "knautia"], ["Echium", "vulgare", "", "b", "echium"], ["Agastache", "", "", "b", "agastache"]], "herfst": [["Verbena", "bonariensis", "", "b", "verbena"], ["Vitis", "vinifera", "(druiven, tegen de schutting)", "e", "vitis", "u"], ["Pennisetum", "alopecuroides 'Little Bunny'", "(pluimen)", "b", "pennisetum"]], "winter": [["Pennisetum", "", "(siergras)", "l", "pennisetum"], ["Vitis", "", "(kale ranken)", "l", "vitis", "u"]]}, "note": "<strong>📍 Plantplek en mest:</strong> <strong>geen mest en geen compostmulch</strong>: schrale, goed gedraineerde grond. Korenbloem direct zaaien op kale grond in de volle zon. <em>Vitis vinifera</em> staat tegen de schutting (de schutting staat op het zuiden, dus ideaal), vrij gedraineerd en beschut; als enige uitzondering een schep rijpe compost in het plantgat, de eerste winter 5 cm mulch (in het voorjaar bij de stam weghalen) en rankdraden op de schutting. Vergeet-mij-nietje zaaien aan de voet van de druif (wil wat vochtiger en lichter beschaduwd; valt hij tegen, dan zone B)."},
+S:{"cls": "schaduw", "meta": "Schaduw · Klimplanten muur", "badge": ["bs", "Jardin Sauvage"], "mt": "Schaduw · Sauvage", "mc": ["sl2", "sz2", "sh2", "sw2"], "zl": "zl-s", "wide": true, "sun": "Schaduw: minder dan ±3 uur directe zon per dag (bevestigd 18 oktober).", "soil": "50% blad- of tuincompost toevoegen. Humusrijke, vochtige grond. Mulch jaarlijks met bladcompost. Geen drainage-zand.", "s": {"lente": [["Primula", "vulgaris", "", "b", "primula"], ["Pulmonaria", "officinalis", "", "b", "pulmonaria"], ["Hyacinthoides", "non-scripta", "(wilde hyacint)", "b", "hyacinthoides"], ["Dryopteris", "affinis 'Crispa'", "", "l", "dryopteris"]], "zomer": [["Astilbe", "'Fanal'", "", "b", "astilbe"], ["Dryopteris", "'Crispa'", "(blad)", "l", "dryopteris"], ["Hydrangea", "petiolaris", "", "b", "hydrangea", "u"]], "herfst": [["Hedera", "helix", "(late bloei)", "b", "hedera", "u"], ["Dryopteris", "", "(semi-evergreen)", "l", "dryopteris"]], "winter": [["Helleborus", "niger", "", "b", "helleborus"], ["Sarcococca", "", "(geur!)", "b", "sarcococca"], ["Dryopteris", "", "(semi-evergreen)", "g", "dryopteris"]]}, "note": "<strong>🌿 Klimplanten schaduwmuur:</strong> Hydrangea anomala petiolaris (bloeit in diepe schaduw), Hedera helix (klimop, klimmende vorm).<br><strong>📍 Plantplek en mest:</strong> humusrijke, vochtige grond met 50% bladcompost; geen zand en geen kunstmest, jaarlijks mulchen met bladcompost. Varens, Astilbe en Primula op de vochtigste plekken, niet tegen de droge muurvoet. Klimhortensia en klimop 30–40 cm van de muur. Sarcococca en Helleborus niger bij het pad, voor de wintergeur."}
 };
 const PH=(z,s,k)=>{if(!k)return null;const e=`${z}-${s}-${k}`;return IMG.ids[e]?e:(anyId(k,z)||null)};
 const cap=(z,s,p,id)=>`${p[0]}${p[1]?' '+p[1]:''}${p[2]?' '+p[2]:''} — zone ${z}, ${s}`+(id&&id!==`${z}-${s}-${p[4]}`?` (foto van dezelfde soort, uit zone ${id[0]} · ${id.split('-')[1]})`:'');
@@ -403,12 +472,12 @@ document.getElementById('zone-grid').innerHTML=Object.entries(ZONES).map(([z,d])
   const seas=SEAS.map(([s,label,c])=>`<div class="season-block ${c}"><div class="sn">${label}</div><ul>`+d.s[s].map(p=>{
     const id=PH(z,s,p[4]);
     const pre=p[5]==='u'?'↑ ':p[5]==='t'?'🌳 ':'';
-    const txt=`<span>${pre}${esc(p[0])}${p[1]?' <em>'+esc(p[1])+'</em>':''}${p[2]?' <span class="x">'+esc(p[2])+'</span>':''}</span>`;
+    const txt=`<span>${pre}${esc(p[0])}${p[1]?' <em>'+esc(p[1])+'</em>':''}${p[2]?' <span class="x">'+esc(p[2])+'</span>':''}${lvl(p[0])}</span>`;
     return id?`<li><img class="thumb" src="${src(id)}" alt="${esc(p[0])}" data-ph="${id}" data-cap="${esc(cap(z,s,p,id))}">${txt}</li>`:`<li class="nophoto">${txt}</li>`;
   }).join('')+'</ul></div>').join('');
   return `<div class="zone-card ${d.cls}"${d.wide?' style="grid-column:1/-1"':''}>
     <div class="zone-header"><div class="zone-letter">${z}</div><div class="zone-title"><h3>Zone ${z}</h3><div class="meta">${d.meta}</div></div><span class="tbadge ${d.badge[0]}">${d.badge[1]}</span></div>
-    <div class="zone-body"><div class="soil-box"><strong>🪱 Grondsoort</strong>${d.soil}</div><div class="season-grid">${seas}</div>${d.note?`<div class="knote">${d.note}</div>`:''}</div></div>`;
+    <div class="zone-body"><div class="soil-box"><strong>☀️ Zon</strong>${d.sun}</div><div class="soil-box" style="margin-top:.4rem"><strong>🪱 Grondsoort</strong>${d.soil}</div><div class="season-grid">${seas}</div>${d.note?`<div class="knote">${d.note}</div>`:''}</div></div>`;
 }).join('');
 
 /* Seizoensindrukken */
@@ -418,111 +487,85 @@ document.getElementById('season-matrix').innerHTML='<div></div>'+
   return `<div class="ic ${d.mc[i]}"><div class="ic-bg"></div><div class="ic-inner"><div class="ic-title"><span class="ic-s">${['🌱 Lente','☀️ Zomer','🍂 Herfst','❄️ Winter'][i]} · </span>${d.mt}</div><ul class="ic-plants">`+d.s[s].map(p=>{
     const id=PH(z,s,p[4]);
     const pre=p[5]==='u'?'↑ ':p[5]==='t'?'🌳 ':'';
-    const txt=`<span>${pre}<span class="pnl">${esc(p[0])}</span>${p[1]?' <span class="pn">'+esc(p[1])+'</span>':''}${p[2]?' '+esc(p[2]):''}</span>`;
+    const txt=`<span>${pre}<span class="pnl">${esc(p[0])}</span>${p[1]?' <span class="pn">'+esc(p[1])+'</span>':''}${p[2]?' '+esc(p[2]):''}${lvl(p[0])}</span>`;
     return `<li${id?'':' class="nophoto"'}>${id?`<img class="thumb-s" src="${src(id)}" alt="${esc(p[0])}" data-ph="${id}" data-cap="${esc(cap(z,s,p,id))}">`:''}<span class="st">${ICON[p[3]]}</span>${txt}</li>`;
   }).join('')+'</ul></div></div>';
  }).join('')).join('');
 
 /* Jaarkalender — B bloei · L blad · E bes · Z zaad · W winter · - leeg (bron: tuinplan.md, correcties zie opmerkingen) */
 const CAL=[
-['Helleborus (A/B/S)','BBBLLLLLLLLB'],
-['Sarcococca (S)','BBLLLLLLLEEB'],
-['Heuchera (A)','LLLLLBBLLLLL'],
-['Amelanchier boom (C)','WWWBLEELLLWW'],
-['Cornus florida boom (A)','WWWBBLLLEEWW'],
-['Trachelospermum (B)','LLLLLBBLLLLL'],
-['Lonicera periclymenum (B)','---LLBBBEE--'],
-['Lonicera heckrottii (B)','---LBBBBEE--'],
-['Rosa klimroos (B)','---LBBBBEEE-'],
-['Campsis radicans (C)','-----LBBBZ--'],
-['Lavandula (C)','----LBBBL---'],
-['Echinacea (B/C)','ZZZ---BBBZZZ'],
-['Verbascum (D)','-----BBZZZ--'],
-['Anemone japonica (A/S)','------LBBB--'],
-['Dryopteris \'Crispa\' (S)','LLLLLLLLLLLL'],
-['H. petiolaris (S)','---LLBBLZZ--'],
-['Grassen (B/C/D)','WWLLLBBBZZWW']
+["Helleborus (A/B/S)", "BBBLLLLLLLLB"],
+["Sarcococca (S)", "BBLLLLLLLEEB"],
+["Heuchera (A)", "LLLLLBBLLLLL"],
+["Amelanchier boom (C)", "WWWBLEELLLWW"],
+["Cornus florida boom (A)", "WWWBBLLLEEWW"],
+["Trachelospermum (B)", "LLLLLBBLLLLL"],
+["Lonicera periclymenum (B)", "---LLBBBEE--"],
+["Rosa klimroos (B)", "---LBBBBEEE-"],
+["Lavandula (D)", "----LBBBL---"],
+["Echinacea (C)", "ZZZ---BBBZZZ"],
+["Dryopteris 'Crispa' (S)", "LLLLLLLLLLLL"],
+["H. petiolaris (S)", "---LLBBLZZ--"],
+["Grassen (A/B/D)", "WWLLLBBBZZWW"],
+["Liriope muscari (A)", "LLLLLLLBBBLL"]
 ];
 const CC={B:'bloei',L:'blad',E:'bes',Z:'zaad',W:'win','-':'emp'};
 document.getElementById('kal').innerHTML='<thead><tr><th>Plant / Zone</th>'+['Jan','Feb','Mrt','Apr','Mei','Jun','Jul','Aug','Sep','Okt','Nov','Dec'].map(m=>`<th>${m}</th>`).join('')+'</tr></thead><tbody>'+
- CAL.map(([n,r])=>`<tr><td>${esc(n)}</td>`+[...r].map(c=>`<td><span class="dot ${CC[c]}"></span></td>`).join('')+'</tr>').join('')+'</tbody>';
+ CAL.map(([n,r])=>`<tr><td>${esc(n)}${lvl(n.split(' ')[0])}</td>`+[...r].map(c=>`<td><span class="dot ${CC[c]}"></span></td>`).join('')+'</tr>').join('')+'</tbody>';
 
 
 /* Onderhoudskalender — spec: letter:maanden (S snoeien, P planten/zaaien, D delen, V uitgebloeid verwijderen) */
 const OND=[
-["A","Amerikaanse kornoelje","Cornus florida 'Rubra'",'S:2 P:10-11',"Nauwelijks snoeien: alleen dode of kruisende takken. Eerste jaren water geven."],
-["A","Longkruid","Pulmonaria officinalis",'S:5 D:9',"Oude bladeren na de bloei wegknippen voor vers blad."],
-["A","Akelei","Aquilegia vulgaris",'V:6 P:3,9',"Laat enkele zaaddozen staan: zaait zichzelf uit."],
-["A","Ooievaarsbek","Geranium macrorrhizum",'S:3 D:9-10',"Oude bladeren in het voorjaar verwijderen."],
-["A","Purperklokje","Heuchera",'S:3 D:4,9 P:4-5',"Verlepte bladeren verwijderen; elke 3–4 jaar delen."],
-["A","Groot sterrenscherm","Astrantia major",'S:3,7 D:3',"Terugknippen na de bloei geeft een tweede bloei."],
-["A","Ooievaarsbek 'Rozanne'","Geranium 'Rozanne'",'S:3,7 D:3',"Na de eerste bloei terugknippen voor nabloei."],
-["A","Vingerhoedskruid","Digitalis purpurea",'P:6-7',"Tweejarig: zaai in juni–juli, laat de zaaddozen staan."],
-["A","Japanse anemoon","Anemone japonica",'S:3 D:3-4',"Oude stengels in het voorjaar terugknippen."],
-["A","Bergduizendknoop","Persicaria amplexicaulis",'S:3 D:3',"Terugknippen in het voorjaar."],
-["A","Zonnekruid","Helenium",'S:3,5 D:3',"Half mei terugknippen geeft compactere planten; elke 3 jaar delen."],
-["A","Kerstroos (oosterse)","Helleborus orientalis",'S:1-2 P:9-10',"Oude bladeren vóór de bloei verwijderen."],
-["A","Zegge","Carex",'S:3 D:4',"Uitkammen of terugknippen in het voorjaar."],
-["B","Klimroos","Rosa 'New Dawn'",'S:2-3 V:7-9 P:11,3',"Hoofdsnoei feb–mrt: zijtakken terug tot 2–3 ogen."],
-["B","Struikroos","Rosa 'Lilly Rose Wonder'",'S:3 V:6-9',"In het voorjaar terugsnoeien tot ongeveer ⅓."],
-["B","Kamperfoelie","Lonicera periclymenum ↑",'S:8',"Snoeien na de bloei."],
-["B","Goud-kamperfoelie","Lonicera heckrottii ↑",'S:8-9',"Snoeien na de bloei."],
-["B","Sterjasmijn","Trachelospermum jasminoides ↑",'S:4 P:4-5',"Lichte snoei in het voorjaar; beschut tegen de woningmuur."],
-["B","Judaspenning","Lunaria annua",'P:6-7',"Tweejarig: laat de zaaddoosjes staan, zaait zichzelf uit."],
-["B","Vergeet-mij-nietje","Myosotis",'P:6 S:7',"Na het uitzaaien opruimen."],
-["B","Sierui","Allium hollandicum",'P:9-10',"Bollen poten; blad laten afsterven."],
-["B","Bossalie","Salvia nemorosa",'S:3,7 D:4',"Na de bloei terugknippen voor tweede bloei."],
-["B","Kattenkruid","Nepeta 'Six Hills Giant'",'S:3,7 D:3',"Na de eerste bloei terugknippen."],
-["B","Zonnehoed","Echinacea purpurea",'S:3 D:3-4 P:4-5',"Zaadhoofden laten staan tot maart."],
-["B","Rudbeckia","Rudbeckia fulgida",'S:3 D:3',"Terugknippen in het voorjaar."],
-["B","Bergaster","Aster amellus",'S:3 D:3-4',"Terugknippen in het voorjaar."],
-["B","Vedergras","Stipa",'S:3 D:4-5',"Uitkammen of terugknippen in maart."],
-["B","Kerstroos","Helleborus",'S:1-2 P:9-10',"Oude bladeren vóór de bloei verwijderen."],
-["C","Krentenboom","Amelanchier lamarckii",'S:2 P:10-11',"Alleen bijsnoeien, in de winter of vlak na de bloei."],
-["C","Kattenkruid","Nepeta",'S:3,7 D:3',"Na de eerste bloei terugknippen."],
-["C","Reuzensierui","Allium giganteum",'P:9-10',"Bollen poten."],
-["C","Baardiris","Iris germanica",'V:6 D:7-8 S:10',"Na de bloei delen; bladtoppen in oktober inkorten."],
-["C","Lavendel","Lavandula angustifolia",'S:4,8 P:4-5',"Snoeien na de bloei (aug), nooit in het oude hout."],
-["C","Salie","Salvia officinalis",'S:4 P:4-5',"Voorjaarssnoei, niet in het oude hout."],
-["C","Zonnehoed 'Magnus'","Echinacea 'Magnus'",'S:3 D:3-4 P:4-5',"Zaadhoofden laten staan tot maart."],
-["C","IJzerhard","Verbena bonariensis",'S:3-4 P:4-5',"Zaait zichzelf uit."],
-["C","Trompetbloem","Campsis radicans ↑",'S:2-3 P:4-5',"Terugsnoeien tot 2–3 knoppen; bloeit pas na 2–3 jaar goed."],
-["C","Druif","Vitis vinifera ↑",'S:12,1,7 P:3-4',"Wintersnoei dec–jan (niet in maart: bloedt); zomer bladschoten inkorten."],
-["C","Clematis","Clematis 'Ville de Lyon' ↑",'S:2-3 P:4-5',"Snoeigroep 3: terug tot ±30 cm."],
-["C","Hemelsleutel","Sedum 'Herbstfreude'",'S:3 D:4',"Oude stengels in het voorjaar terugknippen."],
-["C","Rudbeckia","Rudbeckia",'S:3 D:3',"Terugknippen in het voorjaar."],
-["C","Anijsnetel","Agastache",'S:3 P:5',"Terugknippen in het voorjaar."],
-["C","Lampenpoetsersgras","Pennisetum",'S:3 D:5',"Uitkammen of terugknippen in maart."],
-["D","Bijenvoer","Phacelia tanacetifolia",'P:3-4,9',"Zaaien in het voorjaar of eind zomer."],
-["D","Druifhyacint","Muscari armeniacum",'P:9-10',"Bollen poten."],
-["D","Korenbloem","Centaurea cyanus",'P:3-4,9',"Zaaien in het voorjaar of in september."],
-["D","Koningskaars","Verbascum thapsus",'P:5-6',"Tweejarig: zaai in mei–juni, laat zaaien."],
-["D","Knautia","Knautia macedonica",'S:3,8 D:3',"Terugknippen na de bloei voor nabloei."],
-["D","Slangenkruid","Echium vulgare",'P:5-6',"Tweejarig: zaai in mei–juni."],
-["D","IJzerhard","Verbena bonariensis",'S:3-4 P:4-5',"Zaait zichzelf uit."],
-["D","Gouden haver","Stipa gigantea",'S:3 D:4',"Uitkammen in het voorjaar."],
-["D","Kaardenbol","Dipsacus fullonum",'P:4-5 S:3',"Tweejarig; zaadhoofden laten staan tot maart."],
-["D","Lampenpoetsersgras","Pennisetum",'S:3 D:5',"Uitkammen of terugknippen in maart."],
-["S","Stengelloze sleutelbloem","Primula vulgaris",'D:5-6 P:9',"Na de bloei delen."],
-["S","Longkruid","Pulmonaria officinalis",'S:5 D:9',"Oude bladeren na de bloei wegknippen."],
-["S","Wilde hyacint","Hyacinthoides non-scripta",'P:9-10',"Bollen poten."],
-["S","Geschubde mannetjesvaren","Dryopteris affinis 'Crispa'",'S:3 P:3-4',"Oude bladeren eind winter verwijderen."],
-["S","Hartlelie","Hosta",'S:11 D:3-4',"Verwelkte bladeren in november opruimen; in het voorjaar delen."],
-["S","Pluimspirea","Astilbe 'Fanal'",'S:3 D:3',"Oude pluimen in het voorjaar verwijderen."],
-["S","Vingerhoedskruid","Digitalis purpurea",'P:6-7',"Tweejarig: zaai in juni–juli."],
-["S","Klimhortensia","Hydrangea petiolaris ↑",'S:7-8 P:3-4',"Alleen licht snoeien na de bloei."],
-["S","Japanse anemoon","Anemone japonica",'S:3 D:3-4',"Terugknippen in het voorjaar."],
-["S","Paddenlelie","Tricyrtis",'S:3 D:3',"Terugknippen in het voorjaar."],
-["S","Kerstroos","Helleborus niger",'S:1-2 P:9-10',"Oude bladeren vóór de bloei verwijderen."],
-["S","Kerstgeurstruik","Sarcococca",'S:3-4 P:3-4',"Licht snoeien na de bloei."],
-["S","Kleine maagdenpalm","Vinca minor",'S:3 D:4',"Terugknippen in het voorjaar."],
-["S","Klimop","Hedera helix ↑",'S:2,9',"Snoeien buiten het broedseizoen (niet mrt–aug)."]
+["A", "Amerikaanse kornoelje", "Cornus florida 'Rubra'", "S:2 P:3-4,11-12", "Nauwelijks snoeien: alleen dode of kruisende takken. Geplant in november 2026 op een zure plantplek. Eerste jaren water geven. pH meten in voorjaar en najaar."],
+["A", "Akelei", "Aquilegia vulgaris", "V:6 P:3,9", "Laat enkele zaaddozen staan: zaait zichzelf uit."],
+["A", "Purperklokje", "Heuchera", "S:3 D:4,9 P:4-5", "Verlepte bladeren verwijderen; elke 3–4 jaar delen."],
+["A", "Groot sterrenscherm", "Astrantia major", "S:3,7 D:3", "Terugknippen na de bloei geeft een tweede bloei."],
+["A", "Ooievaarsbek 'Rozanne'", "Geranium 'Rozanne'", "S:3,7 D:3", "Na de eerste bloei terugknippen voor nabloei."],
+["A", "Vingerhoedskruid", "Digitalis purpurea", "P:6-7", "Tweejarig: zaai in juni–juli, laat de zaaddozen staan."],
+["A", "Kerstroos (oosterse)", "Helleborus orientalis", "S:1-2 P:9-10", "Oude bladeren vóór de bloei verwijderen."],
+["A", "Bermzegge", "Carex divulsa", "S:3 D:4", "Uitkammen of terugknippen in het voorjaar."],
+["A", "Leliegras", "Liriope muscari", "S:3 D:4", "Oud blad in het voorjaar terugknippen; delen in het voorjaar."],
+["B", "Klimroos", "Rosa 'New Dawn'", "S:2-3 V:7-9 P:11,3", "Hoofdsnoei feb–mrt: zijtakken terug tot 2–3 ogen."],
+["B", "Kamperfoelie", "Lonicera periclymenum ↑", "S:8", "Snoeien na de bloei."],
+["B", "Sterjasmijn", "Trachelospermum jasminoides ↑", "S:4 P:4-5", "Lichte snoei in het voorjaar; beschut tegen de woningmuur."],
+["B", "Judaspenning", "Lunaria annua", "P:6-7", "Tweejarig: zaai in juni–juli en laat de zaaddozen (zilveren ‘penningen’) staan voor sierwaarde in de winter; zaait zichzelf uit."],
+["B", "Sierui", "Allium hollandicum", "P:9-10", "Bollen poten; blad laten afsterven."],
+["B", "Kattenkruid", "Nepeta 'Six Hills Giant'", "S:3,7 D:3", "Na de eerste bloei terugknippen."],
+["B", "Rudbeckia", "Rudbeckia fulgida", "S:3 D:3", "Terugknippen in het voorjaar."],
+["B", "Kerstroos", "Helleborus", "S:1-2 P:9-10", "Oude bladeren vóór de bloei verwijderen."],
+["B", "Bermzegge", "Carex divulsa", "S:3 D:4", "Uitkammen of terugknippen in het voorjaar."],
+["C", "Krentenboom", "Amelanchier lamarckii", "S:2 P:3-4,11-12", "Alleen bijsnoeien, in de winter of vlak na de bloei. Planten half nov–eind apr (kluitboom)."],
+["C", "Kattenkruid", "Nepeta", "S:3,7 D:3", "Na de eerste bloei terugknippen."],
+["C", "Zonnehoed 'Magnus'", "Echinacea 'Magnus'", "S:3 D:3-4 P:4-5", "Zaadhoofden laten staan tot maart."],
+["C", "Steppesalie", "Salvia nemorosa", "S:3,7", "Na de eerste bloei (juli) terugknippen voor nabloei; oude stengels in het voorjaar. Zonnige plek midden in de tuin, geen mest."],
+["C", "Bergaster", "Aster amellus", "S:3 D:3-4 P:4-5", "Oude stengels in het voorjaar terugknippen; om de 3–4 jaar delen. Zonnige plek midden in de tuin, geen mest."],
+["C", "Clematis", "Clematis 'Ville de Lyon' ↑", "S:2-3 P:4-5", "Snoeigroep 3: terug tot ±30 cm."],
+["C", "Hemelsleutel", "Sedum 'Herbstfreude'", "S:3 D:4", "Oude stengels in het voorjaar terugknippen."],
+["C", "Rudbeckia", "Rudbeckia", "S:3 D:3", "Terugknippen in het voorjaar."],
+["D", "Korenbloem", "Centaurea cyanus", "P:3-4,9", "Zaaien in het voorjaar of in september."],
+["D", "Knautia", "Knautia macedonica", "S:3,8 D:3", "Terugknippen na de bloei voor nabloei."],
+["D", "Slangenkruid", "Echium vulgare", "P:5-6", "Tweejarig: zaai in mei–juni."],
+["D", "IJzerhard", "Verbena bonariensis", "S:3-4 P:4-5", "Zaait zichzelf uit."],
+["D", "Lampenpoetsersgras", "Pennisetum alopecuroides 'Little Bunny'", "S:3 D:5", "Uitkammen of terugknippen in maart."],
+["D", "Lavendel", "Lavandula angustifolia", "S:4,8 P:4-5", "Snoeien na de bloei (aug), nooit in het oude hout."],
+["D", "Anijsnetel", "Agastache", "S:3 P:5", "Terugknippen in het voorjaar."],
+["D", "Druif", "Vitis vinifera ↑", "S:12,1,7 P:3-4", "Tegen de schutting. Wintersnoei dec–jan (niet in maart: bloedt); zomer bladschoten inkorten. Eerste winter 5 cm mulch, in het voorjaar bij de stam weghalen. Rankdraden op de schutting."],
+["D", "Vergeet-mij-nietje", "Myosotis", "P:3,6 S:7", "Zaaien aan de voet van de druif; na het uitzaaien opruimen. Wil wat vochtiger grond en lichte schaduw; valt hij tegen, dan zone B."],
+["S", "Stengelloze sleutelbloem", "Primula vulgaris", "D:5-6 P:9", "Na de bloei delen."],
+["S", "Longkruid", "Pulmonaria officinalis", "S:5 D:9", "Oude bladeren na de bloei wegknippen."],
+["S", "Wilde hyacint", "Hyacinthoides non-scripta", "P:9-10", "Bollen poten."],
+["S", "Geschubde mannetjesvaren", "Dryopteris affinis 'Crispa'", "S:3 P:3-4", "Oude bladeren eind winter verwijderen."],
+["S", "Pluimspirea", "Astilbe 'Fanal'", "S:3 D:3", "Oude pluimen in het voorjaar verwijderen."],
+["S", "Klimhortensia", "Hydrangea petiolaris ↑", "S:7-8 P:3-4", "Alleen licht snoeien na de bloei."],
+["S", "Kerstroos", "Helleborus niger", "S:1-2 P:9-10", "Oude bladeren vóór de bloei verwijderen."],
+["S", "Kerstgeurstruik", "Sarcococca", "S:3-4 P:3-4", "Licht snoeien na de bloei."],
+["S", "Klimop", "Hedera helix ↑", "S:2,9", "Snoeien buiten het broedseizoen (niet mrt–aug)."]
 ];
 const OI={S:'✂️',P:'🌱',D:'🪴',V:'🥀'};
 const OT={S:'Snoeien / terugknippen',P:'Planten / zaaien',D:'Delen / verplanten',V:'Uitgebloeide bloemen verwijderen'};
 const MN=['Jan','Feb','Mrt','Apr','Mei','Jun','Jul','Aug','Sep','Okt','Nov','Dec'];
 const MF=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
-const ZN={A:'Zone A — Half-zon · Natuurlijk',B:'Zone B — Half-zon · Landelijk',C:'Zone C — Volle zon · Landelijk',D:'Zone D — Volle zon · Sauvage',S:'Zone S — Schaduw · Sauvage'};
+const ZN={A:'Zone A — Half-zon · Natuurlijk',B:'Zone B — Half-zon · Landelijk',C:'Zone C — Half-zon · Landelijk',D:'Zone D — Volle zon · Sauvage',S:'Zone S — Schaduw · Sauvage'};
 function parseOnd(spec){const m=Array.from({length:12},()=>[]);spec.split(' ').forEach(tok=>{const[l,ms]=tok.split(':');ms.split(',').forEach(r=>{const[a,b]=r.split('-').map(Number);for(let i=a;i<=(b||a);i++)m[i-1].push(l)})});return m}
 const ONDP=OND.map(r=>({z:r[0],nl:r[1],lat:r[2],note:r[4],m:parseOnd(r[3])}));
 const now=new Date().getMonth();
@@ -542,7 +585,7 @@ function renderOnd(){
     let n=0;const groups=Object.keys(OI).filter(k=>OS.t==='*'||k===OS.t).map(k=>{
       const items=rows.filter(r=>r.m[OS.m].includes(k));n+=items.length;
       if(!items.length)return'';
-      return `<div class="ond-group"><h4>${OI[k]} ${OT[k]} (${items.length})</h4>`+items.map(r=>`<div class="ond-item"><div>${badge(r.z)}</div><div><b>${esc(r.nl)}</b> <i>${esc(r.lat)}</i><small>${esc(r.note)}</small></div></div>`).join('')+'</div>';
+      return `<div class="ond-group"><h4>${OI[k]} ${OT[k]} (${items.length})</h4>`+items.map(r=>`<div class="ond-item"><div>${badge(r.z)}</div><div><b>${esc(r.nl)}</b>${lvl(r.lat.split(' ')[0])} <i>${esc(r.lat)}</i><small>${esc(r.note)}</small></div></div>`).join('')+'</div>';
     }).join('');
     out.innerHTML=`<div class="ond-head"><h3>Te doen in ${MF[OS.m]}${OS.m===now?' (nu)':''}</h3><span>${n} taken</span></div>`+(groups||'<div class="ond-empty">Geen taken gevonden met deze filters.</div>');
   }else{
@@ -550,7 +593,7 @@ function renderOnd(){
     let last='';
     out.innerHTML=shown.length?`<div class="kal-wrap"><table class="kal ond"><thead><tr><th>Plant</th>${MN.map((m,i)=>`<th class="${i===now?'cur':''}" data-m="${i}">${m}</th>`).join('')}<th style="text-align:left">Toelichting</th></tr></thead><tbody>`+
     shown.map(r=>{let h='';if(r.z!==last){last=r.z;h=`<tr><td colspan="14" style="background:var(--parchment);color:var(--moss);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.68rem">${ZN[r.z]}</td></tr>`}
-      return h+`<tr><td>${esc(r.nl)}<br><i style="font-weight:400;color:var(--stone);font-size:.62rem">${esc(r.lat)}</i></td>`+r.m.map((_,i)=>`<td class="${i===now?'cur':''}" style="text-align:center;font-size:.8rem;white-space:nowrap">${has(r,i).map(l=>OI[l]).join('')}</td>`).join('')+`<td style="font-size:.68rem;color:#555;min-width:220px">${esc(r.note)}</td></tr>`}).join('')+'</tbody></table></div><p style="font-size:.7rem;color:var(--stone);margin-top:.5rem">Tip: klik op een maand in de kolomkop om alleen die maand te bekijken.</p>':'<div class="ond-empty">Geen planten gevonden met deze filters.</div>';
+      return h+`<tr><td>${esc(r.nl)}${lvl(r.lat.split(' ')[0])}<br><i style="font-weight:400;color:var(--stone);font-size:.62rem">${esc(r.lat)}</i></td>`+r.m.map((_,i)=>`<td class="${i===now?'cur':''}" style="text-align:center;font-size:.8rem;white-space:nowrap">${has(r,i).map(l=>OI[l]).join('')}</td>`).join('')+`<td style="font-size:.68rem;color:#555;min-width:220px">${esc(r.note)}</td></tr>`}).join('')+'</tbody></table></div><p style="font-size:.7rem;color:var(--stone);margin-top:.5rem">Tip: klik op een maand in de kolomkop om alleen die maand te bekijken.</p>':'<div class="ond-empty">Geen planten gevonden met deze filters.</div>';
     out.querySelectorAll('th[data-m]').forEach(th=>th.onclick=()=>{OS.m=+th.dataset.m;renderOnd()});
   }
 }
@@ -564,62 +607,43 @@ const G=[
 ['Krentenboom','Amelanchier lamarckii',['C'],'🌸','#e0f0d0,#c0d8a0','Boom: wolken bloesem, zoete bessen, oranje-rode herfstkleur — 4 seizoenen sieraad',5,5,'https://nl.wikipedia.org/wiki/Amelanchier_lamarckii','amelanchier'],
 ['Amerikaanse kornoelje',"Cornus florida 'Rubra'",['A'],'🌸','#fbe4ea,#f0b8c8','Boom: grote schutbladeren in de lente, wijnrode herfstkleur, rode bessen',4,5,W('Cornus_florida'),'cornus'],
 ['Kamperfoelie','Lonicera periclymenum',['B'],'🌼','#f0f0c8,#d8d890','Geurig, klimplant, bijen-favoriet',5,4,'https://nl.wikipedia.org/wiki/Gewone_kamperfoelie','periclymenum'],
-['Goud-kamperfoelie','Lonicera heckrottii',['B'],'🌸','#f8e0e8,#e8b0c0','Roze-geel, lang bloeiend, robuster dan periclymenum',5,3,'https://en.wikipedia.org/wiki/Lonicera_%C3%97_heckrottii','B-zomer-lonicera'],
 ['Klimhortensia','Hydrangea anomala petiolaris',['S'],'🤍','#e8eef5,#c8d8e8','Bloeit zelfs in diepe schaduw, zelfhechtend',3,2,'https://en.wikipedia.org/wiki/Hydrangea_anomala','hydrangea'],
-['Trompetbloem','Campsis radicans',['C'],'🧡','#f8e0c8,#e8b888','Oranje trompetten in de zomer, krachtige klimmer',4,3,'https://nl.wikipedia.org/wiki/Trompetbloem','campsis'],
 ['Sterjasmijn','Trachelospermum jasminoides',['B'],'🌿','#e0f0e8,#b8d8c0','Geurig, semi-evergreen, warmste muurpositie',4,2,W('Trachelospermum_jasminoides'),'trachelospermum'],
 ['Klimroos',"Rosa 'New Dawn'",['B'],'🌹','#f8e0e8,#e8b8c8','Lichtroze, herhaalbloeiend, geurig',4,4,'https://en.wikipedia.org/wiki/Rosa_%27New_Dawn%27','newdawn'],
-['Struikroos',"Rosa 'Lilly Rose Wonder'",['B'],'🌹','#f8e0e8,#e8b8c8','Struikroos in de border van zone B, zachtroze bloemen, zomerbloei',null,null,W('Rose'),'rosa'],
-['Druif','Vitis vinifera',['C'],'🍇','#e8e0f0,#c0b0d0','Klimmer: sierlijk blad en druiven in de herfst',null,null,W('Vitis_vinifera'),'vitis'],
+['Druif','Vitis vinifera',['D'],'🍇','#e8e0f0,#c0b0d0','Klimmer tegen de schutting: sierlijk blad en druiven in de herfst',null,null,W('Vitis_vinifera'),'vitis'],
 ['Clematis',"Clematis 'Ville de Lyon'",['C'],'🌺','#f8d8e0,#e0a0b8','Klimmer met karmijnrode bloemen, bloeit laat in de zomer',null,null,W('Clematis'),'clematis'],
 ['Klimop','Hedera helix',['S'],'🌿','#d8ecd8,#a8cca8','Groenblijvende muurklimmer, nestplaats voor vogels; de late bloei is voedsel voor insecten',null,null,W('Hedera_helix'),'hedera'],
-['Zonnehoed','Echinacea purpurea',['B','C'],'🟣','#f0d8f0,#d8a8d8','Bijenmagneet + zaden voor putters',5,4,'https://nl.wikipedia.org/wiki/Rode_zonnehoed','B-herfst-echinacea'],
-['Kerstroos (oosterse)',"Helleborus orientalis 'Double Ellen Red'",['A','B'],'🌺','#f0d8e0,#d8a8b8','Wijnrode dubbele bloemen, bloeit in de kou, groenblijvend blad',3,1,W('Helleborus_orientalis'),'A-winter-helleborus'],
+['Zonnehoed','Echinacea purpurea',['C'],'🟣','#f0d8f0,#d8a8d8','Bijenmagneet + zaden voor putters',5,4,'https://nl.wikipedia.org/wiki/Rode_zonnehoed','B-herfst-echinacea'],
+['Kerstroos (oosterse)','Helleborus orientalis',['A','B'],'🌺','#f0d8e0,#d8a8b8','Enkelbloemige oosterse kerstroos; bloeit in de kou, groenblijvend blad, 40–50 cm',3,1,W('Helleborus_orientalis'),'A-winter-helleborus'],
 ['Kerstroos','Helleborus niger',['S'],'⬜','#e8eef5,#d0dcea','Witte bloemen jan–mrt, bloeit in de kou',3,1,'https://nl.wikipedia.org/wiki/Kerstroos','S-winter-helleborus'],
 ['Purperklokje','Heuchera',['A'],'🍃','#e8d8f0,#c8b0d8','Kleurrijk blad heel jaar, bloeit zomer',3,1,'https://nl.wikipedia.org/wiki/Purperklokje','heuchera'],
-['Akelei',"Aquilegia vulgaris 'Rose Barlow'",['B'],'🌸','#f8e0ec,#e8b8d0','Dubbelbloemige ridderspoor, roze, lente',3,1,'https://en.wikipedia.org/wiki/Aquilegia_vulgaris','B-lente-aquilegia'],
 ['Akelei (wild)','Aquilegia vulgaris',['A'],'🌸','#e8e0f8,#c8b8e8','Ridderspoor met paarse, enkelvoudige bloemen, lente',null,null,'https://en.wikipedia.org/wiki/Aquilegia_vulgaris','A-lente-aquilegia'],
 ['Geschubde mannetjesvaren',"Dryopteris affinis 'Crispa'",['S'],'🌿','#d8ecd8,#a8cca8','Compacte varen, semi-evergreen, schaduw',1,2,'https://en.wikipedia.org/wiki/Dryopteris_affinis','dryopteris'],
-['Lavendel','Lavandula angustifolia',['C'],'🪻','#e8e0f8,#c8b8e8','Bijendroom, geurig, droogtebestendig',5,2,'https://nl.wikipedia.org/wiki/Echte_lavendel','lavandula'],
+['Lavendel','Lavandula angustifolia',['D'],'🪻','#e8e0f8,#c8b8e8','Bijendroom, geurig, droogtebestendig',5,2,'https://nl.wikipedia.org/wiki/Echte_lavendel','lavandula'],
 ['Groot sterrenscherm','Astrantia major (\'Rubra\')',['A'],'🌸','#f8e8e8,#e8c8c8','Subtiele stervormen, lang bloeiend',4,2,'https://en.wikipedia.org/wiki/Astrantia_major','astrantia'],
 ['Knautia','Knautia macedonica',['D'],'🔴','#f0d0d0,#d0a0a0','Donkerrood, wuivend, lang bloeiend',5,3,'https://en.wikipedia.org/wiki/Knautia_macedonica','knautia'],
-['Hartlelie','Hosta (divers)',['S'],'💚','#d8ecd8,#b0ceb0','Monumentaal schaduwblad',2,1,'https://nl.wikipedia.org/wiki/Hartlelie','hosta'],
-['Koningskaars','Verbascum thapsus',['D'],'🕯️','#f8f0d0,#e8dca0','Toorts van 2 m, wilde uitstraling',4,3,'https://nl.wikipedia.org/wiki/Koningskaars','verbascum'],
-['Japanse anemoon','Anemone japonica',['A','S'],'🌸','#f0eef8,#d8d0e8','Bloeit aug–okt, halfschaduw',3,1,'https://nl.wikipedia.org/wiki/Japanse_anemoon','A-herfst-anemone'],
-['Longkruid','Pulmonaria officinalis',['A','S'],'💙','#e0e8f8,#b8c8e8','Vroege roze-blauwe bloemen, gevlekt blad, houdt van schaduw',null,null,W('Pulmonaria_officinalis'),'pulmonaria'],
-['Ooievaarsbek','Geranium macrorrhizum',['A'],'🌸','#f8e0ec,#e0b0c8','Bodembedekker met geurend blad en roze bloemen in de lente',null,null,W('Geranium_macrorrhizum'),'A-lente-geranium'],
+['Longkruid','Pulmonaria officinalis',['S'],'💙','#e0e8f8,#b8c8e8','Vroege roze-blauwe bloemen, gevlekt blad, houdt van schaduw',null,null,W('Pulmonaria_officinalis'),'pulmonaria'],
 ['Ooievaarsbek',"Geranium 'Rozanne'",['A','B'],'💜','#e0e0f8,#b8b8e8','Blauwpaarse bloemen van juni tot de vorst',null,null,W('Geranium_%27Rozanne%27'),'B-zomer-geranium'],
-['Vingerhoedskruid','Digitalis purpurea',['A','S'],'🌸','#f8d8f0,#e0a8d0','Hoge bloemtorens in de zomer, tweejarig, zaait zichzelf uit',null,null,W('Digitalis_purpurea'),'digitalis'],
-['Bergduizendknoop','Persicaria amplexicaulis',['A'],'🌸','#f8d0d0,#d89090','Rode aren van zomer tot de eerste vorst',null,null,W('Persicaria_amplexicaulis'),'persicaria'],
-['Zonnekruid','Helenium',['A'],'🌼','#f8e0c0,#e8b070','Warme oranje-rode bloemen in de late zomer en herfst',null,null,W('Helenium'),'helenium'],
-['Zegge','Carex',['A'],'🌾','#e8f0d8,#c8d8a8','Groenblijvend siergras voor structuur in de winter',null,null,W('Carex'),'carex'],
-['Vergeet-mij-nietje','Myosotis',['B'],'💙','#e0ecf8,#b0c8e8','Lichtblauwe lentebloeier, zaait zichzelf uit',null,null,W('Myosotis'),'myosotis'],
+['Vingerhoedskruid','Digitalis purpurea',['A'],'🌸','#f8d8f0,#e0a8d0','Hoge bloemtorens in de zomer, tweejarig, zaait zichzelf uit',null,null,W('Digitalis_purpurea'),'digitalis'],
+['Bermzegge','Carex divulsa',['A','B'],'🌾','#e8f0d8,#c8d8a8',"Inheemse, groenblijvende zegge van ±40 cm voor structuur in de winter; zon tot schaduw, ook op klei",null,null,'https://www.rhs.org.uk/plants/128685/wd/details','carex'],
+['Vergeet-mij-nietje','Myosotis',['D'],'💙','#e0ecf8,#b0c8e8','Lichtblauwe lentebloeier, zaait zichzelf uit',null,null,W('Myosotis'),'myosotis'],
+['Judaspenning','Lunaria annua',['B'],'🤍','#f0e8f8,#d8c8e8','Paarse lentebloemen, daarna zilverkleurige ronde zaaddozen (‘penningen’) die tot in de winter blijven staan; tweejarig, zaait zichzelf uit',null,null,W('Lunaria_annua'),'lunaria'],
 ['Sierui','Allium hollandicum',['B'],'🟣','#f0d8f0,#d0a8d8','Paarse bolvormige bloemen in mei-juni',null,null,W('Allium_hollandicum'),'B-lente-allium'],
-['Bossalie','Salvia nemorosa',['B'],'🪻','#e0d8f0,#b8a8d8','Donkerpaarse bloemaren, bijenmagneet, bloeit in de zomer',null,null,W('Salvia_nemorosa'),'B-lente-salvia'],
-['Judaspenning','Lunaria annua',['B'],'🌸','#f0e0f0,#d8b0d8','Paarse bloemen, daarna zilverkleurige zaaddoosjes',null,null,W('Lunaria_annua'),'lunaria'],
 ['Kattenkruid',"Nepeta 'Six Hills Giant'",['B','C'],'🪻','#e0e0f8,#b8b0e0','Lavendelblauwe wolken, lang bloeiend, bijenmagneet',null,null,W('Nepeta'),'B-zomer-nepeta'],
 ['Rudbeckia','Rudbeckia fulgida',['B','C'],'🌼','#f8f0c0,#e8d060','Gele bloemen met donker hart in de late zomer en herfst',null,null,W('Rudbeckia_fulgida'),'B-herfst-rudbeckia'],
-['Bergaster','Aster amellus',['B'],'💜','#ece0f8,#c8b0e8','Violette herfstbloeier, waardevol voor laat vliegende insecten',null,null,W('Aster_amellus'),'aster'],
-['Vedergras','Stipa',['B','D'],'🌾','#f0e8d0,#d8c8a0','Zilverig-beige pluimen die met de wind meegolven',null,null,W('Stipa'),'B-winter-stipa'],
-['Reuzensierui','Allium giganteum',['C'],'🟣','#f0d8f0,#d0a0d8','Metershoge stengels met paarse bollen in de lente',null,null,W('Allium_giganteum'),'C-lente-allium'],
-['Baardiris','Iris germanica',['C'],'💜','#ece0f8,#c8a8e0','Statige lentebloeier voor droge zonnige plekken',null,null,W('Iris_germanica'),'iris'],
-['IJzerhard','Verbena bonariensis',['C','D'],'💜','#ece0f8,#c8b0e0','Luchtige paarse bloemschermen op hoge stengels, tot de herfst',null,null,W('Verbena_bonariensis'),'C-zomer-verbena'],
-['Salie','Salvia officinalis',['C'],'🌿','#e0e0f0,#b8b8d8','Aromatisch grijsgroen blad, paarse bloemen in de zomer',null,null,W('Salvia_officinalis'),'salvia'],
+['Steppesalie','Salvia nemorosa',['C'],'💜','#e4e0f8,#b8b0e8','Violetblauwe bloemaren van juni tot augustus, bijenmagneet; volle zon, droogtetolerant',null,null,W('Salvia_nemorosa'),'B-lente-salvia'],
+['Bergaster','Aster amellus',['C'],'💜','#ece0f8,#c8b0e8','Violette herfstbloeier, waardevol voor laat vliegende insecten',null,null,W('Aster_amellus'),'aster'],
+['IJzerhard','Verbena bonariensis',['D'],'💜','#ece0f8,#c8b0e0','Luchtige paarse bloemschermen op hoge stengels, tot de herfst',null,null,W('Verbena_bonariensis'),'C-zomer-verbena'],
 ['Hemelsleutel',"Sedum 'Herbstfreude'",['C'],'🌸','#f8d8d8,#e0a0a0','Roze-koperen schermen in de herfst, veel vlinders',null,null,W('Hylotelephium'),'sedum'],
-['Anijsnetel','Agastache',['C'],'🪻','#e8e0f8,#c0b0e0','Lange bloemaren, geurend blad, bijenmagneet in de late zomer',null,null,W('Agastache'),'agastache'],
-['Lampenpoetsersgras','Pennisetum',['C','D'],'🌾','#f0e8d8,#d8c8a8','Pluimen in de late zomer, blijven staan in de winter',null,null,W('Cenchrus_setaceus'),'pennisetum'],
-['Bijenvoer','Phacelia tanacetifolia',['D'],'💜','#ece0f8,#c0a8e0','Beste bijenmagneet-zaaisel, ook goed voor de bodem',null,null,W('Phacelia_tanacetifolia'),'phacelia'],
-['Druifhyacint','Muscari armeniacum',['D'],'💙','#dce4f8,#a8b8e8','Blauwe lentebol, verwildert makkelijk',null,null,W('Muscari_armeniacum'),'muscari'],
+['Anijsnetel','Agastache',['D'],'🪻','#e8e0f8,#c0b0e0','Lange bloemaren, geurend blad, bijenmagneet in de late zomer',null,null,W('Agastache'),'agastache'],
+['Lampenpoetsersgras',"Pennisetum alopecuroides 'Little Bunny'",['D'],'🌾','#f0e8d8,#d8c8a8','Roze-witte pluimen die bruin worden, vanaf midzomer, ±40–45 cm; blijven staan in de winter; op klei in de winter droog mulchen',null,null,'https://rhsplants.co.uk/plants/_/pennisetum-alopecuroides-little-bunny/classid.2000045814','pennisetum'],
 ['Korenbloem','Centaurea cyanus',['D'],'💙','#dce4f8,#a0b0f0','Knalblauwe zomerbloem, zaait zichzelf uit',null,null,W('Centaurea_cyanus'),'centaurea'],
 ['Slangenkruid','Echium vulgare',['D'],'💙','#dce4f8,#a8b8e8','Blauwe bloemtorens, bijenmagneet voor droge grond',null,null,W('Echium_vulgare'),'echium'],
-['Kaardenbol','Dipsacus fullonum',['D'],'🌿','#e8ecd0,#c0c890','Stekelige zaadhoofden, topvoer voor distelvinken',null,null,W('Dipsacus_fullonum'),'dipsacus'],
-['Gouden haver','Stipa gigantea',['D'],'🌾','#f8f0c8,#e8d880','Groot siergras met gouden pluimen',null,null,W('Stipa_gigantea'),''],
 ['Stengelloze sleutelbloem','Primula vulgaris',['S'],'🌼','#f8f4c8,#e8e090','Lichtgele bloemen in het vroege voorjaar',null,null,W('Primula_vulgaris'),'primula'],
 ['Wilde hyacint','Hyacinthoides non-scripta',['S'],'💙','#dce4f8,#b0b8e8','Blauwe klokjes in de lente, houdt van schaduw',null,null,W('Hyacinthoides_non-scripta'),'hyacinthoides'],
 ['Pluimspirea','Astilbe \'Fanal\'',['S'],'❤️','#f8d0d8,#d890a0','Donkerrode pluimen in de zomer voor vochtige schaduw',null,null,W('Astilbe'),'astilbe'],
-['Paddenlelie','Tricyrtis',['S'],'🌸','#f0e0f0,#d0b0d0','Gespikkelde orchidee-achtige bloemen in de herfst',null,null,W('Tricyrtis'),'tricyrtis'],
 ['Kerstgeurstruik','Sarcococca',['S'],'🌿','#e0f0e8,#b0d8c0','Groenblijvend, intens geurende bloemen in de winter',null,null,W('Sarcococca'),'sarcococca'],
-['Kleine maagdenpalm','Vinca minor',['S'],'💙','#dce4f8,#b0c0e8','Groenblijvende bodembedekker met blauwe bloemen',null,null,W('Vinca_minor'),'vinca'],
+['Leliegras','Liriope muscari',['A'],'💜','#ece0f8,#c8b0e8',"Groenblijvende pol van 20–30 cm met violette aren van late zomer tot herfst; halfschaduw tot schaduw",null,null,'https://www.rhsplants.co.uk/plants/_/liriope-muscari/classid.3173/','liriope'],
 ];
 const gallery=document.getElementById('gallery'),filters=document.getElementById('filters');
 function renderGallery(f){
@@ -628,10 +652,10 @@ function renderGallery(f){
     const [c1,c2]=bg.split(',');
     const id=k?anyId(k):null;
     const zb=zones.map(z=>`<span class="zbadge">${z}</span>`).join('');
-    const block=id?`<img src="${src(id)}" alt="${esc(nl)}" data-ph="${id}" data-cap="${esc(nl+' — '+lat)}">`:`<span class="big-emoji">${emoji}</span>`;
+    const block=(id?`<img src="${src(id)}" alt="${esc(nl)}" data-ph="${id}" data-cap="${esc(nl+' — '+lat)}">`:'')+`<span class="big-emoji">${emoji}</span>`;
     const rats=bee!=null?`<div class="prats"><span class="picon-bee">🐝 ${'⭐'.repeat(bee)}</span><br><span class="picon-bird">🐦 ${'⭐'.repeat(bird)}</span></div>`:'';
     return `<div class="plant-card"><div class="plant-icon-block" style="background:linear-gradient(135deg,${c1},${c2})">${block}<div class="zbadge-strip">${zb}</div></div>
-    <div class="plant-info"><h3>${esc(nl)}</h3><div class="latin">${esc(lat)}</div><div class="pmeta">${esc(desc)}</div>${rats}</div>
+    <div class="plant-info"><h3>${esc(nl)}${lvl(lat.split(' ')[0])}</h3><div class="latin">${esc(lat)}</div><div class="pmeta">${esc(desc)}</div>${LVG[lat.split(' ')[0]]?`<div class="prats" style="color:#8a6a2a">${LVG[lat.split(' ')[0]].c} ${esc(LVG[lat.split(' ')[0]].t)}</div>`:''}${rats}</div>
     <a class="plant-link" href="${url}" target="_blank" rel="noopener">${esc(lat)}</a></div>`;
   }).join('');
 }
