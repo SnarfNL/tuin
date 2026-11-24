@@ -1,0 +1,57 @@
+[
+  {
+    "id": "A",
+    "naam": "Zone A",
+    "type": "sier",
+    "zon": "half-zon (3–6 u)",
+    "thema": "Natuurlijk",
+    "m2": 4.5,
+    "mest": "geen extra mest; kornoelje op zure plantplek, geen kalk",
+    "mulch": "compost/bladcompost ±5 cm",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "B",
+    "naam": "Zone B",
+    "type": "sier",
+    "zon": "half-zon (3–6 u), woningmuur",
+    "thema": "Landelijk",
+    "m2": 8,
+    "mest": "enige zone met organische mest",
+    "mulch": "compost/bladcompost ±5 cm",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "C",
+    "naam": "Zone C",
+    "type": "sier",
+    "zon": "half-zon (3–6 u)",
+    "thema": "Landelijk",
+    "m2": 8,
+    "mest": "geen mest bij Aster amellus, Salvia en Liatris",
+    "mulch": "compost ±5 cm, niet rond Aster/Salvia/Liatris",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "D",
+    "naam": "Zone D",
+    "type": "sier",
+    "zon": "volle zon (>6 u)",
+    "thema": "Jardin Sauvage",
+    "m2": 4,
+    "mest": "geen mest (alleen schep compost bij de druif)",
+    "mulch": "niet met compost; eventueel grof zand/split",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "S",
+    "naam": "Zone S",
+    "type": "sier",
+    "zon": "schaduw (<3 u)",
+    "thema": "Jardin Sauvage",
+    "m2": 2.5,
+    "mest": "geen kunstmest; 50% bladcompost",
+    "mulch": "bladcompost ±5 cm, jaarlijks",
+    "bron": "tuinplan"
+  }
+]

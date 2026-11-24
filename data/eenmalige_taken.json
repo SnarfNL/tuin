@@ -1,0 +1,154 @@
+[
+  {
+    "id": "plan.7",
+    "titel": "Voorjaarsbollen planten (±295–300 stuks plus Allium en Hyacinthoides)",
+    "wanneer": "nov – half dec 2026",
+    "status": "open",
+    "herkomst": "tuinplan stap 7",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.7a",
+    "titel": "Terugvaloptie bollen: in potten of uitstellen tot najaar 2027",
+    "wanneer": "half dec 2026",
+    "status": "open",
+    "herkomst": "tuinplan stap 7a",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.8",
+    "titel": "Kale grond afdekken met bladcompost of mulch",
+    "wanneer": "dec 2026",
+    "status": "open",
+    "herkomst": "tuinplan stap 8",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.9",
+    "titel": "Klimsteun: rankdraden/rooster C, rankdraden B en S, schutting D",
+    "wanneer": "jan–feb 2027",
+    "status": "open",
+    "herkomst": "tuinplan stap 9",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.10",
+    "titel": "Klimplanten, vaste planten en zaad bestellen",
+    "wanneer": "jan–feb 2027",
+    "status": "open",
+    "herkomst": "tuinplan stap 10",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.11",
+    "titel": "Klimplanten planten (druif met schep compost)",
+    "wanneer": "mrt–apr 2027",
+    "status": "open",
+    "herkomst": "tuinplan stap 11",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.12",
+    "titel": "Vaste planten planten; zone D zaaien",
+    "wanneer": "apr–mei 2027",
+    "status": "open",
+    "herkomst": "tuinplan stap 12",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.13",
+    "titel": "5 cm mulchen (niet in D)",
+    "wanneer": "apr–mei 2027",
+    "status": "open",
+    "herkomst": "tuinplan stap 13",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.4",
+    "titel": "Lege kabelbuis leggen (alleen als verlichting gekozen wordt)",
+    "wanneer": "open",
+    "status": "open",
+    "herkomst": "tuinplan stap 4",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.14",
+    "titel": "Verlichting plaatsen",
+    "wanneer": "apr–mei 2027 of later",
+    "status": "geparkeerd",
+    "herkomst": "tuinplan stap 14",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.16",
+    "titel": "Zone D: Centaurea herzaaien, tweejarigen laten uitzaaien",
+    "wanneer": "jaarlijks vanaf 2028",
+    "status": "open",
+    "herkomst": "tuinplan stap 16",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "plan.17",
+    "titel": "Levensduur-check ⏱-soorten: delen, bijplanten of laten uitzaaien",
+    "wanneer": "herfst 2029",
+    "status": "open",
+    "herkomst": "tuinplan stap 17",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.zonuren",
+    "titel": "Zonuren meten per zone (vooral midden in C)",
+    "wanneer": "groeiseizoen 2027",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.vitens",
+    "titel": "Waterhardheid Dronten navragen bij Vitens",
+    "wanneer": "zo snel mogelijk",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.doektest",
+    "titel": "Natte-zandtest Jogetex-doek onder het schorspad",
+    "wanneer": "na een regenbui",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.subsidie",
+    "titel": "Besluit subsidie afwachten (binnen 8 weken na 24 nov)",
+    "wanneer": "uiterlijk ±19 jan 2027",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.myosotis",
+    "titel": "Myosotis in D beoordelen; zo nodig naar B",
+    "wanneer": "na voorjaar 2027",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.muscari",
+    "titel": "Druifhyacint in D beoordelen (uitbreiding)",
+    "wanneer": "na voorjaar 2027",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  },
+  {
+    "id": "actie.purpledome",
+    "titel": "Bloei aster 'Purple Dome' in B beoordelen; zo nodig naar C",
+    "wanneer": "herfst 2027",
+    "status": "open",
+    "herkomst": "open punten",
+    "bron": "tuinplan"
+  }
+]

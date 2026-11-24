@@ -1,0 +1,17 @@
+{
+  "schema_versie": 1,
+  "stand": "2026-11-24",
+  "bron_document": "tuinplan/tuinplan.md",
+  "bestanden": [
+    "bakken.json",
+    "planten.json",
+    "bollen_per_bak.json",
+    "onderhoudsregels.json",
+    "algemene_regels.json",
+    "eenmalige_taken.json"
+  ],
+  "eigenaar": {
+    "tuinplan": "project Tuin",
+    "moestuin": "project Tuinapp"
+  }
+}
