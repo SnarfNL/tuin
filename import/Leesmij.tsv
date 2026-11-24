@@ -1,0 +1,29 @@
+Tuinapp: gegevens
+
+Dit is de bron van de app. Wat hier staat, toont de app; de app hoeft niet te veranderen als je hier iets toevoegt.
+
+Tabbladen
+Locaties: de tuinen (achtertuin, moestuin).
+Acties: de 8 filters in de app, met kleuren.
+Plekken: zones en bakken per locatie. Naam en beschrijving mag je altijd aanpassen.
+Planten: soorten per locatie, met beschrijving, scores, sierwaarde en onderhoudstekst.
+Beplanting: welke plant op welke plek staat (het plan). Bij de moestuin: vanaf (jaar) en jaren (even/oneven) voor de wisselteelt.
+Regels: terugkerende taken. Met een plant gelden ze overal waar die plant staat; anders op de plekken in kolom plekken.
+Projecttaken: eenmalige taken met een periode (van/tot als jjjj-mm).
+Info: thema's, tips, seizoensfoto's en open punten.
+Stand en Voortgang: schrijft de app (waar een plant echt staat; wat is afgevinkt). Niet met de hand wijzigen.
+Instellingen: algemene instellingen van de app.
+Controle: telt fouten (moet overal 0 zijn).
+
+Afspraken
+Een id nooit wijzigen: de voortgang verwijst ernaar. Nieuwe id: kleine letters, zonder spaties (bijv. bak-11, rode-kool).
+Niets verwijderen: zet status op vervallen.
+Maanden: afkortingen jan feb mrt apr mei jun jul aug sep okt nov dec. Reeks met streepje, losse momenten met komma: mrt-apr, okt.
+Deel van de maand: begin, midden of eind (deel_start, deel_eind). Uiterlijk: bijv. midden dec.
+Meerdere plekken: ids met komma (A, B, C).
+Soort regel: taak (afvinkbaar), suggestie (alleen tonen), waarschuwing (niet doen). Herhaling: jaarlijks of tot_geplant (alleen zolang de plant gepland staat).
+Levensduur plant: zaaien (elk jaar zaaien), kort (kortlevend), seizoen (moestuingewas, regels gelden elk jaar).
+De gegevens zijn openbaar leesbaar via de app: geen namen of adressen.
+
+Wie beslist
+Achtertuin: project Tuin. Moestuin: project Moestuin. App en controle: project Tuin app. Jullie zelf: alles, via dit bestand.
