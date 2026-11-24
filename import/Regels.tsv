@@ -1,0 +1,201 @@
+locatie	id	plant	plekken	actie	detail	soort	maanden	keuze	herhaling	deel_start	deel_eind	uiterlijk	voorwaarde	meting	toelichting	waar	bron
+achtertuin	cornus.snoeien	cornus		snoeien	Snoeien / terugknippen	taak	feb		jaarlijks								
+achtertuin	cornus.planten_zaaien	cornus		planten	Planten	taak	mrt-apr, nov-dec	ja	tot_geplant								
+achtertuin	aquilegia.planten_zaaien	aquilegia		planten	Planten	taak	mrt, sep	ja	tot_geplant								
+achtertuin	aquilegia.uitgebloeid_verwijderen	aquilegia		snoeien	Uitgebloeide bloemen weghalen	taak	jun		jaarlijks								
+achtertuin	heuchera.snoeien	heuchera		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	heuchera.planten_zaaien	heuchera		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	heuchera.delen_verplanten	heuchera		planten	Delen / verplanten	suggestie	apr, sep		jaarlijks								
+achtertuin	astrantia.snoeien	astrantia		snoeien	Snoeien / terugknippen	taak	mrt, jul		jaarlijks								
+achtertuin	astrantia.delen_verplanten	astrantia		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	geranium.snoeien	geranium		snoeien	Snoeien / terugknippen	taak	mrt, jul		jaarlijks								
+achtertuin	geranium.delen_verplanten	geranium		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	digitalis.planten_zaaien	digitalis		planten	Zaaien	taak	jun-jul		jaarlijks								
+achtertuin	helleborus_or.snoeien	helleborus_or		snoeien	Snoeien / terugknippen	taak	jan-feb		jaarlijks								
+achtertuin	helleborus_or.planten_zaaien	helleborus_or		planten	Planten	taak	sep-okt		tot_geplant								
+achtertuin	carex.snoeien	carex		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	carex.delen_verplanten	carex		planten	Delen / verplanten	suggestie	apr		jaarlijks								
+achtertuin	liriope.snoeien	liriope		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	liriope.delen_verplanten	liriope		planten	Delen / verplanten	suggestie	apr		jaarlijks								
+achtertuin	galanthus.planten_zaaien	galanthus		planten	Bollen poten	taak	okt-nov		tot_geplant								
+achtertuin	fritillaria.planten_zaaien	fritillaria		planten	Bollen poten	taak	sep-nov		tot_geplant								
+achtertuin	crocus_tom.planten_zaaien	crocus_tom		planten	Bollen poten	taak	okt-dec		tot_geplant			midden dec					
+achtertuin	rosa.snoeien	rosa		snoeien	Snoeien / terugknippen	taak	feb-mrt		jaarlijks								
+achtertuin	rosa.planten_zaaien	rosa		planten	Planten	taak	mrt, nov	ja	tot_geplant								
+achtertuin	rosa.uitgebloeid_verwijderen	rosa		snoeien	Uitgebloeide bloemen weghalen	taak	jul-sep		jaarlijks								
+achtertuin	lonicera.snoeien	lonicera		snoeien	Snoeien / terugknippen	taak	aug		jaarlijks								
+achtertuin	trachelospermum.snoeien	trachelospermum		snoeien	Snoeien / terugknippen	taak	apr		jaarlijks								
+achtertuin	trachelospermum.planten_zaaien	trachelospermum		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	lunaria.planten_zaaien	lunaria		planten	Zaaien	taak	jun-jul		jaarlijks								
+achtertuin	allium.planten_zaaien	allium		planten	Bollen poten	taak	sep-okt		tot_geplant								
+achtertuin	nepeta.snoeien	nepeta		snoeien	Snoeien / terugknippen	taak	mrt, jul		jaarlijks								
+achtertuin	nepeta.delen_verplanten	nepeta		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	rudbeckia.snoeien	rudbeckia		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	rudbeckia.delen_verplanten	rudbeckia		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	purple_dome.snoeien	purple_dome		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	purple_dome.planten_zaaien	purple_dome		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	crocus_cb.planten_zaaien	crocus_cb		planten	Bollen poten	taak	okt-dec		tot_geplant			midden dec					
+achtertuin	narcissus.planten_zaaien	narcissus		planten	Bollen poten	taak	okt-dec		tot_geplant			midden dec					
+achtertuin	amelanchier.snoeien	amelanchier		snoeien	Snoeien / terugknippen	taak	feb		jaarlijks								
+achtertuin	amelanchier.planten_zaaien	amelanchier		planten	Planten	taak	mrt-apr, nov-dec	ja	tot_geplant								
+achtertuin	echinacea.snoeien	echinacea		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	echinacea.delen_verplanten	echinacea		planten	Delen / verplanten	suggestie	mrt-apr		jaarlijks								
+achtertuin	echinacea.planten_zaaien	echinacea		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	salvia.snoeien	salvia		snoeien	Snoeien / terugknippen	taak	mrt, jul		jaarlijks								
+achtertuin	aster_amellus.snoeien	aster_amellus		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	aster_amellus.delen_verplanten	aster_amellus		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	aster_amellus.planten_zaaien	aster_amellus		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	clematis.snoeien	clematis		snoeien	Snoeien / terugknippen	taak	feb-mrt		jaarlijks								
+achtertuin	clematis.planten_zaaien	clematis		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	sedum.snoeien	sedum		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	sedum.delen_verplanten	sedum		planten	Delen / verplanten	suggestie	apr		jaarlijks								
+achtertuin	liatris.snoeien	liatris		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	liatris.planten_zaaien	liatris		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	scilla.planten_zaaien	scilla		planten	Bollen poten	taak	okt-dec		tot_geplant			midden dec					
+achtertuin	centaurea.planten_zaaien	centaurea		planten	Zaaien	taak	mrt-apr, sep	ja	jaarlijks								
+achtertuin	vitis.snoeien	vitis		snoeien	Snoeien / terugknippen	taak	dec-jan, jul		jaarlijks								
+achtertuin	vitis.planten_zaaien	vitis		planten	Planten	taak	mrt-apr		tot_geplant								
+achtertuin	myosotis.planten_zaaien	myosotis		planten	Zaaien	taak	mrt, jun	ja	jaarlijks								
+achtertuin	myosotis.snoeien	myosotis		snoeien	Snoeien / terugknippen	taak	jul		jaarlijks								
+achtertuin	knautia.snoeien	knautia		snoeien	Snoeien / terugknippen	taak	mrt, aug		jaarlijks								
+achtertuin	knautia.delen_verplanten	knautia		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	echium.planten_zaaien	echium		planten	Zaaien	taak	mei-jun		jaarlijks								
+achtertuin	verbena.snoeien	verbena		snoeien	Snoeien / terugknippen	taak	mrt-apr		jaarlijks								
+achtertuin	verbena.planten_zaaien	verbena		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	pennisetum.snoeien	pennisetum		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	pennisetum.delen_verplanten	pennisetum		planten	Delen / verplanten	suggestie	mei		jaarlijks								
+achtertuin	lavandula.snoeien	lavandula		snoeien	Snoeien / terugknippen	taak	apr, aug		jaarlijks								
+achtertuin	lavandula.planten_zaaien	lavandula		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	agastache.snoeien	agastache		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	agastache.planten_zaaien	agastache		planten	Planten	taak	mei		tot_geplant								
+achtertuin	muscari.delen_verplanten	muscari		planten	Delen / verplanten	suggestie	jul		jaarlijks								
+achtertuin	muscari.planten_zaaien	muscari		planten	Bollen poten	taak	okt-dec		tot_geplant								
+achtertuin	primula.delen_verplanten	primula		planten	Delen / verplanten	suggestie	mei-jun		jaarlijks								
+achtertuin	primula.planten_zaaien	primula		planten	Planten	taak	sep		tot_geplant								
+achtertuin	pulmonaria.snoeien	pulmonaria		snoeien	Snoeien / terugknippen	taak	mei		jaarlijks								
+achtertuin	pulmonaria.delen_verplanten	pulmonaria		planten	Delen / verplanten	suggestie	sep		jaarlijks								
+achtertuin	hyacinthoides.planten_zaaien	hyacinthoides		planten	Bollen poten	taak	sep-okt		tot_geplant								
+achtertuin	dryopteris.snoeien	dryopteris		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	dryopteris.planten_zaaien	dryopteris		planten	Planten	taak	mrt-apr		tot_geplant								
+achtertuin	astilbe.snoeien	astilbe		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	astilbe.delen_verplanten	astilbe		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	hydrangea.planten_zaaien	hydrangea		planten	Planten	taak	mrt-apr		tot_geplant								
+achtertuin	hydrangea.snoeien	hydrangea		snoeien	Snoeien / terugknippen	taak	jul-aug		jaarlijks								
+achtertuin	helleborus_ni.snoeien	helleborus_ni		snoeien	Snoeien / terugknippen	taak	jan-feb		jaarlijks								
+achtertuin	helleborus_ni.planten_zaaien	helleborus_ni		planten	Planten	taak	sep-okt		tot_geplant								
+achtertuin	sarcococca.snoeien	sarcococca		snoeien	Snoeien / terugknippen	taak	mrt-apr		jaarlijks								
+achtertuin	sarcococca.planten_zaaien	sarcococca		planten	Planten	taak	mrt-apr		tot_geplant								
+achtertuin	hedera.snoeien	hedera		snoeien	Snoeien / terugknippen	taak	feb, sep		jaarlijks								
+achtertuin	aster_div.snoeien	aster_div		snoeien	Snoeien / terugknippen	taak	mrt		jaarlijks								
+achtertuin	aster_div.delen_verplanten	aster_div		planten	Delen / verplanten	suggestie	mrt		jaarlijks								
+achtertuin	aster_div.planten_zaaien	aster_div		planten	Planten	taak	apr-mei		tot_geplant								
+achtertuin	alg.mulch_winter		A, B, C, S	mulchen	Kale grond afdekken	taak	dec		jaarlijks						±5 cm op vochtige grond, vrij van stengels en stammen. Niet in D.		Mulchen, Hoe 8
+achtertuin	alg.mulch_voorjaar		A, B, C, S	mulchen	Mulchlaag aanvullen na het terugknippen	taak	feb-mrt		jaarlijks						±5 cm. Niet in D; in C niet rond Aster, Salvia en Liatris.		Mulchen, Hoe 8; Jaarlijks onderhoud
+achtertuin	alg.ph_kornoelje	cornus	A	onderhoud	pH meten en noteren	taak	mrt-apr, okt		jaarlijks					pH, streef 5,5–6,5	Op dezelfde plekken in de zure plantplek. In 2027 en 2028 in voor- en najaar, daarna jaarlijks. Regenwater geven.		pH-beheer kornoelje 5; overdracht/tuin.md
+achtertuin	alg.schorspad		algemeen	mulchen	Schorspad en schorsringen controleren en aanvullen	taak	mrt		jaarlijks						Aanvullen als de laag dunner is dan 5 cm; Franse boomschors, liever te weinig bestellen en later aanvullen.		Schorspad, Aanvullen
+achtertuin	alg.zaadhoofden		A, B, C, D, S	snoeien	Zaadhoofden laten staan tot maart	waarschuwing	okt-feb		jaarlijks						Voedsel en beschutting voor vogels en insecten.		Bijen-tips
+achtertuin	alg.blad_sauvage		D, S	opruimen	Blad laten liggen	waarschuwing	okt-dec		jaarlijks						In de sauvage-zones blijft het blad liggen.		Jaarlijks onderhoud
+achtertuin	alg.bollen_blad		A, B, C, D	snoeien	Blad van uitgebloeide bollen laten afsterven	waarschuwing	apr-mei		jaarlijks						Niet afknippen; de bol haalt er de kracht voor volgend jaar uit.		Jaarlijks onderhoud
+achtertuin	alg.klimop_broedseizoen	hedera	S	snoeien	Klimop niet snoeien (broedseizoen)	waarschuwing	mrt-aug		jaarlijks						Snoeien buiten het broedseizoen.		Onderhoudskalender, klimop
+achtertuin	alg.druif_maart	vitis	D	snoeien	Druif niet snoeien in maart (bloedt)	waarschuwing	mrt		jaarlijks						Wintersnoei in dec–jan.		Nieuwe klimmers; Onderhoudskalender, druif
+achtertuin	alg.water.A		A	water	Water geven	taak	apr-sep		jaarlijks				Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt		Per week: 12–15 l/m² = 54–68 l. De kornoelje valt hier ook onder, zie bomen.		Water geven (indicatie per zone)
+achtertuin	alg.water.B		B	water	Water geven	taak	apr-sep		jaarlijks				Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt		Per week: 15–20 l/m² = 120–160 l, plus 15–20 l per klimplant (3 stuks) = 45–60 l. Meest watergevoelige zone; klimplanten extra, ook in de winter bij vorstloze droogte controleren.		Water geven (indicatie per zone)
+achtertuin	alg.water.C		C	water	Water geven	taak	apr-sep		jaarlijks				Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt		Per week: Eerste 6–8 weken na planten ±10 l/m² = ±80 l, plus Clematis 15 l = 15 l; daarna nauwelijks. Aster amellus en Salvia nemorosa zijn droogtetolerant: alleen laten aanslaan.		Water geven (indicatie per zone)
+achtertuin	alg.water.S		S	water	Water geven	taak	apr-sep		jaarlijks				Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt		Per week: 12–15 l/m² = 30–38 l. Moet vochtig blijven (varens, Astilbe); minder gieten maar niet laten uitdrogen.		Water geven (indicatie per zone)
+achtertuin	alg.water.bomen		A, C	water	Bomen water geven	taak	apr-sep		jaarlijks				Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt		40–60 l per boom per week in droge perioden, jaar 1–2; de kornoelje met regenwater.		Water geven, Bomen
+moestuin	suikermais.binnen-zaaien	suikermais		planten	Binnen zaaien	taak	apr-mei		jaarlijks	midden	begin				m-apr–b-mei (in pot)		
+moestuin	suikermais.buiten-zaaien-of-planten	suikermais		planten	Buiten zaaien of planten	taak	mei-jun		jaarlijks	midden	begin				m-mei–b-jun		
+moestuin	suikermais.uitplanten	suikermais		planten	Uitplanten	taak	mei		jaarlijks	midden	eind				m-mei–e-mei		
+moestuin	suikermais.oogsten	suikermais		oogsten	Oogsten	taak	aug-sep		jaarlijks						aug–sep		
+moestuin	pompoen.binnen-zaaien	pompoen		planten	Binnen zaaien	taak	apr-mei		jaarlijks	midden	begin				m-apr–b-mei		
+moestuin	pompoen.buiten-zaaien-of-planten	pompoen		planten	Buiten zaaien of planten	taak	mei		jaarlijks	midden	midden				Na m-mei ter plekke		
+moestuin	pompoen.uitplanten	pompoen		planten	Uitplanten	taak	mei		jaarlijks	midden	midden				Na de IJsheiligen (e-mei)		
+moestuin	pompoen.oogsten	pompoen		oogsten	Oogsten	taak	sep-okt		jaarlijks						sep–okt, vóór de vorst		
+moestuin	courgette.binnen-zaaien	courgette		planten	Binnen zaaien	taak	apr		jaarlijks	midden	eind				m-apr–e-apr		
+moestuin	courgette.uitplanten	courgette		planten	Uitplanten	taak	mei-jun		jaarlijks	midden	midden				m-mei–m-jun		
+moestuin	courgette.oogsten	courgette		oogsten	Oogsten	taak	jul-sep		jaarlijks						jul–sep		
+moestuin	snackkomkommer.binnen-zaaien	snackkomkommer		planten	Binnen zaaien	taak	apr-mei		jaarlijks	eind					e-apr–mei		
+moestuin	snackkomkommer.uitplanten	snackkomkommer		planten	Uitplanten	taak	mei		jaarlijks	midden	midden				Na de IJsheiligen		
+moestuin	snackkomkommer.oogsten	snackkomkommer		oogsten	Oogsten	taak	jul-sep		jaarlijks						jul–sep		
+moestuin	wortel.buiten-zaaien-of-planten	wortel		planten	Buiten zaaien of planten	taak	mrt-jul		jaarlijks						mrt–jul (onder de kasopzet al vanaf e-feb)		
+moestuin	wortel.oogsten	wortel		oogsten	Oogsten	taak	jun-nov		jaarlijks						jun–nov		
+moestuin	lente-ui.buiten-zaaien-of-planten	lente-ui		planten	Buiten zaaien of planten	taak	mrt-jul		jaarlijks						mrt–jul [eigen inschatting]		
+moestuin	lente-ui.oogsten	lente-ui		oogsten	Oogsten	taak	mei-okt		jaarlijks						mei–okt		
+moestuin	rode-biet.buiten-zaaien-of-planten	rode-biet		planten	Buiten zaaien of planten	taak	apr-jul		jaarlijks						apr–jul		
+moestuin	rode-biet.oogsten	rode-biet		oogsten	Oogsten	taak	jul-okt		jaarlijks						jul–okt		
+moestuin	zoete-aardappel.binnen-zaaien	zoete-aardappel		planten	Binnen zaaien	taak	mrt-apr		jaarlijks						Eigen stekjes trekken uit een knol: mrt–apr		
+moestuin	zoete-aardappel.uitplanten	zoete-aardappel		planten	Uitplanten	taak	mei-jun		jaarlijks	eind	begin				e-mei–b-jun, na de laatste vorst		
+moestuin	zoete-aardappel.oogsten	zoete-aardappel		oogsten	Oogsten	taak	sep-okt		jaarlijks						sep–okt, vóór de eerste vorst		
+moestuin	knoflook.buiten-zaaien-of-planten	knoflook		planten	Buiten zaaien of planten	taak	okt-nov		jaarlijks		midden				okt–m-nov (voorjaar: feb–apr kan ook, kleinere bollen)		
+moestuin	knoflook.oogsten	knoflook		oogsten	Oogsten	taak	jun-jul		jaarlijks						jun–jul (als ⅔ van het loof dor is)		
+moestuin	radijs.buiten-zaaien-of-planten	radijs		planten	Buiten zaaien of planten	taak	mrt-apr		jaarlijks		midden				mrt–half apr; weer in jul–aug		
+moestuin	pluksla.buiten-zaaien-of-planten	pluksla		planten	Buiten zaaien of planten	taak	feb-apr		jaarlijks	eind					e-feb–apr (onder de kasopzet)		
+moestuin	pluksla.oogsten	pluksla		oogsten	Oogsten	taak	apr-jun		jaarlijks						apr–jun		
+moestuin	spinazie.buiten-zaaien-of-planten	spinazie		planten	Buiten zaaien of planten	taak	feb-apr		jaarlijks	eind					e-feb–apr (onder de kasopzet)		
+moestuin	spinazie.oogsten	spinazie		oogsten	Oogsten	taak	apr-mei		jaarlijks						apr–mei		
+moestuin	veldsla.buiten-zaaien-of-planten	veldsla		planten	Buiten zaaien of planten	taak	aug-sep		jaarlijks						aug–sep		
+moestuin	veldsla.oogsten	veldsla		oogsten	Oogsten	taak	okt-mrt		jaarlijks						okt–mrt		
+moestuin	dahlia.uitplanten	dahlia		planten	Uitplanten	taak	mei		jaarlijks	midden	midden				Na de IJsheiligen (m-mei)		
+moestuin	dahlia.zaaien	dahlia		planten	Zaaien	taak	mrt		jaarlijks	midden	midden				Voortrekken in pot vanaf m-mrt (optioneel, ±10 °C, licht)		
+moestuin	goudsbloem.zaaien	goudsbloem		planten	Zaaien	taak	apr-mei		jaarlijks						apr–mei, buiten ter plekke [eigen inschatting]		
+moestuin	oost-indische-kers.zaaien	oost-indische-kers		planten	Zaaien	taak	mei		jaarlijks	midden	midden				Na m-mei, buiten ter plekke [eigen inschatting]		
+moestuin	afrikaantje.uitplanten	afrikaantje		planten	Uitplanten	taak	mei		jaarlijks	midden	midden				Na de IJsheiligen		
+moestuin	afrikaantje.zaaien	afrikaantje		planten	Zaaien	taak	mrt-apr		jaarlijks						Binnen mrt–apr [eigen inschatting]		
+moestuin	ridderspoor.zaaien	ridderspoor		planten	Zaaien	taak	mrt-apr		jaarlijks						mrt–apr of sep, buiten ter plekke [eigen inschatting]		
+moestuin	cosmos.zaaien	cosmos		planten	Zaaien	taak	mei		jaarlijks	midden	midden				Na m-mei, buiten ter plekke [eigen inschatting]		
+moestuin	zinnia.zaaien	zinnia		planten	Zaaien	taak	mei		jaarlijks	midden	midden				Na m-mei, buiten ter plekke [eigen inschatting]		
+moestuin	citroenmelisse.planten-of-zaaien	citroenmelisse		planten	Planten of zaaien	taak	apr-mei		tot_geplant						apr–mei		
+moestuin	basilicum.planten-of-zaaien	basilicum		planten	Planten of zaaien	taak	apr		jaarlijks						Binnen zaaien vanaf apr; buiten pas na m-mei		
+moestuin	rozemarijn.planten-of-zaaien	rozemarijn		planten	Planten of zaaien	taak	apr-jun		tot_geplant		eind				apr–e-jun		
+moestuin	peterselie.planten-of-zaaien	peterselie		planten	Planten of zaaien	taak	apr-jul		jaarlijks						Buiten zaaien apr–jul (kiemt traag)		
+moestuin	lavendel.planten-of-zaaien	lavendel		planten	Planten of zaaien	taak	apr-mei		tot_geplant						apr–mei		
+moestuin	tijm.planten-of-zaaien	tijm		planten	Planten of zaaien	taak	apr-mei		tot_geplant						apr–mei		
+moestuin	munt.planten-of-zaaien	munt		planten	Planten of zaaien	taak	apr-mei		tot_geplant						apr–mei, in een ingegraven pot		
+moestuin	aardbei.oogsten	aardbei		oogsten	Oogsten	taak	jun-jul		jaarlijks						jun–jul		
+moestuin	appelboom.oogsten	appelboom		oogsten	Oogsten	taak	aug-okt		jaarlijks						aug–okt (afhankelijk van het ras)		
+moestuin	vijg.oogsten	vijg		oogsten	Oogsten	taak	aug-sep		jaarlijks						aug–sep [eigen inschatting]		
+moestuin	bessenstruik.oogsten	bessenstruik		oogsten	Oogsten	taak	jun-aug		jaarlijks						jun–aug		
+moestuin	framboos.oogsten	framboos		oogsten	Oogsten	taak	jun-aug		jaarlijks	eind	begin				Zomerframboos: e-jun–b-aug; herfstframboos: e-aug–m-okt		
+moestuin	rabarber.oogsten	rabarber		oogsten	Oogsten	taak	apr-jun		jaarlijks						apr–jun; stoppen e-jun		
+moestuin	phacelia.zaaien	phacelia		planten	Zaaien	taak	aug-sep		jaarlijks		begin				aug–b-sep, in bakken die vóór september leeg komen; op klei vóór september zaaien		
+moestuin	mt.1		algemeen	onderhoud	Zaad, knollen en plantgoed bestellen volgens het teeltplan	taak	dec-jan		jaarlijks							Alle bakken	
+moestuin	mt.2		boomgaard	snoeien	Wintersnoei appelboom	taak	jan-feb		jaarlijks							Boomgaard	
+moestuin	mt.3		boomgaard	snoeien	Wintersnoei bessenstruik (aalbes: nov–dec)	taak	nov-feb		jaarlijks							Boomgaard	
+moestuin	mt.4		fruit	snoeien	Herfstframbozen: alle stengels bij de grond af (alleen als het herfstframbozen zijn)	taak	feb-mrt		jaarlijks				Herfstframbozen: alle stengels bij de grond af (alleen als het herfstframbozen zijn)			Frambozenrek	
+moestuin	mt.5		bak-6	onderhoud	Kasopzet op bak 6 zetten; stormhaken vast	taak	feb		jaarlijks	eind	eind					Bak 6	
+moestuin	mt.6		algemeen	mest	Mulch opzij schuiven en ±1 m³ compost over alle bakken verdelen (±2 cm)	taak	mrt		jaarlijks							Alle bakken	
+moestuin	mt.7		boomgaard	mest	Compost op boomspiegels en bij de rabarber	taak	mrt		jaarlijks							Boomgaard	
+moestuin	mt.8		algemeen	mulchen	Houtsnippers 2–3 cm bijvullen	taak	mrt-apr		jaarlijks							Paden, overige deel	
+moestuin	mt.9		bak-9	snoeien	Lavendel en rozemarijn snoeien	taak	mrt-apr		jaarlijks							Bak 9	
+moestuin	mt.10		boomgaard	snoeien	Vijg: dode en bevroren takken weg	taak	mrt-apr		jaarlijks							Boomgaard	
+moestuin	mt.11		compost	mest	Compostbak omzetten; rijpe compost gebruiken	taak	mrt, sep		jaarlijks							Compost	
+moestuin	mt.12	wortel		onderhoud	Insectengaas over de wortel, van zaaien tot oogst	taak	mrt-okt		jaarlijks							Wortelbak	
+moestuin	mt.13		boomgaard	onderhoud	Grasstrook maaien, elke 2–3 weken; maaisel als mulch tussen de groenten	taak	apr-okt		jaarlijks							Boomgaard	
+moestuin	mt.14	aardbei		mulchen	Stro onder de aardbeien	taak	mei		jaarlijks							Aardbeibak	
+moestuin	mt.15	aardbei		onderhoud	Vogelnet over de aardbeien	taak	mei-jul		jaarlijks							Aardbeibak	
+moestuin	mt.16			onderhoud	Kasopzet eraf of gaasframe erop zodra gewassen te hoog worden	taak	mei-aug		jaarlijks							Bak met kasopzet	
+moestuin	mt.17		fruit	snoeien	Bloemstengels rabarber weghalen	taak	mei-jun		jaarlijks							Rabarber	
+moestuin	mt.18			onderhoud	Klimmers (snackkomkommer, Oost-Indische kers) naar het gaas van de pergola leiden	taak	mei-jun		jaarlijks							Bak met biet en komkommer	
+moestuin	mt.19		algemeen	water	Met de hand gieten uit de regentonnen of met water uit de handpomp bij droogte (meer dan een week zonder regen en droge grond)	taak	apr-sep		jaarlijks				Met de hand gieten uit de regentonnen of met water uit de handpomp bij droogte (meer dan een week zonder regen en droge grond)			Alle bakken	
+moestuin	mt.20		bak-1, bak-2, bak-3, bak-4, bak-5, bak-6	mulchen	Stro of grasmaaisel 3–5 cm tussen de gewassen	taak	jun		jaarlijks							Bak 1–6	
+moestuin	mt.21.pompoen	pompoen		mest	Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant	taak	jun-jul		jaarlijks							Pompoen, courgette, komkommer, mais, dahlia	
+moestuin	mt.21.courgette	courgette		mest	Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant	taak	jun-jul		jaarlijks							Pompoen, courgette, komkommer, mais, dahlia	
+moestuin	mt.21.snackkomkommer	snackkomkommer		mest	Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant	taak	jun-jul		jaarlijks							Pompoen, courgette, komkommer, mais, dahlia	
+moestuin	mt.21.suikermais	suikermais		mest	Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant	taak	jun-jul		jaarlijks							Pompoen, courgette, komkommer, mais, dahlia	
+moestuin	mt.21.dahlia	dahlia		mest	Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant	taak	jun-jul		jaarlijks							Pompoen, courgette, komkommer, mais, dahlia	
+moestuin	mt.22	aardbei		snoeien	Aardbei-uitlopers weghalen (in het vernieuwingsjaar in aug laten wortelen)	taak	jun-sep		jaarlijks							Aardbeibak	
+moestuin	mt.23	dahlia		snoeien	Dahlia's opbinden en uitgebloeide bloemen wegknippen	taak	jun-sep		jaarlijks							Dahlia's	
+moestuin	mt.24		bak-9	snoeien	Citroenmelisse na de bloei terugknippen	taak	jul		jaarlijks							Bak 9	
+moestuin	mt.25		boomgaard	snoeien	Zomersnoei appelboom	taak	jul-aug		jaarlijks							Boomgaard	
+moestuin	mt.26		fruit	snoeien	Zomerframbozen: gedragen stengels weg, jonge aanbinden (alleen als het zomerframbozen zijn)	taak	aug		jaarlijks				Zomerframbozen: gedragen stengels weg, jonge aanbinden (alleen als het zomerframbozen zijn)			Frambozenrek	
+moestuin	mt.27	aardbei		snoeien	Aardbeien na de oogst: oud blad weg, licht bemesten	taak	aug		jaarlijks							Aardbeibak	
+moestuin	mt.28		bak-9	snoeien	Lavendel na de bloei licht snoeien (max. ⅓, niet na september)	taak	aug-sep		jaarlijks							Bak 9	
+moestuin	mt.29		algemeen	planten	Phacelia zaaien in bakken die leeg komen; in de winter laten afvriezen	taak	aug-sep		jaarlijks		begin		Phacelia zaaien in bakken die leeg komen; in de winter laten afvriezen			Vrijgekomen bakken	
+moestuin	mt.30		algemeen	onderhoud	Kasopzet op een lege bak voor veldsla	taak	sep		jaarlijks							Wisselend	
+moestuin	mt.31	dahlia		oogsten	Dahlia's rooien na de eerste nachtvorst, vorstvrij bewaren	taak	okt-nov		jaarlijks							Dahliabak	
+moestuin	mt.32	knoflook		planten	Knoflook planten voor het volgende jaar	taak	okt-nov		jaarlijks							Knoflookbak	
+moestuin	mt.33		algemeen	mulchen	Blad en stro verzamelen; lege bakken 5–10 cm afdekken	taak	okt-dec		jaarlijks							Alle lege bakken	
+moestuin	mt.34		algemeen	onderhoud	Koppelingen tussen de regentonnen leeg laten lopen of vorstvrij maken	taak	nov		jaarlijks							Regentonnen	
+moestuin	mt.35		algemeen	onderhoud	Gaasframe opbergen; kasopzet stormvast zetten	taak	nov		jaarlijks							Kasopzet	
+moestuin	mt.36		boomgaard	mulchen	Jonge vijg beschermen bij strenge vorst	taak	nov-mrt		jaarlijks				Jonge vijg beschermen bij strenge vorst			Boomgaard	
+moestuin	mt.37		algemeen	onderhoud	Bewaarde dahliaknollen controleren op rot	taak	dec		jaarlijks							Opslag	

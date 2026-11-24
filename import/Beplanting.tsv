@@ -1,0 +1,112 @@
+locatie	plant	plek	status	aantal	vanaf	jaren
+achtertuin	amelanchier	C	geplant			
+achtertuin	cornus	A	geplant			
+achtertuin	lonicera	B	gepland			
+achtertuin	hydrangea	S	gepland			
+achtertuin	trachelospermum	B	gepland			
+achtertuin	rosa	B	gepland			
+achtertuin	vitis	D	gepland			
+achtertuin	clematis	C	gepland			
+achtertuin	hedera	S	gepland			
+achtertuin	echinacea	C	gepland			
+achtertuin	helleborus_or	A	gepland			
+achtertuin	helleborus_or	B	gepland			
+achtertuin	helleborus_ni	S	gepland			
+achtertuin	heuchera	A	gepland			
+achtertuin	aquilegia	A	gepland			
+achtertuin	dryopteris	S	gepland			
+achtertuin	lavandula	D	gepland			
+achtertuin	astrantia	A	gepland			
+achtertuin	knautia	D	gepland			
+achtertuin	pulmonaria	S	gepland			
+achtertuin	geranium	A	gepland			
+achtertuin	geranium	B	gepland			
+achtertuin	digitalis	A	gepland			
+achtertuin	carex	A	gepland			
+achtertuin	carex	B	gepland			
+achtertuin	myosotis	D	gepland			
+achtertuin	lunaria	B	gepland			
+achtertuin	allium	B	gepland			
+achtertuin	nepeta	B	gepland			
+achtertuin	nepeta	C	gepland			
+achtertuin	rudbeckia	B	gepland			
+achtertuin	rudbeckia	C	gepland			
+achtertuin	aster_amellus	C	gepland			
+achtertuin	verbena	D	gepland			
+achtertuin	salvia	C	gepland			
+achtertuin	sedum	C	gepland			
+achtertuin	agastache	D	gepland			
+achtertuin	pennisetum	D	gepland			
+achtertuin	centaurea	D	gepland			
+achtertuin	echium	D	gepland			
+achtertuin	primula	S	gepland			
+achtertuin	hyacinthoides	S	gepland			
+achtertuin	astilbe	S	gepland			
+achtertuin	sarcococca	S	gepland			
+achtertuin	liriope	A	gepland			
+achtertuin	galanthus	A	gepland	±30		
+achtertuin	crocus_tom	A	gepland	±30		
+achtertuin	crocus_tom	B	gepland	±25		
+achtertuin	crocus_tom	C	gepland	±25		
+achtertuin	crocus_tom	D	gepland	±15		
+achtertuin	crocus_cb	B	gepland	±25		
+achtertuin	crocus_cb	C	gepland	±25		
+achtertuin	crocus_cb	D	gepland	±15		
+achtertuin	fritillaria	A	gepland	±15–20		
+achtertuin	narcissus	B	gepland	±15		
+achtertuin	narcissus	C	gepland	±15		
+achtertuin	scilla	C	gepland	±30		
+achtertuin	muscari	D	gepland	±30		
+achtertuin	aster_div	S	gepland			
+achtertuin	liatris	C	gepland			
+achtertuin	purple_dome	B	gepland			
+moestuin	suikermais	bak-1	gepland		2027	oneven
+moestuin	suikermais	bak-4	gepland		2027	even
+moestuin	pompoen	bak-1	gepland		2027	oneven
+moestuin	pompoen	bak-4	gepland		2027	even
+moestuin	wortel	bak-2	gepland		2027	oneven
+moestuin	wortel	bak-3	gepland		2027	even
+moestuin	lente-ui	bak-2	gepland		2027	oneven
+moestuin	lente-ui	bak-3	gepland		2027	even
+moestuin	afrikaantje	bak-2	gepland		2027	oneven
+moestuin	afrikaantje	bak-3	gepland		2027	even
+moestuin	snackkomkommer	bak-3	gepland		2027	oneven
+moestuin	snackkomkommer	bak-2	gepland		2027	even
+moestuin	rode-biet	bak-3	gepland		2027	oneven
+moestuin	rode-biet	bak-2	gepland		2027	even
+moestuin	goudsbloem	bak-3	gepland		2027	oneven
+moestuin	goudsbloem	bak-2	gepland		2027	even
+moestuin	oost-indische-kers	bak-3	gepland		2027	oneven
+moestuin	oost-indische-kers	bak-2	gepland		2027	even
+moestuin	ridderspoor	bak-3	gepland		2027	oneven
+moestuin	ridderspoor	bak-2	gepland		2027	even
+moestuin	courgette	bak-4	gepland		2027	oneven
+moestuin	courgette	bak-1	gepland		2027	even
+moestuin	goudsbloem	bak-4	gepland		2027	oneven
+moestuin	goudsbloem	bak-1	gepland		2027	even
+moestuin	oost-indische-kers	bak-4	gepland		2027	oneven
+moestuin	oost-indische-kers	bak-1	gepland		2027	even
+moestuin	dahlia	bak-5	gepland		2027	
+moestuin	zoete-aardappel	bak-6	gepland		2027	
+moestuin	afrikaantje	bak-6	gepland		2027	
+moestuin	radijs	bak-6	gepland		2027	
+moestuin	pluksla	bak-6	gepland		2027	
+moestuin	spinazie	bak-6	gepland		2027	
+moestuin	knoflook	bak-8	gepland		2027	
+moestuin	aardbei	bak-8	gepland		2027	
+moestuin	goudsbloem	bak-10	gepland		2027	
+moestuin	cosmos	bak-10	gepland		2027	
+moestuin	zinnia	bak-10	gepland		2027	
+moestuin	citroenmelisse	bak-9	gepland		2027	
+moestuin	basilicum	bak-9	gepland		2027	
+moestuin	rozemarijn	bak-9	gepland		2027	
+moestuin	peterselie	bak-9	gepland		2027	
+moestuin	lavendel	bak-9	gepland		2027	
+moestuin	tijm	bak-9	gepland		2027	
+moestuin	munt	bak-9	gepland		2027	
+moestuin	appelboom	boomgaard	geplant			
+moestuin	vijg	boomgaard	geplant			
+moestuin	jonge-fruitboom	boomgaard	geplant			
+moestuin	bessenstruik	boomgaard	geplant			
+moestuin	framboos	fruit	geplant			
+moestuin	rabarber	fruit	geplant			

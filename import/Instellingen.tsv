@@ -1,0 +1,4 @@
+sleutel	waarde	uitleg
+geen_achterstand_voor	2026-11	Taken uit maanden vóór deze maand (jjjj-mm) tellen niet als nog open
+achterstand_maanden	3	Hoeveel maanden terug de app nog open taken toont
+sierwaarde_codes	B bloei, L blad, E bes of vrucht, Z zaadhoofden, W wintersilhouet, - geen	Codes in Planten.sierwaarde (12 tekens, jan-dec)
