@@ -2,34 +2,553 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4d6b3c">
 <title>Tuin</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    margin: 0; min-height: 100vh; display: grid; place-items: center;
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    background: #f4f1ea; color: #2f3a2b;
-  }
-  main { max-width: 26rem; padding: 2rem 1.5rem; text-align: center; }
-  h1 { font-size: 2rem; margin: 0 0 .5rem; }
-  p { line-height: 1.5; margin: 0 0 1.5rem; }
-  a.knop {
-    display: block; padding: .9rem 1rem; border-radius: .75rem;
-    background: #4d6b3c; color: #fff; text-decoration: none; font-weight: 600;
-  }
-  small { display: block; margin-top: 1.5rem; opacity: .6; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #1d2219; color: #e4e8dc; }
-  }
+:root{--bg:#f4f1ea;--kaart:#fff;--tekst:#2f3a2b;--zacht:#6b7563;--lijn:#e2ddd2;--groen:#4d6b3c;--groen2:#e3eddb;--rood:#a4432f;--geel:#f6ecd0;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#1b2017;--kaart:#252b20;--tekst:#e4e8dc;--zacht:#a3ab99;--lijn:#3a4233;--groen:#8db373;--groen2:#2f3b28;--rood:#e08b74;--geel:#3d3722}}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tekst);padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+a{color:var(--groen)}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--lijn);padding:10px 14px 8px}
+header .rij{display:flex;align-items:center;gap:8px}
+header h1{font-size:19px;margin:0;flex:1}
+.knopje{border:1px solid var(--lijn);background:var(--kaart);border-radius:10px;padding:6px 11px;cursor:pointer}
+.knopje.primair{background:var(--groen);color:#fff;border-color:var(--groen)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:6px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--lijn);background:var(--kaart);border-radius:999px;padding:4px 11px;font-size:13.5px;cursor:pointer;white-space:nowrap}
+.chip.aan{background:var(--groen);border-color:var(--groen);color:#fff}
+main{padding:10px 14px;max-width:1200px;margin:0 auto}
+h2{font-size:15px;margin:18px 2px 8px;color:var(--zacht);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+h3{margin:0 0 6px;font-size:17px}
+.lijst{display:grid;gap:8px}
+.kaart{background:var(--kaart);border:1px solid var(--lijn);border-radius:14px;padding:11px 12px}
+.taak{display:flex;gap:10px;align-items:flex-start}
+.taak.klaar .tk{opacity:.5}.taak.klaar .titel{text-decoration:line-through}
+.vink{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--groen);background:none;cursor:pointer;margin-top:1px;display:grid;place-items:center;color:#fff;font-size:15px}
+.taak.klaar .vink{background:var(--groen)}
+.ico{flex:none;width:28px;text-align:center;font-size:18px}
+.tk{flex:1;min-width:0}
+.kop{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:13px;color:var(--zacht)}
+.actie{border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600}
+.titel{font-weight:600;margin-top:2px}
+.sub{font-size:13px;color:var(--zacht);margin-top:2px}
+.suggestie{background:var(--geel)}
+.waarschuwing{border-color:var(--rood)}.waarschuwing .titel{color:var(--rood)}
+details{margin-top:4px;font-size:13.5px}summary{cursor:pointer;color:var(--groen);font-size:13px}
+.link{background:none;border:0;padding:0;color:var(--groen);cursor:pointer;text-decoration:underline;font-size:inherit}
+.leeg{color:var(--zacht);padding:14px 4px}
+.raster{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.plekkaart{cursor:pointer}.plekkaart .getal{font-size:13px;color:var(--zacht)}
+.foto{width:100%;border-radius:12px;display:block;max-height:340px;object-fit:cover;background:var(--lijn)}
+.fotos{display:flex;gap:8px;overflow-x:auto}.fotos img{height:180px;border-radius:10px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font-size:14px}dt{color:var(--zacht)}dd{margin:0}
+.plantrij{display:flex;gap:10px;align-items:center;cursor:pointer}
+.plantrij .naam{font-weight:600}.plantrij .lat{font-style:italic;color:var(--zacht);font-size:13px}
+.status{font-size:12px;border-radius:6px;padding:1px 7px;background:var(--groen2)}
+.status.gepland{background:var(--geel)}.status.weg{background:var(--lijn);text-decoration:line-through}
+.sier{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:6px 0;font-size:10px;text-align:center}
+.sier div{border-radius:4px;padding:4px 0 2px}
+.score{letter-spacing:2px;color:var(--groen)}
+.jaar td,.jaar th{padding:7px 6px;border-bottom:1px solid var(--lijn);text-align:left;vertical-align:top}
+.jaar{width:100%;border-collapse:collapse;background:var(--kaart);border-radius:14px;overflow:hidden}
+.jaar tr{cursor:pointer}.jaar .nu{background:var(--groen2)}
+.mini{display:inline-block;border-radius:5px;padding:0 5px;margin:1px;font-size:12px}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:6;display:flex;background:var(--kaart);border-top:1px solid var(--lijn);padding-bottom:env(safe-area-inset-bottom)}
+nav a{flex:1;text-align:center;padding:7px 0 8px;font-size:12px;color:var(--zacht);text-decoration:none}
+nav a b{display:block;font-size:19px;font-weight:400}
+nav a.aan{color:var(--groen);font-weight:600}
+label{display:block;margin:10px 0 4px;font-size:13px;color:var(--zacht)}
+input,select,textarea{width:100%;padding:9px 10px;border:1px solid var(--lijn);border-radius:10px;background:var(--kaart)}
+dialog{border:0;border-radius:16px;padding:16px;width:min(440px,94vw);background:var(--kaart);color:var(--tekst)}
+dialog::backdrop{background:#0007}
+.knoppen{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:flex-end}
+#melding{position:fixed;left:50%;transform:translateX(-50%);bottom:76px;z-index:9;background:#333;color:#fff;padding:9px 14px;border-radius:10px;font-size:14px;display:none;max-width:92vw}
+.zoek{margin:6px 0}
+@media (min-width:900px){
+ body{padding:0 0 0 190px}
+ nav{top:0;bottom:0;right:auto;width:190px;flex-direction:column;border-top:0;border-right:1px solid var(--lijn);padding-top:14px}
+ nav a{flex:none;text-align:left;padding:10px 18px;font-size:15px}nav a b{display:inline;margin-right:8px;font-size:17px}
+ .lijst{grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+ header{padding:12px 24px}main{padding:12px 24px}
+ #melding{bottom:20px}
+}
 </style>
 </head>
 <body>
-<main>
-  <h1>Tuin</h1>
-  <p>Hier komt de taken-app voor de moestuin en de achtertuin.</p>
-  <a class="knop" href="tuinplan/">Tuinplan achtertuin</a>
-  <small>Testpagina — GitHub Pages werkt.</small>
-</main>
+<header id="kop"></header>
+<main id="app"><p class="leeg">Laden…</p></main>
+<nav id="nav"></nav>
+<dialog id="dlg"></dialog>
+<div id="melding"></div>
+<script>
+'use strict';
+// URL van de Apps Script-webapp (eindigt op /exec). Kan per toestel worden overschreven bij Instellingen.
+const API_STANDAARD = '';
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1gkO__1D6oWzxG2rEm-hj0PXKLjp2ZVHNyVd9Rf0jJIg/edit';
+const MK = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+const MN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+const SIER = {B:['#f2b8d2','bloei'],L:['#a9cf94','blad'],E:['#d77b6b','bes of vrucht'],Z:['#c9ad7c','zaadhoofden'],W:['#9fb0c4','wintersilhouet'],'-':['transparent','']};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lijst = s => String(s || '').split(/\s*,\s*/).filter(Boolean);
+const opslag = {
+  get(k, d) { try { const v = localStorage.getItem('tuin.' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('tuin.' + k, JSON.stringify(v)); } catch (e) {} }
+};
+const vandaag = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const NU = new Date(), NUJ = NU.getFullYear(), NUM = NU.getMonth() + 1;
+const ym = (j, m) => j * 12 + m - 1;
+const ymTekst = s => { const m = /^(\d{4})-(\d{1,2})/.exec(s || ''); return m ? ym(+m[1], +m[2]) : null; };
+
+let D = null, laadtijd = '', bezig = false, memo = new Map();
+let wachtrij = opslag.get('wachtrij', []);
+const S = Object.assign({ jaar: NUJ, maand: NUM, loc: '', plek: '', actie: '', zoek: '', ploc: '' }, opslag.get('filters', {}));
+if (opslag.get('filterdag', '') !== vandaag()) { S.jaar = NUJ; S.maand = NUM; }
+let route = ['taken'];
+
+/* ---------- gegevens ---------- */
+function rijen(t) {
+  if (!t || !t.length) return [];
+  const kop = t[0].map(k => String(k).trim());
+  return t.slice(1).map(r => { const o = {}; kop.forEach((k, i) => { if (k) o[k] = String(r[i] ?? '').trim(); }); return o; });
+}
+function maanden(s) {
+  return lijst(s).map(x => {
+    const [a, b] = x.split('-').map(y => MK.indexOf(y.trim().slice(0, 3).toLowerCase()) + 1);
+    if (!a) return null;
+    const e = b || a, ms = [];
+    for (let m = a, i = 0; i < 12; i++) { ms.push(m); if (m === e) break; m = m % 12 + 1; }
+    return { start: a, eind: e, maanden: ms };
+  }).filter(Boolean);
+}
+function bouw(j) {
+  const t = j.tabs || {};
+  D = {};
+  for (const n of ['Locaties','Acties','Plekken','Planten','Beplanting','Regels','Projecttaken','Info','Stand','Voortgang','Instellingen']) D[n] = rijen(t[n]);
+  D.inst = {}; D.Instellingen.forEach(r => D.inst[r.sleutel] = r.waarde);
+  D.actie = {}; D.Acties.forEach(a => D.actie[a.id] = a);
+  D.Plekken = D.Plekken.filter(p => p.status !== 'vervallen');
+  D.plek = {}; D.Plekken.forEach(p => D.plek[p.locatie + '|' + p.id] = p);
+  D.plant = {}; D.Planten.forEach(p => D.plant[p.locatie + '|' + p.id] = p);
+  D.Regels.forEach(r => { r.vensters = maanden(r.maanden); r.plekLijst = lijst(r.plekken); r.isKeuze = r.keuze === 'ja'; });
+  D.Projecttaken.forEach(p => { p.plekLijst = lijst(p.plekken); p.vanN = ymTekst(p.van); p.totN = ymTekst(p.tot) ?? p.vanN; });
+  laadtijd = j.tijd || '';
+  pasToe(wachtrij);
+}
+function indexeer() {
+  D.klaar = new Map(); D.Voortgang.forEach(v => D.klaar.set(v.jaar + '|' + v.taak, v));
+  D.klaarP = new Map(); D.Voortgang.filter(v => v.taak.startsWith('p:')).forEach(v => D.klaarP.set(v.taak, v));
+  D.standKey = {}; D.Stand.forEach(s => D.standKey[s.key] = s);
+  memo = new Map();
+}
+function pasToe(acties) {
+  for (const a of acties) {
+    if (a.op === 'voortgang_aan') { D.Voortgang = D.Voortgang.filter(r => !(r.taak === a.rij.taak && r.jaar == a.rij.jaar)); D.Voortgang.push(a.rij); }
+    else if (a.op === 'voortgang_uit') D.Voortgang = D.Voortgang.filter(r => !(r.taak === a.taak && r.jaar == a.jaar));
+    else if (a.op === 'stand_zet') { D.Stand = D.Stand.filter(r => r.key !== a.rij.key); D.Stand.push(a.rij); }
+    else if (a.op === 'stand_weg') D.Stand = D.Stand.filter(r => r.key !== a.key);
+    else if (a.op === 'stand_weg_via') D.Stand = D.Stand.filter(r => !a.via_regel || r.via_regel !== a.via_regel);
+  }
+  indexeer();
+}
+const api = () => opslag.get('api', '') || API_STANDAARD;
+async function laad(stil) {
+  const cache = opslag.get('data', null);
+  if (cache && !D) { bouw(cache); teken(); }
+  if (!api()) { if (!D) { D = null; ga('instellingen'); } return; }
+  try {
+    const r = await fetch(api(), { cache: 'no-store' });
+    const j = await r.json();
+    if (!j.ok) throw Error(j.fout || 'fout');
+    opslag.set('data', j); bouw(j); teken(); verstuur();
+    if (!stil) melding('Gegevens bijgewerkt');
+  } catch (e) {
+    melding(D ? 'Geen verbinding; je ziet de laatst bewaarde gegevens.' : 'Kon de gegevens niet laden. Controleer de URL bij Instellingen.');
+    if (!D) ga('instellingen');
+  }
+}
+function schrijf(acties) {
+  wachtrij.push(...acties); opslag.set('wachtrij', wachtrij);
+  pasToe(acties); teken(); verstuur();
+}
+async function verstuur() {
+  if (bezig || !wachtrij.length || !api()) return;
+  const sleutel = opslag.get('sleutel', '');
+  if (!sleutel) { melding('Nog niet opgeslagen: vul de sleutel in bij Instellingen.'); return; }
+  bezig = true;
+  const deel = wachtrij.slice();
+  try {
+    const r = await fetch(api(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ sleutel, acties: deel }) });
+    const j = await r.json();
+    if (!j.ok) { melding(j.fout === 'sleutel' ? 'De sleutel klopt niet; kijk bij Instellingen.' : 'Opslaan mislukt: ' + j.fout); bezig = false; return; }
+    wachtrij.splice(0, deel.length); opslag.set('wachtrij', wachtrij);
+    const c = opslag.get('data', { tabs: {} }); Object.assign(c.tabs, j.tabs); opslag.set('data', c);
+    D.Stand = rijen(j.tabs.Stand); D.Voortgang = rijen(j.tabs.Voortgang); pasToe(wachtrij);
+    bezig = false; teken();
+    if (wachtrij.length) verstuur();
+  } catch (e) { bezig = false; melding('Niet verstuurd; wordt opnieuw geprobeerd zodra er verbinding is.'); }
+}
+addEventListener('online', verstuur);
+
+/* ---------- logica ---------- */
+const locs = () => D.Locaties;
+const plekNaam = (loc, id) => (D.plek[loc + '|' + id] || {}).naam || id;
+const plantNaam = (loc, id, naam) => (D.plant[loc + '|' + id] || {}).nl || naam || id;
+function geldt(b, j) {
+  if (b.vanaf && j < +b.vanaf) return false;
+  if (b.jaren === 'oneven' && j % 2 === 0) return false;
+  if (b.jaren === 'even' && j % 2 === 1) return false;
+  return true;
+}
+// Effectieve beplanting: het plan met de werkelijke stand eroverheen.
+function beplanting(loc, j) {
+  const k = 'b|' + loc + '|' + j;
+  if (memo.has(k)) return memo.get(k);
+  const uit = [];
+  for (const b of D.Beplanting) {
+    if ((loc && b.locatie !== loc) || b.status === 'vervallen' || !geldt(b, j)) continue;
+    const key = b.locatie + '|' + b.plant + '|' + b.plek, s = D.standKey[key];
+    const e = { key, locatie: b.locatie, plant: b.plant, plek: b.plek, planPlek: b.plek, status: b.status, aantal: b.aantal, notitie: '', uitStand: false };
+    if (s) Object.assign(e, { plek: s.plek || e.plek, status: s.status || e.status, aantal: s.aantal || e.aantal, notitie: s.notitie, via: s.via_regel, datum: s.datum, uitStand: true });
+    uit.push(e);
+  }
+  for (const s of D.Stand) if (s.nieuw === 'ja' && (!loc || s.locatie === loc))
+    uit.push({ key: s.key, locatie: s.locatie, plant: s.plant, naam: s.naam, plek: s.plek, status: s.status, aantal: s.aantal, notitie: s.notitie, datum: s.datum, nieuw: true, uitStand: true });
+  memo.set(k, uit);
+  return uit;
+}
+function doelen(r, bep) {
+  if (r.plekLijst.length) return r.plekLijst.map(p => ({ plek: p, plant: r.plant }));
+  if (!r.plant) return D.plek[r.locatie + '|algemeen'] ? [{ plek: 'algemeen' }] : [];
+  const pl = D.plant[r.locatie + '|' + r.plant] || {}, elkJaar = pl.levensduur === 'seizoen' || pl.levensduur === 'zaaien';
+  const gezien = new Set(), uit = [];
+  for (const e of bep) {
+    if (e.plant !== r.plant || e.status === 'weg') continue;
+    const ok = r.herhaling === 'tot_geplant' ? (e.status === 'gepland' || (e.via || '').startsWith('r:' + r.id + ':')) : (e.status === 'geplant' || elkJaar);
+    if (!ok || gezien.has(e.plek)) continue;
+    gezien.add(e.plek); uit.push({ plek: e.plek, plant: r.plant, entry: e });
+  }
+  return uit;
+}
+const isKlaar = t => t.type === 'p' ? D.klaarP.has(t.key) : D.klaar.has(t.vj + '|' + t.key);
+function regelTaken(J, M) {
+  const k = 'r|' + J + '|' + M;
+  if (memo.has(k)) return memo.get(k);
+  const uit = [];
+  for (const r of D.Regels) {
+    if (!D.actie[r.actie] && r.soort === 'taak') continue;
+    for (const v of r.vensters) {
+      if (!v.maanden.includes(M)) continue;
+      const vj = M < v.start ? J - 1 : J;
+      for (const d of doelen(r, beplanting(r.locatie, J))) {
+        const key = 'r:' + r.id + ':' + d.plek + ':' + v.start;
+        const t = { type: 'r', key, r, v, vj, loc: r.locatie, actie: r.actie, soort: r.soort || 'taak', titel: r.detail, plekken: [d.plek], plant: d.plant, entry: d.entry };
+        if (r.isKeuze && !isKlaar(t) && r.vensters.some(w => w !== v && D.klaar.has(vj + '|r:' + r.id + ':' + d.plek + ':' + w.start))) continue;
+        t.groep = M === v.start && r.deel_start ? r.deel_start : 'hele';
+        const sub = [];
+        if (v.maanden.length > 1) sub.push(MK[v.start - 1] + '–' + MK[v.eind - 1] + (r.deel_eind ? ' (' + r.deel_eind + ' ' + MK[v.eind - 1] + ')' : ''));
+        if (r.isKeuze) sub.push('één van: ' + r.maanden);
+        if (r.uiterlijk) sub.push('uiterlijk ' + r.uiterlijk);
+        if (r.voorwaarde) sub.push(r.voorwaarde);
+        t.sub = sub.join(' · ');
+        uit.push(t);
+      }
+    }
+  }
+  memo.set(k, uit);
+  return uit;
+}
+function projectTaak(p) {
+  return { type: 'p', key: 'p:' + p.id, p, loc: p.locatie, actie: p.actie, soort: 'taak', titel: p.titel, plekken: p.plekLijst,
+    groep: p.deel || 'hele', sub: [p.wanneer, p.uiterlijk && 'uiterlijk ' + p.uiterlijk, p.afhankelijk_van && 'eerst: ' + p.afhankelijk_van].filter(Boolean).join(' · ') };
+}
+function takenMaand(J, M) {
+  const n = ym(J, M);
+  return regelTaken(J, M).concat(D.Projecttaken.filter(p => p.status === 'open' && p.vanN != null && p.vanN <= n && n <= p.totN).map(projectTaak));
+}
+function achterstand(J, M) {
+  const nu = ym(J, M), grens = ymTekst(D.inst.geen_achterstand_voor) ?? 0, n = +D.inst.achterstand_maanden || 3, gezien = new Set(), uit = [];
+  for (let k = n; k >= 1; k--) {
+    const x = nu - k; if (x < grens) continue;
+    for (const t of regelTaken(Math.floor(x / 12), x % 12 + 1)) {
+      const s = ym(t.vj, t.v.start), eind = s + t.v.maanden.length - 1;
+      if (t.soort !== 'taak' || eind >= nu || isKlaar(t) || gezien.has(t.vj + t.key)) continue;
+      if (t.r.isKeuze && t.r.vensters.some(w => ym(t.vj, w.start) > s && ym(t.vj, w.start) >= nu - 0)) continue;
+      gezien.add(t.vj + t.key); uit.push(Object.assign({}, t, { achter: true }));
+    }
+  }
+  for (const p of D.Projecttaken) if (p.status === 'open' && p.totN != null && p.totN < nu && !D.klaarP.has('p:' + p.id)) uit.push(Object.assign(projectTaak(p), { achter: true }));
+  return uit;
+}
+function filter(ts) {
+  return ts.filter(t => (!S.loc || t.loc === S.loc) && (!S.plek || t.plekken.includes(S.plek)) && (!S.actie || t.actie === S.actie));
+}
+function vink(t) {
+  if (!isKlaar(t)) {
+    let meting = '';
+    if (t.r && t.r.meting) { meting = prompt('Meting (' + t.r.meting + ')', '') ?? ''; }
+    const acts = [{ op: 'voortgang_aan', rij: { jaar: String(t.type === 'p' ? NUJ : t.vj), taak: t.key, datum: vandaag(), notitie: '', meting } }];
+    if (t.r && t.r.actie === 'planten' && t.r.herhaling === 'tot_geplant' && t.entry) {
+      const e = t.entry;
+      acts.push({ op: 'stand_zet', rij: { key: e.key, locatie: e.locatie, plant: e.plant, naam: e.naam || '', plek: e.plek, status: 'geplant', aantal: e.aantal || '', notitie: e.notitie || '', nieuw: e.nieuw ? 'ja' : '', via_regel: t.key, datum: vandaag() } });
+    }
+    schrijf(acts);
+  } else {
+    const v = t.type === 'p' ? D.klaarP.get(t.key) : D.klaar.get(t.vj + '|' + t.key);
+    schrijf([{ op: 'voortgang_uit', jaar: v.jaar, taak: t.key }, { op: 'stand_weg_via', via_regel: t.key }]);
+  }
+}
+
+/* ---------- weergave ---------- */
+let TK = [];
+function actieLabel(id) {
+  const a = D.actie[id];
+  return a ? `<span class="actie" style="background:${esc(a.kleur_achtergrond)};color:${esc(a.kleur_tekst)}">${esc(a.label)}</span>` : '';
+}
+function taakHtml(t) {
+  const i = TK.push(t) - 1, klaar = isKlaar(t);
+  const waar = t.plekken.map(p => esc(plekNaam(t.loc, p))).join(', ');
+  const plant = t.plant ? ` · <button class="link" data-plant="${esc(t.loc + '|' + t.plant)}">${esc(plantNaam(t.loc, t.plant))}</button>` : '';
+  const r = t.r || {}, meer = [r.toelichting, r.waar && 'Waar: ' + r.waar, r.meting && 'Meting: ' + r.meting, (t.p || r).bron && 'Bron: ' + (t.p || r).bron].filter(Boolean);
+  const v = klaar ? (t.type === 'p' ? D.klaarP.get(t.key) : D.klaar.get(t.vj + '|' + t.key)) : null;
+  const knop = t.soort === 'taak' ? `<button class="vink" data-vink="${i}" aria-label="Afvinken">${klaar ? '✓' : ''}</button>` : `<span class="ico">${t.soort === 'suggestie' ? '💡' : '⚠️'}</span>`;
+  return `<div class="kaart taak ${klaar ? 'klaar' : ''} ${t.soort}">${knop}<div class="tk">
+    <div class="kop">${actieLabel(t.actie)}<span>${S.loc ? '' : esc((D.Locaties.find(l => l.id === t.loc) || {}).naam || t.loc) + ' · '}${waar}${plant}</span></div>
+    <div class="titel">${esc(t.titel)}</div>
+    ${t.sub || t.achter ? `<div class="sub">${t.achter && t.v ? 'Van ' + MK[t.v.start - 1] + (t.vj !== S.jaar ? ' ' + t.vj : '') + ' · ' : ''}${esc(t.sub)}</div>` : ''}
+    ${v ? `<div class="sub">Gedaan op ${esc(v.datum)}${v.meting ? ' · ' + esc(v.meting) : ''}</div>` : ''}
+    ${meer.length ? `<details><summary>Meer</summary>${meer.map(x => `<p>${esc(x)}</p>`).join('')}</details>` : ''}
+  </div></div>`;
+}
+function chips(waarden, huidig, attr) {
+  return `<div class="chips">${waarden.map(([w, l, stijl]) => `<button class="chip ${huidig === w ? 'aan' : ''}" data-${attr}="${esc(w)}" ${stijl && huidig !== w ? `style="${stijl}"` : ''}>${esc(l)}</button>`).join('')}</div>`;
+}
+function filterbalk(metActie) {
+  let h = chips([['', 'Alles'], ...locs().map(l => [l.id, l.naam])], S.loc, 'loc');
+  if (S.loc) h += chips([['', 'Alle ' + ((D.Locaties.find(l => l.id === S.loc) || {}).plekwoord || 'plek').toLowerCase() + 'en'], ...D.Plekken.filter(p => p.locatie === S.loc).map(p => [p.id, p.naam])], S.plek, 'plek');
+  if (metActie) h += chips([['', 'Alle acties'], ...D.Acties.map(a => [a.id, a.label, `background:${a.kleur_achtergrond};color:${a.kleur_tekst};border-color:transparent`])], S.actie, 'actie');
+  return h;
+}
+function groepen(ts) {
+  const volg = ['begin', 'midden', 'eind', 'hele'], naam = { begin: 'Begin', midden: 'Midden', eind: 'Eind', hele: 'Hele maand' };
+  const ao = id => D.Acties.findIndex(a => a.id === id);
+  const sort = a => a.sort((x, y) => isKlaar(x) - isKlaar(y) || ao(x.actie) - ao(y.actie) || x.loc.localeCompare(y.loc) || x.titel.localeCompare(y.titel));
+  let h = '';
+  for (const g of volg) {
+    const d = sort(ts.filter(t => t.soort === 'taak' && t.groep === g));
+    if (d.length) h += `<h2>${naam[g]}${g !== 'hele' ? ' ' + MN[S.maand - 1] : ''}</h2><div class="lijst">${d.map(taakHtml).join('')}</div>`;
+  }
+  const sg = sort(ts.filter(t => t.soort === 'suggestie')), ws = sort(ts.filter(t => t.soort === 'waarschuwing'));
+  if (sg.length) h += `<h2>Suggesties</h2><div class="lijst">${sg.map(taakHtml).join('')}</div>`;
+  if (ws.length) h += `<h2>Niet doen</h2><div class="lijst">${ws.map(taakHtml).join('')}</div>`;
+  return h;
+}
+function schermTaken() {
+  const ts = filter(takenMaand(S.jaar, S.maand)), isNu = S.jaar === NUJ && S.maand === NUM;
+  const achter = isNu ? filter(achterstand(S.jaar, S.maand)) : [];
+  const taken = ts.filter(t => t.soort === 'taak'), klaar = taken.filter(isKlaar).length;
+  kop(`<div class="rij"><button class="knopje" data-maand="-1" aria-label="Vorige maand">‹</button><h1 style="text-align:center">${MN[S.maand - 1]} ${S.jaar}</h1><button class="knopje" data-maand="1" aria-label="Volgende maand">›</button>${isNu ? '' : '<button class="knopje" data-maand="0">Nu</button>'}</div>${filterbalk(true)}`);
+  let h = `<div class="sub" style="margin:4px 2px">${taken.length} taken · ${klaar} gedaan${achter.length ? ' · ' + achter.length + ' nog open' : ''}</div>`;
+  if (achter.length) h += `<h2>Nog open</h2><div class="lijst">${achter.map(taakHtml).join('')}</div>`;
+  h += groepen(ts) || '<p class="leeg">Geen taken voor deze selectie.</p>';
+  if (isNu) {
+    const zd = filter(D.Projecttaken.filter(p => (p.status === 'open' && p.vanN == null) || p.status === 'geparkeerd').map(p => Object.assign(projectTaak(p), { soort: p.status === 'geparkeerd' ? 'suggestie' : 'taak' })));
+    if (zd.length) h += `<details style="margin-top:16px"><summary>Zonder datum of geparkeerd (${zd.length})</summary><div class="lijst" style="margin-top:8px">${zd.map(taakHtml).join('')}</div></details>`;
+  }
+  return h;
+}
+function standHtml(e, metPlek) {
+  const pl = D.plant[e.locatie + '|' + e.plant] || {};
+  return `<div class="kaart plantrij" data-bewerk="${esc(e.key)}"><span class="ico">${esc(pl.emoji || '🌱')}</span><div class="tk">
+    <div class="naam">${esc(plantNaam(e.locatie, e.plant, e.naam))} ${e.aantal ? `<span class="sub">× ${esc(e.aantal)}</span>` : ''}</div>
+    <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(e.status)}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
+  </div><span class="sub">✎</span></div>`;
+}
+function schermPlekken() {
+  kop(`<div class="rij"><h1>Plekken</h1></div>` + chips([['', 'Alles'], ...locs().map(l => [l.id, l.naam])], S.loc, 'loc'));
+  const ts = takenMaand(NUJ, NUM).filter(t => t.soort === 'taak' && !isKlaar(t));
+  return locs().filter(l => !S.loc || l.id === S.loc).map(l => {
+    const bep = beplanting(l.id, NUJ).filter(e => e.status !== 'weg');
+    return `<h2>${esc(l.naam)}</h2><div class="raster">${D.Plekken.filter(p => p.locatie === l.id).map(p => {
+      const np = bep.filter(e => e.plek === p.id).length, nt = ts.filter(t => t.loc === l.id && t.plekken.includes(p.id)).length;
+      return `<div class="kaart plekkaart" data-ga="plek/${esc(l.id)}/${esc(p.id)}"><b>${esc(p.naam)}</b><div class="getal">${np} planten · ${nt} open in ${MK[NUM - 1]}</div>${p.thema ? `<div class="getal">${esc(p.thema)}</div>` : ''}</div>`;
+    }).join('')}</div>`;
+  }).join('');
+}
+function schermPlek(loc, id) {
+  const p = D.plek[loc + '|' + id];
+  if (!p) return '<p class="leeg">Plek niet gevonden.</p>';
+  kop(`<div class="rij"><button class="knopje" data-terug>‹</button><h1>${esc(p.naam)}</h1></div>`);
+  const velden = [['Zon', p.zon], ['Thema', p.thema], ['Oppervlak', p.m2 && p.m2 + ' m²'], ['Maat', p.maat], ['Grond (plan)', p.grond], ['Grond (uitgevoerd)', p.grond_uitgevoerd], ['Mulch', p.mulch], ['Water per week', p.water_per_week]].filter(x => x[1]);
+  const bep = beplanting(loc, NUJ).filter(e => e.plek === id);
+  const ts = takenMaand(NUJ, NUM).filter(t => t.loc === loc && t.plekken.includes(id));
+  return `${p.foto ? `<img class="foto" src="${esc(p.foto)}" alt="" loading="lazy">` : ''}
+    ${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
+    <h2>Planten ${NUJ}</h2><div class="lijst">${bep.map(e => standHtml(e)).join('') || '<p class="leeg">Nog niets.</p>'}</div>
+    <p><button class="knopje primair" data-nieuw="${esc(loc + '|' + id)}">+ Plant toevoegen</button></p>
+    <h2>Taken ${MN[NUM - 1]}</h2><div class="lijst">${ts.map(taakHtml).join('') || '<p class="leeg">Geen taken.</p>'}</div>
+    ${velden.length ? `<h2>Gegevens</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
+    ${p.plantplek_en_mest ? `<h2>Plantplek en mest</h2><div class="kaart">${p.plantplek_en_mest.split(' • ').map(x => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
+}
+function schermPlanten() {
+  kop(`<div class="rij"><h1>Planten</h1></div>` + chips([['', 'Alles'], ...locs().map(l => [l.id, l.naam])], S.loc, 'loc') + `<input class="zoek" type="search" placeholder="Zoek op naam" value="${esc(S.zoek)}" id="zoek">`);
+  return `<div class="lijst" id="plantlijst">${plantenLijst()}</div>`;
+}
+function plantenLijst() {
+  const z = S.zoek.toLowerCase();
+  return D.Planten.filter(p => (!S.loc || p.locatie === S.loc) && (!z || (p.nl + ' ' + p.latijn).toLowerCase().includes(z))).sort((a, b) => a.nl.localeCompare(b.nl)).map(p => {
+    const bep = beplanting(p.locatie, NUJ).filter(e => e.plant === p.id && e.status !== 'weg');
+    const waar = [...new Set(bep.map(e => plekNaam(p.locatie, e.plek)))].join(', ');
+    const st = bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
+    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}"><span class="ico">${esc(p.emoji || '🌱')}</span><div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${st}</span>` : ''}</div></div>`;
+  }).join('') || '<p class="leeg">Geen planten gevonden.</p>';
+}
+function schermPlant(loc, id) {
+  const p = D.plant[loc + '|' + id];
+  if (!p) return '<p class="leeg">Plant niet gevonden.</p>';
+  kop(`<div class="rij"><button class="knopje" data-terug>‹</button><h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1></div>`);
+  const fotos = lijst(p.fotos), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
+  const velden = [['Soort', p.soort], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Hoogte', p.hoogte], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantafstand', p.plantafstand], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
+  const bep = beplanting(loc, NUJ).filter(e => e.plant === id);
+  const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
+  return `${fotos.length ? `<div class="fotos">${fotos.map(f => `<img src="${esc(f)}" alt="" loading="lazy">`).join('')}</div>` : ''}
+    <p><i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
+    ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
+    ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div><div class="sub">${[...new Set(p.sierwaarde)].filter(c => SIER[c] && c !== '-').map(c => `<span class="mini" style="background:${SIER[c][0]}">${SIER[c][1]}</span>`).join('')} ${esc(p.bron_bloei)}</div></div>` : ''}
+    <h2>Waar staat hij (${NUJ})</h2><div class="lijst">${bep.map(e => standHtml(e, true)).join('') || '<p class="leeg">Staat nergens in het plan.</p>'}</div>
+    <p><button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">+ Ergens toevoegen</button></p>
+    ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
+    ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
+    ${p.link_url ? `<p><a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || 'Meer informatie')}</a></p>` : ''}`;
+}
+function schermJaar() {
+  kop(`<div class="rij"><button class="knopje" data-jaar="-1">‹</button><h1 style="text-align:center">Jaar ${S.jaar}</h1><button class="knopje" data-jaar="1">›</button></div>${filterbalk(true)}`);
+  let h = '<table class="jaar"><tbody>';
+  for (let m = 1; m <= 12; m++) {
+    const ts = filter(takenMaand(S.jaar, m)).filter(t => t.soort === 'taak'), per = {};
+    ts.forEach(t => per[t.actie] = (per[t.actie] || 0) + 1);
+    const k = ts.filter(isKlaar).length;
+    h += `<tr data-naarmaand="${m}" class="${S.jaar === NUJ && m === NUM ? 'nu' : ''}"><th>${MN[m - 1]}</th><td>${D.Acties.filter(a => per[a.id]).map(a => `<span class="mini" style="background:${a.kleur_achtergrond};color:${a.kleur_tekst}">${esc(a.label)} ${per[a.id]}</span>`).join('') || '<span class="sub">–</span>'}</td><td class="sub" style="white-space:nowrap">${k}/${ts.length}</td></tr>`;
+  }
+  return h + '</tbody></table>';
+}
+function schermMeer() {
+  kop(`<div class="rij"><h1>Meer</h1></div>` + chips([['info', 'Info'], ['instellingen', 'Instellingen']], route[0], 'ga'));
+  if (route[0] === 'instellingen') return schermInstellingen();
+  return locs().map(l => {
+    const I = D.Info.filter(x => x.locatie === l.id), t = I.find(x => x.soort === 'titel') || {};
+    const tips = {}; I.filter(x => x.soort === 'tip').forEach(x => (tips[x.id] = tips[x.id] || { titel: x.titel, emoji: x.extra, p: [] }).p.push(x.tekst));
+    return `<h2>${esc(l.naam)}</h2><div class="kaart"><h3>${esc(t.titel || l.naam)}</h3><div class="sub">${esc(t.tekst)}</div></div>
+      ${I.filter(x => x.soort === 'impressie').length ? `<div class="fotos" style="margin-top:8px">${I.filter(x => x.soort === 'impressie').map(x => `<figure style="margin:0"><img src="${esc(x.extra)}" alt="" loading="lazy"><figcaption class="sub">${esc(x.titel)}</figcaption></figure>`).join('')}</div>` : ''}
+      ${I.filter(x => x.soort === 'thema').map(x => `<div class="kaart" style="margin-top:8px"><b>${esc(x.extra)} ${esc(x.titel)}</b><div>${esc(x.tekst)}</div></div>`).join('')}
+      ${Object.values(tips).map(x => `<details class="kaart" style="margin-top:8px"><summary><b>${esc(x.emoji)} ${esc(x.titel)}</b></summary>${x.p.map(y => `<p>${esc(y)}</p>`).join('')}</details>`).join('')}
+      ${I.filter(x => x.soort === 'open_punt').length ? `<div class="kaart" style="margin-top:8px"><b>Open punten</b>${I.filter(x => x.soort === 'open_punt').map(x => `<p>${esc(x.tekst)}</p>`).join('')}</div>` : ''}`;
+  }).join('');
+}
+function schermInstellingen() {
+  return `<div class="kaart">
+    <label for="i-api">URL van het Apps Script (eindigt op /exec)</label><input id="i-api" value="${esc(opslag.get('api', '') || API_STANDAARD)}" placeholder="https://script.google.com/macros/s/…/exec">
+    <label for="i-sleutel">Sleutel om af te vinken en de stand bij te werken</label><input id="i-sleutel" type="password" value="${esc(opslag.get('sleutel', ''))}" autocomplete="off">
+    <div class="knoppen"><button class="knopje primair" data-opslaan>Opslaan en laden</button></div></div>
+    <h2>Status</h2><div class="kaart"><dl>
+      <dt>Gegevens van</dt><dd>${laadtijd ? esc(new Date(laadtijd).toLocaleString('nl-NL')) : 'nog niet geladen'}</dd>
+      <dt>Nog te versturen</dt><dd>${wachtrij.length} ${wachtrij.length ? '<button class="link" data-wissen>wissen</button>' : ''}</dd></dl>
+      <div class="knoppen"><button class="knopje" data-verversen>Gegevens verversen</button></div></div>
+    <h2>Beheer</h2><div class="kaart"><p>Planten, plekken, taken en namen pas je aan in de <a href="${SHEET_URL}" target="_blank" rel="noopener">Google Sheet</a>. Daarna hier op <i>Gegevens verversen</i>.</p><p><a href="tuinplan/">Tuinplan achtertuin</a></p></div>`;
+}
+
+/* ---------- dialoog: stand bijwerken ---------- */
+function plekOpties(loc, gekozen) { return D.Plekken.filter(p => p.locatie === loc).map(p => `<option value="${esc(p.id)}" ${p.id === gekozen ? 'selected' : ''}>${esc(p.naam)}</option>`).join(''); }
+function statusOpties(g) { return ['gepland', 'geplant', 'weg'].map(s => `<option ${s === g ? 'selected' : ''}>${s}</option>`).join(''); }
+function bewerk(key) {
+  const e = beplanting('', NUJ).find(x => x.key === key);
+  if (!e) return;
+  const dlg = $('#dlg');
+  dlg.innerHTML = `<h3>${esc(plantNaam(e.locatie, e.plant, e.naam))}</h3>
+    <div class="sub">${e.nieuw ? 'Extra plant (niet in het plan)' : 'Volgens het plan: ' + esc(plekNaam(e.locatie, e.planPlek))}</div>
+    <label>Plek</label><select id="d-plek">${plekOpties(e.locatie, e.plek)}</select>
+    <label>Status</label><select id="d-status">${statusOpties(e.status)}</select>
+    <label>Aantal</label><input id="d-aantal" value="${esc(e.aantal)}" inputmode="numeric">
+    <label>Notitie</label><input id="d-notitie" value="${esc(e.notitie)}">
+    <div class="knoppen">${e.uitStand ? `<button class="knopje" data-d="plan">${e.nieuw ? 'Verwijderen' : 'Terug naar plan'}</button>` : ''}<button class="knopje" data-d="sluit">Annuleren</button><button class="knopje primair" data-d="ok">Opslaan</button></div>`;
+  dlg.onclick = ev => {
+    const d = ev.target.dataset.d; if (!d) return;
+    if (d === 'ok') schrijf([{ op: 'stand_zet', rij: { key: e.key, locatie: e.locatie, plant: e.plant, naam: e.naam || '', plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: e.nieuw ? 'ja' : '', via_regel: '', datum: vandaag() } }]);
+    if (d === 'plan') schrijf([{ op: 'stand_weg', key: e.key }]);
+    dlg.close();
+  };
+  dlg.showModal();
+}
+function nieuw(arg) {
+  const [loc, plek, plant] = arg.split('|');
+  const opties = D.Planten.filter(p => p.locatie === loc).sort((a, b) => a.nl.localeCompare(b.nl)).map(p => `<option value="${esc(p.id)}" ${p.id === plant ? 'selected' : ''}>${esc(p.nl)}</option>`).join('');
+  const dlg = $('#dlg');
+  dlg.innerHTML = `<h3>Plant toevoegen</h3><div class="sub">${esc((D.Locaties.find(l => l.id === loc) || {}).naam)}</div>
+    <label>Plant</label><select id="d-plant">${opties}<option value="">Andere plant…</option></select>
+    <div id="d-vrij" hidden><label>Naam</label><input id="d-naam"></div>
+    <label>Plek</label><select id="d-plek">${plekOpties(loc, plek)}</select>
+    <label>Status</label><select id="d-status">${statusOpties('geplant')}</select>
+    <label>Aantal</label><input id="d-aantal" inputmode="numeric">
+    <label>Notitie</label><input id="d-notitie">
+    <div class="knoppen"><button class="knopje" data-d="sluit">Annuleren</button><button class="knopje primair" data-d="ok">Toevoegen</button></div>`;
+  $('#d-plant').onchange = () => { $('#d-vrij').hidden = !!$('#d-plant').value; };
+  dlg.onclick = ev => {
+    const d = ev.target.dataset.d; if (!d) return;
+    if (d === 'ok') {
+      const pid = $('#d-plant').value, naam = $('#d-naam').value.trim();
+      if (!pid && !naam) { $('#d-naam').focus(); return; }
+      const id = pid || 'vrij-' + naam.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      schrijf([{ op: 'stand_zet', rij: { key: loc + '|' + id + '|+' + Date.now(), locatie: loc, plant: id, naam: pid ? '' : naam, plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: 'ja', via_regel: '', datum: vandaag() } }]);
+    }
+    dlg.close();
+  };
+  dlg.showModal();
+}
+
+/* ---------- navigatie ---------- */
+function kop(h) { $('#kop').innerHTML = h; }
+function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
+function ga(h) { location.hash = h; }
+function teken() {
+  route = (decodeURIComponent(location.hash.slice(1)) || 'taken').split('/');
+  opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie }); opslag.set('filterdag', vandaag());
+  const hoofd = { taken: 'taken', plekken: 'plekken', plek: 'plekken', planten: 'planten', plant: 'planten', jaar: 'jaar', info: 'meer', instellingen: 'meer' }[route[0]] || 'taken';
+  $('#nav').innerHTML = [['taken', '✓', 'Taken'], ['plekken', '▦', 'Plekken'], ['planten', '❀', 'Planten'], ['jaar', '▤', 'Jaar'], ['info', '⋯', 'Meer']].map(([h, i, l]) => `<a href="#${h}" class="${hoofd === h || (h === 'info' && hoofd === 'meer') ? 'aan' : ''}"><b>${i}</b>${l}</a>`).join('');
+  if (!D) { if (route[0] === 'instellingen') { kop('<div class="rij"><h1>Instellingen</h1></div>'); $('#app').innerHTML = schermInstellingen(); } return; }
+  TK = [];
+  const f = { taken: schermTaken, plekken: schermPlekken, plek: () => schermPlek(route[1], route[2]), planten: schermPlanten, plant: () => schermPlant(route[1], route[2]), jaar: schermJaar, info: schermMeer, instellingen: schermMeer }[route[0]] || schermTaken;
+  $('#app').innerHTML = f();
+}
+addEventListener('hashchange', () => { teken(); scrollTo(0, 0); });
+document.addEventListener('click', ev => {
+  const el = ev.target.closest('[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
+  if (!el || el.closest('dialog')) return;
+  const d = el.dataset;
+  if (d.vink != null) return vink(TK[+d.vink]);
+  if (d.loc != null) { S.loc = d.loc; S.plek = ''; }
+  else if (d.plek != null) S.plek = d.plek;
+  else if (d.actie != null) S.actie = d.actie;
+  else if (d.maand != null) { if (+d.maand === 0) { S.jaar = NUJ; S.maand = NUM; } else { const x = ym(S.jaar, S.maand) + +d.maand; S.jaar = Math.floor(x / 12); S.maand = x % 12 + 1; } }
+  else if (d.jaar != null) S.jaar += +d.jaar;
+  else if (d.naarmaand != null) { S.maand = +d.naarmaand; return ga('taken'); }
+  else if (d.ga != null) return ga(d.ga);
+  else if (d.terug != null) return history.length > 1 ? history.back() : ga('taken');
+  else if (d.plant != null) { const [l, p] = d.plant.split('|'); return ga('plant/' + l + '/' + p); }
+  else if (d.bewerk != null) return bewerk(d.bewerk);
+  else if (d.nieuw != null) return nieuw(d.nieuw);
+  else if (d.opslaan != null) { opslag.set('api', $('#i-api').value.trim()); opslag.set('sleutel', $('#i-sleutel').value.trim()); return laad().then(() => { if (D) ga('taken'); }); }
+  else if (d.verversen != null) return laad();
+  else if (d.wissen != null) { if (confirm('Niet-verstuurde wijzigingen wissen?')) { wachtrij = []; opslag.set('wachtrij', []); laad(true); } return; }
+  teken();
+});
+document.addEventListener('input', ev => { if (ev.target.id === 'zoek') { S.zoek = ev.target.value; $('#plantlijst').innerHTML = plantenLijst(); } });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && D) laad(true); });
+teken();
+laad(true);
+</script>
 </body>
 </html>

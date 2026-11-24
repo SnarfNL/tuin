@@ -35,7 +35,7 @@ Deze repo bevat de Tuinapp en de plannen van twee tuinen: de achtertuin (`tuinpl
 | `docs/projectcontext.md` | Context en besluiten van het tuinontwerp | project Tuin |
 | Google Sheet "Tuinapp" | Alle gegevens van de app | zie Regels 2 |
 | `data/` | Bevroren stand van 24 november 2026 (schema 2) | niemand meer |
-| `index.html` (hoofdmap), `scripts/`, `docs/datamodel.md`, `CLAUDE.md`, `README.md` | App, scripts en afspraken | project Tuin app |
+| `index.html` (hoofdmap), `appsscript/`, `scripts/`, `docs/datamodel.md`, `CLAUDE.md`, `README.md` | App, scripts en afspraken | project Tuin app |
 
 ## Regels
 
