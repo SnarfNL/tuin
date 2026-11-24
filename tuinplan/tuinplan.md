@@ -12,7 +12,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **Vervallen soorten (besloten 14 november 2026):** *Phacelia tanacetifolia* (bijenvoer, zone D), *Anemone japonica* (Japanse anemoon, zone A) en *Campsis radicans* (trompetbloem, zone C) zijn uit het plan gehaald, zonder reserveplek. *Allium hollandicum* (sierui, zone B) blijft. De plantenlijst telde daarna 40 soorten.
 
-**Tuinkas:** de glazen achthoek op de plattegrond is een tuinkas en blijft staan (besloten 18 oktober 2026). Het houten frame vervalt.
+**Tuinkas:** de glazen achthoek op de plattegrond is een tuinkas en blijft staan (besloten 18 oktober 2026). Het houten frame vervalt. De tuinkas hoort bij de achtertuin en dus bij dit plan. Planten die in de tuinkas worden opgekweekt of staan, mogen wel naar de moestuin worden verplaatst (besloten 24 november 2026). Wat er daarna in de moestuin met die planten gebeurt, valt onder het moestuinplan.
 
 **Grassen:** alle grassen blijven maximaal 60 cm hoog, inclusief pluimen (besloten 18 oktober 2026). In D komt *Pennisetum alopecuroides* 'Little Bunny' (±40–45 cm); in A en B *Carex divulsa* (bermzegge). *Stipa* en *Stipa gigantea* vervallen (zie de reservelijst). *Briza media* (hartjesgras) is definitief vervallen (besloten 22 oktober 2026) en komt niet op de reservelijst.
 

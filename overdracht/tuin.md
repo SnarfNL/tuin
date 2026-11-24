@@ -74,7 +74,7 @@
 
 ## Tuinkas: Tuin of Moestuin?
 
-**Bij Tuin.** De glazen tuinkas staat in de achtertuin, en de achtertuin is van het project Tuin. Zo staat het ook in `overdracht/moestuin.md`: de moestuin heeft geen vaste kas, alleen een losse kasopzet over een bak, en in de app valt de tuinkas onder de locatie achtertuin (A, B, C, D en kas). De planning van wat er in de tuinkas groeit hoort dus bij het project Tuin.
+**Bij Tuin.** De glazen tuinkas staat in de achtertuin, en de achtertuin is van het project Tuin. Zo staat het ook in `overdracht/moestuin.md`: de moestuin heeft geen vaste kas, alleen een losse kasopzet over een bak, en in de app valt de tuinkas onder de locatie achtertuin (A, B, C, D en kas). De planning van wat er in de tuinkas groeit hoort dus bij het project Tuin. Planten uit de tuinkas mogen wel naar de moestuin worden verplaatst (besloten 24 november 2026, zie *Tuinkas* in de inleiding van `tuinplan/tuinplan.md`); vanaf dat moment vallen ze onder het moestuinplan.
 
 Wat het tuinplan nu over de kas zegt: hij blijft staan (besloten 18 oktober 2026), heeft een fundering (gelegd door de stratenmaker, klaar op 14 november 2026) en geldt als een van de zonnigste plekken (aanname, nog meten). **Open punt:** het tuinplan heeft nog geen teeltplanning voor de kas. Tot die er is, levert de kas geen taken op.
 
