@@ -1,0 +1,1648 @@
+{
+ "regels": [
+  {
+   "id": "suikermais.binnen-zaaien",
+   "plant": "suikermais",
+   "actie": "planten",
+   "detail": "Binnen zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "m-apr–b-mei (in pot)",
+   "deel": {
+    "start": "midden",
+    "eind": "begin"
+   }
+  },
+  {
+   "id": "suikermais.buiten-zaaien-of-planten",
+   "plant": "suikermais",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "m-mei–b-jun",
+   "deel": {
+    "start": "midden",
+    "eind": "begin"
+   }
+  },
+  {
+   "id": "suikermais.uitplanten",
+   "plant": "suikermais",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "m-mei–e-mei",
+   "deel": {
+    "start": "midden",
+    "eind": "eind"
+   }
+  },
+  {
+   "id": "suikermais.oogsten",
+   "plant": "suikermais",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "aug–sep"
+  },
+  {
+   "id": "pompoen.binnen-zaaien",
+   "plant": "pompoen",
+   "actie": "planten",
+   "detail": "Binnen zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "m-apr–b-mei",
+   "deel": {
+    "start": "midden",
+    "eind": "begin"
+   }
+  },
+  {
+   "id": "pompoen.buiten-zaaien-of-planten",
+   "plant": "pompoen",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na m-mei ter plekke",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "pompoen.uitplanten",
+   "plant": "pompoen",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na de IJsheiligen (e-mei)",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "pompoen.oogsten",
+   "plant": "pompoen",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "sep–okt, vóór de vorst"
+  },
+  {
+   "id": "courgette.binnen-zaaien",
+   "plant": "courgette",
+   "actie": "planten",
+   "detail": "Binnen zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "m-apr–e-apr",
+   "deel": {
+    "start": "midden",
+    "eind": "eind"
+   }
+  },
+  {
+   "id": "courgette.uitplanten",
+   "plant": "courgette",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "m-mei–m-jun",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "courgette.oogsten",
+   "plant": "courgette",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jul–sep"
+  },
+  {
+   "id": "snackkomkommer.binnen-zaaien",
+   "plant": "snackkomkommer",
+   "actie": "planten",
+   "detail": "Binnen zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "e-apr–mei",
+   "deel": {
+    "start": "eind"
+   }
+  },
+  {
+   "id": "snackkomkommer.uitplanten",
+   "plant": "snackkomkommer",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na de IJsheiligen",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "snackkomkommer.oogsten",
+   "plant": "snackkomkommer",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jul–sep"
+  },
+  {
+   "id": "wortel.buiten-zaaien-of-planten",
+   "plant": "wortel",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "mrt–jul (onder de kasopzet al vanaf e-feb)"
+  },
+  {
+   "id": "wortel.oogsten",
+   "plant": "wortel",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jun–nov"
+  },
+  {
+   "id": "lente-ui.buiten-zaaien-of-planten",
+   "plant": "lente-ui",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "mrt–jul [eigen inschatting]"
+  },
+  {
+   "id": "lente-ui.oogsten",
+   "plant": "lente-ui",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "mei–okt"
+  },
+  {
+   "id": "rode-biet.buiten-zaaien-of-planten",
+   "plant": "rode-biet",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "apr–jul"
+  },
+  {
+   "id": "rode-biet.oogsten",
+   "plant": "rode-biet",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     7,
+     8,
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jul–okt"
+  },
+  {
+   "id": "zoete-aardappel.binnen-zaaien",
+   "plant": "zoete-aardappel",
+   "actie": "planten",
+   "detail": "Binnen zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Eigen stekjes trekken uit een knol: mrt–apr"
+  },
+  {
+   "id": "zoete-aardappel.uitplanten",
+   "plant": "zoete-aardappel",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "e-mei–b-jun, na de laatste vorst",
+   "deel": {
+    "start": "eind",
+    "eind": "begin"
+   }
+  },
+  {
+   "id": "zoete-aardappel.oogsten",
+   "plant": "zoete-aardappel",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "sep–okt, vóór de eerste vorst"
+  },
+  {
+   "id": "knoflook.buiten-zaaien-of-planten",
+   "plant": "knoflook",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     10,
+     11
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "okt–m-nov (voorjaar: feb–apr kan ook, kleinere bollen)",
+   "deel": {
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "knoflook.oogsten",
+   "plant": "knoflook",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jun–jul (als ⅔ van het loof dor is)"
+  },
+  {
+   "id": "radijs.buiten-zaaien-of-planten",
+   "plant": "radijs",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "mrt–half apr; weer in jul–aug",
+   "deel": {
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "pluksla.buiten-zaaien-of-planten",
+   "plant": "pluksla",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     2,
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "e-feb–apr (onder de kasopzet)",
+   "deel": {
+    "start": "eind"
+   }
+  },
+  {
+   "id": "pluksla.oogsten",
+   "plant": "pluksla",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "apr–jun"
+  },
+  {
+   "id": "spinazie.buiten-zaaien-of-planten",
+   "plant": "spinazie",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     2,
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "e-feb–apr (onder de kasopzet)",
+   "deel": {
+    "start": "eind"
+   }
+  },
+  {
+   "id": "spinazie.oogsten",
+   "plant": "spinazie",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "apr–mei"
+  },
+  {
+   "id": "veldsla.buiten-zaaien-of-planten",
+   "plant": "veldsla",
+   "actie": "planten",
+   "detail": "Buiten zaaien of planten",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "aug–sep"
+  },
+  {
+   "id": "veldsla.oogsten",
+   "plant": "veldsla",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     10,
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "okt–mrt"
+  },
+  {
+   "id": "dahlia.uitplanten",
+   "plant": "dahlia",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na de IJsheiligen (m-mei)",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "dahlia.zaaien",
+   "plant": "dahlia",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     3
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Voortrekken in pot vanaf m-mrt (optioneel, ±10 °C, licht)",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "goudsbloem.zaaien",
+   "plant": "goudsbloem",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "apr–mei, buiten ter plekke [eigen inschatting]"
+  },
+  {
+   "id": "oost-indische-kers.zaaien",
+   "plant": "oost-indische-kers",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na m-mei, buiten ter plekke [eigen inschatting]",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "afrikaantje.uitplanten",
+   "plant": "afrikaantje",
+   "actie": "planten",
+   "detail": "Uitplanten",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na de IJsheiligen",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "afrikaantje.zaaien",
+   "plant": "afrikaantje",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Binnen mrt–apr [eigen inschatting]"
+  },
+  {
+   "id": "ridderspoor.zaaien",
+   "plant": "ridderspoor",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "mrt–apr of sep, buiten ter plekke [eigen inschatting]"
+  },
+  {
+   "id": "cosmos.zaaien",
+   "plant": "cosmos",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na m-mei, buiten ter plekke [eigen inschatting]",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "zinnia.zaaien",
+   "plant": "zinnia",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Na m-mei, buiten ter plekke [eigen inschatting]",
+   "deel": {
+    "start": "midden",
+    "eind": "midden"
+   }
+  },
+  {
+   "id": "citroenmelisse.planten-of-zaaien",
+   "plant": "citroenmelisse",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "tot_geplant",
+   "toelichting": "apr–mei"
+  },
+  {
+   "id": "basilicum.planten-of-zaaien",
+   "plant": "basilicum",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Binnen zaaien vanaf apr; buiten pas na m-mei"
+  },
+  {
+   "id": "rozemarijn.planten-of-zaaien",
+   "plant": "rozemarijn",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "herhaling": "tot_geplant",
+   "toelichting": "apr–e-jun",
+   "deel": {
+    "eind": "eind"
+   }
+  },
+  {
+   "id": "peterselie.planten-of-zaaien",
+   "plant": "peterselie",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Buiten zaaien apr–jul (kiemt traag)"
+  },
+  {
+   "id": "lavendel.planten-of-zaaien",
+   "plant": "lavendel",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "tot_geplant",
+   "toelichting": "apr–mei"
+  },
+  {
+   "id": "tijm.planten-of-zaaien",
+   "plant": "tijm",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "tot_geplant",
+   "toelichting": "apr–mei"
+  },
+  {
+   "id": "munt.planten-of-zaaien",
+   "plant": "munt",
+   "actie": "planten",
+   "detail": "Planten of zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "herhaling": "tot_geplant",
+   "toelichting": "apr–mei, in een ingegraven pot"
+  },
+  {
+   "id": "aardbei.oogsten",
+   "plant": "aardbei",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jun–jul"
+  },
+  {
+   "id": "appelboom.oogsten",
+   "plant": "appelboom",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "aug–okt (afhankelijk van het ras)"
+  },
+  {
+   "id": "vijg.oogsten",
+   "plant": "vijg",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "aug–sep [eigen inschatting]"
+  },
+  {
+   "id": "bessenstruik.oogsten",
+   "plant": "bessenstruik",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7,
+     8
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "jun–aug"
+  },
+  {
+   "id": "framboos.oogsten",
+   "plant": "framboos",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7,
+     8
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "Zomerframboos: e-jun–b-aug; herfstframboos: e-aug–m-okt",
+   "deel": {
+    "start": "eind",
+    "eind": "begin"
+   }
+  },
+  {
+   "id": "rabarber.oogsten",
+   "plant": "rabarber",
+   "actie": "oogsten",
+   "detail": "Oogsten",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "apr–jun; stoppen e-jun"
+  },
+  {
+   "id": "phacelia.zaaien",
+   "plant": "phacelia",
+   "actie": "planten",
+   "detail": "Zaaien",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "toelichting": "aug–b-sep, in bakken die vóór september leeg komen; op klei vóór september zaaien",
+   "deel": {
+    "eind": "begin"
+   }
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Zaad, knollen en plantgoed bestellen volgens het teeltplan",
+   "soort": "taak",
+   "vensters": [
+    [
+     12,
+     1
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Alle bakken",
+   "id": "mt.1",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Wintersnoei appelboom",
+   "soort": "taak",
+   "vensters": [
+    [
+     1,
+     2
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "id": "mt.2",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Wintersnoei bessenstruik (aalbes: nov–dec)",
+   "soort": "taak",
+   "vensters": [
+    [
+     11,
+     12,
+     1,
+     2
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "id": "mt.3",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Herfstframbozen: alle stengels bij de grond af (alleen als het herfstframbozen zijn)",
+   "soort": "taak",
+   "vensters": [
+    [
+     2,
+     3
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Frambozenrek",
+   "voorwaarde": "Herfstframbozen: alle stengels bij de grond af (alleen als het herfstframbozen zijn)",
+   "id": "mt.4",
+   "plekken": [
+    "fruit"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Kasopzet op bak 6 zetten; stormhaken vast",
+   "soort": "taak",
+   "vensters": [
+    [
+     2
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak 6",
+   "deel": {
+    "start": "eind",
+    "eind": "eind"
+   },
+   "id": "mt.5",
+   "plekken": [
+    "bak-6"
+   ]
+  },
+  {
+   "actie": "mest",
+   "detail": "Mulch opzij schuiven en ±1 m³ compost over alle bakken verdelen (±2 cm)",
+   "soort": "taak",
+   "vensters": [
+    [
+     3
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Alle bakken",
+   "id": "mt.6",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "mest",
+   "detail": "Compost op boomspiegels en bij de rabarber",
+   "soort": "taak",
+   "vensters": [
+    [
+     3
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "eigen_inschatting": true,
+   "id": "mt.7",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "mulchen",
+   "detail": "Houtsnippers 2–3 cm bijvullen",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Paden, overige deel",
+   "id": "mt.8",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Lavendel en rozemarijn snoeien",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak 9",
+   "id": "mt.9",
+   "plekken": [
+    "bak-9"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Vijg: dode en bevroren takken weg",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "eigen_inschatting": true,
+   "id": "mt.10",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "mest",
+   "detail": "Compostbak omzetten; rijpe compost gebruiken",
+   "soort": "taak",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Compost",
+   "eigen_inschatting": true,
+   "id": "mt.11",
+   "plekken": [
+    "compost"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Insectengaas over de wortel, van zaaien tot oogst",
+   "soort": "taak",
+   "vensters": [
+    [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Wortelbak",
+   "id": "mt.12",
+   "plant": "wortel"
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Grasstrook maaien, elke 2–3 weken; maaisel als mulch tussen de groenten",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "id": "mt.13",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "mulchen",
+   "detail": "Stro onder de aardbeien",
+   "soort": "taak",
+   "vensters": [
+    [
+     5
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Aardbeibak",
+   "id": "mt.14",
+   "plant": "aardbei"
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Vogelnet over de aardbeien",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Aardbeibak",
+   "id": "mt.15",
+   "plant": "aardbei"
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Kasopzet eraf of gaasframe erop zodra gewassen te hoog worden",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak met kasopzet",
+   "id": "mt.16",
+   "plekken": []
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Bloemstengels rabarber weghalen",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Rabarber",
+   "id": "mt.17",
+   "plekken": [
+    "fruit"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Klimmers (snackkomkommer, Oost-Indische kers) naar het gaas van de pergola leiden",
+   "soort": "taak",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak met biet en komkommer",
+   "id": "mt.18",
+   "plekken": []
+  },
+  {
+   "actie": "water",
+   "detail": "Met de hand gieten uit de regentonnen of met water uit de handpomp bij droogte (meer dan een week zonder regen en droge grond)",
+   "soort": "taak",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Alle bakken",
+   "voorwaarde": "Met de hand gieten uit de regentonnen of met water uit de handpomp bij droogte (meer dan een week zonder regen en droge grond)",
+   "id": "mt.19",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "mulchen",
+   "detail": "Stro of grasmaaisel 3–5 cm tussen de gewassen",
+   "soort": "taak",
+   "vensters": [
+    [
+     6
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak 1–6",
+   "id": "mt.20",
+   "plekken": [
+    "bak-1",
+    "bak-2",
+    "bak-3",
+    "bak-4",
+    "bak-5",
+    "bak-6"
+   ]
+  },
+  {
+   "actie": "mest",
+   "detail": "Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Pompoen, courgette, komkommer, mais, dahlia",
+   "id": "mt.21.pompoen",
+   "plant": "pompoen"
+  },
+  {
+   "actie": "mest",
+   "detail": "Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Pompoen, courgette, komkommer, mais, dahlia",
+   "id": "mt.21.courgette",
+   "plant": "courgette"
+  },
+  {
+   "actie": "mest",
+   "detail": "Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Pompoen, courgette, komkommer, mais, dahlia",
+   "id": "mt.21.snackkomkommer",
+   "plant": "snackkomkommer"
+  },
+  {
+   "actie": "mest",
+   "detail": "Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Pompoen, courgette, komkommer, mais, dahlia",
+   "id": "mt.21.suikermais",
+   "plant": "suikermais"
+  },
+  {
+   "actie": "mest",
+   "detail": "Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Pompoen, courgette, komkommer, mais, dahlia",
+   "id": "mt.21.dahlia",
+   "plant": "dahlia"
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Aardbei-uitlopers weghalen (in het vernieuwingsjaar in aug laten wortelen)",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Aardbeibak",
+   "id": "mt.22",
+   "plant": "aardbei"
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Dahlia's opbinden en uitgebloeide bloemen wegknippen",
+   "soort": "taak",
+   "vensters": [
+    [
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Dahlia's",
+   "id": "mt.23",
+   "plant": "dahlia"
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Citroenmelisse na de bloei terugknippen",
+   "soort": "taak",
+   "vensters": [
+    [
+     7
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak 9",
+   "eigen_inschatting": true,
+   "id": "mt.24",
+   "plekken": [
+    "bak-9"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Zomersnoei appelboom",
+   "soort": "taak",
+   "vensters": [
+    [
+     7,
+     8
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "id": "mt.25",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Zomerframbozen: gedragen stengels weg, jonge aanbinden (alleen als het zomerframbozen zijn)",
+   "soort": "taak",
+   "vensters": [
+    [
+     8
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Frambozenrek",
+   "voorwaarde": "Zomerframbozen: gedragen stengels weg, jonge aanbinden (alleen als het zomerframbozen zijn)",
+   "id": "mt.26",
+   "plekken": [
+    "fruit"
+   ]
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Aardbeien na de oogst: oud blad weg, licht bemesten",
+   "soort": "taak",
+   "vensters": [
+    [
+     8
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Aardbeibak",
+   "id": "mt.27",
+   "plant": "aardbei"
+  },
+  {
+   "actie": "snoeien",
+   "detail": "Lavendel na de bloei licht snoeien (max. ⅓, niet na september)",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Bak 9",
+   "id": "mt.28",
+   "plekken": [
+    "bak-9"
+   ]
+  },
+  {
+   "actie": "planten",
+   "detail": "Phacelia zaaien in bakken die leeg komen; in de winter laten afvriezen",
+   "soort": "taak",
+   "vensters": [
+    [
+     8,
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Vrijgekomen bakken",
+   "voorwaarde": "Phacelia zaaien in bakken die leeg komen; in de winter laten afvriezen",
+   "deel": {
+    "eind": "begin"
+   },
+   "id": "mt.29",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Kasopzet op een lege bak voor veldsla",
+   "soort": "taak",
+   "vensters": [
+    [
+     9
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Wisselend",
+   "id": "mt.30",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "oogsten",
+   "detail": "Dahlia's rooien na de eerste nachtvorst, vorstvrij bewaren",
+   "soort": "taak",
+   "vensters": [
+    [
+     10,
+     11
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Dahliabak",
+   "id": "mt.31",
+   "plant": "dahlia"
+  },
+  {
+   "actie": "planten",
+   "detail": "Knoflook planten voor het volgende jaar",
+   "soort": "taak",
+   "vensters": [
+    [
+     10,
+     11
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Knoflookbak",
+   "id": "mt.32",
+   "plant": "knoflook"
+  },
+  {
+   "actie": "mulchen",
+   "detail": "Blad en stro verzamelen; lege bakken 5–10 cm afdekken",
+   "soort": "taak",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Alle lege bakken",
+   "id": "mt.33",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Koppelingen tussen de regentonnen leeg laten lopen of vorstvrij maken",
+   "soort": "taak",
+   "vensters": [
+    [
+     11
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Regentonnen",
+   "eigen_inschatting": true,
+   "id": "mt.34",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Gaasframe opbergen; kasopzet stormvast zetten",
+   "soort": "taak",
+   "vensters": [
+    [
+     11
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Kasopzet",
+   "id": "mt.35",
+   "plekken": [
+    "algemeen"
+   ]
+  },
+  {
+   "actie": "mulchen",
+   "detail": "Jonge vijg beschermen bij strenge vorst",
+   "soort": "taak",
+   "vensters": [
+    [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Boomgaard",
+   "voorwaarde": "Jonge vijg beschermen bij strenge vorst",
+   "eigen_inschatting": true,
+   "id": "mt.36",
+   "plekken": [
+    "boomgaard"
+   ]
+  },
+  {
+   "actie": "onderhoud",
+   "detail": "Bewaarde dahliaknollen controleren op rot",
+   "soort": "taak",
+   "vensters": [
+    [
+     12
+    ]
+   ],
+   "herhaling": "jaarlijks",
+   "waar": "Opslag",
+   "id": "mt.37",
+   "plekken": [
+    "algemeen"
+   ]
+  }
+ ]
+}

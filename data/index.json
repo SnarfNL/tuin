@@ -1,0 +1,74 @@
+{
+ "schema_versie": 2,
+ "locaties": [
+  {
+   "id": "achtertuin",
+   "naam": "Achtertuin",
+   "map": "achtertuin",
+   "plekwoord": "Zone",
+   "bron": "tuinplan/tuinplan.md",
+   "beslist_in": "project Tuin"
+  },
+  {
+   "id": "moestuin",
+   "naam": "Moestuin",
+   "map": "moestuin",
+   "plekwoord": "Bak",
+   "bron": "moestuin/moestuinplan.md",
+   "beslist_in": "project Moestuin"
+  }
+ ],
+ "acties": [
+  {
+   "id": "snoeien",
+   "label": "Snoeien"
+  },
+  {
+   "id": "mulchen",
+   "label": "Mulchen"
+  },
+  {
+   "id": "mest",
+   "label": "Mest geven"
+  },
+  {
+   "id": "planten",
+   "label": "Planten & zaaien"
+  },
+  {
+   "id": "oogsten",
+   "label": "Oogsten & rooien"
+  },
+  {
+   "id": "water",
+   "label": "Water"
+  },
+  {
+   "id": "opruimen",
+   "label": "Opruimen"
+  },
+  {
+   "id": "onderhoud",
+   "label": "Onderhoud"
+  }
+ ],
+ "geen_achterstand_voor": "2026-11",
+ "sierwaarde_codes": {
+  "B": "bloei",
+  "L": "blad",
+  "E": "bes of vrucht",
+  "Z": "zaadhoofden",
+  "W": "wintersilhouet",
+  "-": "geen"
+ },
+ "meta": {
+  "schema_versie": 2,
+  "gebouwd_uit": [
+   "tuinplan/tuinplan.md",
+   "tuinplan/index.html",
+   "moestuin/moestuinplan.md",
+   "overdracht/tuin.md"
+  ],
+  "script": "scripts/bouw_data.py"
+ }
+}

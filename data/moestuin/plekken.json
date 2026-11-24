@@ -1,0 +1,142 @@
+{
+ "plekken": [
+  {
+   "id": "bak-1",
+   "naam": "Bak 1",
+   "type": "bak",
+   "beschrijving": "Achter links",
+   "maat": "4,0 × 1,5 m",
+   "m2": 6.0,
+   "zon": "Ochtendschaduw van de haag (vooral nov–mrt); in het groeiseizoen vanaf de late ochtend zon [eigen inschatting]",
+   "grond": "Schone tuinaarde 15 cm op klei",
+   "status": "actief"
+  },
+  {
+   "id": "bak-2",
+   "naam": "Bak 2",
+   "type": "bak",
+   "beschrijving": "Achter",
+   "maat": "3,0 × 1,5 m",
+   "m2": 4.5,
+   "zon": "Als bak 1; in de zomer rond het middaguur wat schaduw van de pergola",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-3",
+   "naam": "Bak 3",
+   "type": "bak",
+   "beschrijving": "Achter",
+   "maat": "3,0 × 1,5 m",
+   "m2": 4.5,
+   "zon": "Als bak 1",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-4",
+   "naam": "Bak 4",
+   "type": "bak",
+   "beschrijving": "Achter rechts",
+   "maat": "4,0 × 1,5 m",
+   "m2": 6.0,
+   "zon": "Als bak 1; in de winter mogelijk vroege-middagschaduw van de folietunnel van de buren",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-5",
+   "naam": "Bak 5",
+   "type": "bak",
+   "beschrijving": "Voor links",
+   "maat": "4,0 × 1,5 m",
+   "m2": 6.0,
+   "zon": "Zonnigst; ochtendschaduw in het voorjaar het eerst weg",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-6",
+   "naam": "Bak 6",
+   "type": "bak",
+   "beschrijving": "Voor",
+   "maat": "3,0 × 1,5 m",
+   "m2": 4.5,
+   "zon": "Als bak 5",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-7",
+   "naam": "Bak 7",
+   "type": "bak",
+   "beschrijving": "Voor",
+   "maat": "3,0 × 1,5 m",
+   "m2": 4.5,
+   "zon": "Volle zon [eigen inschatting]",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-8",
+   "naam": "Bak 8",
+   "type": "bak",
+   "beschrijving": "Voor rechts",
+   "maat": "4,0 × 1,5 m",
+   "m2": 6.0,
+   "zon": "Volle zon; in de winter mogelijk vroege-middagschaduw van de folietunnel van de buren",
+   "grond": "Idem",
+   "status": "actief"
+  },
+  {
+   "id": "bak-9",
+   "naam": "Bak 9 · kruidenbak",
+   "type": "bak",
+   "beschrijving": "Kruidenbak, midden, haaks op de andere bakken",
+   "maat": "3,0 × 1,0 m",
+   "m2": 3.0,
+   "zon": "Volle zon [eigen inschatting]",
+   "grond": "70% tuinaarde, 30% grof scherp zand 0–4 mm, 15 cm",
+   "status": "actief"
+  },
+  {
+   "id": "bak-10",
+   "naam": "Bak 10 · bloemenbak",
+   "type": "bak",
+   "beschrijving": "Bloemenbak, achterin voor de schuur",
+   "maat": "±3,0 × 0,8 m (staat er; moet nog 1 m ingekort worden)",
+   "m2": 2.4,
+   "zon": "Niet ingemeten",
+   "grond": "Schone tuinaarde",
+   "status": "actief"
+  },
+  {
+   "id": "boomgaard",
+   "naam": "Boomgaard",
+   "type": "boomgaard",
+   "beschrijving": "Appelboom, vijg, een jonge fruitboom en een bessenstruik, met grasstrook",
+   "status": "actief"
+  },
+  {
+   "id": "fruit",
+   "naam": "Frambozen en rabarber",
+   "type": "fruit",
+   "beschrijving": "Frambozen op een houten rek, rabarber",
+   "status": "actief"
+  },
+  {
+   "id": "compost",
+   "naam": "Compost",
+   "type": "algemeen",
+   "beschrijving": "Houten compostbakken achter de vijg, bij het hek",
+   "status": "actief"
+  },
+  {
+   "id": "algemeen",
+   "naam": "Algemeen",
+   "type": "algemeen",
+   "beschrijving": "Paden, pergola, kasopzet, regentonnen, handpomp, schuur",
+   "status": "actief"
+  }
+ ]
+}

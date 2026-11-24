@@ -1,0 +1,1374 @@
+{
+ "planten": [
+  {
+   "id": "amelanchier",
+   "nl": "Krentenboom",
+   "latijn": "Amelanchier lamarckii",
+   "soort": "boom",
+   "klimplant": false,
+   "beschrijving": "Boom: wolken bloesem, zoete bessen, oranje-rode herfstkleur — 4 seizoenen sieraad",
+   "bijen": 2,
+   "vogels": 5,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N2/P2. Vogels: Ebben (bessen, \"vogels zijn er verzot op\")",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://nl.wikipedia.org/wiki/Amelanchier_lamarckii"
+   },
+   "emoji": "🌸",
+   "kleur": [
+    "#e0f0d0",
+    "#c0d8a0"
+   ],
+   "fotos": [
+    "tuinplan/images/C-lente-amelanchier.jpg"
+   ],
+   "sierwaarde": "WWWBBEELLLWW",
+   "bron_bloei": "Imkerpedia (bloei apr–mei); Ebben (bessen rond juli)",
+   "vorm": "halfstam",
+   "hoogte": "4–6 m (snoeibaar)",
+   "seizoenstekst": {
+    "lente": "Wolken witte bloesem, koperrood jong blad",
+    "zomer": "Zoete bessen (juni–juli)",
+    "herfst": "Spectaculaire oranje-rode herfstkleur",
+    "winter": "Elegant vertakt silhouet"
+   },
+   "grondwens": "Klei + compost, licht vochtig prima",
+   "plantmoment": "half november tot eind april (kluitboom; niet bij vorst of op natte klei) (besloten 22 oktober 2026). Geplant op 21 november 2026, in de volle grond, met boomsteun en een ring van schors. Stamomtrek 12–14 cm volgens het label."
+  },
+  {
+   "id": "cornus",
+   "nl": "Amerikaanse kornoelje",
+   "latijn": "Cornus florida 'Rubra'",
+   "soort": "boom",
+   "klimplant": false,
+   "beschrijving": "Boom: grote schutbladeren in de lente, wijnrode herfstkleur, rode bessen",
+   "bijen": 2,
+   "vogels": 5,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; Ebben noemt bijen. Vogels: Ebben (vogels, rode vruchten)",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Cornus_florida"
+   },
+   "emoji": "🌸",
+   "kleur": [
+    "#fbe4ea",
+    "#f0b8c8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-lente-cornus.jpg"
+   ],
+   "sierwaarde": "WWWLBBLLEEWW",
+   "bron_bloei": "Ebben (bloei mei–jun, rode vruchten)",
+   "vorm": "halfstam",
+   "hoogte": "±5 m volgens Directplant: groeit eerst in de hoogte, wordt later rond en groeit langzaam (eerder geschat op 4–7 m)",
+   "seizoenstekst": {
+    "lente": "Indrukwekkende grote witte of roze schutbladeren rond kleine bloemknopjes",
+    "zomer": "Frisgroen blad met sierlijke, licht golvende randen",
+    "herfst": "Diep wijnrode tot purperen herfstkleur + glanzend rode bessen",
+    "winter": "Horizontale etagevertakking met opvallende knoppen"
+   },
+   "grondwens": "Zuur tot neutraal, humusrijk, vochthoudend maar goed doorlatend (geen kalk). De pH wordt zelf op de juiste waarde gebracht en bijgehouden, zodat de boom goed aanslaat (besloten 22 oktober 2026).",
+   "tip": "Bescherm tegen felle middagzon en droge wind om bladverbranding te voorkomen",
+   "plantmoment": "potplant het hele jaar, volle grond oktober tot april (Directplant). Geplant in november 2026 (na 21 november) op een zure plantplek met DCM Vivimus Rhodo, met boomsteun en een ring van schors. De grond op die plek meet pH 7 en bruiste bij de azijntest (vrije kalk), daarom geen zwavel maar een zure plantplek (zie pH-beheer kornoelje)."
+  },
+  {
+   "id": "lonicera",
+   "nl": "Kamperfoelie",
+   "latijn": "Lonicera periclymenum",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Geurig, klimplant; vooral bezocht door hommels en nachtvlinders",
+   "bijen": 1,
+   "vogels": 4,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P0 (vooral hommels en nachtvlinders, eigen kennis). Vogels: lijst klimplanten Vogelbescherming; bessen",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://nl.wikipedia.org/wiki/Gewone_kamperfoelie"
+   },
+   "emoji": "🌼",
+   "kleur": [
+    "#f0f0c8",
+    "#d8d890"
+   ],
+   "fotos": [
+    "tuinplan/images/B-zomer-periclymenum.jpg"
+   ],
+   "sierwaarde": "---LLBBBBE--",
+   "bron_bloei": "Imkerpedia (bloei jun–okt); bessen eigen inschatting"
+  },
+  {
+   "id": "hydrangea",
+   "nl": "Klimhortensia",
+   "latijn": "Hydrangea anomala petiolaris",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Bloeit zelfs in diepe schaduw, zelfhechtend",
+   "bijen": 3,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3. Vogels: lijst klimplanten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Hydrangea_anomala"
+   },
+   "emoji": "🤍",
+   "kleur": [
+    "#e8eef5",
+    "#c8d8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/S-zomer-hydrangea.jpg"
+   ],
+   "sierwaarde": "WWWLLBBZZZWW",
+   "bron_bloei": "Imkerpedia (bloei jun–jul)"
+  },
+  {
+   "id": "trachelospermum",
+   "nl": "Sterjasmijn",
+   "latijn": "Trachelospermum jasminoides",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Geurig, semi-evergreen, warmste muurpositie",
+   "bijen": 3,
+   "vogels": 2,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; Ebben noemt bijen. Vogels: groenblijvende dekking",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Trachelospermum_jasminoides"
+   },
+   "emoji": "🌿",
+   "kleur": [
+    "#e0f0e8",
+    "#b8d8c0"
+   ],
+   "fotos": [
+    "tuinplan/images/B-zomer-trachelospermum.jpg"
+   ],
+   "sierwaarde": "WWLLLBBLLLLW",
+   "bron_bloei": "Plan (bloei jun–jul)"
+  },
+  {
+   "id": "rosa",
+   "nl": "Klimroos",
+   "latijn": "Rosa 'New Dawn'",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Lichtroze, herhaalbloeiend, geurig",
+   "bijen": 2,
+   "vogels": 2,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; halfgevulde bloem; Belle Epoque zet hem bij rozen voor bijen. Vogels: Vogelbescherming noemt alleen ramblerrozen",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Rosa_%27New_Dawn%27"
+   },
+   "emoji": "🌹",
+   "kleur": [
+    "#f8e0e8",
+    "#e8b8c8"
+   ],
+   "fotos": [
+    "tuinplan/images/X-x-newdawn.jpg"
+   ],
+   "sierwaarde": "---LLBBBBBE-",
+   "bron_bloei": "Belle Epoque (bloei jun–okt); bottels eigen inschatting"
+  },
+  {
+   "id": "vitis",
+   "nl": "Druif",
+   "latijn": "Vitis vinifera",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Klimmer tegen de schutting: sierlijk blad en druiven in de herfst",
+   "bijen": 2,
+   "vogels": 4,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N2/P2. Vogels: Ebben (vogels, druiven)",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Vitis_vinifera"
+   },
+   "emoji": "🍇",
+   "kleur": [
+    "#e8e0f0",
+    "#c0b0d0"
+   ],
+   "fotos": [
+    "tuinplan/images/C-herfst-vitis.jpg"
+   ],
+   "sierwaarde": "WW-LLLLLEELW",
+   "bron_bloei": "Imkerpedia (bloei jun, onopvallend); Ebben (herfstkleur)"
+  },
+  {
+   "id": "clematis",
+   "nl": "Clematis",
+   "latijn": "Clematis 'Ville de Lyon'",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Klimmer met karmijnrode bloemen, bloeit laat in de zomer",
+   "bijen": 1,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; Clematis-soorten daar N0/P1–4 (vooral stuifmeel)",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Clematis"
+   },
+   "emoji": "🌺",
+   "kleur": [
+    "#f8d8e0",
+    "#e0a0b8"
+   ],
+   "fotos": [
+    "tuinplan/images/X-x-clematis.jpg"
+   ],
+   "sierwaarde": "---LLLBBBL--",
+   "bron_bloei": "RHS, Engelstalig (bloei jul–sep)"
+  },
+  {
+   "id": "hedera",
+   "nl": "Klimop",
+   "latijn": "Hedera helix",
+   "soort": "klimplant",
+   "klimplant": true,
+   "beschrijving": "Groenblijvende muurklimmer, nestplaats voor vogels; de late bloei is voedsel voor insecten",
+   "bijen": 5,
+   "vogels": 5,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N5/P5. Vogels: Ebben (vogels, bessen) en lijst klimplanten Vogelbescherming; nestplaats",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Hedera_helix"
+   },
+   "emoji": "🌿",
+   "kleur": [
+    "#d8ecd8",
+    "#a8cca8"
+   ],
+   "fotos": [
+    "tuinplan/images/X-x-hedera.jpg"
+   ],
+   "sierwaarde": "EEEELLLLBBBW",
+   "bron_bloei": "Ebben (bloei sep–nov, blauwzwarte bessen); rijpe bessen jan–apr eigen inschatting"
+  },
+  {
+   "id": "echinacea",
+   "nl": "Zonnehoed",
+   "latijn": "Echinacea purpurea",
+   "soort": "vaste plant",
+   "levensduur": "kort",
+   "klimplant": false,
+   "beschrijving": "Bijenmagneet + zaden voor putters",
+   "bijen": 3,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P2. Vogels: zaadhoofden; Ebben noemt geen vogels",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://nl.wikipedia.org/wiki/Rode_zonnehoed"
+   },
+   "emoji": "🟣",
+   "kleur": [
+    "#f0d8f0",
+    "#d8a8d8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-herfst-echinacea.jpg"
+   ],
+   "sierwaarde": "ZZZ-LLBBBZZZ",
+   "bron_bloei": "Ebben (bloei jul–sep)"
+  },
+  {
+   "id": "helleborus_or",
+   "nl": "Kerstroos (oosterse)",
+   "latijn": "Helleborus orientalis",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Enkelbloemige oosterse kerstroos; bloeit in de kou, groenblijvend blad, 40–50 cm",
+   "bijen": 2,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; MAX Vandaag noemt hem een vroege bijenplant",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Helleborus_orientalis"
+   },
+   "emoji": "🌺",
+   "kleur": [
+    "#f0d8e0",
+    "#d8a8b8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-winter-helleborus.jpg"
+   ],
+   "sierwaarde": "WBBBLLLLLLLW",
+   "bron_bloei": "eigen inschatting (bloei feb–apr)"
+  },
+  {
+   "id": "helleborus_ni",
+   "nl": "Kerstroos",
+   "latijn": "Helleborus niger",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Witte bloemen jan–mrt, bloeit in de kou",
+   "bijen": 1,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P1",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://nl.wikipedia.org/wiki/Kerstroos"
+   },
+   "emoji": "⬜",
+   "kleur": [
+    "#e8eef5",
+    "#d0dcea"
+   ],
+   "fotos": [
+    "tuinplan/images/S-winter-helleborus.jpg"
+   ],
+   "sierwaarde": "BBBLLLLLLLLW",
+   "bron_bloei": "Imkerpedia (bloei jan–mrt)"
+  },
+  {
+   "id": "heuchera",
+   "nl": "Purperklokje",
+   "latijn": "Heuchera",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Kleurrijk blad heel jaar, bloeit zomer",
+   "bijen": 2,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1–3/P0 per soort; cultivar nog niet gekozen",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://nl.wikipedia.org/wiki/Purperklokje"
+   },
+   "emoji": "🍃",
+   "kleur": [
+    "#e8d8f0",
+    "#c8b0d8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-lente-heuchera.jpg"
+   ],
+   "sierwaarde": "WWLLLBBLLLLW",
+   "bron_bloei": "Imkerpedia (H. micrantha jun–jul)"
+  },
+  {
+   "id": "aquilegia",
+   "nl": "Akelei (wild)",
+   "latijn": "Aquilegia vulgaris",
+   "soort": "vaste plant",
+   "levensduur": "kort",
+   "klimplant": false,
+   "beschrijving": "Ridderspoor met paarse, enkelvoudige bloemen, lente",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N0/P3",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Aquilegia_vulgaris"
+   },
+   "emoji": "🌸",
+   "kleur": [
+    "#e8e0f8",
+    "#c8b8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-lente-aquilegia.jpg"
+   ],
+   "sierwaarde": "---LBBBZ----",
+   "bron_bloei": "Imkerpedia (bloei mei–jul)"
+  },
+  {
+   "id": "dryopteris",
+   "nl": "Geschubde mannetjesvaren",
+   "latijn": "Dryopteris affinis 'Crispa'",
+   "soort": "varen",
+   "klimplant": false,
+   "beschrijving": "Compacte varen, semi-evergreen, schaduw",
+   "bijen": 0,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: varen, bloeit niet. Vogels: varens staan op de lijst vaste planten van Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Dryopteris_affinis"
+   },
+   "emoji": "🌿",
+   "kleur": [
+    "#d8ecd8",
+    "#a8cca8"
+   ],
+   "fotos": [
+    "tuinplan/images/S-winter-dryopteris.jpg"
+   ],
+   "sierwaarde": "WW-LLLLLLLLW",
+   "bron_bloei": "geen bloei; blad eigen inschatting"
+  },
+  {
+   "id": "lavandula",
+   "nl": "Lavendel",
+   "latijn": "Lavandula angustifolia",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Bijendroom, geurig, droogtebestendig",
+   "bijen": 5,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N5/P0. Vogels: lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://nl.wikipedia.org/wiki/Echte_lavendel"
+   },
+   "emoji": "🪻",
+   "kleur": [
+    "#e8e0f8",
+    "#c8b8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/C-zomer-lavandula.jpg"
+   ],
+   "sierwaarde": "WWLLLBBLLLLW",
+   "bron_bloei": "Imkerpedia (bloei jun–jul)"
+  },
+  {
+   "id": "astrantia",
+   "nl": "Groot sterrenscherm",
+   "latijn": "Astrantia major ('Rubra')",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Subtiele stervormen, lang bloeiend",
+   "bijen": 2,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N2/P2",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Astrantia_major"
+   },
+   "emoji": "🌸",
+   "kleur": [
+    "#f8e8e8",
+    "#e8c8c8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-zomer-astrantia.jpg"
+   ],
+   "sierwaarde": "---LLBBZL---",
+   "bron_bloei": "Imkerpedia (bloei jun–jul)"
+  },
+  {
+   "id": "knautia",
+   "nl": "Knautia",
+   "latijn": "Knautia macedonica",
+   "soort": "vaste plant",
+   "levensduur": "kort",
+   "klimplant": false,
+   "beschrijving": "Donkerrood, wuivend, lang bloeiend",
+   "bijen": 1,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P0 (honingbij; hommels en vlinders komen veel, eigen kennis). Vogels: Vogelbescherming noemt de verwante beemdkroon",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Knautia_macedonica"
+   },
+   "emoji": "🔴",
+   "kleur": [
+    "#f0d0d0",
+    "#d0a0a0"
+   ],
+   "fotos": [
+    "tuinplan/images/D-zomer-knautia.jpg"
+   ],
+   "sierwaarde": "---LLBBBBZ--",
+   "bron_bloei": "Imkerpedia (bloei jun–sep)"
+  },
+  {
+   "id": "pulmonaria",
+   "nl": "Longkruid",
+   "latijn": "Pulmonaria officinalis",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Vroege roze-blauwe bloemen, gevlekt blad, houdt van schaduw",
+   "bijen": 1,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P1 (honingbij; vroege hommels en sachembijen, eigen kennis)",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Pulmonaria_officinalis"
+   },
+   "emoji": "💙",
+   "kleur": [
+    "#e0e8f8",
+    "#b8c8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-lente-pulmonaria.jpg",
+    "tuinplan/images/S-lente-pulmonaria.jpg"
+   ],
+   "sierwaarde": "--BBBLLLLL--",
+   "bron_bloei": "Imkerpedia (bloei mrt–mei)"
+  },
+  {
+   "id": "geranium",
+   "nl": "Ooievaarsbek",
+   "latijn": "Geranium 'Rozanne'",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Blauwpaarse bloemen van juni tot de vorst",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia (andere Geranium-soorten vaak N3/P3); Ebben noemt bijen",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Geranium_%27Rozanne%27"
+   },
+   "emoji": "💜",
+   "kleur": [
+    "#e0e0f8",
+    "#b8b8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-zomer-geranium.jpg"
+   ],
+   "sierwaarde": "---LLBBBBB--",
+   "bron_bloei": "Plan (\"juni tot de vorst\")"
+  },
+  {
+   "id": "digitalis",
+   "nl": "Vingerhoedskruid",
+   "latijn": "Digitalis purpurea",
+   "soort": "tweejarig",
+   "levensduur": "zaaien",
+   "klimplant": false,
+   "beschrijving": "Hoge bloemtorens in de zomer, tweejarig, zaait zichzelf uit",
+   "bijen": 2,
+   "vogels": 3,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; Radar/FLORON: populair bij hommels. Vogels: lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Digitalis_purpurea"
+   },
+   "emoji": "🌸",
+   "kleur": [
+    "#f8d8f0",
+    "#e0a8d0"
+   ],
+   "fotos": [
+    "tuinplan/images/S-zomer-digitalis.jpg"
+   ],
+   "sierwaarde": "---LLBBBZ---",
+   "bron_bloei": "Radar/FLORON (bloei eind mei–sep)"
+  },
+  {
+   "id": "carex",
+   "nl": "Bermzegge",
+   "latijn": "Carex divulsa",
+   "soort": "gras",
+   "klimplant": false,
+   "beschrijving": "Inheemse, groenblijvende zegge van ±40 cm voor structuur in de winter; zon tot schaduw, ook op klei",
+   "bijen": 0,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: windbestoven zegge (eigen inschatting)",
+   "link": {
+    "label": "RHS",
+    "url": "https://www.rhs.org.uk/plants/128685/wd/details"
+   },
+   "emoji": "🌾",
+   "kleur": [
+    "#e8f0d8",
+    "#c8d8a8"
+   ],
+   "fotos": [
+    "tuinplan/images/A-winter-carex.jpg"
+   ],
+   "sierwaarde": "WWLLLLLLLLLW",
+   "bron_bloei": "groenblijvend (plan); bloei onopvallend"
+  },
+  {
+   "id": "myosotis",
+   "nl": "Vergeet-mij-nietje",
+   "latijn": "Myosotis",
+   "soort": "tweejarig",
+   "levensduur": "zaaien",
+   "klimplant": false,
+   "beschrijving": "Lichtblauwe lentebloeier, zaait zichzelf uit",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia M. sylvatica N3/P0",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Myosotis"
+   },
+   "emoji": "💙",
+   "kleur": [
+    "#e0ecf8",
+    "#b0c8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-lente-myosotis.jpg"
+   ],
+   "sierwaarde": "---LBB------",
+   "bron_bloei": "Imkerpedia (M. sylvatica mei–jun)"
+  },
+  {
+   "id": "lunaria",
+   "nl": "Judaspenning",
+   "latijn": "Lunaria annua",
+   "soort": "tweejarig",
+   "levensduur": "zaaien",
+   "klimplant": false,
+   "beschrijving": "Paarse lentebloemen, daarna zilverkleurige ronde zaaddozen ('penningen') die tot in de winter blijven staan; tweejarig, zaait zichzelf uit",
+   "bijen": 3,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3. Vogels: lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Lunaria_annua"
+   },
+   "emoji": "🤍",
+   "kleur": [
+    "#f0e8f8",
+    "#d8c8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-lente-lunaria.jpg"
+   ],
+   "sierwaarde": "ZZLLBBZZZZZZ",
+   "bron_bloei": "Imkerpedia (bloei mei–jun); zaaddozen plan"
+  },
+  {
+   "id": "allium",
+   "nl": "Sierui",
+   "latijn": "Allium hollandicum",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Paarse bolvormige bloemen in mei-juni",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia (A. giganteum N4/P4); Ecoflora: bijen- en vlinderplant",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Allium_hollandicum"
+   },
+   "emoji": "🟣",
+   "kleur": [
+    "#f0d8f0",
+    "#d0a8d8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-lente-allium.jpg"
+   ],
+   "sierwaarde": "---LBBZZ----",
+   "bron_bloei": "Plan (bloei mei–jun); Ecoflora (zaaddozen)"
+  },
+  {
+   "id": "nepeta",
+   "nl": "Kattenkruid",
+   "latijn": "Nepeta 'Six Hills Giant'",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Lavendelblauwe wolken, lang bloeiend, bijenmagneet",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N. × faassenii N3/P3 (cultivar zelf niet in de lijst)",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Nepeta"
+   },
+   "emoji": "🪻",
+   "kleur": [
+    "#e0e0f8",
+    "#b8b0e0"
+   ],
+   "fotos": [
+    "tuinplan/images/B-zomer-nepeta.jpg"
+   ],
+   "sierwaarde": "---LBBBBBL--",
+   "bron_bloei": "Imkerpedia (N. × faassenii mei–sep)"
+  },
+  {
+   "id": "rudbeckia",
+   "nl": "Rudbeckia",
+   "latijn": "Rudbeckia fulgida",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Gele bloemen met donker hart in de late zomer en herfst",
+   "bijen": 1,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P0. Vogels: NH Nieuws (putters op de zaadbolletjes)",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Rudbeckia_fulgida"
+   },
+   "emoji": "🌼",
+   "kleur": [
+    "#f8f0c0",
+    "#e8d060"
+   ],
+   "fotos": [
+    "tuinplan/images/B-herfst-rudbeckia.jpg"
+   ],
+   "sierwaarde": "ZZ-LLLBBBBZZ",
+   "bron_bloei": "Imkerpedia (bloei jul–okt)"
+  },
+  {
+   "id": "aster_amellus",
+   "nl": "Bergaster",
+   "latijn": "Aster amellus",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Violette herfstbloeier, waardevol voor laat vliegende insecten",
+   "bijen": 3,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Aster_amellus"
+   },
+   "emoji": "💜",
+   "kleur": [
+    "#ece0f8",
+    "#c8b0e8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-herfst-aster.jpg"
+   ],
+   "sierwaarde": "---LLLBBBBZ-",
+   "bron_bloei": "Imkerpedia (bloei jul–okt)"
+  },
+  {
+   "id": "verbena",
+   "nl": "IJzerhard",
+   "latijn": "Verbena bonariensis",
+   "soort": "vaste plant",
+   "levensduur": "kort",
+   "klimplant": false,
+   "beschrijving": "Luchtige paarse bloemschermen op hoge stengels, tot de herfst",
+   "bijen": 3,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P0. Vogels: lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Verbena_bonariensis"
+   },
+   "emoji": "💜",
+   "kleur": [
+    "#ece0f8",
+    "#c8b0e0"
+   ],
+   "fotos": [
+    "tuinplan/images/D-herfst-verbena.jpg"
+   ],
+   "sierwaarde": "ZZ-LLLBBBBZZ",
+   "bron_bloei": "Imkerpedia (bloei jul–okt)"
+  },
+  {
+   "id": "salvia",
+   "nl": "Steppesalie",
+   "latijn": "Salvia nemorosa",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Violetblauwe bloemaren van juni tot augustus, bijenmagneet; volle zon, droogtetolerant",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P0",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Salvia_nemorosa"
+   },
+   "emoji": "💜",
+   "kleur": [
+    "#e4e0f8",
+    "#b8b0e8"
+   ],
+   "fotos": [
+    "tuinplan/images/B-lente-salvia.jpg"
+   ],
+   "sierwaarde": "---LLBBBBL--",
+   "bron_bloei": "Imkerpedia (bloei jun–sep)"
+  },
+  {
+   "id": "sedum",
+   "nl": "Hemelsleutel",
+   "latijn": "Sedum 'Herbstfreude'",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Roze-koperen schermen in de herfst, veel vlinders",
+   "bijen": 4,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia Sedum spectabile ('Herbstfreude') N4/P0. Vogels: vetkruid op de lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Hylotelephium"
+   },
+   "emoji": "🌸",
+   "kleur": [
+    "#f8d8d8",
+    "#e0a0a0"
+   ],
+   "fotos": [
+    "tuinplan/images/C-herfst-sedum.jpg"
+   ],
+   "sierwaarde": "ZZ-LLLLBBZZZ",
+   "bron_bloei": "Imkerpedia (bloei aug–sep)"
+  },
+  {
+   "id": "agastache",
+   "nl": "Anijsnetel",
+   "latijn": "Agastache",
+   "soort": "vaste plant",
+   "levensduur": "kort",
+   "klimplant": false,
+   "beschrijving": "Lange bloemaren, geurend blad, bijenmagneet in de late zomer",
+   "bijen": 2,
+   "vogels": 2,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N2/P2 voor de meeste soorten; cultivar nog niet gekozen",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Agastache"
+   },
+   "emoji": "🪻",
+   "kleur": [
+    "#e8e0f8",
+    "#c0b0e0"
+   ],
+   "fotos": [
+    "tuinplan/images/C-herfst-agastache.jpg"
+   ],
+   "sierwaarde": "----LLBBBZZ-",
+   "bron_bloei": "Imkerpedia (bloei jul–sep)"
+  },
+  {
+   "id": "pennisetum",
+   "nl": "Lampenpoetsersgras 'Little Bunny'",
+   "latijn": "Pennisetum alopecuroides 'Little Bunny'",
+   "soort": "gras",
+   "klimplant": false,
+   "beschrijving": "Roze-witte pluimen die bruin worden, vanaf midzomer, ±40–45 cm; pluimen blijven staan in de winter; op klei in de winter droog mulchen",
+   "bijen": 0,
+   "vogels": 2,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: windbestoven gras (eigen inschatting)",
+   "link": {
+    "label": "RHS",
+    "url": "https://rhsplants.co.uk/plants/_/pennisetum-alopecuroides-little-bunny/classid.2000045814"
+   },
+   "emoji": "🌾",
+   "kleur": [
+    "#f0e8d8",
+    "#d8c8a8"
+   ],
+   "fotos": [
+    "tuinplan/images/C-winter-pennisetum.jpg"
+   ],
+   "sierwaarde": "WW-LLLBBBZZW",
+   "bron_bloei": "Plan (pluimen vanaf midzomer, blijven in de winter staan)"
+  },
+  {
+   "id": "centaurea",
+   "nl": "Korenbloem",
+   "latijn": "Centaurea cyanus",
+   "soort": "eenjarig",
+   "levensduur": "zaaien",
+   "klimplant": false,
+   "beschrijving": "Knalblauwe zomerbloem, zaait zichzelf uit",
+   "bijen": 5,
+   "vogels": 3,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N5/P5. Vogels: lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Centaurea_cyanus"
+   },
+   "emoji": "💙",
+   "kleur": [
+    "#dce4f8",
+    "#a0b0f0"
+   ],
+   "fotos": [
+    "tuinplan/images/D-lente-centaurea.jpg"
+   ],
+   "sierwaarde": "----LBBBZ---",
+   "bron_bloei": "Imkerpedia (bloei jun–aug)"
+  },
+  {
+   "id": "echium",
+   "nl": "Slangenkruid",
+   "latijn": "Echium vulgare",
+   "soort": "tweejarig",
+   "levensduur": "zaaien",
+   "klimplant": false,
+   "beschrijving": "Blauwe bloemtorens, bijenmagneet voor droge grond",
+   "bijen": 4,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N4/P4",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Echium_vulgare"
+   },
+   "emoji": "💙",
+   "kleur": [
+    "#dce4f8",
+    "#a8b8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/D-zomer-echium.jpg"
+   ],
+   "sierwaarde": "---LBBBBBZ--",
+   "bron_bloei": "Imkerpedia (bloei mei–sep)"
+  },
+  {
+   "id": "primula",
+   "nl": "Stengelloze sleutelbloem",
+   "latijn": "Primula vulgaris",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Lichtgele bloemen in het vroege voorjaar",
+   "bijen": 1,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N0/P1",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Primula_vulgaris"
+   },
+   "emoji": "🌼",
+   "kleur": [
+    "#f8f4c8",
+    "#e8e090"
+   ],
+   "fotos": [
+    "tuinplan/images/S-lente-primula.jpg"
+   ],
+   "sierwaarde": "--BBBLLLLL--",
+   "bron_bloei": "Imkerpedia (bloei mrt–mei)"
+  },
+  {
+   "id": "hyacinthoides",
+   "nl": "Wilde hyacint",
+   "latijn": "Hyacinthoides non-scripta",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Blauwe klokjes in de lente, houdt van schaduw",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Hyacinthoides_non-scripta"
+   },
+   "emoji": "💙",
+   "kleur": [
+    "#dce4f8",
+    "#b0b8e8"
+   ],
+   "fotos": [
+    "tuinplan/images/S-lente-hyacinthoides.jpg"
+   ],
+   "sierwaarde": "--LBB-------",
+   "bron_bloei": "Imkerpedia (bloei apr–mei)"
+  },
+  {
+   "id": "astilbe",
+   "nl": "Pluimspirea",
+   "latijn": "Astilbe 'Fanal'",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Donkerrode pluimen in de zomer voor vochtige schaduw",
+   "bijen": 2,
+   "vogels": 3,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia Astilbe-soorten N2/P2. Vogels: spirea (Astilbe) op de lijst vaste planten Vogelbescherming",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Astilbe"
+   },
+   "emoji": "❤️",
+   "kleur": [
+    "#f8d0d8",
+    "#d890a0"
+   ],
+   "fotos": [
+    "tuinplan/images/S-zomer-astilbe.jpg"
+   ],
+   "sierwaarde": "ZZ-LLBBZZZZZ",
+   "bron_bloei": "eigen inschatting (bloei jun–jul)"
+  },
+  {
+   "id": "sarcococca",
+   "nl": "Kerstgeurstruik",
+   "latijn": "Sarcococca",
+   "soort": "struik",
+   "klimplant": false,
+   "beschrijving": "Groenblijvend, intens geurende bloemen in de winter",
+   "bijen": 5,
+   "vogels": 2,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia S. hookeriana en S. confusa N5/P5; soort nog niet gekozen",
+   "link": {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Sarcococca"
+   },
+   "emoji": "🌿",
+   "kleur": [
+    "#e0f0e8",
+    "#b0d8c0"
+   ],
+   "fotos": [
+    "tuinplan/images/S-winter-sarcococca.jpg"
+   ],
+   "sierwaarde": "BBBLLLLLLEEB",
+   "bron_bloei": "Imkerpedia (bloei jan–apr per soort); dec en bessen plan"
+  },
+  {
+   "id": "liriope",
+   "nl": "Leliegras",
+   "latijn": "Liriope muscari",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Groenblijvende pol van 20–30 cm met violette aren van late zomer tot herfst; halfschaduw tot schaduw",
+   "bijen": 2,
+   "vogels": 2,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia; Ebben noemt bijen en vlinders. Vogels: zwarte bessen (eigen inschatting)",
+   "link": {
+    "label": "RHS",
+    "url": "https://www.rhsplants.co.uk/plants/_/liriope-muscari/classid.3173/"
+   },
+   "emoji": "💜",
+   "kleur": [
+    "#ece0f8",
+    "#c8b0e8"
+   ],
+   "sierwaarde": "WW-LLLLBBBEE",
+   "bron_bloei": "Plan (bloei aug–okt); RHS, Engelstalig (zwarte bessen)"
+  },
+  {
+   "id": "galanthus",
+   "nl": "Sneeuwklokje",
+   "latijn": "Galanthus nivalis",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Witte bolbloem in feb–mrt; vochtige, voedselrijke plek, op klei en zand; vroege nectar voor bijen. Bolletjes zo snel mogelijk planten",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3",
+   "link": {
+    "label": "Groei & Bloei",
+    "url": "https://UDEN.GROEI.NL/fileadmin/Afdelingen/afdeling_uden/Allerlei/PDF/Bollen_voor_bijen.pdf"
+   },
+   "sierwaarde": "-BBL--------",
+   "bron_bloei": "Imkerpedia (bloei feb–mrt)"
+  },
+  {
+   "id": "crocus_tom",
+   "nl": "Boerenkrokus",
+   "latijn": "Crocus tommasinianus",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Lila krokus in feb–mrt; lichte klei, zon of halfschaduw, waardevol voor bijen (Ebben); verwildert",
+   "bijen": 5,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N5/P5",
+   "link": {
+    "label": "Ebben",
+    "url": "https://www.ebben.nl/nl/treeebb/crtomass-crocus-tommasinianus/pdf"
+   },
+   "sierwaarde": "-BBL--------",
+   "bron_bloei": "Imkerpedia (bloei feb–mrt)"
+  },
+  {
+   "id": "crocus_cb",
+   "nl": "Krokus 'Cream Beauty'",
+   "latijn": "Crocus chrysanthus 'Cream Beauty'",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Crèmegele krokus in feb–mrt, 5 cm diep planten (Nijssen); de soort staat op lichte klei, in zon of halfschaduw, goed voor bijen (Ebben)",
+   "bijen": 5,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia (alle andere krokussen N5/P5); Ebben: goed voor bijen",
+   "link": {
+    "label": "Nijssen",
+    "url": "https://www.nijssenbulbs.com/crocus-voorjaarsbloeiend/460-13558-crocus-chrysanthus-cream-beauty-460.html"
+   },
+   "sierwaarde": "-BBL--------",
+   "bron_bloei": "Plan (Nijssen, feb–mrt)"
+  },
+  {
+   "id": "fritillaria",
+   "nl": "Kievitsbloem",
+   "latijn": "Fritillaria meleagris",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Geblokte klokjes in apr–mei, bestoven door hommels en bijen; vochtige, licht beschaduwde plek",
+   "bijen": 1,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P1",
+   "link": {
+    "label": "Vroege Vogels",
+    "url": "https://www.bnnvara.nl/vroegevogels/artikelen/hangend-klokje-van-de-wilde-kievitsbloem-nationale-bloem-verkiezing"
+   },
+   "sierwaarde": "--LBB-------",
+   "bron_bloei": "Imkerpedia (bloei apr–mei)"
+  },
+  {
+   "id": "narcissus",
+   "nl": "Wilde narcis",
+   "latijn": "Narcissus pseudonarcissus",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Gele narcis in mrt–apr, bezocht door honingbijen en hommels; zon of lichte schaduw, weinig eisen aan de bodem",
+   "bijen": 1,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N1/P1",
+   "link": {
+    "label": "Landelijke Gilden",
+    "url": "https://landelijkegilden.be/media/4218/download"
+   },
+   "sierwaarde": "--BBL-------",
+   "bron_bloei": "Plan (mrt–apr); Imkerpedia noemt mrt–mei"
+  },
+  {
+   "id": "scilla",
+   "nl": "Oosterse sterhyacint",
+   "latijn": "Scilla siberica",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Blauwe bolbloem in mrt–apr, bezocht door wilde bijen, honingbijen en hommels; zon of lichte schaduw",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3",
+   "link": {
+    "label": "BNNVARA",
+    "url": "https://bnnvara.nl/community/fotos/planten/oosterse-sterhyacint/357779"
+   },
+   "sierwaarde": "--BBL-------",
+   "bron_bloei": "Imkerpedia (bloei mrt–apr)"
+  },
+  {
+   "id": "muscari",
+   "nl": "Druifhyacint",
+   "latijn": "Muscari armeniacum",
+   "soort": "bol",
+   "klimplant": false,
+   "beschrijving": "Blauwe lentebol (apr–mei), trekt bijen en vroege hommels; zon of halfschaduw, planten in okt–dec. Terug van de reservelijst",
+   "bijen": 3,
+   "vogels": 1,
+   "score_eigen": [
+    "bijen",
+    "vogels"
+   ],
+   "bron_scores": "Bijen: niet in Imkerpedia (M. botryoides N3/P0); Plukkers: trekt bijen en vroege hommels",
+   "link": {
+    "label": "Plukkers",
+    "url": "https://plukkers.com/en/products/muscari-blauwe-druifjes-armeniacum-bio"
+   },
+   "fotos": [
+    "tuinplan/images/D-lente-muscari.jpg"
+   ],
+   "sierwaarde": "--LBB-------",
+   "bron_bloei": "Plan en Plukkers (apr–mei)"
+  },
+  {
+   "id": "aster_div",
+   "nl": "Bosaster",
+   "latijn": "Aster divaricatus",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Witte herfstaster (aug–okt) voor halfschaduw en schaduw; waardevol voor bijen en vlinders (Ebben)",
+   "bijen": 3,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia (Eurybia divaricata) N3/P0",
+   "link": {
+    "label": "Ebben",
+    "url": "https://ebben.nl/nl/treeebb/asdivari-aster-divaricatus/pdf"
+   },
+   "sierwaarde": "---LLLLBBBZZ",
+   "bron_bloei": "Plan en Ebben (aug–okt); Imkerpedia noemt jul–okt"
+  },
+  {
+   "id": "liatris",
+   "nl": "Liatris (prachtschaarde)",
+   "latijn": "Liatris spicata",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Paarse of witte bloemaren in jul–aug, 40–75 cm; bijenplant voor zon of halfzon (Plantago), trekt vlinders. 3 stuks: 2 'Floristan Violett', 1 'Floristan Weiß'. Geen natte winterbodem",
+   "bijen": 3,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia N3/P3",
+   "link": {
+    "label": "Plantago",
+    "url": "https://www.plantago.nl/plantindex/plant/NL/L/8/liatris/5201.html"
+   },
+   "sierwaarde": "----LLBBBZZ-",
+   "bron_bloei": "Imkerpedia (bloei jul–sep)"
+  },
+  {
+   "id": "purple_dome",
+   "nl": "Aster 'Purple Dome'",
+   "latijn": "Symphyotrichum novae-angliae 'Purple Dome'",
+   "soort": "vaste plant",
+   "klimplant": false,
+   "beschrijving": "Violetpaarse herfstaster (aug–okt), ±60 cm, zelden meeldauw; Aster novae-angliae staat in de top-10 van vlinderlokkende planten (Vlinderstichting). 1 plant",
+   "bijen": 2,
+   "vogels": 2,
+   "score_eigen": [
+    "vogels"
+   ],
+   "bron_scores": "Bijen: Imkerpedia S. novae-angliae N2/P2",
+   "link": {
+    "label": "Vlinders 2011",
+    "url": "https://natuurtijdschriften.nl/pub/559026/VLIN2011026004008.pdf"
+   },
+   "sierwaarde": "----LLLBBBZ-",
+   "bron_bloei": "Plan (aug–okt); Imkerpedia noemt sep–nov voor de soort"
+  }
+ ]
+}

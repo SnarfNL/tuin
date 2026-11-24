@@ -1,0 +1,93 @@
+{
+ "info": {
+  "titel": "Tuinplan — Landelijk · Natuurlijk · Sauvage",
+  "ondertitel": "Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen",
+  "themas": [
+   {
+    "id": "landelijk",
+    "naam": "Landelijk",
+    "emoji": "🌷",
+    "beschrijving": "Warme nostalgische uitstraling. Klimrozen, lavendel, ridderspoor. Zones B en C."
+   },
+   {
+    "id": "natuurlijk",
+    "naam": "Natuurlijk",
+    "emoji": "🍃",
+    "beschrijving": "Zachte borders met vaste planten. Textuur, structuur en sereniteit. Heuchera als kleuraccent. Zone A."
+   },
+   {
+    "id": "sauvage",
+    "naam": "Jardin Sauvage",
+    "emoji": "🌾",
+    "beschrijving": "Wilde schoonheid, veel inheemse en wilde soorten, zaadhoofden. Paradijs voor bijen en vogels. Zones D en S."
+   }
+  ],
+  "tips": [
+   {
+    "id": "bijen",
+    "emoji": "🐝",
+    "titel": "Bijen-tips",
+    "punten": [
+     "Kies waar mogelijk enkelbloeiende soorten (niet gevuld); de dubbelbloemige 'Rose Barlow' en 'Double Ellen Red' staan daarom op de reservelijst",
+     "Trachelospermum trekt honingbijen",
+     "Vroege bollen (sneeuwklokje, krokussen, Oosterse sterhyacint, wilde narcis, kievitsbloem en druifhyacint) geven bijen en hommels voedsel van februari tot mei",
+     "Vlinders: liatris (C), aster 'Purple Dome' (B) en bosaster (S) vullen de vlinderplanten aan die er al staan (hemelsleutel, ijzerhard, kattenkruid, Anijsnetel en lavendel)",
+     "Laat zaadhoofden staan tot maart",
+     "Maak 1–2 insectenhotels in zone D of S",
+     "Vermijd pesticiden volledig"
+    ]
+   },
+   {
+    "id": "vogels",
+    "emoji": "🐦",
+    "titel": "Vogel-tips",
+    "punten": [
+     "Amelanchier (zone C) = bessen in juni–juli",
+     "Cornus florida (zone A) = rode bessen in de herfst",
+     "Klimop in zone S = nestplaats",
+     "Waterbassin in zone D = ideaal"
+    ]
+   },
+   {
+    "id": "klimmers",
+    "emoji": "🌸",
+    "titel": "Nieuwe klimmers",
+    "punten": [
+     "Trachelospermum: plant tegen de beschutte muur van de woning",
+     "Lonicera periclymenum: snoei na de bloei (aug)",
+     "Klimroos en Clematis 'Ville de Lyon': snoei in feb–mrt",
+     "Druif (Vitis, zone D tegen de schutting): snoei in dec–jan, niet in maart (bloedt)"
+    ]
+   },
+   {
+    "id": "klei",
+    "emoji": "🪱",
+    "titel": "Klei — advies",
+    "punten": [
+     "Nooit op natte klei werken",
+     "Jaarlijks mulchen (de bodem afdekken met een mulchlaag, zie Mulchen) verbetert klei langzaam",
+     "Regenwormen zijn jouw beste vriend",
+     "Geen diepploegen — bodemlagen intact"
+    ]
+   }
+  ],
+  "impressies": [
+   {
+    "seizoen": "lente",
+    "foto": "tuinplan/images/tuin-impressie-lente.jpg"
+   },
+   {
+    "seizoen": "zomer",
+    "foto": "tuinplan/images/tuin-impressie-zomer.jpg"
+   },
+   {
+    "seizoen": "herfst",
+    "foto": "tuinplan/images/tuin-impressie-herfst.jpg"
+   },
+   {
+    "seizoen": "winter",
+    "foto": "tuinplan/images/tuin-impressie-winter.jpg"
+   }
+  ]
+ }
+}

@@ -1,0 +1,430 @@
+{
+ "projecttaken": [
+  {
+   "id": "tuin.bollen-planten-295-300-plus-allium-en-hy",
+   "titel": "Bollen planten (±295–300 plus Allium en Hyacinthoides); sneeuwklokje en kievitsbloem eerst",
+   "actie": "planten",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "zo snel mogelijk, uiterlijk vóór half december 2026",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "bollen in huis; grond niet te nat",
+   "periode": {
+    "van": "2026-11",
+    "tot": "2026-12",
+    "uiterlijk": {
+     "maand": 12,
+     "deel": "midden"
+    }
+   }
+  },
+  {
+   "id": "tuin.kievitsbloem-bevestigen-en-controleren-o",
+   "titel": "Kievitsbloem bevestigen en controleren of de bollen nog te koop zijn",
+   "actie": "planten",
+   "plekken": [
+    "A"
+   ],
+   "wanneer": "begin december 2026",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12",
+    "deel": "begin"
+   }
+  },
+  {
+   "id": "tuin.terugvaloptie-bollen-toepassen-als-plant",
+   "titel": "Terugvaloptie bollen toepassen als planten niet lukt",
+   "actie": "planten",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "wanneer": "half december 2026",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "vorige taak",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12",
+    "deel": "midden"
+   }
+  },
+  {
+   "id": "tuin.kale-grond-afdekken-met-compost-of-bladc",
+   "titel": "Kale grond afdekken met compost of bladcompost (niet in D)",
+   "actie": "mulchen",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "S"
+   ],
+   "wanneer": "december 2026",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "bollen geplant",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "tuin.nagaan-wat-er-per-zone-in-de-grond-zit-c",
+   "titel": "Nagaan wat er per zone in de grond zit (compost, perliet, mest) en noteren",
+   "actie": "onderhoud",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "december 2026",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "tuin.natte-zandtest-met-het-jogetex-doek-onde",
+   "titel": "Natte-zandtest met het Jogetex-doek onder het schorspad",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "na de eerstvolgende regenbui (december 2026)",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "regen",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "tuin.lengte-en-breedte-van-het-schorspad-en-h",
+   "titel": "Lengte en breedte van het schorspad en het terras vastleggen; hoeveelheid schors uitrekenen",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "vóór eind februari 2027 (vóór de eerste aanvulling)",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2027-02",
+    "tot": "2027-02",
+    "uiterlijk": {
+     "maand": 2,
+     "deel": "eind"
+    }
+   }
+  },
+  {
+   "id": "tuin.besluit-subsidie-afwachten",
+   "titel": "Besluit subsidie afwachten",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "uiterlijk 19 januari 2027 (8 weken), met verlenging uiterlijk 16 februari 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "gemeente",
+   "periode": {
+    "van": "2027-01",
+    "tot": "2027-01",
+    "uiterlijk": {
+     "maand": 1,
+     "deel": "midden"
+    }
+   }
+  },
+  {
+   "id": "tuin.beslissen-welke-soorten-blijven-in-de-te",
+   "titel": "Beslissen welke soorten blijven in de te volle zones A, D en S; soort of cultivar van de bosaster kiezen; cultivars van Heuchera, Helleborus en Agastache kiezen",
+   "actie": "onderhoud",
+   "plekken": [
+    "A",
+    "D",
+    "S"
+   ],
+   "wanneer": "begin januari 2027 (vóór het bestellen)",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2027-01",
+    "tot": "2027-01",
+    "deel": "begin"
+   }
+  },
+  {
+   "id": "tuin.fasering-beslissen-drie-stappen-of-alles",
+   "titel": "Fasering beslissen (drie stappen of alles in voorjaar 2027)",
+   "actie": "onderhoud",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "begin januari 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2027-01",
+    "tot": "2027-01",
+    "deel": "begin"
+   }
+  },
+  {
+   "id": "tuin.klimsteun-plaatsen-rankdraden-of-rooster",
+   "titel": "Klimsteun plaatsen: rankdraden of rooster in C, rankdraden in B en S en op de schutting in D",
+   "actie": "onderhoud",
+   "plekken": [
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "januari–februari 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "droog weer",
+   "periode": {
+    "van": "2027-01",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "tuin.klimplanten-vaste-planten-en-zaad-bestel",
+   "titel": "Klimplanten, vaste planten en zaad bestellen (ook 3 liatris, 1 aster 'Purple Dome', 1–2 bosasters)",
+   "actie": "planten",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "januari–februari 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "soortkeuze",
+   "periode": {
+    "van": "2027-01",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "tuin.waterhardheid-in-dronten-navragen-bij-vi",
+   "titel": "Waterhardheid in Dronten navragen bij Vitens",
+   "actie": "onderhoud",
+   "plekken": [
+    "A"
+   ],
+   "wanneer": "vóór maart 2027 (vóór het groeiseizoen)",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2027-03",
+    "tot": "2027-03",
+    "uiterlijk": {
+     "maand": 3,
+     "deel": "eind"
+    }
+   }
+  },
+  {
+   "id": "tuin.klimplanten-planten-druif-met-een-schep-",
+   "titel": "Klimplanten planten (druif met een schep compost)",
+   "actie": "planten",
+   "plekken": [
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "maart–april 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "klimsteun",
+   "periode": {
+    "van": "2027-03",
+    "tot": "2027-04"
+   }
+  },
+  {
+   "id": "tuin.vaste-planten-planten-ook-liatris-aster-",
+   "titel": "Vaste planten planten (ook liatris, aster 'Purple Dome', bosaster) en zone D zaaien (korenbloem; vergeet-mij-nietje aan de voet van de druif)",
+   "actie": "planten",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "april–mei 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "klimplanten geplant",
+   "periode": {
+    "van": "2027-04",
+    "tot": "2027-05"
+   }
+  },
+  {
+   "id": "tuin.5-cm-mulchen-niet-in-d",
+   "titel": "5 cm mulchen (niet in D)",
+   "actie": "mulchen",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "S"
+   ],
+   "wanneer": "mei 2027, na het planten",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "vaste planten geplant",
+   "periode": {
+    "van": "2027-05",
+    "tot": "2027-05"
+   }
+  },
+  {
+   "id": "tuin.druifhyacint-beoordelen-uitbreiding-zo-n",
+   "titel": "Druifhyacint beoordelen (uitbreiding); zo nodig dunnen in juli",
+   "actie": "onderhoud",
+   "plekken": [
+    "D"
+   ],
+   "wanneer": "mei 2027 (na de bloei); dunnen juli",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "eerste bloei",
+   "periode": {
+    "van": "2027-05",
+    "tot": "2027-05"
+   }
+  },
+  {
+   "id": "tuin.zonuren-meten-vooral-midden-in-c-en-in-b",
+   "titel": "Zonuren meten, vooral midden in C en in B",
+   "actie": "onderhoud",
+   "plekken": [
+    "B",
+    "C",
+    "A"
+   ],
+   "wanneer": "mei–augustus 2027",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2027-05",
+    "tot": "2027-08"
+   }
+  },
+  {
+   "id": "tuin.bloei-aster-purple-dome-beoordelen-valt-",
+   "titel": "Bloei aster 'Purple Dome' beoordelen; valt hij tegen, in het voorjaar naar C",
+   "actie": "onderhoud",
+   "plekken": [
+    "B",
+    "C"
+   ],
+   "wanneer": "beoordelen oktober 2027, verplaatsen maart–april 2028",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "eerste bloei",
+   "periode": {
+    "van": "2027-10",
+    "tot": "2027-10"
+   }
+  },
+  {
+   "id": "tuin.vergeet-mij-nietje-beoordelen-valt-hij-t",
+   "titel": "Vergeet-mij-nietje beoordelen; valt hij tegen, naar B",
+   "actie": "onderhoud",
+   "plekken": [
+    "D",
+    "B"
+   ],
+   "wanneer": "juni, na de eerste bloei",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "eerste bloei",
+   "periode": {
+    "van": "2027-06",
+    "tot": "2027-06"
+   }
+  },
+  {
+   "id": "tuin.hoogte-en-zonbehoefte-per-soort-controle",
+   "titel": "Hoogte en zonbehoefte per soort controleren en een hoogtekolom met bronnen toevoegen",
+   "actie": "onderhoud",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "wanneer": "vóór het bestellen (begin januari 2027)",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2027-01",
+    "tot": "2027-01",
+    "uiterlijk": {
+     "maand": 1,
+     "deel": "begin"
+    }
+   }
+  },
+  {
+   "id": "tuin.levensduur-check-soorten-aquilegia-knaut",
+   "titel": "Levensduur-check ⏱-soorten (Aquilegia, Knautia, Verbena, Agastache, Echinacea)",
+   "actie": "onderhoud",
+   "plekken": [
+    "A",
+    "C",
+    "D"
+   ],
+   "wanneer": "herfst 2029",
+   "status": "open",
+   "bron": "overdracht/tuin.md",
+   "periode": {
+    "van": "2029-09",
+    "tot": "2029-11"
+   }
+  },
+  {
+   "id": "tuin.verlichting-armatuur-laagspanning-of-230",
+   "titel": "Verlichting: armatuur, laagspanning of 230 V kiezen",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "geparkeerd, geen datum",
+   "status": "geparkeerd",
+   "bron": "overdracht/tuin.md",
+   "afhankelijk_van": "besluit verlichting"
+  }
+ ]
+}

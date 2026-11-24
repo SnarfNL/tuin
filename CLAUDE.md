@@ -1,40 +1,38 @@
 # Afspraken voor Claude in deze repo
 
-Deze repo is het **gedeelde geheugen** van de tuin: het tuinplan en de plantenlijst per bak. Twee Claude-projecten werken ermee: **Tuin** (tuinontwerp en siertuin) en **Tuinapp** (de takenapp, inclusief de moestuin). **De repo is leidend**: wat hier staat geldt, ook als een projectdocument iets anders zegt.
+Deze repo bevat de Tuinapp en de plannen van twee tuinen: de achtertuin (`tuinplan/`) en de moestuin (`moestuin/`). Er werken drie Claude-projecten mee:
+
+- **Tuin app** bouwt en onderhoudt de app en de afgeleide data.
+- **Tuin** beslist over de achtertuin.
+- **Moestuin** beslist over de moestuin.
 
 ## Taal en werkwijze
 
 - Schrijf en antwoord in het Nederlands.
-- Benoem beslissingen eerst en leg ze pas vast als de gebruiker daarom vraagt. Een besluit uit een gesprek is "voorgesteld" tot het is bevestigd.
-- Gebruik Nederlandse (of Vlaamse) websites als bron voor plantinformatie; vermeld het als alleen een anderstalige bron beschikbaar is.
-- De repo is **openbaar** en wordt via GitHub Pages gepubliceerd: zet er geen persoonsgegevens, adressen, contactgegevens of details van de thuisinfrastructuur in.
+- Benoem beslissingen eerst. Leg ze pas vast als de gebruiker ze bevestigt. Een besluit uit een gesprek is "voorgesteld" tot het is bevestigd.
+- Gebruik Nederlandse of Vlaamse websites als bron voor plantinformatie. Vermeld het als alleen een anderstalige bron beschikbaar is.
+- De repo is **openbaar** en wordt gepubliceerd via GitHub Pages. Zet er geen namen, adressen, contactgegevens of details van de thuisinfrastructuur in.
 
 ## Wat staat waar
 
-| Pad | Inhoud | Eigenaar |
+| Pad | Inhoud | Wie schrijft |
 |---|---|---|
-| `tuinplan/tuinplan.md` | Het tuinplan: zones, planten, grond, kalenders, onderhoud, planning, besluiten | project Tuin |
-| `tuinplan/index.html` + `tuinplan/images/` | Interactieve weergave van het tuinplan (GitHub Pages: `/tuinplan/`) | project Tuin |
-| `index.html` (hoofdmap) | Startpagina en straks de app (GitHub Pages) | project Tuinapp |
-| `docs/projectcontext.md` | Context, besluiten en open punten van het tuinontwerp | project Tuin |
-| `data/*.json` | Gestructureerde siertuindata (`bron: "tuinplan"`): bakken, planten, bollen, onderhoudsregels, algemene regels, eenmalige taken | project Tuin |
-| `data/moestuin/` | Moestuindata (`bron: "moestuin"`): bakken, gewassen, teeltplan, onderhoudsregels | project Tuinapp |
-| `docs/handoff-tuinapp.md` | Overdracht en datamodel voor de app | project Tuinapp |
+| `tuinplan/tuinplan.md` | Plan van de achtertuin (bron van waarheid) | project Tuin |
+| `tuinplan/index.html`, `tuinplan/images/` | Interactieve weergave van het tuinplan, foto's | project Tuin |
+| `moestuin/moestuinplan.md` | Plan van de moestuin (bron van waarheid) | project Moestuin |
+| `overdracht/wijzigingen.md` | Eén regel per wijziging in een plan die de app raakt | Tuin en Moestuin (toevoegen); Tuin app (afvinken als verwerkt) |
+| `overdracht/tuin.md`, `overdracht/moestuin.md` | Overdracht van 24 november 2026 | Tuin en Moestuin |
+| `docs/projectcontext.md` | Context en besluiten van het tuinontwerp | project Tuin |
+| `data/` | App-data, gebouwd uit de plannen (schema 2, zie `docs/datamodel.md`) | project Tuin app |
+| `data/<locatie>/stand.json`, `data/voortgang/` | Werkelijke stand en afvinken | de app zelf |
+| `index.html` (hoofdmap), `scripts/`, `docs/datamodel.md`, `CLAUDE.md`, `README.md` | App, scripts en afspraken | project Tuin app |
 
-## Regels voor wijzigingen
+## Regels
 
-1. **Siertuin:** wijzig `tuinplan/tuinplan.md`, de HTML en records met `bron: "tuinplan"` alleen op expliciet verzoek, en alleen vanuit het project Tuin (of als de gebruiker daar zelf om vraagt).
-2. **Samen bijwerken:** raakt een wijziging planten, bakken of onderhoud, werk dan `tuinplan/tuinplan.md` én `data/` bij **in dezelfde commit**. Werk `meta.json` (`stand`) bij.
-3. **De HTML** wordt alleen bijgewerkt als de gebruiker daar expliciet om vraagt. Houd hem dan consistent met `tuinplan/tuinplan.md`, maar zet er alleen plant- en plantonderhoudsinformatie in.
-4. **Niet verwijderen:** een plant of regel die vervalt krijgt `"status": "vervallen"`, zodat verwijzingen en het logboek van de app blijven kloppen. Afgevallen soorten staan in `tuinplan/tuinplan.md` op de reservelijst.
-5. **Moestuin en app:** het project Tuinapp schrijft in `data/moestuin/`, `docs/handoff-tuinapp.md` en de app-bestanden (zoals `index.html` in de hoofdmap).
-6. **Controle:** draai `python3 scripts/check_data.py` vóór elke commit. Het script controleert verwijzingen, maanden en acties, en of de plantenlijst in `data/planten.json` overeenkomt met de tabel *Alle planten* in `tuinplan/tuinplan.md`.
+1. **Plannen:** alleen het project Tuin wijzigt `tuinplan/`; alleen het project Moestuin wijzigt `moestuin/`. Een wijziging die planten, zones, bakken, onderhoud, taken of planning raakt, krijgt in dezelfde commit een regel in `overdracht/wijzigingen.md`: datum, wat er veranderd is en de sectie.
+2. **Data:** alleen het project Tuin app schrijft in `data/`, en altijd via `python3 -I scripts/bouw_data.py`. Pas de JSON niet met de hand aan, behalve `stand.json` en `voortgang/` (die schrijft de app).
+3. **Verwerken:** het project Tuin app draait na een nieuwe regel in `overdracht/wijzigingen.md` het bouwscript. Daarna leest het `data/AANVULLEN.md`, controleert de data en zet achter de regel ` (verwerkt <datum>)`.
+4. **Werkelijke stand:** lees `data/<locatie>/stand.json` vóór een beslissing over de beplanting. Bij twijfel wint voor waar een plant nu staat de stand, en voor wat de bedoeling is het plan.
+5. **Niet verwijderen:** een plant, plek of regel die vervalt, krijgt `"status": "vervallen"` in het plan of in de data. Zo blijven de voortgang en de stand kloppen.
+6. **Controle:** draai `python3 -I scripts/check_data.py` vóór elke commit die `data/` raakt.
 7. **Commits** gaan direct op `main`, klein en met een duidelijke Nederlandse omschrijving (bijvoorbeeld `Zone S: bosaster-cultivar gekozen`).
-
-## Datamodel (kort)
-
-- Maanden: `jan feb mrt apr mei jun jul aug sep okt nov dec`.
-- Acties: `snoeien`, `planten_zaaien`, `delen_verplanten`, `uitgebloeid_verwijderen`, `mulchen`, `meten`, `water_geven`, `niet_doen`, `aanvullen`; voor de moestuin ook `zaaien`, `uitplanten`, `oogsten`, `bemesten`, `afdekken`.
-- Herhaling: `jaarlijks`, `eenmalig_aanplant` (vervalt zodra de plant `status: "geplant"` heeft), `indien_nodig`, `conditioneel`.
-- Plantstatus: `gepland`, `geplant`, `vervallen`.
-- Volledige beschrijving: `docs/handoff-tuinapp.md`.

@@ -1,0 +1,1599 @@
+{
+ "regels": [
+  {
+   "id": "cornus.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "cornus",
+   "vensters": [
+    [
+     2
+    ]
+   ]
+  },
+  {
+   "id": "cornus.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "keuze": true,
+   "plant": "cornus",
+   "vensters": [
+    [
+     3,
+     4
+    ],
+    [
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "aquilegia.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "keuze": true,
+   "plant": "aquilegia",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     9
+    ]
+   ]
+  },
+  {
+   "id": "aquilegia.uitgebloeid_verwijderen",
+   "actie": "snoeien",
+   "detail": "Uitgebloeide bloemen weghalen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "aquilegia",
+   "vensters": [
+    [
+     6
+    ]
+   ]
+  },
+  {
+   "id": "heuchera.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "heuchera",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "heuchera.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "heuchera",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "heuchera.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "heuchera",
+   "vensters": [
+    [
+     4
+    ],
+    [
+     9
+    ]
+   ]
+  },
+  {
+   "id": "astrantia.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "astrantia",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "astrantia.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "astrantia",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "geranium.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "geranium",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "geranium.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "geranium",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "digitalis.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Zaaien",
+   "herhaling": "jaarlijks",
+   "plant": "digitalis",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ]
+  },
+  {
+   "id": "helleborus_or.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "helleborus_or",
+   "vensters": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "helleborus_or.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "helleborus_or",
+   "vensters": [
+    [
+     9,
+     10
+    ]
+   ]
+  },
+  {
+   "id": "carex.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "carex",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "carex.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "carex",
+   "vensters": [
+    [
+     4
+    ]
+   ]
+  },
+  {
+   "id": "liriope.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "liriope",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "liriope.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "liriope",
+   "vensters": [
+    [
+     4
+    ]
+   ]
+  },
+  {
+   "id": "galanthus.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "plant": "galanthus",
+   "vensters": [
+    [
+     10,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "fritillaria.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "plant": "fritillaria",
+   "vensters": [
+    [
+     9,
+     10,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "crocus_tom.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "uiterlijk": {
+    "maand": 12,
+    "deel": "midden"
+   },
+   "plant": "crocus_tom",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "rosa.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "rosa",
+   "vensters": [
+    [
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "rosa.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "keuze": true,
+   "plant": "rosa",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     11
+    ]
+   ]
+  },
+  {
+   "id": "rosa.uitgebloeid_verwijderen",
+   "actie": "snoeien",
+   "detail": "Uitgebloeide bloemen weghalen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "rosa",
+   "vensters": [
+    [
+     7,
+     8,
+     9
+    ]
+   ]
+  },
+  {
+   "id": "lonicera.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "lonicera",
+   "vensters": [
+    [
+     8
+    ]
+   ]
+  },
+  {
+   "id": "trachelospermum.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "trachelospermum",
+   "vensters": [
+    [
+     4
+    ]
+   ]
+  },
+  {
+   "id": "trachelospermum.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "trachelospermum",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "lunaria.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Zaaien",
+   "herhaling": "jaarlijks",
+   "plant": "lunaria",
+   "vensters": [
+    [
+     6,
+     7
+    ]
+   ]
+  },
+  {
+   "id": "allium.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "plant": "allium",
+   "vensters": [
+    [
+     9,
+     10
+    ]
+   ]
+  },
+  {
+   "id": "nepeta.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "nepeta",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "nepeta.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "nepeta",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "rudbeckia.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "rudbeckia",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "rudbeckia.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "rudbeckia",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "purple_dome.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "purple_dome",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "purple_dome.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "purple_dome",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "crocus_cb.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "uiterlijk": {
+    "maand": 12,
+    "deel": "midden"
+   },
+   "plant": "crocus_cb",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "narcissus.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "uiterlijk": {
+    "maand": 12,
+    "deel": "midden"
+   },
+   "plant": "narcissus",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "amelanchier.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "amelanchier",
+   "vensters": [
+    [
+     2
+    ]
+   ]
+  },
+  {
+   "id": "amelanchier.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "keuze": true,
+   "plant": "amelanchier",
+   "vensters": [
+    [
+     3,
+     4
+    ],
+    [
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "echinacea.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "echinacea",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "echinacea.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "echinacea",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "echinacea.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "echinacea",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "salvia.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "salvia",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "aster_amellus.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "aster_amellus",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "aster_amellus.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "aster_amellus",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "aster_amellus.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "aster_amellus",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "clematis.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "clematis",
+   "vensters": [
+    [
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "clematis.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "clematis",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "sedum.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "sedum",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "sedum.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "sedum",
+   "vensters": [
+    [
+     4
+    ]
+   ]
+  },
+  {
+   "id": "liatris.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "liatris",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "liatris.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "liatris",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "scilla.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "uiterlijk": {
+    "maand": 12,
+    "deel": "midden"
+   },
+   "plant": "scilla",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "centaurea.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Zaaien",
+   "herhaling": "jaarlijks",
+   "keuze": true,
+   "plant": "centaurea",
+   "vensters": [
+    [
+     3,
+     4
+    ],
+    [
+     9
+    ]
+   ]
+  },
+  {
+   "id": "vitis.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "vitis",
+   "vensters": [
+    [
+     12,
+     1
+    ],
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "vitis.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "vitis",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "myosotis.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Zaaien",
+   "herhaling": "jaarlijks",
+   "keuze": true,
+   "plant": "myosotis",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     6
+    ]
+   ]
+  },
+  {
+   "id": "myosotis.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "myosotis",
+   "vensters": [
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "knautia.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "knautia",
+   "vensters": [
+    [
+     3
+    ],
+    [
+     8
+    ]
+   ]
+  },
+  {
+   "id": "knautia.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "knautia",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "echium.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Zaaien",
+   "herhaling": "jaarlijks",
+   "plant": "echium",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "verbena.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "verbena",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "verbena.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "verbena",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "pennisetum.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "pennisetum",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "pennisetum.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "pennisetum",
+   "vensters": [
+    [
+     5
+    ]
+   ]
+  },
+  {
+   "id": "lavandula.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "lavandula",
+   "vensters": [
+    [
+     4
+    ],
+    [
+     8
+    ]
+   ]
+  },
+  {
+   "id": "lavandula.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "lavandula",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "agastache.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "agastache",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "agastache.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "agastache",
+   "vensters": [
+    [
+     5
+    ]
+   ]
+  },
+  {
+   "id": "muscari.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "muscari",
+   "vensters": [
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "muscari.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "plant": "muscari",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ]
+  },
+  {
+   "id": "primula.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "primula",
+   "vensters": [
+    [
+     5,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "primula.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "primula",
+   "vensters": [
+    [
+     9
+    ]
+   ]
+  },
+  {
+   "id": "pulmonaria.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "pulmonaria",
+   "vensters": [
+    [
+     5
+    ]
+   ]
+  },
+  {
+   "id": "pulmonaria.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "pulmonaria",
+   "vensters": [
+    [
+     9
+    ]
+   ]
+  },
+  {
+   "id": "hyacinthoides.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Bollen poten",
+   "herhaling": "tot_geplant",
+   "plant": "hyacinthoides",
+   "vensters": [
+    [
+     9,
+     10
+    ]
+   ]
+  },
+  {
+   "id": "dryopteris.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "dryopteris",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "dryopteris.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "dryopteris",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "astilbe.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "astilbe",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "astilbe.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "astilbe",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "hydrangea.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "hydrangea",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "hydrangea.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "hydrangea",
+   "vensters": [
+    [
+     7,
+     8
+    ]
+   ]
+  },
+  {
+   "id": "helleborus_ni.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "helleborus_ni",
+   "vensters": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "helleborus_ni.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "helleborus_ni",
+   "vensters": [
+    [
+     9,
+     10
+    ]
+   ]
+  },
+  {
+   "id": "sarcococca.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "sarcococca",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "sarcococca.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "sarcococca",
+   "vensters": [
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "hedera.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "hedera",
+   "vensters": [
+    [
+     2
+    ],
+    [
+     9
+    ]
+   ]
+  },
+  {
+   "id": "aster_div.snoeien",
+   "actie": "snoeien",
+   "detail": "Snoeien / terugknippen",
+   "soort": "taak",
+   "herhaling": "jaarlijks",
+   "plant": "aster_div",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "aster_div.delen_verplanten",
+   "actie": "planten",
+   "detail": "Delen / verplanten",
+   "soort": "suggestie",
+   "herhaling": "jaarlijks",
+   "plant": "aster_div",
+   "vensters": [
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "aster_div.planten_zaaien",
+   "actie": "planten",
+   "soort": "taak",
+   "detail": "Planten",
+   "herhaling": "tot_geplant",
+   "plant": "aster_div",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "alg.mulch_winter",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "S"
+   ],
+   "actie": "mulchen",
+   "detail": "Kale grond afdekken",
+   "vensters": [
+    [
+     12
+    ]
+   ],
+   "toelichting": "±5 cm op vochtige grond, vrij van stengels en stammen. Niet in D.",
+   "bron": "Mulchen, Hoe 8",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.mulch_voorjaar",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "S"
+   ],
+   "actie": "mulchen",
+   "detail": "Mulchlaag aanvullen na het terugknippen",
+   "vensters": [
+    [
+     2,
+     3
+    ]
+   ],
+   "toelichting": "±5 cm. Niet in D; in C niet rond Aster, Salvia en Liatris.",
+   "bron": "Mulchen, Hoe 8; Jaarlijks onderhoud",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.ph_kornoelje",
+   "plekken": [
+    "A"
+   ],
+   "plant": "cornus",
+   "actie": "onderhoud",
+   "detail": "pH meten en noteren",
+   "vensters": [
+    [
+     3,
+     4
+    ],
+    [
+     10
+    ]
+   ],
+   "meting": {
+    "eenheid": "pH",
+    "streef": "5,5–6,5"
+   },
+   "toelichting": "Op dezelfde plekken in de zure plantplek. In 2027 en 2028 in voor- en najaar, daarna jaarlijks. Regenwater geven.",
+   "bron": "pH-beheer kornoelje 5; overdracht/tuin.md",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.schorspad",
+   "plekken": [
+    "algemeen"
+   ],
+   "actie": "mulchen",
+   "detail": "Schorspad en schorsringen controleren en aanvullen",
+   "vensters": [
+    [
+     3
+    ]
+   ],
+   "toelichting": "Aanvullen als de laag dunner is dan 5 cm; Franse boomschors, liever te weinig bestellen en later aanvullen.",
+   "bron": "Schorspad, Aanvullen",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.zaadhoofden",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "S"
+   ],
+   "actie": "snoeien",
+   "detail": "Zaadhoofden laten staan tot maart",
+   "soort": "waarschuwing",
+   "vensters": [
+    [
+     10,
+     11,
+     12,
+     1,
+     2
+    ]
+   ],
+   "toelichting": "Voedsel en beschutting voor vogels en insecten.",
+   "bron": "Bijen-tips",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.blad_sauvage",
+   "plekken": [
+    "D",
+    "S"
+   ],
+   "actie": "opruimen",
+   "detail": "Blad laten liggen",
+   "soort": "waarschuwing",
+   "vensters": [
+    [
+     10,
+     11,
+     12
+    ]
+   ],
+   "toelichting": "In de sauvage-zones blijft het blad liggen.",
+   "bron": "Jaarlijks onderhoud",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.bollen_blad",
+   "plekken": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "actie": "snoeien",
+   "detail": "Blad van uitgebloeide bollen laten afsterven",
+   "soort": "waarschuwing",
+   "vensters": [
+    [
+     4,
+     5
+    ]
+   ],
+   "toelichting": "Niet afknippen; de bol haalt er de kracht voor volgend jaar uit.",
+   "bron": "Jaarlijks onderhoud",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.klimop_broedseizoen",
+   "plekken": [
+    "S"
+   ],
+   "plant": "hedera",
+   "actie": "snoeien",
+   "detail": "Klimop niet snoeien (broedseizoen)",
+   "soort": "waarschuwing",
+   "vensters": [
+    [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "toelichting": "Snoeien buiten het broedseizoen.",
+   "bron": "Onderhoudskalender, klimop",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.druif_maart",
+   "plekken": [
+    "D"
+   ],
+   "plant": "vitis",
+   "actie": "snoeien",
+   "detail": "Druif niet snoeien in maart (bloedt)",
+   "soort": "waarschuwing",
+   "vensters": [
+    [
+     3
+    ]
+   ],
+   "toelichting": "Wintersnoei in dec–jan.",
+   "bron": "Nieuwe klimmers; Onderhoudskalender, druif",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.water.A",
+   "plekken": [
+    "A"
+   ],
+   "actie": "water",
+   "detail": "Water geven",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "voorwaarde": "Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt",
+   "toelichting": "Per week: 12–15 l/m² = 54–68 l. De kornoelje valt hier ook onder, zie bomen.",
+   "bron": "Water geven (indicatie per zone)",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.water.B",
+   "plekken": [
+    "B"
+   ],
+   "actie": "water",
+   "detail": "Water geven",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "voorwaarde": "Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt",
+   "toelichting": "Per week: 15–20 l/m² = 120–160 l, plus 15–20 l per klimplant (3 stuks) = 45–60 l. Meest watergevoelige zone; klimplanten extra, ook in de winter bij vorstloze droogte controleren.",
+   "bron": "Water geven (indicatie per zone)",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.water.C",
+   "plekken": [
+    "C"
+   ],
+   "actie": "water",
+   "detail": "Water geven",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "voorwaarde": "Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt",
+   "toelichting": "Per week: Eerste 6–8 weken na planten ±10 l/m² = ±80 l, plus Clematis 15 l = 15 l; daarna nauwelijks. Aster amellus en Salvia nemorosa zijn droogtetolerant: alleen laten aanslaan.",
+   "bron": "Water geven (indicatie per zone)",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.water.S",
+   "plekken": [
+    "S"
+   ],
+   "actie": "water",
+   "detail": "Water geven",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "voorwaarde": "Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt",
+   "toelichting": "Per week: 12–15 l/m² = 30–38 l. Moet vochtig blijven (varens, Astilbe); minder gieten maar niet laten uitdrogen.",
+   "bron": "Water geven (indicatie per zone)",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  },
+  {
+   "id": "alg.water.bomen",
+   "plekken": [
+    "A",
+    "C"
+   ],
+   "actie": "water",
+   "detail": "Bomen water geven",
+   "vensters": [
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   ],
+   "voorwaarde": "Alleen als er die week minder dan ±10 mm regen viel en de grond op 5 cm droog aanvoelt",
+   "toelichting": "40–60 l per boom per week in droge perioden, jaar 1–2; de kornoelje met regenwater.",
+   "bron": "Water geven, Bomen",
+   "soort": "taak",
+   "herhaling": "jaarlijks"
+  }
+ ]
+}

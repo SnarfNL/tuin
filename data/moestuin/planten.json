@@ -1,0 +1,345 @@
+{
+ "planten": [
+  {
+   "id": "suikermais",
+   "nl": "Suikermais",
+   "latijn": "Zea mays convar. saccharata",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Poaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "45 × 45 cm, in een blok",
+   "beschrijving": "Windbestuiver: in een blok zetten, niet in één rij. Een bak van 1,5 m is krap. Niet te laat oogsten, anders worden de korrels melig"
+  },
+  {
+   "id": "pompoen",
+   "nl": "Pompoen",
+   "latijn": "Cucurbita maxima (klein ras; ras nog te kiezen)",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Cucurbitaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "1 plant per ±1,5 m² [eigen inschatting]",
+   "beschrijving": "Groot en hongerig, woekert: ranken over de rand laten groeien. Compost in het plantgat"
+  },
+  {
+   "id": "courgette",
+   "nl": "Courgette",
+   "latijn": "Cucurbita pepo",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Cucurbitaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "2–3 planten per bak, ±1 m² per plant [eigen inschatting]",
+   "beschrijving": "Groot en hongerig. Jong oogsten, om de paar dagen"
+  },
+  {
+   "id": "snackkomkommer",
+   "nl": "Snackkomkommer",
+   "latijn": "Cucumis sativus",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Cucurbitaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "50 cm [eigen inschatting]",
+   "beschrijving": "Buitenras kiezen. Laten klimmen tegen het gaas van de pergola"
+  },
+  {
+   "id": "wortel",
+   "nl": "Wortel",
+   "latijn": "Daucus carota subsp. sativus",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Apiaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 20 cm, dunnen tot 3–5 cm [eigen inschatting]",
+   "beschrijving": "Insectengaas vanaf het zaaien tegen de wortelvlieg (eerste vlucht m-apr–b-jul, daarna jul–okt)"
+  },
+  {
+   "id": "lente-ui",
+   "nl": "Lente-ui",
+   "latijn": "Allium fistulosum",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Amaryllidaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 15–20 cm [eigen inschatting]",
+   "beschrijving": "Tussen de wortels: de uiengeur maakt het de wortelvlieg moeilijker"
+  },
+  {
+   "id": "rode-biet",
+   "nl": "Rode biet",
+   "latijn": "Beta vulgaris subsp. vulgaris (Conditiva-groep)",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Amaranthaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 25 cm, 5 cm in de rij na dunnen",
+   "beschrijving": "Zaad is een kluwen: altijd dunnen. Uitgedund blad is eetbaar"
+  },
+  {
+   "id": "zoete-aardappel",
+   "nl": "Zoete aardappel",
+   "latijn": "Ipomoea batatas",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Convolvulaceae",
+   "plantgoed": "Plantgoed (stekjes)",
+   "plantafstand": "40–50 cm [eigen inschatting]",
+   "beschrijving": "Wil warmte (90–120 warme dagen); onder de kasopzet beginnen. Gevoelig onder 10 °C"
+  },
+  {
+   "id": "knoflook",
+   "nl": "Knoflook",
+   "latijn": "Allium sativum",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Amaryllidaceae",
+   "plantgoed": "Plantgoed (tenen)",
+   "plantafstand": "10–15 cm [eigen inschatting]",
+   "beschrijving": "Grootste tenen planten. Na de oogst laten drogen met het loof eraan"
+  },
+  {
+   "id": "radijs",
+   "nl": "Radijs",
+   "latijn": "Raphanus sativus",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Brassicaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 10–15 cm, 2 cm in de rij",
+   "beschrijving": "Onder de kasopzet. Grond vochtig houden"
+  },
+  {
+   "id": "pluksla",
+   "nl": "Pluksla",
+   "latijn": "Lactuca sativa",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Asteraceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 20 cm [eigen inschatting]",
+   "beschrijving": "Blad plukken, plant laten staan"
+  },
+  {
+   "id": "spinazie",
+   "nl": "Spinazie",
+   "latijn": "Spinacia oleracea",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Amaranthaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 20 cm [eigen inschatting]",
+   "beschrijving": "Schiet door bij warmte en lange dagen"
+  },
+  {
+   "id": "veldsla",
+   "nl": "Veldsla",
+   "latijn": "Valerianella locusta",
+   "soort": "groente",
+   "levensduur": "seizoen",
+   "familie": "Caprifoliaceae",
+   "plantgoed": "Zaad",
+   "plantafstand": "Rijen 10 cm [eigen inschatting]",
+   "beschrijving": "Onder de kasopzet de hele winter te oogsten"
+  },
+  {
+   "id": "dahlia",
+   "nl": "Dahlia",
+   "latijn": "Dahlia",
+   "soort": "knol",
+   "levensduur": "seizoen",
+   "plantgoed": "Knollen",
+   "plantafstand": "50–60 cm [eigen inschatting]",
+   "beschrijving": "Opbinden. Uitgebloeide bloemen wegknippen. Knollen rooien na de eerste nachtvorst (e-okt/b-nov) en vorstvrij, droog bewaren; rond kerst controleren op rot. Enkelbloemige rassen zijn beter voor bijen",
+   "bloei": "jul–eerste nachtvorst"
+  },
+  {
+   "id": "goudsbloem",
+   "nl": "Goudsbloem",
+   "latijn": "Calendula officinalis",
+   "soort": "eenjarig",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad",
+   "plantafstand": "25 cm [eigen inschatting]",
+   "beschrijving": "Zaait zich uit. Bloemen eetbaar",
+   "bloei": "jun–okt"
+  },
+  {
+   "id": "oost-indische-kers",
+   "nl": "Oost-Indische kers",
+   "latijn": "Tropaeolum majus",
+   "soort": "eenjarig",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad",
+   "plantafstand": "30 cm [eigen inschatting]",
+   "beschrijving": "Vorstgevoelig. Bloemen en blad eetbaar; trekt luizen weg van de courgette. In de bak met biet en komkommer een klimmend ras tegen de pergola",
+   "bloei": "jun–eerste vorst"
+  },
+  {
+   "id": "afrikaantje",
+   "nl": "Afrikaantje",
+   "latijn": "Tagetes patula",
+   "soort": "eenjarig",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad of plantgoed",
+   "plantafstand": "20–25 cm [eigen inschatting]",
+   "beschrijving": "Tegen aaltjes in de grond",
+   "bloei": "jun–okt"
+  },
+  {
+   "id": "ridderspoor",
+   "nl": "Ridderspoor",
+   "latijn": "Consolida ajacis",
+   "soort": "eenjarig",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad",
+   "plantafstand": "20–30 cm [eigen inschatting]",
+   "beschrijving": "Alle delen giftig: niet tussen eetbaar blad door elkaar plukken. Gevoelig voor meeldauw",
+   "bloei": "jun–aug"
+  },
+  {
+   "id": "cosmos",
+   "nl": "Cosmos",
+   "latijn": "Cosmos bipinnatus",
+   "soort": "eenjarig",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad",
+   "plantafstand": "30–40 cm [eigen inschatting]",
+   "beschrijving": "Bak 10. Uitgebloeide bloemen wegknippen verlengt de bloei",
+   "bloei": "jul–okt"
+  },
+  {
+   "id": "zinnia",
+   "nl": "Zinnia",
+   "latijn": "Zinnia elegans",
+   "soort": "eenjarig",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad",
+   "plantafstand": "25–30 cm [eigen inschatting]",
+   "beschrijving": "Bak 10. Snijbloem",
+   "bloei": "jul–okt"
+  },
+  {
+   "id": "citroenmelisse",
+   "nl": "Citroenmelisse",
+   "latijn": "Melissa officinalis",
+   "soort": "kruid",
+   "plantgoed": "Plantgoed",
+   "plantafstand": "40 cm [eigen inschatting]",
+   "beschrijving": "Vaste plant. Na de bloei (jul) terugknippen, anders zaait hij zich overal uit [eigen inschatting]"
+  },
+  {
+   "id": "basilicum",
+   "nl": "Basilicum",
+   "latijn": "Ocimum basilicum",
+   "soort": "kruid",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad of plantgoed",
+   "plantafstand": "20–25 cm",
+   "beschrijving": "Eenjarig, elk jaar nieuw. Wil warmte en een beschutte plek; topjes regelmatig plukken"
+  },
+  {
+   "id": "rozemarijn",
+   "nl": "Rozemarijn",
+   "latijn": "Salvia rosmarinus (winterhard ras, bijv. 'Arp')",
+   "soort": "kruid",
+   "plantgoed": "Plantgoed",
+   "plantafstand": "50 cm [eigen inschatting]",
+   "beschrijving": "Vorstgevoelig; schrale, droge plek. Licht snoeien in mrt–apr en jul"
+  },
+  {
+   "id": "peterselie",
+   "nl": "Peterselie",
+   "latijn": "Petroselinum crispum",
+   "soort": "kruid",
+   "levensduur": "seizoen",
+   "plantgoed": "Zaad of plantgoed",
+   "plantafstand": "20 cm [eigen inschatting]",
+   "beschrijving": "Tweejarig: schiet het tweede jaar door. Jaarlijks opnieuw zaaien of plantje kopen"
+  },
+  {
+   "id": "lavendel",
+   "nl": "Lavendel",
+   "latijn": "Lavandula angustifolia",
+   "soort": "kruid",
+   "plantgoed": "Plantgoed",
+   "plantafstand": "40 cm [eigen inschatting]",
+   "beschrijving": "Snoeien in mrt–apr (net boven het kale hout) en na de bloei (aug–sep, max. ⅓). Nooit in het kale hout, niet na september"
+  },
+  {
+   "id": "tijm",
+   "nl": "Tijm",
+   "latijn": "Thymus vulgaris",
+   "soort": "kruid",
+   "plantgoed": "Plantgoed",
+   "plantafstand": "25 cm [eigen inschatting]",
+   "beschrijving": "Na de bloei licht terugknippen [eigen inschatting]"
+  },
+  {
+   "id": "munt",
+   "nl": "Munt",
+   "latijn": "Mentha (bijv. M. spicata)",
+   "soort": "kruid",
+   "plantgoed": "Plantgoed",
+   "plantafstand": "1 pot",
+   "beschrijving": "Woekert zonder pot"
+  },
+  {
+   "id": "aardbei",
+   "nl": "Aardbei",
+   "latijn": "Fragaria × ananassa",
+   "soort": "fruit",
+   "beschrijving": "Planten aug–sep of mrt; 30 cm in de rij, rijen 50 cm [eigen inschatting]. Stro eronder in mei, vogelnet mei–jul, uitlopers weghalen. Oogst is het grootst in jaar 2 en 3; daarna vernieuwen met eigen uitlopers (aug) op een plek waar 3 jaar geen aardbeien stonden"
+  },
+  {
+   "id": "appelboom",
+   "nl": "Appelboom",
+   "latijn": "Malus domestica",
+   "soort": "fruit",
+   "beschrijving": "Compost op de boomspiegel in mrt [eigen inschatting]"
+  },
+  {
+   "id": "vijg",
+   "nl": "Vijg",
+   "latijn": "Ficus carica",
+   "soort": "fruit",
+   "beschrijving": "Niet helemaal winterhard; jonge boom 's winters beschermen [eigen inschatting]. Sap irriteert de huid: handschoenen"
+  },
+  {
+   "id": "jonge-fruitboom",
+   "nl": "Jonge fruitboom",
+   "latijn": "Soort onbekend",
+   "soort": "fruit",
+   "beschrijving": "Zie open punten"
+  },
+  {
+   "id": "bessenstruik",
+   "nl": "Bessenstruik",
+   "latijn": "Soort onbekend (aalbes, kruisbes of zwarte bes)",
+   "soort": "fruit",
+   "beschrijving": "Zie open punten"
+  },
+  {
+   "id": "framboos",
+   "nl": "Framboos",
+   "latijn": "Rubus idaeus",
+   "soort": "fruit"
+  },
+  {
+   "id": "rabarber",
+   "nl": "Rabarber",
+   "latijn": "Rheum × hybridum",
+   "soort": "fruit",
+   "beschrijving": "Na eind juni niet meer oogsten, zodat de plant reserves opbouwt. Compost in het najaar [eigen inschatting]"
+  },
+  {
+   "id": "phacelia",
+   "nl": "Phacelia",
+   "latijn": "Phacelia tanacetifolia",
+   "soort": "groenbemester",
+   "levensduur": "seizoen",
+   "beschrijving": "Bevriest in de winter en blijft als mulch liggen. Familie Boraginaceae, past bij alle gewassen hier"
+  }
+ ]
+}

@@ -1,0 +1,324 @@
+{
+ "beplanting": [
+  {
+   "plant": "suikermais",
+   "plek": "bak-1",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "suikermais",
+   "plek": "bak-4",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "pompoen",
+   "plek": "bak-1",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "pompoen",
+   "plek": "bak-4",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "wortel",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "wortel",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "lente-ui",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "lente-ui",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "afrikaantje",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "afrikaantje",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "snackkomkommer",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "snackkomkommer",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "rode-biet",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "rode-biet",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "goudsbloem",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "goudsbloem",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "oost-indische-kers",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "oost-indische-kers",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "ridderspoor",
+   "plek": "bak-3",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "ridderspoor",
+   "plek": "bak-2",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "courgette",
+   "plek": "bak-4",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "courgette",
+   "plek": "bak-1",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "goudsbloem",
+   "plek": "bak-4",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "goudsbloem",
+   "plek": "bak-1",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "oost-indische-kers",
+   "plek": "bak-4",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "oneven"
+  },
+  {
+   "plant": "oost-indische-kers",
+   "plek": "bak-1",
+   "status": "gepland",
+   "vanaf": 2027,
+   "jaren": "even"
+  },
+  {
+   "plant": "dahlia",
+   "plek": "bak-5",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "zoete-aardappel",
+   "plek": "bak-6",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "afrikaantje",
+   "plek": "bak-6",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "radijs",
+   "plek": "bak-6",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "pluksla",
+   "plek": "bak-6",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "spinazie",
+   "plek": "bak-6",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "knoflook",
+   "plek": "bak-8",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "aardbei",
+   "plek": "bak-8",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "goudsbloem",
+   "plek": "bak-10",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "cosmos",
+   "plek": "bak-10",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "zinnia",
+   "plek": "bak-10",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "citroenmelisse",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "basilicum",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "rozemarijn",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "peterselie",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "lavendel",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "tijm",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "munt",
+   "plek": "bak-9",
+   "status": "gepland",
+   "vanaf": 2027
+  },
+  {
+   "plant": "appelboom",
+   "plek": "boomgaard",
+   "status": "geplant"
+  },
+  {
+   "plant": "vijg",
+   "plek": "boomgaard",
+   "status": "geplant"
+  },
+  {
+   "plant": "jonge-fruitboom",
+   "plek": "boomgaard",
+   "status": "geplant"
+  },
+  {
+   "plant": "bessenstruik",
+   "plek": "boomgaard",
+   "status": "geplant"
+  },
+  {
+   "plant": "framboos",
+   "plek": "fruit",
+   "status": "geplant"
+  },
+  {
+   "plant": "rabarber",
+   "plek": "fruit",
+   "status": "geplant"
+  }
+ ]
+}

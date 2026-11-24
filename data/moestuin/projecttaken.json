@@ -1,0 +1,350 @@
+{
+ "projecttaken": [
+  {
+   "id": "moes.reglement-van-het-complex-nalezen-over-k",
+   "titel": "Reglement van het complex nalezen over kasopzet, IBC en pergola",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "nov–dec 2026",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-11",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "moes.noppenfolie-tegen-de-binnenkant-van-alle",
+   "titel": "Noppenfolie tegen de binnenkant van alle bakken",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "dec 2026",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "moes.rvs-band-bestellen-3-rollen-van-10-m-12-",
+   "titel": "RVS-band bestellen (3 rollen van 10 m, 12 × 0,7 mm, plus 100–120 RVS-schroeven 4 × 20 mm) en monteren: 2 banden in bak 1, 4, 5, 8; 1 in bak 2, 3, 6, 7, bak 9 (kruidenbak) en bak 10 (bloemenbak, band ±0,86 m)",
+   "actie": "onderhoud",
+   "plekken": [
+    "bak-1",
+    "bak-2",
+    "bak-9",
+    "bak-10"
+   ],
+   "wanneer": "dec 2026",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "moes.worteldoek-binnen-de-bakken-openknippen-",
+   "titel": "Worteldoek binnen de bakken openknippen, flappen tegen de binnenkant vastzetten (na folie en band)",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "dec 2026",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2026-12"
+   }
+  },
+  {
+   "id": "moes.7-m-schone-tuinaarde-bestellen-los-laten",
+   "titel": "±7 m³ schone tuinaarde bestellen, los laten storten, bakken 15 cm vullen (aanvoer met de kruiwagen)",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "dec 2026–feb 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.grof-scherp-zand-0-4-mm-200-kg-8-zakken-",
+   "titel": "Grof scherp zand 0–4 mm (±200 kg, 8 zakken) door de aarde van bak 9 (kruidenbak)",
+   "actie": "onderhoud",
+   "plekken": [
+    "bak-9"
+   ],
+   "wanneer": "dec 2026–feb 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.3-m-houtsnippers-op-het-worteldoek-van-d",
+   "titel": "±3 m³ houtsnippers op het worteldoek van de paden en ±20 m² van het overige deel",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "dec 2026–feb 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.bloemenbak-bak-10-een-meter-inkorten-tot",
+   "titel": "Bloemenbak (bak 10) een meter inkorten, tot ±3 m lang",
+   "actie": "onderhoud",
+   "plekken": [
+    "bak-10"
+   ],
+   "wanneer": "winter 2026–27",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.kasopzet-bouwen-1-5-2-0-m-polycarbonaat-",
+   "titel": "Kasopzet bouwen (1,5 × 2,0 m, polycarbonaat, raamopeners, stormhaken, gaasframe)",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "winter 2026–27",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.pergola-bouwen",
+   "titel": "Pergola bouwen",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "winter 2026–27",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.jonge-pruim-verwijderen",
+   "titel": "Jonge pruim verwijderen",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "winter 2026–27",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.schaduw-van-de-folietunnel-van-de-buren-",
+   "titel": "Schaduw van de folietunnel van de buren op bak 4 en 8 bekijken",
+   "actie": "onderhoud",
+   "plekken": [
+    "bak-4"
+   ],
+   "wanneer": "feb 2027, rond 12.00 uur",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-02",
+    "tot": "2027-02"
+   }
+  },
+  {
+   "id": "moes.kasopzet-voor-het-eerst-op-bak-6-voortee",
+   "titel": "Kasopzet voor het eerst op bak 6, voorteelt zaaien",
+   "actie": "planten",
+   "plekken": [
+    "bak-6"
+   ],
+   "wanneer": "e-feb 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-02",
+    "tot": "2027-02",
+    "deel": "eind"
+   }
+  },
+  {
+   "id": "moes.knoflook-planten-in-bak-8-voorjaarsplant",
+   "titel": "Knoflook planten in bak 8 (voorjaarsplanting, omdat de bakken pas in de winter gevuld worden)",
+   "actie": "planten",
+   "plekken": [
+    "bak-8"
+   ],
+   "wanneer": "feb–mrt 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-02",
+    "tot": "2027-03"
+   }
+  },
+  {
+   "id": "moes.jonge-aardbeiplanten-van-het-oude-vak-ov",
+   "titel": "Jonge aardbeiplanten van het oude vak overzetten naar bak 8",
+   "actie": "planten",
+   "plekken": [
+    "bak-8"
+   ],
+   "wanneer": "mrt 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-03",
+    "tot": "2027-03"
+   }
+  },
+  {
+   "id": "moes.bak-9-kruidenbak-planten-munt-in-een-ing",
+   "titel": "Bak 9 (kruidenbak) planten; munt in een ingegraven pot",
+   "actie": "planten",
+   "plekken": [
+    "bak-9"
+   ],
+   "wanneer": "mrt–apr 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-03",
+    "tot": "2027-04"
+   }
+  },
+  {
+   "id": "moes.bak-10-bloemenbak-inzaaien-goudsbloem-co",
+   "titel": "Bak 10 (bloemenbak) inzaaien: goudsbloem, cosmos, zinnia",
+   "actie": "planten",
+   "plekken": [
+    "bak-10"
+   ],
+   "wanneer": "m-apr–mei 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-04",
+    "tot": "2027-05",
+    "deel": "midden"
+   }
+  },
+  {
+   "id": "moes.breedte-van-de-kruiwagen-nameten-tegen-d",
+   "titel": "Breedte van de kruiwagen nameten tegen de paden van 0,65 m",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "voorjaar 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-03",
+    "tot": "2027-05"
+   }
+  },
+  {
+   "id": "moes.zonuren-per-bak-globaal-bijhouden",
+   "titel": "Zonuren per bak globaal bijhouden",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "groeiseizoen 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-04",
+    "tot": "2027-09"
+   }
+  },
+  {
+   "id": "moes.oogsttijd-van-de-frambozen-noteren-jun-a",
+   "titel": "Oogsttijd van de frambozen noteren: jun–aug = zomerframboos, e-aug–okt = herfstframboos",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "jun–okt 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2027-06",
+    "tot": "2027-10"
+   }
+  },
+  {
+   "id": "moes.rassen-kiezen-bij-het-bestellen-pompoen-",
+   "titel": "Rassen kiezen bij het bestellen (pompoen, suikermais, snackkomkommer, klimmende Oost-Indische kers, dahlia's)",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "dec 2026–jan 2027",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2026-12",
+    "tot": "2027-01"
+   }
+  },
+  {
+   "id": "moes.ibc-van-1000-l-aan-de-dakgoot",
+   "titel": "IBC van 1000 l aan de dakgoot",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "later",
+   "status": "geparkeerd",
+   "bron": "moestuin/moestuinplan.md §5"
+  },
+  {
+   "id": "moes.aardbeien-vernieuwen-met-eigen-uitlopers",
+   "titel": "Aardbeien vernieuwen met eigen uitlopers op een nieuwe plek",
+   "actie": "onderhoud",
+   "plekken": [
+    "algemeen"
+   ],
+   "wanneer": "aug 2029",
+   "status": "open",
+   "bron": "moestuin/moestuinplan.md §5",
+   "periode": {
+    "van": "2029-08",
+    "tot": "2029-08"
+   }
+  }
+ ]
+}

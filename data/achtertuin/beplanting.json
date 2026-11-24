@@ -1,0 +1,322 @@
+{
+ "beplanting": [
+  {
+   "plant": "amelanchier",
+   "plek": "C",
+   "status": "geplant"
+  },
+  {
+   "plant": "cornus",
+   "plek": "A",
+   "status": "geplant"
+  },
+  {
+   "plant": "lonicera",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "hydrangea",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "trachelospermum",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "rosa",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "vitis",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "clematis",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "hedera",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "echinacea",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "helleborus_or",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "helleborus_or",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "helleborus_ni",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "heuchera",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "aquilegia",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "dryopteris",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "lavandula",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "astrantia",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "knautia",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "pulmonaria",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "geranium",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "geranium",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "digitalis",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "carex",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "carex",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "myosotis",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "lunaria",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "allium",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "nepeta",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "nepeta",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "rudbeckia",
+   "plek": "B",
+   "status": "gepland"
+  },
+  {
+   "plant": "rudbeckia",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "aster_amellus",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "verbena",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "salvia",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "sedum",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "agastache",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "pennisetum",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "centaurea",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "echium",
+   "plek": "D",
+   "status": "gepland"
+  },
+  {
+   "plant": "primula",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "hyacinthoides",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "astilbe",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "sarcococca",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "liriope",
+   "plek": "A",
+   "status": "gepland"
+  },
+  {
+   "plant": "galanthus",
+   "plek": "A",
+   "status": "gepland",
+   "aantal": "±30"
+  },
+  {
+   "plant": "crocus_tom",
+   "plek": "A",
+   "status": "gepland",
+   "aantal": "±30"
+  },
+  {
+   "plant": "crocus_tom",
+   "plek": "B",
+   "status": "gepland",
+   "aantal": "±25"
+  },
+  {
+   "plant": "crocus_tom",
+   "plek": "C",
+   "status": "gepland",
+   "aantal": "±25"
+  },
+  {
+   "plant": "crocus_tom",
+   "plek": "D",
+   "status": "gepland",
+   "aantal": "±15"
+  },
+  {
+   "plant": "crocus_cb",
+   "plek": "B",
+   "status": "gepland",
+   "aantal": "±25"
+  },
+  {
+   "plant": "crocus_cb",
+   "plek": "C",
+   "status": "gepland",
+   "aantal": "±25"
+  },
+  {
+   "plant": "crocus_cb",
+   "plek": "D",
+   "status": "gepland",
+   "aantal": "±15"
+  },
+  {
+   "plant": "fritillaria",
+   "plek": "A",
+   "status": "gepland",
+   "aantal": "±15–20"
+  },
+  {
+   "plant": "narcissus",
+   "plek": "B",
+   "status": "gepland",
+   "aantal": "±15"
+  },
+  {
+   "plant": "narcissus",
+   "plek": "C",
+   "status": "gepland",
+   "aantal": "±15"
+  },
+  {
+   "plant": "scilla",
+   "plek": "C",
+   "status": "gepland",
+   "aantal": "±30"
+  },
+  {
+   "plant": "muscari",
+   "plek": "D",
+   "status": "gepland",
+   "aantal": "±30"
+  },
+  {
+   "plant": "aster_div",
+   "plek": "S",
+   "status": "gepland"
+  },
+  {
+   "plant": "liatris",
+   "plek": "C",
+   "status": "gepland"
+  },
+  {
+   "plant": "purple_dome",
+   "plek": "B",
+   "status": "gepland"
+  }
+ ]
+}
