@@ -2,6 +2,8 @@
 
 Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
+**Vastlegging (sinds 24 november 2026):** het project Tuin beslist over de achtertuin en legt dat vast in dit bestand. Het project Tuin app zet het om naar de app-data. Elke wijziging die planten, zones, onderhoud of planning raakt, staat ook in `overdracht/wijzigingen.md`. De stand van de overdracht staat in `overdracht/tuin.md`.
+
 **Levensduur:** ⏳ = verwachte levensduur korter dan 3 jaar (eenjarig of tweejarig; blijft in het plan, zaait zich meestal uit of moet worden herzaaid) · ⏱ = kortlevend, ongeveer 2–4 jaar (grensgeval; op klei vaak korter, vervang of deel tijdig). Besluit 18 oktober 2026: de ⏳-soorten in zone D (Centaurea en de tweejarigen) blijven; eenjarigen worden herzaaid en tweejarigen mogen uitzaaien. De ⏱-soorten blijven ook; in jaar 3–4 worden ze gecontroleerd en zo nodig gedeeld of bijgeplant.
 
 **Bollen en vlinderplanten (besloten 14 november 2026):** voor kleur in de vroege lente komen er bollen in de zones A, B, C en D: sneeuwklokje, boerenkrokus, krokus 'Cream Beauty', kievitsbloem, wilde narcis, Oosterse sterhyacint en druifhyacint (de druifhyacint komt terug van de reservelijst). In zone S komt de bosaster (*Aster divaricatus*) voor witte herfstbloei. Als vlinderplanten komen er 3 stuks *Liatris spicata* in zone C (2 'Floristan Violett' en 1 'Floristan Weiß') en 1 aster 'Purple Dome' in zone B. De aantallen bollen per zone staan onder *Bollen per zone*; het zijn eigen schattingen. Niet gekozen: narcis 'Tête-à-tête' en de paddenlelie (geen Nederlandse bron over bijenwaarde gevonden) en de wilde marjolein (de liatris is ervoor in de plaats gekomen). De plantenlijst telt nu 50 soorten, de reservelijst 16.
@@ -20,9 +22,9 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **Tuinmaten (22 oktober 2026, zijden genummerd volgens de plattegrond):** zijde 1 = 8,50 m, zijde 2 = 2,70 m (1 en 2 samen is de linkerzijkant, 11,2 m), zijde 3 = 3 m (klein deel onderin), zijde 4 = 8,50 m (rechterzijkant), zijde 5 (bovenzijde) = 8,70 m.
 
-**Oppervlaktes per zone (nagerekend door Kas, besloten 22 oktober 2026):** A 4,5 m², B 8 m², C 8 m², D 4 m² en S 2–3 m² (verdeeld over kleinere delen; hierna gerekend met 2,5 m²); samen ±27 m². Dit vervangt de eerdere schatting van 41 m² (A 6, S 4, B 10, C 12, D 9). Irrigatie, mulch en planning zijn hierop herberekend.
+**Oppervlaktes per zone (nagerekend door de eigenaar, besloten 22 oktober 2026):** A 4,5 m², B 8 m², C 8 m², D 4 m² en S 2–3 m² (verdeeld over kleinere delen; hierna gerekend met 2,5 m²); samen ±27 m². Dit vervangt de eerdere schatting van 41 m² (A 6, S 4, B 10, C 12, D 9). Irrigatie, mulch en planning zijn hierop herberekend.
 
-**Irrigatie (besloten 22 oktober 2026):** Kas doet in de eerste fases niets met irrigatie. Alle irrigatieplannen (kringen, leidingen, druppelslang, regenton, bomenringen) staan onderaan dit bestand onder *Mogelijk vervolgproject: irrigatie*. In de eerste fases wordt met de hand water gegeven met de tuinslang of gieter; hoeveel per zone staat in de *Onderhoudskalender* onder *Water geven (indicatie per zone)*.
+**Irrigatie (besloten 22 oktober 2026):** De eigenaar doet in de eerste fases niets met irrigatie. Alle irrigatieplannen (kringen, leidingen, druppelslang, regenton, bomenringen) staan onderaan dit bestand onder *Mogelijk vervolgproject: irrigatie*. In de eerste fases wordt met de hand water gegeven met de tuinslang of gieter; hoeveel per zone staat in de *Onderhoudskalender* onder *Water geven (indicatie per zone)*.
 
 **Plantplek en mest:** per zone staat onder *Plantplek en mest* wat er bij het planten in de grond moet en welke plek de soort nodig heeft (zon, schaduw, wel of geen mest). Lees dat voordat je gaat planten.
 
@@ -44,7 +46,9 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 ### Zone A — Half-zon · Natuurlijk
 
-**Grondsoort:** 30 cm mengsel: 50% lichte tuinaarde + 30% compost + 20% perliet. Verbetert doorlatendheid, houdt vocht vast.
+**Grondsoort (plan):** 30 cm mengsel: 50% lichte tuinaarde + 30% compost + 20% perliet. Verbetert doorlatendheid, houdt vocht vast.
+
+**Grondverbetering, uitgevoerd (stand 24 november 2026):** het plantvak is licht verhoogd met een rand en gevuld met oude tuingrond (16 november). Of er compost of perliet door is gemengd: onbekend. De kornoelje staat in een eigen zure plantplek met DCM Vivimus Rhodo (zie *pH-beheer kornoelje*). Het plan klopt hier dus niet meer met de uitvoering. Voorgesteld (eigen inschatting): niet opnieuw spitten, maar de grond verbeteren met compost of bladcompost als mulchlaag (december en feb–mrt, zie *Mulchen*), buiten de zure plantplek.
 
 | Seizoen | Planten |
 |---|---|
@@ -63,7 +67,9 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 ### Zone B — Half-zon · Klimplanten muur · Landelijk
 
-**Grondsoort:** 60% potgrond/compost, 30% lichte klei, 10% organische mest. Muren zijn droog — extra compost essentieel.
+**Grondsoort (plan):** 60% potgrond/compost, 30% lichte klei, 10% organische mest. Muren zijn droog — extra compost essentieel.
+
+**Grondverbetering, uitgevoerd (stand 24 november 2026):** licht verhoogd plantvak met rand, gevuld met oude tuingrond (16 november); op 18 november was de verwachting dat ook B nog met tuinaarde wordt aangevuld. Of er compost, potgrond of organische mest door is gemengd: onbekend. Het plan klopt hier dus niet meer met de uitvoering. Voorgesteld (eigen inschatting): compost als mulchlaag (december en feb–mrt) en de organische mest alleen in de plantgaten van de klimplanten, vooral de roos.
 
 | Seizoen | Planten |
 |---|---|
@@ -86,7 +92,9 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 ### Zone C — Half-zon · Klimplanten · Landelijk
 
-**Grondsoort:** 40% scherp zand + 30% compost door kleibodem. Klimplanten minimaal 60 cm diep planten.
+**Grondsoort (plan):** 40% scherp zand + 30% compost door kleibodem. Klimplanten minimaal 60 cm diep planten.
+
+**Grondverbetering, uitgevoerd (stand 24 november 2026):** licht verhoogd plantvak met rand; zand bovenop de klei, aangevuld met tuinaarde (eerste levering 1,5 m³ besteld op 18 november; voor C, D en B samen werd 2–2,5 m³ verwacht). Of er compost door is gemengd: onbekend. Het zand ligt op de klei in plaats van erdoor. Eigen inschatting: op de overgang van zand naar klei kan water blijven staan; plant *Liatris*, *Aster amellus* en *Salvia nemorosa* daarom iets verhoogd, zoals hieronder al staat.
 
 | Seizoen | Planten |
 |---|---|
@@ -98,7 +106,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 **🌿 Klimplanten zone C:** Clematis 'Ville de Lyon'. Boom: *Amelanchier lamarckii*. *Vitis vinifera* is op 22 oktober 2026 verplaatst naar zone D (tegen de schutting). De pergola vervalt. Besloten: de klimmers krijgen rankdraden of een rooster op de muur (zie *Planning & stappen*, stap 9).
 
 **📍 Plantplek en mest zone C:**
-- *Aster amellus* (Bergaster) en *Salvia nemorosa* (steppesalie) komen op de **zonnigste plek, midden in de tuin** (besloten 22 oktober 2026; Kas zorgt dat ze daar komen). Beide willen zon en goed gedraineerde grond.
+- *Aster amellus* (Bergaster) en *Salvia nemorosa* (steppesalie) komen op de **zonnigste plek, midden in de tuin** (besloten 22 oktober 2026; de eigenaar zorgt dat ze daar komen). Beide willen zon en goed gedraineerde grond.
 - **Geen mest** bij Aster en Salvia, ook geen dikke laag compost eromheen: ze bloeien beter en blijven steviger op schrale tot matig voedselrijke grond. Wel het zand-compostmengsel van zone C (40% scherp zand + 30% compost door de klei), met de plantkuil iets verhoogd zodat water wegloopt.
 - *Salvia nemorosa* staat alleen in zone C (besloten 22 oktober 2026), niet in zone B.
 - *Echinacea*, *Sedum*, *Rudbeckia* en *Nepeta* mogen op de overige plekken in C; ze zijn minder kritisch.
@@ -109,7 +117,9 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 ### Zone D — Volle zon · Jardin Sauvage
 
-**Grondsoort:** 40% grof zand door klei. Geen extra mest — wilde planten bloeien beter in schrale, goed gedraineerde grond.
+**Grondsoort (plan):** 40% grof zand door klei. Geen extra mest — wilde planten bloeien beter in schrale, goed gedraineerde grond.
+
+**Grondverbetering, uitgevoerd (stand 24 november 2026):** licht verhoogd plantvak met rand; zand bovenop de klei, aangevuld met tuinaarde. Het kleine ronde vak bij de stenen hoort ook bij D. Eigen inschatting: tuinaarde is voedselrijker dan de schrale grond die het plan voor D wil. Houd daarom vast aan geen mest en geen compost, en gebruik rond lavendel, Anijsnetel en Pennisetum grof zand of split als toplaag (zie *Mulchen*).
 
 | Seizoen | Planten |
 |---|---|
@@ -121,14 +131,16 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 **📍 Plantplek en mest zone D:**
 - **Geen mest en geen compostmulch** in zone D: schrale, goed gedraineerde grond (40% grof zand door de klei). Dat geldt voor lavendel, Agastache, Knautia, Verbena, Echium, Centaurea en Pennisetum.
 - *Centaurea cyanus* (korenbloem): direct zaaien op kale, schrale grond in de volle zon (RHS: korenbloem wil volle zon, vochtige maar goed gedraineerde, liefst arme grond). Niet bemesten, anders veel blad en weinig bloei.
-- *Vitis vinifera* (druif) staat **tegen de schutting** (besloten 22 oktober 2026: daar staat nog niets tegen). Dit is de enige uitzondering op "geen mest in D": een schep rijpe compost in het plantgat (RHS: een beetje compost of mest bij het planten), de rest van de plek schraal houden. Vrij gedraineerd, zonnig en beschut; zuidoost tot zuidwest is het best (RHS), pH 6,5–6,8; de schutting staat op het zuiden. Plantafstand minimaal 30–40 cm van de schutting, rankdraden op de schutting. De eerste winter 5 cm mulch (schors of compost) rond de plant, in het voorjaar weghalen bij de stam. De schutting staat op het zuiden (Kas, 22 oktober 2026), dus een goede plek voor de druif.
+- *Vitis vinifera* (druif) staat **tegen de schutting** (besloten 22 oktober 2026: daar staat nog niets tegen). Dit is de enige uitzondering op "geen mest in D": een schep rijpe compost in het plantgat (RHS: een beetje compost of mest bij het planten), de rest van de plek schraal houden. Vrij gedraineerd, zonnig en beschut; zuidoost tot zuidwest is het best (RHS), pH 6,5–6,8; de schutting staat op het zuiden. Plantafstand minimaal 30–40 cm van de schutting, rankdraden op de schutting. De eerste winter 5 cm mulch (schors of compost) rond de plant, in het voorjaar weghalen bij de stam. De schutting staat op het zuiden (eigenaar, 22 oktober 2026), dus een goede plek voor de druif.
 - *Myosotis* (vergeet-mij-nietje) wordt gezaaid aan de voet van de druif, waar de grond wat vochtiger en lichter beschaduwd is. Het is een soort die matig vruchtbare, vochtige grond en lichte schaduw verkiest (RHS), dus de kans is groter dat hij het in zone D minder goed doet dan in zone B. Eigen inschatting; vervalt hij, dan is zone B de terugvaloptie.
 - Aster amellus en Dipsacus staan niet meer in zone D (Aster is naar C; Dipsacus staat op de reservelijst).
 - **Bollen (14 november 2026):** boerenkrokus, krokus 'Cream Beauty' en druifhyacint tussen de vaste planten, zonder mest. De druifhyacint is terug van de reservelijst. Hij kan zich uitbreiden (eigen inschatting): houd hem in de gaten, want zone D is al vol. Zaai de korenbloem niet op de plekken waar de bollen staan.
 
 ### Zone S — Schaduw · Klimplanten muur · Jardin Sauvage
 
-**Grondsoort:** 50% blad- of tuincompost toevoegen. Humusrijke, vochtige grond. Mulch jaarlijks met bladcompost. Geen drainage-zand.
+**Grondsoort (plan):** 50% blad- of tuincompost toevoegen. Humusrijke, vochtige grond. Mulch jaarlijks met bladcompost. Geen drainage-zand.
+
+**Grondverbetering, uitgevoerd (stand 24 november 2026):** licht verhoogd plantvak met rand, gevuld met oude tuingrond (16 november). Of er bladcompost door is gemengd: onbekend. Het plan klopt hier dus niet meer met de uitvoering. Voorgesteld (eigen inschatting): bladcompost als mulchlaag in december (stap 8) en daarna jaarlijks, zodat de grond humusrijker wordt zonder te spitten.
 
 | Seizoen | Planten |
 |---|---|
@@ -173,8 +185,8 @@ Bronnen: [Ebben – boerenkrokus](https://www.ebben.nl/nl/treeebb/crtomass-crocu
 - **Zomer:** Frisgroen blad met sierlijke, licht golvende randen
 - **Herfst:** 🍁 Diep wijnrode tot purperen herfstkleur + glanzend rode bessen
 - **Winter:** Horizontale etagevertakking met opvallende knoppen
-- **Bijen:** ⭐⭐⭐⭐
-- **Vogels:** ⭐⭐⭐⭐⭐ (de scharlakenrode bessen zijn een magneet voor vogels)
+- **Bijen:** 2 (e) — niet in de drachtplantenlijst van Imkerpedia; Ebben noemt bijen (zie *Alle planten*)
+- **Vogels:** 5 (e) — Ebben noemt vogels en rode vruchten
 - **Grond:** Zuur tot neutraal, humusrijk, vochthoudend maar goed doorlatend (geen kalk). De pH wordt zelf op de juiste waarde gebracht en bijgehouden, zodat de boom goed aanslaat (besloten 22 oktober 2026).
 - **Tip:** Bescherm tegen felle middagzon en droge wind om bladverbranding te voorkomen
 - **Mest:** Directplant adviseert in het voorjaar bemesten met siertuinmeststof. In dit plan geen verse mest in het plantgat en geen kalkhoudende meststof (zie *pH-beheer kornoelje*).
@@ -189,8 +201,8 @@ Bronnen: [Ebben – boerenkrokus](https://www.ebben.nl/nl/treeebb/crtomass-crocu
 - **Zomer:** Zoete bessen (juni–juli)
 - **Herfst:** Spectaculaire oranje-rode herfstkleur
 - **Winter:** Elegant vertakt silhouet
-- **Bijen:** ⭐⭐⭐⭐⭐
-- **Vogels:** ⭐⭐⭐⭐⭐ (bessen)
+- **Bijen:** 2 — Imkerpedia N2/P2 (waardering voor de honingbij; zie *Alle planten*)
+- **Vogels:** 5 (e) — bessen; Ebben: "vogels zijn er verzot op"
 - **Grond:** Klei + compost, licht vochtig prima
 - **Wikipedia:** https://nl.wikipedia.org/wiki/Amelanchier_lamarckii
 
@@ -210,90 +222,125 @@ Bronnen: [Cropaia – How to lower soil pH](https://cropaia.com/blog/how-to-lowe
 
 ## Alle planten — beschrijving & links
 
-| Nederlandse naam | Latijnse naam | Zone(s) | Beschrijving | Bijen | Vogels | Levensduur | Link |
-|---|---|---|---|---|---|---|---|
-| Krentenboom | Amelanchier lamarckii | C | Boom: wolken bloesem, zoete bessen, oranje-rode herfstkleur — 4 seizoenen sieraad | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | – | [Wikipedia](https://nl.wikipedia.org/wiki/Amelanchier_lamarckii) |
-| Amerikaanse kornoelje | Cornus florida 'Rubra' | A | Boom: grote schutbladeren in de lente, wijnrode herfstkleur, rode bessen | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Cornus_florida) |
-| Kamperfoelie | Lonicera periclymenum | B | Geurig, klimplant, bijen-favoriet | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | – | [Wikipedia](https://nl.wikipedia.org/wiki/Gewone_kamperfoelie) |
-| Klimhortensia | Hydrangea anomala petiolaris | S | Bloeit zelfs in diepe schaduw, zelfhechtend | ⭐⭐⭐ | ⭐⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Hydrangea_anomala) |
-| Sterjasmijn | Trachelospermum jasminoides | B | Geurig, semi-evergreen, warmste muurpositie | ⭐⭐⭐⭐ | ⭐⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Trachelospermum_jasminoides) |
-| Klimroos | Rosa 'New Dawn' | B | Lichtroze, herhaalbloeiend, geurig | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Rosa_%27New_Dawn%27) |
-| Druif | Vitis vinifera | D | Klimmer tegen de schutting: sierlijk blad en druiven in de herfst | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Vitis_vinifera) |
-| Clematis | Clematis 'Ville de Lyon' | C | Klimmer met karmijnrode bloemen, bloeit laat in de zomer | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Clematis) |
-| Klimop | Hedera helix | S | Groenblijvende muurklimmer, nestplaats voor vogels; de late bloei is voedsel voor insecten | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Hedera_helix) |
-| Zonnehoed | Echinacea purpurea | C | Bijenmagneet + zaden voor putters | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://nl.wikipedia.org/wiki/Rode_zonnehoed) |
-| Kerstroos (oosterse) | Helleborus orientalis | A, B | Enkelbloemige oosterse kerstroos; bloeit in de kou, groenblijvend blad, 40–50 cm | ⭐⭐⭐ | ⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Helleborus_orientalis) |
-| Kerstroos | Helleborus niger | S | Witte bloemen jan–mrt, bloeit in de kou | ⭐⭐⭐ | ⭐ | – | [Wikipedia](https://nl.wikipedia.org/wiki/Kerstroos) |
-| Purperklokje | Heuchera | A | Kleurrijk blad heel jaar, bloeit zomer | ⭐⭐⭐ | ⭐ | – | [Wikipedia](https://nl.wikipedia.org/wiki/Purperklokje) |
-| Akelei (wild) | Aquilegia vulgaris | A | Ridderspoor met paarse, enkelvoudige bloemen, lente | – | – | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Aquilegia_vulgaris) |
-| Geschubde mannetjesvaren | Dryopteris affinis 'Crispa' | S | Compacte varen, semi-evergreen, schaduw | ⭐ | ⭐⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Dryopteris_affinis) |
-| Lavendel | Lavandula angustifolia | D | Bijendroom, geurig, droogtebestendig | ⭐⭐⭐⭐⭐ | ⭐⭐ | – | [Wikipedia](https://nl.wikipedia.org/wiki/Echte_lavendel) |
-| Groot sterrenscherm | Astrantia major ('Rubra') | A | Subtiele stervormen, lang bloeiend | ⭐⭐⭐⭐ | ⭐⭐ | – | [Wikipedia](https://en.wikipedia.org/wiki/Astrantia_major) |
-| Knautia | Knautia macedonica | D | Donkerrood, wuivend, lang bloeiend | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Knautia_macedonica) |
-| Longkruid | Pulmonaria officinalis | S | Vroege roze-blauwe bloemen, gevlekt blad, houdt van schaduw | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Pulmonaria_officinalis) |
-| Ooievaarsbek | Geranium 'Rozanne' | A, B | Blauwpaarse bloemen van juni tot de vorst | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Geranium_%27Rozanne%27) |
-| Vingerhoedskruid | Digitalis purpurea | A | Hoge bloemtorens in de zomer, tweejarig, zaait zichzelf uit | – | – | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Digitalis_purpurea) |
-| Bermzegge | Carex divulsa | A, B | Inheemse, groenblijvende zegge van ±40 cm voor structuur in de winter; zon tot schaduw, ook op klei | – | – | – | [RHS](https://www.rhs.org.uk/plants/128685/wd/details) |
-| Vergeet-mij-nietje | Myosotis | D | Lichtblauwe lentebloeier, zaait zichzelf uit | – | – | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Myosotis) |
-| Judaspenning | Lunaria annua | B | Paarse lentebloemen, daarna zilverkleurige ronde zaaddozen ('penningen') die tot in de winter blijven staan; tweejarig, zaait zichzelf uit | – | – | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Lunaria_annua) |
-| Sierui | Allium hollandicum | B | Paarse bolvormige bloemen in mei-juni | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Allium_hollandicum) |
-| Kattenkruid | Nepeta 'Six Hills Giant' | B, C | Lavendelblauwe wolken, lang bloeiend, bijenmagneet | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Nepeta) |
-| Rudbeckia | Rudbeckia fulgida | B, C | Gele bloemen met donker hart in de late zomer en herfst | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Rudbeckia_fulgida) |
-| Bergaster | Aster amellus | C | Violette herfstbloeier, waardevol voor laat vliegende insecten | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Aster_amellus) |
-| IJzerhard | Verbena bonariensis | D | Luchtige paarse bloemschermen op hoge stengels, tot de herfst | – | – | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Verbena_bonariensis) |
-| Steppesalie | Salvia nemorosa | C | Violetblauwe bloemaren van juni tot augustus, bijenmagneet; volle zon, droogtetolerant | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Salvia_nemorosa) |
-| Hemelsleutel | Sedum 'Herbstfreude' | C | Roze-koperen schermen in de herfst, veel vlinders | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Hylotelephium) |
-| Anijsnetel | Agastache | D | Lange bloemaren, geurend blad, bijenmagneet in de late zomer | – | – | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Agastache) |
-| Lampenpoetsersgras 'Little Bunny' | Pennisetum alopecuroides 'Little Bunny' | D | Roze-witte pluimen die bruin worden, vanaf midzomer, ±40–45 cm; pluimen blijven staan in de winter; op klei in de winter droog mulchen | – | – | – | [RHS](https://rhsplants.co.uk/plants/_/pennisetum-alopecuroides-little-bunny/classid.2000045814) |
-| Korenbloem | Centaurea cyanus | D | Knalblauwe zomerbloem, zaait zichzelf uit | – | – | ⏳ eenjarig, jaarlijks herzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Centaurea_cyanus) |
-| Slangenkruid | Echium vulgare | D | Blauwe bloemtorens, bijenmagneet voor droge grond | – | – | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Echium_vulgare) |
-| Stengelloze sleutelbloem | Primula vulgaris | S | Lichtgele bloemen in het vroege voorjaar | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Primula_vulgaris) |
-| Wilde hyacint | Hyacinthoides non-scripta | S | Blauwe klokjes in de lente, houdt van schaduw | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Hyacinthoides_non-scripta) |
-| Pluimspirea | Astilbe 'Fanal' | S | Donkerrode pluimen in de zomer voor vochtige schaduw | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Astilbe) |
-| Kerstgeurstruik | Sarcococca | S | Groenblijvend, intens geurende bloemen in de winter | – | – | – | [Wikipedia](https://en.wikipedia.org/wiki/Sarcococca) |
-| Leliegras | Liriope muscari | A | Groenblijvende pol van 20–30 cm met violette aren van late zomer tot herfst; halfschaduw tot schaduw | – | – | – | [RHS](https://www.rhsplants.co.uk/plants/_/liriope-muscari/classid.3173/) |
-| Sneeuwklokje | Galanthus nivalis | A | Witte bolbloem in feb–mrt; vochtige, voedselrijke plek, op klei en zand; vroege nectar voor bijen. Bolletjes zo snel mogelijk planten | – | – | – | [Groei & Bloei](https://UDEN.GROEI.NL/fileadmin/Afdelingen/afdeling_uden/Allerlei/PDF/Bollen_voor_bijen.pdf) |
-| Boerenkrokus | Crocus tommasinianus | A, B, C, D | Lila krokus in feb–mrt; lichte klei, zon of halfschaduw, waardevol voor bijen (Ebben); verwildert | – | – | – | [Ebben](https://www.ebben.nl/nl/treeebb/crtomass-crocus-tommasinianus/pdf) |
-| Krokus 'Cream Beauty' | Crocus chrysanthus 'Cream Beauty' | B, C, D | Crèmegele krokus in feb–mrt, 5 cm diep planten (Nijssen); de soort staat op lichte klei, in zon of halfschaduw, goed voor bijen (Ebben) | – | – | – | [Nijssen](https://www.nijssenbulbs.com/crocus-voorjaarsbloeiend/460-13558-crocus-chrysanthus-cream-beauty-460.html) |
-| Kievitsbloem | Fritillaria meleagris | A | Geblokte klokjes in apr–mei, bestoven door hommels en bijen; vochtige, licht beschaduwde plek | – | – | – | [Vroege Vogels](https://www.bnnvara.nl/vroegevogels/artikelen/hangend-klokje-van-de-wilde-kievitsbloem-nationale-bloem-verkiezing) |
-| Wilde narcis | Narcissus pseudonarcissus | B, C | Gele narcis in mrt–apr, bezocht door honingbijen en hommels; zon of lichte schaduw, weinig eisen aan de bodem | – | – | – | [Landelijke Gilden](https://landelijkegilden.be/media/4218/download) |
-| Oosterse sterhyacint | Scilla siberica | C | Blauwe bolbloem in mrt–apr, bezocht door wilde bijen, honingbijen en hommels; zon of lichte schaduw | – | – | – | [BNNVARA](https://bnnvara.nl/community/fotos/planten/oosterse-sterhyacint/357779) |
-| Druifhyacint | Muscari armeniacum | D | Blauwe lentebol (apr–mei), trekt bijen en vroege hommels; zon of halfschaduw, planten in okt–dec. Terug van de reservelijst | – | – | – | [Plukkers](https://plukkers.com/en/products/muscari-blauwe-druifjes-armeniacum-bio) |
-| Bosaster | Aster divaricatus | S | Witte herfstaster (aug–okt) voor halfschaduw en schaduw; waardevol voor bijen en vlinders (Ebben) | – | – | – | [Ebben](https://ebben.nl/nl/treeebb/asdivari-aster-divaricatus/pdf) |
-| Liatris (prachtschaarde) | Liatris spicata | C | Paarse of witte bloemaren in jul–aug, 40–75 cm; bijenplant voor zon of halfzon (Plantago), trekt vlinders. 3 stuks: 2 'Floristan Violett', 1 'Floristan Weiß'. Geen natte winterbodem | – | – | – | [Plantago](https://www.plantago.nl/plantindex/plant/NL/L/8/liatris/5201.html) |
-| Aster 'Purple Dome' | Symphyotrichum novae-angliae 'Purple Dome' | B | Violetpaarse herfstaster (aug–okt), ±60 cm, zelden meeldauw; Aster novae-angliae staat in de top-10 van vlinderlokkende planten (Vlinderstichting). 1 plant | – | – | – | [Vlinders 2011](https://natuurtijdschriften.nl/pub/559026/VLIN2011026004008.pdf) |
+**Bijen- en vogelscore (aangevuld 24 november 2026):**
+
+- **Bijen (0–5):** de hoogste van de nectar- en de pollenwaarde in de [drachtplantenlijst van Imkerpedia](https://www.imkerpedia.nl/wiki/index.php/Drachtplanten). Die waarden gaan over hoe goed de honingbij de plant bevliegt (1–5; 5 = constant goede tot zeer goede bevlieging). Hommels en wilde bijen kunnen een plant anders waarderen; daar staat een opmerking bij als dat bekend is. Staat de soort of cultivar niet in de lijst, dan is de score een eigen inschatting, gemarkeerd met **(e)**, met de onderbouwing in de kolom *Bron scores* (bijvoorbeeld [Ebben TreeEbb](https://www.ebben.nl/nl/treeebb/), een verwante soort of een Nederlandse kwekerij). Een 0 betekent dat de plant geen bloemen voor bijen heeft (varen, windbestoven gras).
+- **Vogels (0–5):** altijd een eigen inschatting op een vaste schaal, onderbouwd met Nederlandse bronnen waar die er zijn: 5 = een bron noemt vogels, met bessen of vruchten én nest- of schuilplek; 4 = een bron noemt vogels of de plant staat op een lijst van Vogelbescherming, en de plant draagt bessen of vruchten; 3 = de plant staat op een [lijst vogelvriendelijke planten van Vogelbescherming](https://www.vogelbescherming.nl/in-mijn-tuin/tuininrichting/vogelvriendelijke-beplanting) of een bron noemt zaden die vogels eten; 2 = zaden, bessen of dekking zonder bron; 1 = alleen indirect, via insecten op de bloemen; 0 = geen waarde bekend.
+- De eerdere sterren (indicatief, uit eigen kennis) zijn hierdoor vervangen. Opvallende verschillen: krentenboom bijen 2 (was 5), kamperfoelie bijen 1 (was 5), Knautia bijen 1 (was 5); dat zijn waarden voor de honingbij.
+
+| Nederlandse naam | Latijnse naam | Zone(s) | Beschrijving | Bijen (0–5) | Vogels (0–5) | Bron scores | Levensduur | Link |
+|---|---|---|---|---|---|---|---|---|
+| Krentenboom | Amelanchier lamarckii | C | Boom: wolken bloesem, zoete bessen, oranje-rode herfstkleur — 4 seizoenen sieraad | 2 | 5 (e) | Bijen: Imkerpedia N2/P2. Vogels: Ebben (bessen, "vogels zijn er verzot op") | – | [Wikipedia](https://nl.wikipedia.org/wiki/Amelanchier_lamarckii) |
+| Amerikaanse kornoelje | Cornus florida 'Rubra' | A | Boom: grote schutbladeren in de lente, wijnrode herfstkleur, rode bessen | 2 (e) | 5 (e) | Bijen: niet in Imkerpedia; Ebben noemt bijen. Vogels: Ebben (vogels, rode vruchten) | – | [Wikipedia](https://en.wikipedia.org/wiki/Cornus_florida) |
+| Kamperfoelie | Lonicera periclymenum | B | Geurig, klimplant; vooral bezocht door hommels en nachtvlinders | 1 | 4 (e) | Bijen: Imkerpedia N1/P0 (vooral hommels en nachtvlinders, eigen kennis). Vogels: lijst klimplanten Vogelbescherming; bessen | – | [Wikipedia](https://nl.wikipedia.org/wiki/Gewone_kamperfoelie) |
+| Klimhortensia | Hydrangea anomala petiolaris | S | Bloeit zelfs in diepe schaduw, zelfhechtend | 3 | 3 (e) | Bijen: Imkerpedia N3/P3. Vogels: lijst klimplanten Vogelbescherming | – | [Wikipedia](https://en.wikipedia.org/wiki/Hydrangea_anomala) |
+| Sterjasmijn | Trachelospermum jasminoides | B | Geurig, semi-evergreen, warmste muurpositie | 3 (e) | 2 (e) | Bijen: niet in Imkerpedia; Ebben noemt bijen. Vogels: groenblijvende dekking | – | [Wikipedia](https://en.wikipedia.org/wiki/Trachelospermum_jasminoides) |
+| Klimroos | Rosa 'New Dawn' | B | Lichtroze, herhaalbloeiend, geurig | 2 (e) | 2 (e) | Bijen: niet in Imkerpedia; halfgevulde bloem; Belle Epoque zet hem bij rozen voor bijen. Vogels: Vogelbescherming noemt alleen ramblerrozen | – | [Wikipedia](https://en.wikipedia.org/wiki/Rosa_%27New_Dawn%27) |
+| Druif | Vitis vinifera | D | Klimmer tegen de schutting: sierlijk blad en druiven in de herfst | 2 | 4 (e) | Bijen: Imkerpedia N2/P2. Vogels: Ebben (vogels, druiven) | – | [Wikipedia](https://en.wikipedia.org/wiki/Vitis_vinifera) |
+| Clematis | Clematis 'Ville de Lyon' | C | Klimmer met karmijnrode bloemen, bloeit laat in de zomer | 1 (e) | 1 (e) | Bijen: niet in Imkerpedia; Clematis-soorten daar N0/P1–4 (vooral stuifmeel) | – | [Wikipedia](https://en.wikipedia.org/wiki/Clematis) |
+| Klimop | Hedera helix | S | Groenblijvende muurklimmer, nestplaats voor vogels; de late bloei is voedsel voor insecten | 5 | 5 (e) | Bijen: Imkerpedia N5/P5. Vogels: Ebben (vogels, bessen) en lijst klimplanten Vogelbescherming; nestplaats | – | [Wikipedia](https://en.wikipedia.org/wiki/Hedera_helix) |
+| Zonnehoed | Echinacea purpurea | C | Bijenmagneet + zaden voor putters | 3 | 2 (e) | Bijen: Imkerpedia N3/P2. Vogels: zaadhoofden; Ebben noemt geen vogels | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://nl.wikipedia.org/wiki/Rode_zonnehoed) |
+| Kerstroos (oosterse) | Helleborus orientalis | A, B | Enkelbloemige oosterse kerstroos; bloeit in de kou, groenblijvend blad, 40–50 cm | 2 (e) | 1 (e) | Bijen: niet in Imkerpedia; MAX Vandaag noemt hem een vroege bijenplant | – | [Wikipedia](https://en.wikipedia.org/wiki/Helleborus_orientalis) |
+| Kerstroos | Helleborus niger | S | Witte bloemen jan–mrt, bloeit in de kou | 1 | 1 (e) | Bijen: Imkerpedia N1/P1 | – | [Wikipedia](https://nl.wikipedia.org/wiki/Kerstroos) |
+| Purperklokje | Heuchera | A | Kleurrijk blad heel jaar, bloeit zomer | 2 (e) | 1 (e) | Bijen: Imkerpedia N1–3/P0 per soort; cultivar nog niet gekozen | – | [Wikipedia](https://nl.wikipedia.org/wiki/Purperklokje) |
+| Akelei (wild) | Aquilegia vulgaris | A | Ridderspoor met paarse, enkelvoudige bloemen, lente | 3 | 1 (e) | Bijen: Imkerpedia N0/P3 | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Aquilegia_vulgaris) |
+| Geschubde mannetjesvaren | Dryopteris affinis 'Crispa' | S | Compacte varen, semi-evergreen, schaduw | 0 | 3 (e) | Bijen: varen, bloeit niet. Vogels: varens staan op de lijst vaste planten van Vogelbescherming | – | [Wikipedia](https://en.wikipedia.org/wiki/Dryopteris_affinis) |
+| Lavendel | Lavandula angustifolia | D | Bijendroom, geurig, droogtebestendig | 5 | 3 (e) | Bijen: Imkerpedia N5/P0. Vogels: lijst vaste planten Vogelbescherming | – | [Wikipedia](https://nl.wikipedia.org/wiki/Echte_lavendel) |
+| Groot sterrenscherm | Astrantia major ('Rubra') | A | Subtiele stervormen, lang bloeiend | 2 | 1 (e) | Bijen: Imkerpedia N2/P2 | – | [Wikipedia](https://en.wikipedia.org/wiki/Astrantia_major) |
+| Knautia | Knautia macedonica | D | Donkerrood, wuivend, lang bloeiend | 1 | 2 (e) | Bijen: Imkerpedia N1/P0 (honingbij; hommels en vlinders komen veel, eigen kennis). Vogels: Vogelbescherming noemt de verwante beemdkroon | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Knautia_macedonica) |
+| Longkruid | Pulmonaria officinalis | S | Vroege roze-blauwe bloemen, gevlekt blad, houdt van schaduw | 1 | 1 (e) | Bijen: Imkerpedia N1/P1 (honingbij; vroege hommels en sachembijen, eigen kennis) | – | [Wikipedia](https://en.wikipedia.org/wiki/Pulmonaria_officinalis) |
+| Ooievaarsbek | Geranium 'Rozanne' | A, B | Blauwpaarse bloemen van juni tot de vorst | 3 (e) | 1 (e) | Bijen: niet in Imkerpedia (andere Geranium-soorten vaak N3/P3); Ebben noemt bijen | – | [Wikipedia](https://en.wikipedia.org/wiki/Geranium_%27Rozanne%27) |
+| Vingerhoedskruid | Digitalis purpurea | A | Hoge bloemtorens in de zomer, tweejarig, zaait zichzelf uit | 2 (e) | 3 (e) | Bijen: niet in Imkerpedia; Radar/FLORON: populair bij hommels. Vogels: lijst vaste planten Vogelbescherming | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Digitalis_purpurea) |
+| Bermzegge | Carex divulsa | A, B | Inheemse, groenblijvende zegge van ±40 cm voor structuur in de winter; zon tot schaduw, ook op klei | 0 (e) | 1 (e) | Bijen: windbestoven zegge (eigen inschatting) | – | [RHS](https://www.rhs.org.uk/plants/128685/wd/details) |
+| Vergeet-mij-nietje | Myosotis | D | Lichtblauwe lentebloeier, zaait zichzelf uit | 3 | 1 (e) | Bijen: Imkerpedia M. sylvatica N3/P0 | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Myosotis) |
+| Judaspenning | Lunaria annua | B | Paarse lentebloemen, daarna zilverkleurige ronde zaaddozen ('penningen') die tot in de winter blijven staan; tweejarig, zaait zichzelf uit | 3 | 3 (e) | Bijen: Imkerpedia N3/P3. Vogels: lijst vaste planten Vogelbescherming | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Lunaria_annua) |
+| Sierui | Allium hollandicum | B | Paarse bolvormige bloemen in mei-juni | 3 (e) | 1 (e) | Bijen: niet in Imkerpedia (A. giganteum N4/P4); Ecoflora: bijen- en vlinderplant | – | [Wikipedia](https://en.wikipedia.org/wiki/Allium_hollandicum) |
+| Kattenkruid | Nepeta 'Six Hills Giant' | B, C | Lavendelblauwe wolken, lang bloeiend, bijenmagneet | 3 (e) | 1 (e) | Bijen: Imkerpedia N. × faassenii N3/P3 (cultivar zelf niet in de lijst) | – | [Wikipedia](https://en.wikipedia.org/wiki/Nepeta) |
+| Rudbeckia | Rudbeckia fulgida | B, C | Gele bloemen met donker hart in de late zomer en herfst | 1 | 3 (e) | Bijen: Imkerpedia N1/P0. Vogels: NH Nieuws (putters op de zaadbolletjes) | – | [Wikipedia](https://en.wikipedia.org/wiki/Rudbeckia_fulgida) |
+| Bergaster | Aster amellus | C | Violette herfstbloeier, waardevol voor laat vliegende insecten | 3 | 2 (e) | Bijen: Imkerpedia N3/P3 | – | [Wikipedia](https://en.wikipedia.org/wiki/Aster_amellus) |
+| IJzerhard | Verbena bonariensis | D | Luchtige paarse bloemschermen op hoge stengels, tot de herfst | 3 | 3 (e) | Bijen: Imkerpedia N3/P0. Vogels: lijst vaste planten Vogelbescherming | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Verbena_bonariensis) |
+| Steppesalie | Salvia nemorosa | C | Violetblauwe bloemaren van juni tot augustus, bijenmagneet; volle zon, droogtetolerant | 3 | 1 (e) | Bijen: Imkerpedia N3/P0 | – | [Wikipedia](https://en.wikipedia.org/wiki/Salvia_nemorosa) |
+| Hemelsleutel | Sedum 'Herbstfreude' | C | Roze-koperen schermen in de herfst, veel vlinders | 4 | 3 (e) | Bijen: Imkerpedia Sedum spectabile ('Herbstfreude') N4/P0. Vogels: vetkruid op de lijst vaste planten Vogelbescherming | – | [Wikipedia](https://en.wikipedia.org/wiki/Hylotelephium) |
+| Anijsnetel | Agastache | D | Lange bloemaren, geurend blad, bijenmagneet in de late zomer | 2 (e) | 2 (e) | Bijen: Imkerpedia N2/P2 voor de meeste soorten; cultivar nog niet gekozen | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://en.wikipedia.org/wiki/Agastache) |
+| Lampenpoetsersgras 'Little Bunny' | Pennisetum alopecuroides 'Little Bunny' | D | Roze-witte pluimen die bruin worden, vanaf midzomer, ±40–45 cm; pluimen blijven staan in de winter; op klei in de winter droog mulchen | 0 (e) | 2 (e) | Bijen: windbestoven gras (eigen inschatting) | – | [RHS](https://rhsplants.co.uk/plants/_/pennisetum-alopecuroides-little-bunny/classid.2000045814) |
+| Korenbloem | Centaurea cyanus | D | Knalblauwe zomerbloem, zaait zichzelf uit | 5 | 3 (e) | Bijen: Imkerpedia N5/P5. Vogels: lijst vaste planten Vogelbescherming | ⏳ eenjarig, jaarlijks herzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Centaurea_cyanus) |
+| Slangenkruid | Echium vulgare | D | Blauwe bloemtorens, bijenmagneet voor droge grond | 4 | 2 (e) | Bijen: Imkerpedia N4/P4 | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Echium_vulgare) |
+| Stengelloze sleutelbloem | Primula vulgaris | S | Lichtgele bloemen in het vroege voorjaar | 1 | 1 (e) | Bijen: Imkerpedia N0/P1 | – | [Wikipedia](https://en.wikipedia.org/wiki/Primula_vulgaris) |
+| Wilde hyacint | Hyacinthoides non-scripta | S | Blauwe klokjes in de lente, houdt van schaduw | 3 | 1 (e) | Bijen: Imkerpedia N3/P3 | – | [Wikipedia](https://en.wikipedia.org/wiki/Hyacinthoides_non-scripta) |
+| Pluimspirea | Astilbe 'Fanal' | S | Donkerrode pluimen in de zomer voor vochtige schaduw | 2 (e) | 3 (e) | Bijen: Imkerpedia Astilbe-soorten N2/P2. Vogels: spirea (Astilbe) op de lijst vaste planten Vogelbescherming | – | [Wikipedia](https://en.wikipedia.org/wiki/Astilbe) |
+| Kerstgeurstruik | Sarcococca | S | Groenblijvend, intens geurende bloemen in de winter | 5 (e) | 2 (e) | Bijen: Imkerpedia S. hookeriana en S. confusa N5/P5; soort nog niet gekozen | – | [Wikipedia](https://en.wikipedia.org/wiki/Sarcococca) |
+| Leliegras | Liriope muscari | A | Groenblijvende pol van 20–30 cm met violette aren van late zomer tot herfst; halfschaduw tot schaduw | 2 (e) | 2 (e) | Bijen: niet in Imkerpedia; Ebben noemt bijen en vlinders. Vogels: zwarte bessen (eigen inschatting) | – | [RHS](https://www.rhsplants.co.uk/plants/_/liriope-muscari/classid.3173/) |
+| Sneeuwklokje | Galanthus nivalis | A | Witte bolbloem in feb–mrt; vochtige, voedselrijke plek, op klei en zand; vroege nectar voor bijen. Bolletjes zo snel mogelijk planten | 3 | 1 (e) | Bijen: Imkerpedia N3/P3 | – | [Groei & Bloei](https://UDEN.GROEI.NL/fileadmin/Afdelingen/afdeling_uden/Allerlei/PDF/Bollen_voor_bijen.pdf) |
+| Boerenkrokus | Crocus tommasinianus | A, B, C, D | Lila krokus in feb–mrt; lichte klei, zon of halfschaduw, waardevol voor bijen (Ebben); verwildert | 5 | 1 (e) | Bijen: Imkerpedia N5/P5 | – | [Ebben](https://www.ebben.nl/nl/treeebb/crtomass-crocus-tommasinianus/pdf) |
+| Krokus 'Cream Beauty' | Crocus chrysanthus 'Cream Beauty' | B, C, D | Crèmegele krokus in feb–mrt, 5 cm diep planten (Nijssen); de soort staat op lichte klei, in zon of halfschaduw, goed voor bijen (Ebben) | 5 (e) | 1 (e) | Bijen: niet in Imkerpedia (alle andere krokussen N5/P5); Ebben: goed voor bijen | – | [Nijssen](https://www.nijssenbulbs.com/crocus-voorjaarsbloeiend/460-13558-crocus-chrysanthus-cream-beauty-460.html) |
+| Kievitsbloem | Fritillaria meleagris | A | Geblokte klokjes in apr–mei, bestoven door hommels en bijen; vochtige, licht beschaduwde plek | 1 | 1 (e) | Bijen: Imkerpedia N1/P1 | – | [Vroege Vogels](https://www.bnnvara.nl/vroegevogels/artikelen/hangend-klokje-van-de-wilde-kievitsbloem-nationale-bloem-verkiezing) |
+| Wilde narcis | Narcissus pseudonarcissus | B, C | Gele narcis in mrt–apr, bezocht door honingbijen en hommels; zon of lichte schaduw, weinig eisen aan de bodem | 1 | 1 (e) | Bijen: Imkerpedia N1/P1 | – | [Landelijke Gilden](https://landelijkegilden.be/media/4218/download) |
+| Oosterse sterhyacint | Scilla siberica | C | Blauwe bolbloem in mrt–apr, bezocht door wilde bijen, honingbijen en hommels; zon of lichte schaduw | 3 | 1 (e) | Bijen: Imkerpedia N3/P3 | – | [BNNVARA](https://bnnvara.nl/community/fotos/planten/oosterse-sterhyacint/357779) |
+| Druifhyacint | Muscari armeniacum | D | Blauwe lentebol (apr–mei), trekt bijen en vroege hommels; zon of halfschaduw, planten in okt–dec. Terug van de reservelijst | 3 (e) | 1 (e) | Bijen: niet in Imkerpedia (M. botryoides N3/P0); Plukkers: trekt bijen en vroege hommels | – | [Plukkers](https://plukkers.com/en/products/muscari-blauwe-druifjes-armeniacum-bio) |
+| Bosaster | Aster divaricatus | S | Witte herfstaster (aug–okt) voor halfschaduw en schaduw; waardevol voor bijen en vlinders (Ebben) | 3 | 2 (e) | Bijen: Imkerpedia (Eurybia divaricata) N3/P0 | – | [Ebben](https://ebben.nl/nl/treeebb/asdivari-aster-divaricatus/pdf) |
+| Liatris (prachtschaarde) | Liatris spicata | C | Paarse of witte bloemaren in jul–aug, 40–75 cm; bijenplant voor zon of halfzon (Plantago), trekt vlinders. 3 stuks: 2 'Floristan Violett', 1 'Floristan Weiß'. Geen natte winterbodem | 3 | 2 (e) | Bijen: Imkerpedia N3/P3 | – | [Plantago](https://www.plantago.nl/plantindex/plant/NL/L/8/liatris/5201.html) |
+| Aster 'Purple Dome' | Symphyotrichum novae-angliae 'Purple Dome' | B | Violetpaarse herfstaster (aug–okt), ±60 cm, zelden meeldauw; Aster novae-angliae staat in de top-10 van vlinderlokkende planten (Vlinderstichting). 1 plant | 2 | 2 (e) | Bijen: Imkerpedia S. novae-angliae N2/P2 | – | [Vlinders 2011](https://natuurtijdschriften.nl/pub/559026/VLIN2011026004008.pdf) |
 
 Legenda symbolen (seizoensindrukken): 🌸 in bloei · 🍃 mooi blad/structuur · 🫘 bessen/zaad/vrucht · 🌿 groenblijvend · ↑ klimplant · 🌳 boom
 
 ## Jaarkalender — bloei & sierwaarde
 
-Legenda: Bloei · Blad/structuur · Bessen/vruchten · Zaadhoofden · Win = wintersilhouet/groen · – = geen sierwaarde die maand
+Per soort de sierwaarde per maand (aangevuld 24 november 2026). Per maand staat de belangrijkste sierwaarde. Legenda: **Bloei** · **Blad** (blad of structuur, ook herfstkleur) · **Bes** (bessen of vruchten) · **Zaad** (zaadhoofden of zaaddozen) · **Win** (wintersilhouet of groenblijvend in de winter) · **–** geen sierwaarde die maand.
 
-| Plant / Zone | Jan | Feb | Mrt | Apr | Mei | Jun | Jul | Aug | Sep | Okt | Nov | Dec |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Helleborus (A/B/S) | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Bloei |
-| Sarcococca (S) | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Bes | Bes | Bloei |
-| Sneeuwklokje (A) | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | – |
-| Krokussen (A/B/C/D) | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | – |
-| Oosterse sterhyacint (C) | – | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – |
-| Wilde narcis (B/C) | – | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – |
-| Kievitsbloem (A) | – | – | – | Bloei | Bloei | – | – | – | – | – | – | – |
-| Druifhyacint (D) | – | – | – | Bloei | Bloei | – | – | – | – | – | – | – |
-| Heuchera (A) | Blad | Blad | Blad | Blad | Blad | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad |
-| Amelanchier boom (C) | Win | Win | Win | Bloei | Blad | Bes | Bes | Blad | Blad | Blad | Win | Win |
-| Cornus florida boom (A) | Win | Win | Win | Bloei | Bloei | Blad | Blad | Blad | Bes | Bes | Win | Win |
-| Trachelospermum (B) | Blad | Blad | Blad | Blad | Blad | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad |
-| Lonicera periclymenum (B) | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bes | Bes | – | – |
-| Rosa klimroos (B) | – | – | – | Blad | Bloei | Bloei | Bloei | Bloei | Bes | Bes | Bes | – |
-| Lavandula (D) | – | – | – | – | Blad | Bloei | Bloei | Bloei | Blad | – | – | – |
-| Liatris spicata (C) | – | – | – | – | Blad | Blad | Bloei | Bloei | Zaad | Zaad | – | – |
-| Echinacea (C) ⏱ | Zaad | Zaad | Zaad | – | – | – | Bloei | Bloei | Bloei | Zaad | Zaad | Zaad |
-| Aster 'Purple Dome' (B) | – | – | – | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | – | – |
-| Bosaster (S) | – | – | – | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | – | – |
-| Dryopteris 'Crispa' (S) | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad |
-| H. petiolaris (S) | – | – | – | Blad | Blad | Bloei | Bloei | Blad | Zaad | Zaad | – | – |
-| Grassen (A/B/D) | Win | Win | Blad | Blad | Blad | Bloei | Bloei | Bloei | Zaad | Zaad | Win | Win |
-| Liriope muscari (A) | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Bloei | Bloei | Bloei | Blad | Blad |
+De bloeimaanden komen uit de bron in de laatste kolom; *Plan* betekent dat ze eerder in dit plan zijn vastgelegd. Blad, bes, zaad en winter zijn een eigen inschatting, behalve waar de bron ze noemt. Bloeimaanden kunnen per jaar en per plek een paar weken verschuiven.
+
+| Plant | Zone(s) | Jan | Feb | Mrt | Apr | Mei | Jun | Jul | Aug | Sep | Okt | Nov | Dec | Bron bloei |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Krentenboom (*Amelanchier lamarckii*) | C | Win | Win | Win | Bloei | Bloei | Bes | Bes | Blad | Blad | Blad | Win | Win | Imkerpedia (bloei apr–mei); Ebben (bessen rond juli) |
+| Amerikaanse kornoelje (*Cornus florida 'Rubra'*) | A | Win | Win | Win | Blad | Bloei | Bloei | Blad | Blad | Bes | Bes | Win | Win | Ebben (bloei mei–jun, rode vruchten) |
+| Kamperfoelie (*Lonicera periclymenum*) | B | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Bes | – | – | Imkerpedia (bloei jun–okt); bessen eigen inschatting |
+| Klimhortensia (*Hydrangea anomala petiolaris*) | S | Win | Win | Win | Blad | Blad | Bloei | Bloei | Zaad | Zaad | Zaad | Win | Win | Imkerpedia (bloei jun–jul) |
+| Sterjasmijn (*Trachelospermum jasminoides*) | B | Win | Win | Blad | Blad | Blad | Bloei | Bloei | Blad | Blad | Blad | Blad | Win | Plan (bloei jun–jul) |
+| Klimroos (*Rosa 'New Dawn'*) | B | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | Bes | – | Belle Epoque (bloei jun–okt); bottels eigen inschatting |
+| Druif (*Vitis vinifera*) | D | Win | Win | – | Blad | Blad | Blad | Blad | Blad | Bes | Bes | Blad | Win | Imkerpedia (bloei jun, onopvallend); Ebben (herfstkleur) |
+| Clematis (*Clematis 'Ville de Lyon'*) | C | – | – | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Blad | – | – | RHS, Engelstalig (bloei jul–sep) |
+| Klimop (*Hedera helix*) | S | Bes | Bes | Bes | Bes | Blad | Blad | Blad | Blad | Bloei | Bloei | Bloei | Win | Ebben (bloei sep–nov, blauwzwarte bessen); rijpe bessen jan–apr eigen inschatting |
+| Zonnehoed (*Echinacea purpurea*) | C | Zaad | Zaad | Zaad | – | Blad | Blad | Bloei | Bloei | Bloei | Zaad | Zaad | Zaad | Ebben (bloei jul–sep) |
+| Kerstroos (oosterse) (*Helleborus orientalis*) | A, B | Win | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Win | eigen inschatting (bloei feb–apr) |
+| Kerstroos (*Helleborus niger*) | S | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Win | Imkerpedia (bloei jan–mrt) |
+| Purperklokje (*Heuchera*) | A | Win | Win | Blad | Blad | Blad | Bloei | Bloei | Blad | Blad | Blad | Blad | Win | Imkerpedia (H. micrantha jun–jul) |
+| Akelei (wild) (*Aquilegia vulgaris*) | A | – | – | – | Blad | Bloei | Bloei | Bloei | Zaad | – | – | – | – | Imkerpedia (bloei mei–jul) |
+| Geschubde mannetjesvaren (*Dryopteris affinis 'Crispa'*) | S | Win | Win | – | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Win | geen bloei; blad eigen inschatting |
+| Lavendel (*Lavandula angustifolia*) | D | Win | Win | Blad | Blad | Blad | Bloei | Bloei | Blad | Blad | Blad | Blad | Win | Imkerpedia (bloei jun–jul) |
+| Groot sterrenscherm (*Astrantia major ('Rubra')*) | A | – | – | – | Blad | Blad | Bloei | Bloei | Zaad | Blad | – | – | – | Imkerpedia (bloei jun–jul) |
+| Knautia (*Knautia macedonica*) | D | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Zaad | – | – | Imkerpedia (bloei jun–sep) |
+| Longkruid (*Pulmonaria officinalis*) | S | – | – | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | – | – | Imkerpedia (bloei mrt–mei) |
+| Ooievaarsbek (*Geranium 'Rozanne'*) | A, B | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | – | – | Plan ("juni tot de vorst") |
+| Vingerhoedskruid (*Digitalis purpurea*) | A | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Zaad | – | – | – | Radar/FLORON (bloei eind mei–sep) |
+| Bermzegge (*Carex divulsa*) | A, B | Win | Win | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Win | groenblijvend (plan); bloei onopvallend |
+| Vergeet-mij-nietje (*Myosotis*) | D | – | – | – | Blad | Bloei | Bloei | – | – | – | – | – | – | Imkerpedia (M. sylvatica mei–jun) |
+| Judaspenning (*Lunaria annua*) | B | Zaad | Zaad | Blad | Blad | Bloei | Bloei | Zaad | Zaad | Zaad | Zaad | Zaad | Zaad | Imkerpedia (bloei mei–jun); zaaddozen plan |
+| Sierui (*Allium hollandicum*) | B | – | – | – | Blad | Bloei | Bloei | Zaad | Zaad | – | – | – | – | Plan (bloei mei–jun); Ecoflora (zaaddozen) |
+| Kattenkruid (*Nepeta 'Six Hills Giant'*) | B, C | – | – | – | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | Blad | – | – | Imkerpedia (N. × faassenii mei–sep) |
+| Rudbeckia (*Rudbeckia fulgida*) | B, C | Zaad | Zaad | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Zaad | Zaad | Imkerpedia (bloei jul–okt) |
+| Bergaster (*Aster amellus*) | C | – | – | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Zaad | – | Imkerpedia (bloei jul–okt) |
+| IJzerhard (*Verbena bonariensis*) | D | Zaad | Zaad | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Zaad | Zaad | Imkerpedia (bloei jul–okt) |
+| Steppesalie (*Salvia nemorosa*) | C | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Blad | – | – | Imkerpedia (bloei jun–sep) |
+| Hemelsleutel (*Sedum 'Herbstfreude'*) | C | Zaad | Zaad | – | Blad | Blad | Blad | Blad | Bloei | Bloei | Zaad | Zaad | Zaad | Imkerpedia (bloei aug–sep) |
+| Anijsnetel (*Agastache*) | D | – | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Zaad | Zaad | – | Imkerpedia (bloei jul–sep) |
+| Lampenpoetsersgras 'Little Bunny' (*Pennisetum alopecuroides 'Little Bunny'*) | D | Win | Win | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Zaad | Zaad | Win | Plan (pluimen vanaf midzomer, blijven in de winter staan) |
+| Korenbloem (*Centaurea cyanus*) | D | – | – | – | – | Blad | Bloei | Bloei | Bloei | Zaad | – | – | – | Imkerpedia (bloei jun–aug) |
+| Slangenkruid (*Echium vulgare*) | D | – | – | – | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | Zaad | – | – | Imkerpedia (bloei mei–sep) |
+| Stengelloze sleutelbloem (*Primula vulgaris*) | S | – | – | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | – | – | Imkerpedia (bloei mrt–mei) |
+| Wilde hyacint (*Hyacinthoides non-scripta*) | S | – | – | Blad | Bloei | Bloei | – | – | – | – | – | – | – | Imkerpedia (bloei apr–mei) |
+| Pluimspirea (*Astilbe 'Fanal'*) | S | Zaad | Zaad | – | Blad | Blad | Bloei | Bloei | Zaad | Zaad | Zaad | Zaad | Zaad | eigen inschatting (bloei jun–jul) |
+| Kerstgeurstruik (*Sarcococca*) | S | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | Blad | Bes | Bes | Bloei | Imkerpedia (bloei jan–apr per soort); dec en bessen plan |
+| Leliegras (*Liriope muscari*) | A | Win | Win | – | Blad | Blad | Blad | Blad | Bloei | Bloei | Bloei | Bes | Bes | Plan (bloei aug–okt); RHS, Engelstalig (zwarte bessen) |
+| Sneeuwklokje (*Galanthus nivalis*) | A | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | – | Imkerpedia (bloei feb–mrt) |
+| Boerenkrokus (*Crocus tommasinianus*) | A, B, C, D | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | – | Imkerpedia (bloei feb–mrt) |
+| Krokus 'Cream Beauty' (*Crocus chrysanthus 'Cream Beauty'*) | B, C, D | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | – | Plan (Nijssen, feb–mrt) |
+| Kievitsbloem (*Fritillaria meleagris*) | A | – | – | Blad | Bloei | Bloei | – | – | – | – | – | – | – | Imkerpedia (bloei apr–mei) |
+| Wilde narcis (*Narcissus pseudonarcissus*) | B, C | – | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | Plan (mrt–apr); Imkerpedia noemt mrt–mei |
+| Oosterse sterhyacint (*Scilla siberica*) | C | – | – | Bloei | Bloei | Blad | – | – | – | – | – | – | – | Imkerpedia (bloei mrt–apr) |
+| Druifhyacint (*Muscari armeniacum*) | D | – | – | Blad | Bloei | Bloei | – | – | – | – | – | – | – | Plan en Plukkers (apr–mei) |
+| Bosaster (*Aster divaricatus*) | S | – | – | – | Blad | Blad | Blad | Blad | Bloei | Bloei | Bloei | Zaad | Zaad | Plan en Ebben (aug–okt); Imkerpedia noemt jul–okt |
+| Liatris (prachtschaarde) (*Liatris spicata*) | C | – | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Zaad | Zaad | – | Imkerpedia (bloei jul–sep) |
+| Aster 'Purple Dome' (*Symphyotrichum novae-angliae 'Purple Dome'*) | B | – | – | – | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Zaad | – | Plan (aug–okt); Imkerpedia noemt sep–nov voor de soort |
 
 ## Aanleg, onderhoud & vogels & bijen
 
@@ -345,6 +392,7 @@ Zie *Planning & stappen vanaf 31 oktober* voor de volledige stappenlijst met dat
 
 - **Dec–jan:** Druif snoeien; verder vogels genieten
 - **Feb–mrt:** Klimroos en Clematis 'Ville de Lyon' snoeien; vaste planten terugknippen, mulchen
+- **Maart:** schorspad (en de schorsringen om de bomen) controleren en aanvullen als de laag dunner is dan 5 cm (zie *Schorspad*)
 - **April–mei:** Planten, zaaien zone D; blad van de uitgebloeide bollen laten afsterven
 - **Jun–aug:** Genieten, met de hand water geven bij droogte volgens *Water geven (indicatie per zone)*; kamperfoelie en klimhortensia snoeien na de bloei
 - **September–half december:** Bollen poten (sneeuwklokje en kievitsbloem zo vroeg mogelijk)
@@ -414,7 +462,7 @@ Legenda: ✂️ snoeien / terugknippen · 🌱 planten / zaaien · 🪴 delen / 
 
 ## Water geven (indicatie per zone)
 
-Besloten 22 oktober 2026: Kas doet in de eerste fases niets met irrigatie. Water geven gebeurt met de hand (tuinslang of gieter). Onderstaande hoeveelheden zijn indicaties, afgeleid uit het eerdere irrigatieplan en herberekend voor de nieuwe oppervlaktes; het zijn eigen richtwaarden, geen bronwaarden.
+Besloten 22 oktober 2026: De eigenaar doet in de eerste fases niets met irrigatie. Water geven gebeurt met de hand (tuinslang of gieter). Onderstaande hoeveelheden zijn indicaties, afgeleid uit het eerdere irrigatieplan en herberekend voor de nieuwe oppervlaktes; het zijn eigen richtwaarden, geen bronwaarden.
 
 **Regels**
 
@@ -474,8 +522,10 @@ Hoeveelheid: 5 cm over 27 m² is ongeveer 1,35 m³ per ronde (ongeveer 1,15 m³ 
 
 **Aangelegd:** de schors ligt sinds 14 november 2026 in het pad; ook rond beide bomen ligt een ring van schors. Besloten 3 november 2026. Het pad staat op de plattegrond, maar was nog niet in de tekst beschreven. De zones waaraan het grenst, de lengte en de breedte zijn nog niet vastgelegd (zie *Open punten*).
 
-- **Afdeklaag:** 5–10 cm tuinschors. Vul elk jaar aan, want schors verteert. Onkruid dat in de schors kiemt, trek je er gewoon uit.
-- **Doek eronder:** een waterdoorlatend, niet-gecoat doek. Het doek houdt de schors gescheiden van de klei en remt onkruid van onderaf. Kas gebruikt het doek dat al ligt: Jogetex 17/16 van Joosten Kunststoffen (polypropyleen, 79 g/m²). Volgens de datasheet is dat doek waterdoorlatend en er staat geen coating vermeld (3 november 2026). Het voelt glad en er blijven kleine plekjes water op liggen, maar dat past bij waterafstotend polypropyleen. Controleer het met een natte-zandtest: til na een regenbui een hoek op. Is het zand eronder nat, dan komt het water erdoor. Is het zand droog, dan Joosten Kunststoffen bellen. Koop je later nieuw doek, dan is 29/29 (134 g/m²) steviger en heeft het de hoogste waterdoorlatendheid in de datasheet (de eenheid in de pdf is onduidelijk). Een gecoat of gelamineerd doek is niet geschikt: controleer bij aankoop dat "waterdoorlatend" erbij staat.
+- **Afdeklaag:** 5–10 cm Franse boomschors. Onkruid dat in de schors kiemt, trek je er gewoon uit.
+- **Aanvullen (maand vastgelegd 24 november 2026):** controleer het pad elk jaar in **maart**, samen met de mulchronde van feb–mrt, en vul aan als de laag dunner is dan 5 cm. De maand is een eigen inschatting: na de winter, vóór het groeiseizoen, en in één bestelling met de mulch. Franse boomschors verteert langzaam en gaat 4 tot 6 jaar mee ([Afvalzorg](https://www.afvalzorg.nl/content/uploads/2021/01/Productblad-boomschors.pdf)), dus aanvullen is niet elk jaar nodig. Liever iets te weinig bestellen en later aanvullen (wens van de eigenaar, 7 november 2026).
+- **Terras en aansluiting (besloten 7 november 2026):** ook een rond terras van 2,6 m doorsnee achter in de tuin en een kort stuk pad naar de veranda komen in Franse boomschors. Of het terras al is aangelegd: onbekend.
+- **Doek eronder:** een waterdoorlatend, niet-gecoat doek. Het doek houdt de schors gescheiden van de klei en remt onkruid van onderaf. De eigenaar gebruikt het doek dat al ligt: Jogetex 17/16 van Joosten Kunststoffen (polypropyleen, 79 g/m²). Volgens de datasheet is dat doek waterdoorlatend en er staat geen coating vermeld (3 november 2026). Het voelt glad en er blijven kleine plekjes water op liggen, maar dat past bij waterafstotend polypropyleen. Controleer het met een natte-zandtest: til na een regenbui een hoek op. Is het zand eronder nat, dan komt het water erdoor. Is het zand droog, dan Joosten Kunststoffen bellen. Koop je later nieuw doek, dan is 29/29 (134 g/m²) steviger en heeft het de hoogste waterdoorlatendheid in de datasheet (de eenheid in de pdf is onduidelijk). Een gecoat of gelamineerd doek is niet geschikt: controleer bij aankoop dat "waterdoorlatend" erbij staat.
 - **Afwatering:** op kleibodem kan het pad na regen plassen. Is een deel van het pad laag, leg dan eerst een laagje grof zand of fijn puin onder het doek.
 - **Rand:** een opsluitrand, zodat de schors niet in de borders schuift.
 - **Hoeveelheid:** 0,05–0,10 m³ schors per m² pad (5–10 cm). Pas uit te rekenen als de afmetingen bekend zijn.
@@ -494,7 +544,7 @@ Nog uit te werken. Hieronder staan de uitgangspunten en de vragen die eerst bean
 
 - **Gewenste sfeer:** wandlantaarns met gekleurd glas (amber en rood) en een kaarsvlameffect, naar het voorbeeld van de lampen in Symbolica (Efteling). Dat zijn waarschijnlijk maatwerk-armaturen. Nog geen lantaarn gekozen.
 - **Lichtbron:** led-lampen met vlameffect van **Segula**, serie *LED Fire Flame Line*: 1800 K (warm wit), niet dimbaar, ±15.000 uur. Opties: E27 1 W G125 helder (art. 10050839 staand, 10050840 hangend, ±€25,90) en E14 0,2 W kaars (art. 10050813 twisted candle, 10050811 wind blast, ±€13,90). Prijzen zijn de zakelijke prijs incl. btw bij pro.lights.ie; vergelijk bij een Nederlandse of Belgische webshop.
-- **Tweede merk:** Ampoule (serie Fire) is door Kas genoemd. De productpagina's bij Lampen24 waren niet te openen, dus de specificaties moeten nog gecontroleerd worden.
+- **Tweede merk:** Ampoule (serie Fire) is door de eigenaar genoemd. De productpagina's bij Lampen24 waren niet te openen, dus de specificaties moeten nog gecontroleerd worden.
 - **Let op buiten:** de Segula-pagina's noemen gebruik binnen en buiten, maar geen IP-klasse. Gebruik de lamp alleen in een gesloten, regenbestendige armatuur en controleer de datasheet. Kies staand of hangend passend bij de stand van de lamp in de armatuur (zo omschrijft de verkoper het; de variant wordt niet verder uitgelegd).
 
 **Armaturen (kandidaten)**
@@ -511,7 +561,7 @@ Nog uit te werken. Hieronder staan de uitgangspunten en de vragen die eerst bean
 
 ## Subsidie (klimaatadaptatie, gemeente Urk voor Dronten)
 
-**Aangevraagd (gemeld 24 november 2026):** ontstenen en vergroenen (39,6 m², €198) en de krentenboom (stamomtrek 12–14 cm, €35), samen €233; de groene gevel en de kornoelje zitten niet in deze aanvraag (zie `claude/subsidieaanvraag.md`). Het besluit komt binnen 8 weken (eenmalig te verlengen met 4 weken). Hieronder de informatie van 22 oktober 2026. De gemeente Urk behandelt de aanvragen namens Dronten, Urk en de Noordoostpolder (*Subsidieregeling klimaatadaptatie maatregelen van de DUN-gemeenten 2026–2028*). De regeling loopt van 1 oktober 2026 tot en met 31 december 2028, zolang het budget strekt (op = op). Dronten heeft een budget van €53.662 (maximaal €17.887 per jaar).
+**Aangevraagd (gemeld 24 november 2026):** ontstenen en vergroenen (39,6 m², €198) en de krentenboom (stamomtrek 12–14 cm, €35), samen €233; de groene gevel en de kornoelje zitten niet in deze aanvraag (de aanvraag zelf staat in het project Tuin). Het besluit komt binnen 8 weken (eenmalig te verlengen met 4 weken). Hieronder de informatie van 22 oktober 2026. De gemeente Urk behandelt de aanvragen namens Dronten, Urk en de Noordoostpolder (*Subsidieregeling klimaatadaptatie maatregelen van de DUN-gemeenten 2026–2028*). De regeling loopt van 1 oktober 2026 tot en met 31 december 2028, zolang het budget strekt (op = op). Dronten heeft een budget van €53.662 (maximaal €17.887 per jaar).
 
 **Wat dit plan kan opleveren (indicatie)**
 
@@ -597,8 +647,8 @@ Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 20
 | Nederlandse naam | Latijnse naam | Zone (was) | Reden | Link |
 |---|---|---|---|---|
 | Goud-kamperfoelie | Lonicera heckrottii | B | Dubbel met Lonicera periclymenum, dat beter scoort bij vogels (4 sterren, tegen 3). | [Wikipedia](https://en.wikipedia.org/wiki/Lonicera_%C3%97_heckrottii) |
-| Struikroos | Rosa 'Lilly Rose Wonder' | B | Op verzoek van Kas verwijderd. Wil bovendien meer zon, en de klimroos staat er al. | [Wikipedia](https://en.wikipedia.org/wiki/Rose) |
-| Hartlelie | Hosta (divers) | S | Op verzoek van Kas verwijderd. Weinig bijen- en vogelwaarde, slakken, neemt veel ruimte in 2–3 m². | [Wikipedia](https://nl.wikipedia.org/wiki/Hartlelie) |
+| Struikroos | Rosa 'Lilly Rose Wonder' | B | Op verzoek van de eigenaar verwijderd. Wil bovendien meer zon, en de klimroos staat er al. | [Wikipedia](https://en.wikipedia.org/wiki/Rose) |
+| Hartlelie | Hosta (divers) | S | Op verzoek van de eigenaar verwijderd. Weinig bijen- en vogelwaarde, slakken, neemt veel ruimte in 2–3 m². | [Wikipedia](https://nl.wikipedia.org/wiki/Hartlelie) |
 | Akelei | Aquilegia vulgaris 'Rose Barlow' | B | Dubbelbloemig (minder bijvriendelijk); de wilde akelei staat al in zone A. | [Wikipedia](https://en.wikipedia.org/wiki/Aquilegia_vulgaris) |
 | Koningskaars | Verbascum thapsus | D | Wordt 2 m en is tweejarig; Echium houdt zone D wild genoeg. | [Wikipedia](https://nl.wikipedia.org/wiki/Koningskaars) |
 | Ooievaarsbek | Geranium macrorrhizum | A | Dubbel met 'Rozanne' en woekert. | [Wikipedia](https://en.wikipedia.org/wiki/Geranium_macrorrhizum) |
@@ -610,17 +660,18 @@ Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 20
 | Paddenlelie | Tricyrtis | S | Voegt weinig toe in 2–3 m². Op 14 november 2026 opnieuw bekeken voor herfstbloei in zone S: geen Nederlandse bron over bijenwaarde gevonden, daarom is de bosaster gekozen. | [Wikipedia](https://en.wikipedia.org/wiki/Tricyrtis) |
 | Kleine maagdenpalm | Vinca minor | S | Woekert. | [Wikipedia](https://en.wikipedia.org/wiki/Vinca_minor) |
 | Vedergras | Stipa | B, D | Wil zon en droge grond. Vervangen door bermzegge (B). | [Wikipedia](https://en.wikipedia.org/wiki/Stipa) |
-| Kaardenbol | Dipsacus fullonum | D | Op verzoek van Kas naar de reservelijst gegaan (22 oktober 2026); zone D is te vol. Tweejarig, stekelige zaadhoofden zijn topvoer voor distelvinken. | [Wikipedia](https://en.wikipedia.org/wiki/Dipsacus_fullonum) |
+| Kaardenbol | Dipsacus fullonum | D | Op verzoek van de eigenaar naar de reservelijst gegaan (22 oktober 2026); zone D is te vol. Tweejarig, stekelige zaadhoofden zijn topvoer voor distelvinken. | [Wikipedia](https://en.wikipedia.org/wiki/Dipsacus_fullonum) |
 | Kerstroos (oosterse) | Helleborus orientalis 'Double Ellen Red' | A, B | Dubbelbloemig (minder bijvriendelijk). Vervangen door de enkelbloemige oosterse kerstroos. | [Wikipedia](https://en.wikipedia.org/wiki/Helleborus_orientalis) |
 
 ## Open punten
 
 - Actiepunt: meet de zonuren in het groeiseizoen (aanname: alleen de tuinkas en zone D hebben meer dan 6 uur zon).
-- Actiepunt: controleer hoogte, zonbehoefte en bijen- en vogelwaarde per soort in de definitieve lijst (nu indicatief uit eigen kennis) en voeg een hoogtekolom met bronnen toe.
+- Actiepunt: controleer hoogte en zonbehoefte per soort in de definitieve lijst (nu indicatief uit eigen kennis) en voeg een hoogtekolom met bronnen toe. De bijen- en vogelscores zijn op 24 november 2026 met bronnen aangevuld (zie *Alle planten*); de links in die tabel wijzen nog deels naar Engelstalige pagina's (Wikipedia, RHS).
+- Grondverbetering (24 november 2026): in alle zones wijkt de uitvoering af van het geplande mengsel (A, B en S oude tuingrond; C en D zand op klei met tuinaarde). Nog na te gaan wat er per zone in zit (compost, perliet, mest). Voorgesteld: niet meer spitten maar verbeteren met een mulchlaag (zie de zones en *Mulchen*).
 - Na het nameten van de oppervlaktes (22 oktober 2026) is de plantenlijst te vol voor de kleine zones. Stand na het besluit van 14 november 2026 (bollen en vlinderplanten): zone A 9 soorten (incl. boom) plus 3 bolsoorten op 4,5 m², zone B 11 soorten plus 3 bolsoorten op 8 m², zone C 9 soorten (incl. boom) plus 4 bolsoorten op 8 m², zone D 9 soorten (incl. de druif) plus 3 bolsoorten op 4 m² en zone S 10 soorten op 2–3 m². Bollen staan tussen en onder de vaste planten en vragen weinig eigen ruimte (eigen inschatting). Zone D, S en A zijn nog te vol; nog te beslissen welke soorten blijven; beoordeel ook de plantafstanden bij het uitzetten.
 - Zone S (14 november 2026): met de bosaster 10 soorten op 2–3 m². Beslis of er een soort uit moet, en kies de soort of cultivar van de bosaster.
 - Bollen (14 november 2026): de aantallen per zone zijn een eigen schatting; pas ze aan bij het bestellen. De bollen kunnen pas de grond in na de grondbehandeling (stap 5) en uiterlijk half december; zie stap 7a voor de terugvaloptie.
-- Kievitsbloem (14 november 2026): het antwoord "ja op alles" op de vraag "nu planten of overslaan" is gelezen als nu planten. Nog te bevestigen door Kas; controleer ook of de bollen in november nog te koop zijn.
+- Kievitsbloem (14 november 2026): het antwoord "ja op alles" op de vraag "nu planten of overslaan" is gelezen als nu planten. Nog te bevestigen door de eigenaar; controleer ook of de bollen in november nog te koop zijn.
 - Druifhyacint (14 november 2026): kan zich in zone D uitbreiden (eigen inschatting), terwijl zone D al vol is. Na het eerste voorjaar beoordelen.
 - Liatris (14 november 2026): de bronnen over wegrotten op natte winterbodem zijn Engelstalig (Tuinzaden.eu, Gardenia); een Nederlandse bron is niet gevonden. Plant iets verhoogd in het zandmengsel. De verdeling 2 'Floristan Violett' en 1 'Floristan Weiß' is een voorstel van Claude, bevestigd met de open voorstellen.
 - Aster 'Purple Dome' (14 november 2026): bloeit het rijkst met minstens 6 uur zon (RHS); zone B heeft 3–6 uur. Meet de zonuren; valt de bloei tegen, dan naar zone C.
@@ -628,7 +679,7 @@ Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 20
 - Kornoelje: geplant in november 2026 op een zure plantplek, met boomsteun en een ring van schors. Houd de afstand tot het pad in de gaten (takken vanaf de grond).
 - Stroom voor verlichting: bij de ton is stroom aanwezig; bij de zones zelf nog uit te werken.
 - pH kornoelje (bijgewerkt 24 november 2026): gemeten pH 7 met vrije kalk; er is een zure plantplek gemaakt met DCM Vivimus Rhodo en de kornoelje is geplant. Nog te doen: in het voorjaar de pH van de plantplek meten en noteren, geef regenwater, en vraag bij Vitens na hoe hard het water in Dronten is.
-- Actiepunt: meet de zonuren op de plek midden in de tuin waar Aster amellus, Salvia nemorosa en Liatris spicata komen (zone C). De schutting in zone D staat op het zuiden (Kas, 22 oktober 2026): geen controle meer nodig voor de druif.
+- Actiepunt: meet de zonuren op de plek midden in de tuin waar Aster amellus, Salvia nemorosa en Liatris spicata komen (zone C). De schutting in zone D staat op het zuiden (eigenaar, 22 oktober 2026): geen controle meer nodig voor de druif.
 - Actiepunt: *Myosotis* in zone D zit op een wat droge, zonnige plek; hij wil meer vocht en lichte schaduw (RHS). Valt hij tegen na het eerste voorjaar, dan terug naar zone B.
 - Subsidie: aangevraagd (gemeld 24 november 2026) voor ontstenen en de krentenboom. Wacht op het besluit (binnen 8 weken). De groene gevel kan eventueel later apart, als de gemeente dat toestaat.
 - Actiepunt: beslis over de fasering in drie stappen. Herfst 2026 het skelet (tegels weg, ondergrond, bomen, bollen, eventueel een kabelbuis, klimsteun, kale grond afdekken). Voorjaar 2027 de beplanting (klimplanten en vaste planten in A, B en C, zone D zaaien, mulch). Najaar 2027 en 2028 de rest (zone S, aanvullen, verlichting). Daarna de planning aanpassen. Let op de zes-maandentermijn van de subsidie (zie *Subsidie*).
@@ -638,7 +689,7 @@ Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 20
 
 ## Mogelijk vervolgproject: irrigatie
 
-**Status:** geparkeerd (besloten 22 oktober 2026). Kas doet in de eerste fases niets met irrigatie; water geven gebeurt met de hand volgens *Water geven (indicatie per zone)*. Dit onderdeel bewaart het eerder uitgewerkte irrigatieplan voor het geval Kas het later toch oppakt. Hoeveelheden zijn herberekend voor ±27 m² (22 oktober 2026). Nog niets besteld.
+**Status:** geparkeerd (besloten 22 oktober 2026). De eigenaar doet in de eerste fases niets met irrigatie; water geven gebeurt met de hand volgens *Water geven (indicatie per zone)*. Dit onderdeel bewaart het eerder uitgewerkte irrigatieplan voor het geval de eigenaar het later toch oppakt. Hoeveelheden zijn herberekend voor ±27 m² (22 oktober 2026). Nog niets besteld.
 
 Het plan werkt met **kringen** (hydrozones): planten met dezelfde waterbehoefte hangen aan dezelfde leiding en worden samen bewaterd. Zo krijgt de droge muurzone B meer water dan de zuinige zone C, en krijgt zone D geen druppelleiding.
 
@@ -658,7 +709,7 @@ De hoeveelheden gelden voor de eerste twee jaar na het planten, in droge weken (
 | — | D (volle zon, sauvage), 4 m² | Geen | Geen druppelleiding; alleen een tapaansluiting voor een slang | Alleen bij het zaaien en aanslaan; nieuwe lavendel en Anijsnetel in het eerste jaar; de druif tegen de schutting 15–20 l per week in droge perioden met de slang laten aanslaan | — | Slang op tapaansluiting |
 | Bomen | Kornoelje (A), krentenboom (C) | Eerste jaren regelmatig | Ring met 4 druppelaars van 4 l/h, aan een eigen kogelkraantje | 40–60 l per boom per week in droge perioden, jaar 1–2 (kornoelje eerder en vaker); samen 80–120 l | ca. 2,5–4 uur per beurt | Eigen kogelkraantje naast V2 en V3 |
 
-**Totaal bij de huidige maten** (A 4,5, S 2–3 (gerekend met 2,5), B 8, C 8 en D 4 m², samen ±27 m²; nagerekend door Kas op 22 oktober 2026): in een droge week in jaar 1–2 is de behoefte ongeveer 330–570 l per week (ondergrens zonder C, bovengrens met C). Dat is B 165–220 l, A + S 85–105 l, C ±125 l (alleen de eerste 6–8 weken) en de twee bomen samen 80–120 l. Bij 10–12 droge weken per seizoen komt dat neer op ongeveer 3–7 m³ water per seizoen (schatting). De regenton van 120 l dekt dus ongeveer een vijfde tot een derde van één droge week; dat telt mee bij de keuze voor fase 2. Per beurt loopt één kring tegelijk (ongeveer 100–150 l/h, ruim binnen wat een tuinslang levert); de bomenringen (16 l/h) draaien met een kring mee. Reken op 3–4 uur per week, bijna geheel onbemand. Rekenvoorbeeld: druppelslang met druppelaars van 2 l/h om de 33 cm en rijen op 40 cm geeft ±15 l/h per m², dus 1 uur ≈ 15 l/m².
+**Totaal bij de huidige maten** (A 4,5, S 2–3 (gerekend met 2,5), B 8, C 8 en D 4 m², samen ±27 m²; nagerekend door de eigenaar op 22 oktober 2026): in een droge week in jaar 1–2 is de behoefte ongeveer 330–570 l per week (ondergrens zonder C, bovengrens met C). Dat is B 165–220 l, A + S 85–105 l, C ±125 l (alleen de eerste 6–8 weken) en de twee bomen samen 80–120 l. Bij 10–12 droge weken per seizoen komt dat neer op ongeveer 3–7 m³ water per seizoen (schatting). De regenton van 120 l dekt dus ongeveer een vijfde tot een derde van één droge week; dat telt mee bij de keuze voor fase 2. Per beurt loopt één kring tegelijk (ongeveer 100–150 l/h, ruim binnen wat een tuinslang levert); de bomenringen (16 l/h) draaien met een kring mee. Reken op 3–4 uur per week, bijna geheel onbemand. Rekenvoorbeeld: druppelslang met druppelaars van 2 l/h om de 33 cm en rijen op 40 cm geeft ±15 l/h per m², dus 1 uur ≈ 15 l/m².
 
 ### Fase 1 en fase 2 (van dit vervolgproject)
 
