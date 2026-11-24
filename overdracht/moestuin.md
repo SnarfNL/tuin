@@ -35,7 +35,8 @@ Zie `moestuinplan.md` §5 (eenmalige taken) en §6 (open punten).
 - Aanleg deze winter: noppenfolie, RVS-band, worteldoek openknippen, tuinaarde en zand bestellen en vullen, houtsnippers, bloemenbak, kasopzet en pergola bouwen, pruim weg, reglement van het complex nalezen.
 - Voorjaar 2027: kasopzet op bak 6 met voorteelt (e-feb), knoflook (feb–mrt) en aardbeien (mrt) in bak 8, bak 9 planten (mrt–apr), bak 10 inzaaien (m-apr–mei).
 - Nog te beslissen: invulling bak 7, rassen (bij het bestellen in dec–jan), irrigatie (concept).
-- Nog na te gaan: type frambozen (oogsttijd 2027), soorten in de boomgaard, kraan op het complex, of bak 2, 3, 6, 7 al zijn opgeschoven en bak 10 al staat.
+- Nog na te gaan: type frambozen (oogsttijd 2027) en de soorten in de boomgaard.
+- Stand 24 november 2026: bak 2, 3, 6 en 7 zijn verschoven; bak 10 staat en moet nog een meter worden ingekort. Op het complex is geen kraan, wel een handpomp op het eigen perceel.
 
 ## Hoort de tuinkas thuis bij de moestuin?
 

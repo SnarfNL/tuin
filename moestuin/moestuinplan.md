@@ -24,7 +24,7 @@ Volkstuin van ±150 m² op zware zeeklei. Moestuindeel ±91 m² (±9,2 × 9,4 m)
 | Bak 7 (voor) | 3,0 × 1,5 m | 4,5 | Volle zon [eigen inschatting] | Idem |
 | Bak 8 (voor rechts) | 4,0 × 1,5 m | 6,0 | Volle zon; in de winter mogelijk vroege-middagschaduw van de folietunnel van de buren | Idem |
 | Bak 9 (kruidenbak, midden, haaks op de andere bakken) | 3,0 × 1,0 m | 3,0 | Volle zon [eigen inschatting] | 70% tuinaarde, 30% grof scherp zand 0–4 mm, 15 cm |
-| Bak 10 (bloemenbak, achterin voor de schuur) | ±3,0 × 0,8 m | ±2,4 | Niet ingemeten | Schone tuinaarde |
+| Bak 10 (bloemenbak, achterin voor de schuur) | ±3,0 × 0,8 m (staat er; moet nog 1 m ingekort worden) | ±2,4 | Niet ingemeten | Schone tuinaarde |
 
 - Alle bakken: onbehandelde Douglas planken 22 × 200 mm, één plank hoog, HDPE-noppenfolie aan de binnenkant, dwarsband van RVS tegen uitbollen. De bakken staan direct op waterdoorlatend worteldoek dat binnen de bak wordt opengeknipt.
 - Vulling (besloten, nog niet besteld): ±7 m³ schone tuinaarde, los gestort, 15 cm hoog. Geen hügelkultur, geen zakken bemeste aarde.
@@ -41,7 +41,7 @@ Volkstuin van ±150 m² op zware zeeklei. Moestuindeel ±91 m² (±9,2 × 9,4 m)
 | Ander fruit en vaste planten | Rabarber, frambozen op een houten rek, blauwe spar (geen taken) | bestaand |
 | Compost | Houten compostbakken achter de vijg, bij het hek | bestaand |
 | Regenwater | 3 regentonnen (±200 l) en 2 kuipen (samen ±700 l) aan de dakgoot van de schuur. Later mogelijk een IBC van 1000 l | bestaand |
-| Handpomp | Gedeelde grondwaterpomp bij de ingang van het complex (noodvulling) | bestaand |
+| Handpomp | Grondwaterpomp direct op het eigen perceel. Op het complex is geen kraan | bestaand |
 | Schuur | Kunststof schuur | bestaand |
 | Overige deel | ±60 m²; ±20 m² krijgt worteldoek met houtsnippers, de rest blijft zoals het is | besloten |
 | Water geven | Met de hand gieten uit de regentonnen, tot er anders besloten wordt. Het irrigatieplan (druppelslang op een zonnepomp met timer) is een concept | besloten (irrigatie: concept) |
@@ -172,7 +172,7 @@ Zaaien, uitplanten, oogsten en planten per gewas staan in §2 en §3. Hier staan
 | mei–aug | Kasopzet eraf of gaasframe erop zodra gewassen te hoog worden | Bak met kasopzet | verplaatsen | jaarlijks | besloten |
 | mei–jun | Bloemstengels rabarber weghalen | Rabarber | uitgebloeid_verwijderen | jaarlijks | besloten |
 | mei–jun | Klimmers (snackkomkommer, Oost-Indische kers) naar het gaas van de pergola leiden | Bak met biet en komkommer | opbinden | jaarlijks | besloten |
-| apr–sep | Met de hand gieten uit de regentonnen bij droogte (meer dan een week zonder regen en droge grond) | Alle bakken | water_geven | conditioneel | besloten |
+| apr–sep | Met de hand gieten uit de regentonnen of met water uit de handpomp bij droogte (meer dan een week zonder regen en droge grond) | Alle bakken | water_geven | conditioneel | besloten |
 | jun | Stro of grasmaaisel 3–5 cm tussen de gewassen | Bak 1–6 | mulchen | jaarlijks | besloten |
 | jun–jul | Eén keer bijmesten met organische korrels (gedroogde koemest), een handje per plant | Pompoen, courgette, komkommer, mais, dahlia | bemesten | jaarlijks | besloten |
 | jun–sep | Aardbei-uitlopers weghalen (in het vernieuwingsjaar in aug laten wortelen) | Aardbeibak | snoeien | jaarlijks | besloten |
@@ -197,14 +197,13 @@ Zaaien, uitplanten, oogsten en planten per gewas staan in §2 en §3. Hier staan
 | Periode | Taak | Status |
 |---|---|---|
 | nov–dec 2026 | Reglement van het complex nalezen over kasopzet, IBC en pergola | open |
-| nov–dec 2026 | Bak 2, 3, 6 en 7 15 cm naar het pergolapad schuiven (besloten 17 nov) | onbekend of al gedaan |
 | dec 2026 | Noppenfolie tegen de binnenkant van alle bakken | open (stand 15 nov: ligt klaar) |
 | dec 2026 | RVS-band bestellen (3 rollen van 10 m, 12 × 0,7 mm, plus 100–120 RVS-schroeven 4 × 20 mm) en monteren: 2 banden in bak 1, 4, 5, 8; 1 in bak 2, 3, 6, 7, bak 9 (kruidenbak) en bak 10 (bloemenbak, band ±0,86 m) | open |
 | dec 2026 | Worteldoek binnen de bakken openknippen, flappen tegen de binnenkant vastzetten (na folie en band) | open |
 | dec 2026–feb 2027 | ±7 m³ schone tuinaarde bestellen, los laten storten, bakken 15 cm vullen (aanvoer met de kruiwagen) | open |
 | dec 2026–feb 2027 | Grof scherp zand 0–4 mm (±200 kg, 8 zakken) door de aarde van bak 9 (kruidenbak) | open |
 | dec 2026–feb 2027 | ±3 m³ houtsnippers op het worteldoek van de paden en ±20 m² van het overige deel | open |
-| winter 2026–27 | Bloemenbak (bak 10) bouwen en plaatsen, als dat nog niet gedaan is; plek bij de schuur inmeten | onbekend |
+| winter 2026–27 | Bloemenbak (bak 10) een meter inkorten, tot ±3 m lang | open |
 | winter 2026–27 | Kasopzet bouwen (1,5 × 2,0 m, polycarbonaat, raamopeners, stormhaken, gaasframe) | open |
 | winter 2026–27 | Pergola bouwen | open |
 | winter 2026–27 | Jonge pruim verwijderen | open |
@@ -233,8 +232,6 @@ Nog te beslissen:
 Nog na te gaan (geen keuze, maar ter plekke kijken):
 4. Frambozen: zomer- of herfstframbozen? In 2027 aan de oogsttijd zien; tot dan is de snoei conditioneel.
 5. Boomgaard: welke twee bomen staan er precies bij de grasstrook, welke soort is de jonge fruitboom en welke de bessenstruik?
-6. Is er op het complex een kraan?
-7. Zijn bak 2, 3, 6 en 7 al 15 cm opgeschoven, en staat de bloemenbak (bak 10) al?
 
 ## 7. Bronnen
 
