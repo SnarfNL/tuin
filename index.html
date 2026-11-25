@@ -565,7 +565,7 @@ function plantenLijst() {
     const bep = beplanting(p.locatie, NUJ).filter(e => e.plant === p.id && e.status !== 'weg');
     const waar = [...new Set(bep.map(e => plekNaam(p.locatie, e.plek)))].join(', ');
     const st = bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
-    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${soortTag(p.soort)}${waar ? '<br>' : ''}${esc(waar)}${st ? `<br><span class="status ${st}">${statusLabel(st)}</span>` : ''}</div></div>`;
+    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${soortTag(p.soort)} ${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${statusLabel(st)}</span>` : ''}</div></div>`;
   }).join('') || '<p class="leeg">Geen planten gevonden.</p>';
 }
 function schermPlant(loc, id) {
