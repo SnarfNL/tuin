@@ -804,10 +804,12 @@ function rijForm(soort, arg) {
   const alle = D[ALLE[c.tab]], f = { loc: rij ? rij.locatie : (S.loc || (locs()[0] || {}).id) };
   c.velden.forEach(([k]) => f[k] = rij ? rij[k] || '' : '');
   const dlg = $('#dlg'), woord = soort === 'plek' ? 'plek' : 'plant';
-  const lees = () => c.velden.forEach(([k]) => { const e = $('#v-' + k); if (e) f[k] = e.value.trim(); });
+  const nieuwPlant = soort === 'plant' && !rij; f.plek = ''; f.status = 'gepland';
+  const lees = () => { c.velden.forEach(([k]) => { const e = $('#v-' + k); if (e) f[k] = e.value.trim(); }); if (nieuwPlant) { f.plek = $('#v-plek').value; f.status = $('#v-status').value; } };
   const teken2 = () => {
     dlg.innerHTML = `<div class="taakform"><h3>${rij ? esc(rij[c.naam] || '') + ' bewerken' : 'Nieuwe ' + woord}</h3>
       ${rij ? `<div class="sub">${esc((D.Locaties.find(l => l.id === f.loc) || {}).naam || f.loc)}</div>` : `<label>Waar</label><div class="seg" role="group" aria-label="Locatie">${locs().map(l => `<button type="button" class="${f.loc === l.id ? 'aan' : ''}" data-rl="${esc(l.id)}" aria-pressed="${f.loc === l.id}">${esc(l.naam)}</button>`).join('')}</div>`}
+      ${nieuwPlant ? `<div class="twee"><div><label for="v-plek">${esc((D.Locaties.find(l => l.id === f.loc) || {}).plekwoord || 'Plek')}</label><select id="v-plek"><option value="">Nog geen plek</option>${plekOpties(f.loc, f.plek)}</select></div><div><label for="v-status">Status</label><select id="v-status">${['gepland', 'geplant'].map(x => `<option value="${x}" ${x === f.status ? 'selected' : ''}>${statusLabel(x)}</option>`).join('')}</select></div></div>` : ''}
       ${c.velden.map(([k, lab, t]) => `<label for="v-${k}">${lab}</label>${t === 'soort' ? `<select id="v-${k}"><option value="">Kies een soort</option>${soorten().map(g => `<optgroup label="${g.groep}">${g.lijst.map(x => `<option value="${esc(x.naam)}"${x.naam === String(f[k]).toLowerCase() ? ' selected' : ''}>${x.emoji} ${esc(cap(x.naam))}</option>`).join('')}</optgroup>`).join('')}${f[k] && !soortInfo(f[k]) ? `<option value="${esc(f[k])}" selected>${esc(f[k])}</option>` : ''}</select>` : t === 'lang' ? `<textarea id="v-${k}" rows="2">${esc(f[k])}</textarea>` : `<input id="v-${k}" value="${esc(f[k])}"${t === 'lijst' ? ` list="l-${k}"` : ''}>${t === 'lijst' ? `<datalist id="l-${k}">${[...new Set(alle.map(x => x[k]).filter(Boolean))].sort().map(v => `<option value="${esc(v)}">`).join('')}</datalist>` : ''}`}`).join('')}
       <div class="knoppen">${rij ? '<button type="button" class="knopje vervallen" data-d="weg">Vervallen</button>' : '<span></span>'}<span style="display:flex;gap:8px"><button type="button" class="knopje" data-d="sluit">Annuleren</button><button type="button" class="knopje primair" data-d="ok">${rij ? 'Opslaan' : 'Toevoegen'}</button></span></div></div>`;
   };
@@ -820,7 +822,9 @@ function rijForm(soort, arg) {
     c.velden.forEach(([k]) => { if (!rij || f[k] !== (rij[k] || '')) r[k] = f[k]; });
     if (rij && Object.keys(r).length === 2) return dlg.close();
     if (!rij) r.status = soort === 'plek' ? 'actief' : '';
-    schrijf([{ op: 'rij_zet', tab: c.tab, rij: r }]); dlg.close();
+    const acts = [{ op: 'rij_zet', tab: c.tab, rij: r }];
+    if (nieuwPlant && f.plek) acts.push({ op: 'stand_zet', rij: { key: f.loc + '|' + id + '|+' + Date.now(), locatie: f.loc, plant: id, naam: '', plek: f.plek, status: f.status, aantal: '', notitie: '', nieuw: 'ja', via_regel: '', datum: vandaag() } });
+    schrijf(acts); dlg.close();
     melding(rij ? 'Opgeslagen' : (soort === 'plek' ? 'Plek' : 'Plant') + ' toegevoegd');
     if (!rij) ga(soort + '/' + f.loc + '/' + id);
   };
@@ -834,7 +838,7 @@ function rijForm(soort, arg) {
   dlg.onchange = null;
   dlg.onclick = ev => {
     const b = ev.target.closest('button'); if (!b) return;
-    if (b.dataset.rl != null) { lees(); f.loc = b.dataset.rl; return teken2(); }
+    if (b.dataset.rl != null) { lees(); if (f.loc !== b.dataset.rl) f.plek = ''; f.loc = b.dataset.rl; return teken2(); }
     const d = b.dataset.d;
     if (d === 'sluit') return dlg.close();
     if (d === 'ok') return opslaan();
