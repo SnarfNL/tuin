@@ -26,7 +26,7 @@ function doPost(e) {
     const ss = SpreadsheetApp.getActive();
     (b.acties || []).forEach(a => voerUit_(ss, a));
     SpreadsheetApp.flush();
-    return uit_({ ok: true, tijd: new Date().toISOString(), tabs: { Stand: waarden_(ss, 'Stand'), Voortgang: waarden_(ss, 'Voortgang'), Fotos: waarden_(ss, 'Fotos'), Regels: waarden_(ss, 'Regels'), Projecttaken: waarden_(ss, 'Projecttaken'), Plekken: waarden_(ss, 'Plekken'), Planten: waarden_(ss, 'Planten') } });
+    return uit_({ ok: true, tijd: new Date().toISOString(), tabs: { Stand: waarden_(ss, 'Stand'), Voortgang: waarden_(ss, 'Voortgang'), Fotos: waarden_(ss, 'Fotos'), Regels: waarden_(ss, 'Regels'), Projecttaken: waarden_(ss, 'Projecttaken'), Plekken: waarden_(ss, 'Plekken'), Planten: waarden_(ss, 'Planten'), Instellingen: waarden_(ss, 'Instellingen') } });
   } catch (x) {
     return uit_({ ok: false, fout: String(x) });
   } finally {
