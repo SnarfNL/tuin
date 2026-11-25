@@ -325,6 +325,21 @@ function beplanting(loc, j) {
   memo.set(k, uit);
   return uit;
 }
+// Plan voor een later jaar, alleen voor plekken die dit jaar leeg zijn: loc|plek -> { jaar, lijst }.
+function toekomst() {
+  if (memo.has('tk')) return memo.get('tk');
+  const uit = {}, bezet = new Set(), tot = Math.max(NUJ, ...D.Beplanting.map(b => +b.vanaf || 0)) + 2;
+  for (const e of beplanting('', NUJ)) if (e.status !== 'weg' && e.status !== 'vervallen') bezet.add(e.locatie + '|' + e.plek);
+  for (const s of D.Stand) if (s.status === 'gepland' || s.status === 'geplant') bezet.add(s.locatie + '|' + s.plek);
+  for (let j = NUJ + 1; j <= tot; j++) for (const e of beplanting('', j)) {
+    const k = e.locatie + '|' + e.plek;
+    if (e.status === 'weg' || e.status === 'vervallen' || bezet.has(k) || (uit[k] && uit[k].jaar < j)) continue;
+    (uit[k] = uit[k] || { jaar: j, lijst: [] }).lijst.push(Object.assign({}, e, { toekomst: j }));
+  }
+  memo.set('tk', uit);
+  return uit;
+}
+const toekomstLijst = () => Object.values(toekomst()).flatMap(x => x.lijst);
 function doelen(r, bep) {
   if (r.plekLijst.length) return r.plekLijst.map(p => ({ plek: p, plant: r.plant }));
   if (!r.plant) return D.plek[r.locatie + '|algemeen'] ? [{ plek: 'algemeen' }] : [];
@@ -521,7 +536,7 @@ function standHtml(e, metPlek, knoppen) {
   const rij = knoppen ? '<div class="kaart plantrij rijknoppen">' : `<div class="kaart plantrij" data-bewerk="${esc(e.key)}">`;
   return `${rij}<span class="dot ${esc(e.status)}"></span>${f.length ? mini(f, '') : ''}<div class="tk">
     <div class="naam">${esc(plantNaam(e.locatie, e.plant, e.naam))} ${e.aantal ? `<span class="sub">× ${esc(e.aantal)}</span>` : ''}</div>
-    <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(statusLabel(e.status))}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
+    <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${e.toekomst ? 'gepland voor ' + e.toekomst : esc(statusLabel(e.status))}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
   </div>${knoppen ? `<div class="rk">${knoppen(e)}</div>` : `<span class="bewerk">${svg(IC.pen, 16)}Bewerken</span>`}</div>`;
 }
 function schermPlekken() {
@@ -530,8 +545,8 @@ function schermPlekken() {
   return fab('plek', 'Plek') + locs().filter(l => !S.loc || l.id === S.loc).map(l => {
     const bep = beplanting(l.id, NUJ).filter(e => e.status !== 'weg');
     return `<h2>${esc(l.naam)}</h2><div class="raster">${D.Plekken.filter(p => p.locatie === l.id).map(p => {
-      const np = bep.filter(e => e.plek === p.id).length, nt = ts.filter(t => t.loc === l.id && t.plekken.includes(p.id)).length;
-      return `<div class="kaart plekkaart" data-ga="plek/${esc(l.id)}/${esc(p.id)}">${mini(fotosPlek(p), svg(IC[plekSoort(p)], 26, 1.8))}<div class="tk"><b>${esc(p.naam)}</b><div class="getal">${np} planten</div><div class="getal">${nt ? `<b style="color:var(--groen)">${nt} open</b> in ${MK[NUM - 1]}` : 'niets open'}</div>${p.thema ? `<div class="getal">${esc(p.thema)}</div>` : ''}</div></div>`;
+      const np = bep.filter(e => e.plek === p.id).length, tk = toekomst()[l.id + '|' + p.id], nt = ts.filter(t => t.loc === l.id && t.plekken.includes(p.id)).length;
+      return `<div class="kaart plekkaart" data-ga="plek/${esc(l.id)}/${esc(p.id)}">${mini(fotosPlek(p), svg(IC[plekSoort(p)], 26, 1.8))}<div class="tk"><b>${esc(p.naam)}</b><div class="getal">${np} planten${tk ? ` · ${tk.lijst.length} voor ${tk.jaar}` : ''}</div><div class="getal">${nt ? `<b style="color:var(--groen)">${nt} open</b> in ${MK[NUM - 1]}` : 'niets open'}</div>${p.thema ? `<div class="getal">${esc(p.thema)}</div>` : ''}</div></div>`;
     }).join('')}</div>`;
   }).join('');
 }
@@ -540,7 +555,7 @@ function schermPlek(loc, id) {
   if (!p) return '<p class="leeg">Plek niet gevonden.</p>';
   kop(`<div class="rij">${terug()}<span class="sub" style="flex:1;margin:0">${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)}</span>${bewerkKnop('plek', loc, id, true)}</div><h1 style="font-size:34px;margin:0 4px">${esc(p.naam)}</h1>`);
   const velden = [['Zon', p.zon], ['Thema', p.thema], ['Oppervlak', p.m2 && p.m2 + ' m²'], ['Maat', p.maat], ['Grond (plan)', p.grond], ['Grond (uitgevoerd)', p.grond_uitgevoerd], ['Mulch', p.mulch], ['Water per week', p.water_per_week]].filter(x => x[1]);
-  const bep = beplanting(loc, NUJ).filter(e => e.plek === id);
+  const bep = beplanting(loc, NUJ).filter(e => e.plek === id), tk = toekomst()[loc + '|' + id], geen = () => '';
   const ts = takenMaand(NUJ, NUM).filter(t => t.loc === loc && t.plekken.includes(id));
   let vlg = '–';
   for (let k = 1; k <= 12; k++) { const x = ym(NUJ, NUM) + k, j = Math.floor(x / 12), m = x % 12 + 1; if (takenMaand(j, m).some(t => t.soort === 'taak' && t.loc === loc && t.plekken.includes(id))) { vlg = MK[m - 1]; break; } }
@@ -550,6 +565,7 @@ function schermPlek(loc, id) {
     ${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
     <h2>Taken ${MN[NUM - 1]} <span class="tel">${ts.length}</span></h2><div class="lijst">${ts.map(taakHtml).join('') || '<p class="leeg">Geen taken.</p>'}</div>
     <h2>Staat nu ${NUJ}</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e)).join('')}</div>` : '<p class="leeg">Nog niets.</p>'}
+    ${tk ? `<h2>Gepland voor ${tk.jaar}</h2><div class="groep">${tk.lijst.map(e => standHtml(e, false, geen)).join('')}</div>` : ''}
     <p><button class="knopje rand" data-nieuw="${esc(loc + '|' + id)}">${svg(IC.plus, 18)}Plant toevoegen</button></p>
     ${velden.length ? `<h2>Gegevens</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
     ${p.plantplek_en_mest ? `<h2>Plantplek en mest</h2><div class="kaart">${p.plantplek_en_mest.split(' • ').map(x => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
@@ -564,10 +580,11 @@ const plantenBasis = () => { const z = S.zoek.toLowerCase(); return D.Planten.fi
 function plantenLijst() {
   const ps = S.psoort || [];
   return plantenBasis().filter(p => !ps.length || ps.includes(String(p.soort || '').toLowerCase())).sort((a, b) => a.nl.localeCompare(b.nl)).map(p => {
-    const bep = beplanting(p.locatie, NUJ).filter(e => e.plant === p.id && e.status !== 'weg');
+    let bep = beplanting(p.locatie, NUJ).filter(e => e.plant === p.id && e.status !== 'weg'), lab = '';
+    if (!bep.length) { bep = toekomstLijst().filter(e => e.locatie === p.locatie && e.plant === p.id); if (bep.length) lab = 'voor ' + Math.min(...bep.map(e => e.toekomst)); }
     const waar = [...new Set(bep.map(e => plekNaam(p.locatie, e.plek)))].join(', ');
-    const st = bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
-    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${soortTag(p.soort)} ${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${statusLabel(st)}</span>` : ''}</div></div>`;
+    const st = lab ? 'gepland' : bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
+    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${soortTag(p.soort)} ${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${lab ? 'gepland ' + lab : statusLabel(st)}</span>` : ''}</div></div>`;
   }).join('') || '<p class="leeg">Geen planten gevonden.</p>';
 }
 function schermPlant(loc, id) {
@@ -577,12 +594,13 @@ function schermPlant(loc, id) {
   const fotos = fotosPlant(p), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
   const velden = [['Hoogte', p.hoogte], ['Plantafstand', p.plantafstand], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
+  const tl = toekomstLijst().filter(e => (e.locatie === loc && e.plant === id) || e.plant === loc + ':' + id), geen = () => '';
   const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
   const knoppen = e => `<button class="knopje primair" data-bewerk="${esc(e.key)}">${svg(IC.pen, 16)}Plek bewerken</button>${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 16)}Verplaats naar tuin</button>` : ''}`;
   return `${fotoStrook('plant', loc, id, fotos)}
     <p>${soortTag(p.soort, true)} <i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
     ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
-    <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true, knoppen)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}<div class="chips" style="margin:8px 0 4px"><button class="chip plekplus" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.plus, 16)}Plek toevoegen</button></div>
+    <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true, knoppen)).join('')}</div>` : (tl.length ? '' : '<p class="leeg">Staat nergens in het plan.</p>')}${tl.length ? `<h2>Gepland voor later</h2><div class="groep">${tl.map(e => standHtml(e, true, geen)).join('')}</div>` : ''}<div class="chips" style="margin:8px 0 4px"><button class="chip plekplus" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.plus, 16)}Plek toevoegen</button></div>
     ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
     ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div>${p.bron_bloei ? `<div class="sub">${esc(p.bron_bloei)}</div>` : ''}</div>` : ''}
     ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
