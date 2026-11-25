@@ -107,6 +107,7 @@ dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;font
 .plantrij .naam{font-weight:600}.plantrij .lat{font-style:italic;color:var(--zacht);font-size:13px}
 .dot{flex:none;width:10px;height:10px;border-radius:5px;background:var(--groen)}.dot.gepland{background:none;border:2px solid var(--geeltekst)}.dot.weg{background:var(--rand)}
 .bewerk{display:inline-flex;align-items:center;gap:4px;color:var(--groen);font-size:13px;font-weight:600}
+.soort{display:inline-block;font-size:12px;border-radius:6px;padding:1px 7px;background:var(--vlak);color:var(--tekst2);white-space:nowrap}
 .status{font-size:12px;font-weight:600;border-radius:6px;padding:1px 7px;background:var(--groen2);color:var(--groentekst)}
 .status.gepland{background:var(--geel);color:var(--geeltekst)}.status.weg{background:var(--vlak);color:var(--zacht);text-decoration:line-through}
 .sier{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:6px 0;font-size:10px;text-align:center}
@@ -196,7 +197,7 @@ const ymTekst = s => { const m = /^(\d{4})-(\d{1,2})/.exec(s || ''); return m ? 
 
 let D = null, laadtijd = '', bezig = false, memo = new Map();
 let wachtrij = opslag.get('wachtrij', []);
-const S = Object.assign({ jaar: NUJ, maand: NUM, loc: '', plek: '', actie: '', zoek: '', ploc: '', tzoek: '' }, opslag.get('filters', {}));
+const S = Object.assign({ jaar: NUJ, maand: NUM, loc: '', plek: '', actie: '', zoek: '', ploc: '', tzoek: '', psoort: [] }, opslag.get('filters', {}));
 if (opslag.get('filterdag', '') !== vandaag()) { S.jaar = NUJ; S.maand = NUM; }
 let route = ['taken'];
 
@@ -432,6 +433,12 @@ function chips(waarden, huidig, attr, rol) {
 function seg(waarden, huidig, attr) {
   return `<div class="seg" role="group">${waarden.map(([w, l]) => `<button class="${huidig === w ? 'aan' : ''}" data-${attr}="${esc(w)}" aria-pressed="${huidig === w}">${esc(l)}</button>`).join('')}</div>`;
 }
+const cap = s => s ? s[0].toUpperCase() + s.slice(1) : '';
+function soorten() {
+  return [['Sier', 'soorten_sier'], ['Eetbaar', 'soorten_eetbaar']].map(([g, k]) => ({ groep: g, lijst: String(D.inst[k] || '').split(';').map(x => x.trim()).filter(Boolean).map(x => { const i = x.indexOf(' '), e = x.slice(0, i), n = x.slice(i + 1).trim(); return /\p{L}/u.test(e) ? { emoji: '', naam: x.toLowerCase(), groep: g } : { emoji: e, naam: n.toLowerCase(), groep: g }; }) }));
+}
+const soortInfo = s => soorten().flatMap(g => g.lijst).find(x => x.naam === String(s || '').toLowerCase());
+const soortTag = (s, metGroep) => { if (!s) return ''; const i = soortInfo(s); return `<span class="soort">${i && i.emoji ? i.emoji + ' ' : ''}${metGroep && i ? i.groep + ' · ' : ''}${esc(cap(s))}</span>`; };
 const locSeg = () => seg([['', 'Alles'], ...locs().map(l => [l.id, l.naam])], S.loc, 'loc');
 function filterbalk(metActie) {
   const n = (S.plek ? 1 : 0) + (metActie && S.actie ? 1 : 0), a = D.actie[S.actie];
@@ -448,6 +455,14 @@ function filterSheet() {
     ${lo ? `<div class="stap"><div>2 · ${esc(lo.plekwoord || 'Plek')}</div>${chips([['', 'Alle'], ...D.Plekken.filter(p => p.locatie === S.loc).map(p => [p.id, p.naam])], S.plek, 'plek')}</div>` : ''}
     <div class="stap"><div>${lo ? 3 : 2} · Actie <span style="font-weight:400">· taken in ${MN[S.maand - 1]}</span></div><div class="acties">${D.Acties.map(a => { const k = tel(a.id); return `<button class="${S.actie === a.id ? 'aan' : ''} ${k ? '' : 'nul'}" data-actie="${S.actie === a.id ? '' : esc(a.id)}" aria-pressed="${S.actie === a.id}"><i style="background:${esc(a.kleur_achtergrond)};box-shadow:inset 0 0 0 1.5px ${esc(a.kleur_tekst)}"></i><b>${esc(a.label)}</b><small>${k}</small></button>`; }).join('')}</div></div>
     <button class="knopje primair" style="min-height:52px;font-size:16px" data-sluitfilter>Toon ${n} ${n === 1 ? 'taak' : 'taken'}</button>`;
+}
+function plantFilterSheet() {
+  const ps = S.psoort || [], basis = plantenBasis(), tel = s => basis.filter(p => String(p.soort || '').toLowerCase() === s).length;
+  const n = basis.filter(p => !ps.length || ps.includes(String(p.soort || '').toLowerCase())).length;
+  return `<div class="greep"></div>
+    <div class="rij" style="display:flex;align-items:center"><h3 style="flex:1;margin:0">Filter op soort</h3><button class="knopje" style="border:0;border-radius:22px;background:var(--geel);color:var(--geeltekst);font-weight:600" data-pwis>Wissen</button></div>
+    ${soorten().map(g => { const l = g.lijst.filter(x => tel(x.naam) || ps.includes(x.naam)); return l.length ? `<div class="stap"><div>${g.groep}</div><div class="chips">${l.map(x => { const aan = ps.includes(x.naam); return `<button class="chip ${aan ? 'aan' : ''}" data-psoort="${esc(x.naam)}" aria-pressed="${aan}">${x.emoji} ${esc(cap(x.naam))} <small>${tel(x.naam)}</small></button>`; }).join('')}</div></div>` : ''; }).join('')}
+    <button class="knopje primair" style="min-height:52px;font-size:16px" data-sluitfilter>Toon ${n} ${n === 1 ? 'plant' : 'planten'}</button>`;
 }
 function groepen(ts) {
   const volg = ['begin', 'midden', 'eind', 'hele'], naam = { begin: 'Begin', midden: 'Midden', eind: 'Eind', hele: 'Hele maand' };
@@ -538,16 +553,19 @@ function schermPlek(loc, id) {
     ${p.plantplek_en_mest ? `<h2>Plantplek en mest</h2><div class="kaart">${p.plantplek_en_mest.split(' • ').map(x => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
 }
 function schermPlanten() {
-  kop(`<div class="rij"><h1>Planten</h1></div><div class="rij">${locSeg()}</div>` + `<input class="zoek" type="search" placeholder="Zoek op naam" value="${esc(S.zoek)}" id="zoek">`);
+  const ps = S.psoort || [];
+  kop(`<div class="rij"><h1>Planten</h1></div><div class="rij">${locSeg()}<button class="filterknop" data-filters aria-label="Filter op soort${ps.length ? ', ' + ps.length + ' actief' : ''}">${svg(IC.filter, 20)}${ps.length ? '<span class="stip"></span>' : ''}</button></div>` + `<input class="zoek" type="search" placeholder="Zoek op naam" value="${esc(S.zoek)}" id="zoek">`
+    + (ps.length ? `<div class="chips">${ps.map(s => `<button class="chip klein aan" data-psoort="${esc(s)}" aria-label="Filter ${esc(s)} wissen">${esc(cap(s))} ${svg(IC.x, 14, 2.5)}</button>`).join('')}</div>` : ''));
   return `<div class="lijst" id="plantlijst">${plantenLijst()}</div>` + fab('plant', 'Plant');
 }
+const plantenBasis = () => { const z = S.zoek.toLowerCase(); return D.Planten.filter(p => (!S.loc || p.locatie === S.loc) && (!z || (p.nl + ' ' + p.latijn).toLowerCase().includes(z))); };
 function plantenLijst() {
-  const z = S.zoek.toLowerCase();
-  return D.Planten.filter(p => (!S.loc || p.locatie === S.loc) && (!z || (p.nl + ' ' + p.latijn).toLowerCase().includes(z))).sort((a, b) => a.nl.localeCompare(b.nl)).map(p => {
+  const ps = S.psoort || [];
+  return plantenBasis().filter(p => !ps.length || ps.includes(String(p.soort || '').toLowerCase())).sort((a, b) => a.nl.localeCompare(b.nl)).map(p => {
     const bep = beplanting(p.locatie, NUJ).filter(e => e.plant === p.id && e.status !== 'weg');
     const waar = [...new Set(bep.map(e => plekNaam(p.locatie, e.plek)))].join(', ');
     const st = bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
-    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${statusLabel(st)}</span>` : ''}</div></div>`;
+    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${soortTag(p.soort)}${waar ? '<br>' : ''}${esc(waar)}${st ? `<br><span class="status ${st}">${statusLabel(st)}</span>` : ''}</div></div>`;
   }).join('') || '<p class="leeg">Geen planten gevonden.</p>';
 }
 function schermPlant(loc, id) {
@@ -555,12 +573,12 @@ function schermPlant(loc, id) {
   if (!p) return '<p class="leeg">Plant niet gevonden.</p>';
   kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1>${bewerkKnop('plant', loc, id)}</div>`);
   const fotos = fotosPlant(p), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
-  const velden = [['Soort', p.soort], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Hoogte', p.hoogte], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantafstand', p.plantafstand], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
+  const velden = [['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Hoogte', p.hoogte], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantafstand', p.plantafstand], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
   const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
   return `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
     ${fotoStrook('plant', loc, id, fotos)}
-    <p><i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
+    <p>${soortTag(p.soort, true)} <i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
     ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
     ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div><div class="sub">${[...new Set(p.sierwaarde)].filter(c => SIER[c] && c !== '-').map(c => `<span class="mini" style="background:${SIER[c][0]}">${SIER[c][1]}</span>`).join('')} ${esc(p.bron_bloei)}</div></div>` : ''}
     <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}
@@ -763,7 +781,7 @@ function taakForm(t) {
 /* ---------- plek of plant toevoegen of bewerken ---------- */
 const VELDEN = {
   plek: { tab: 'Plekken', naam: 'naam', velden: [['naam', 'Naam'], ['type', 'Soort plek', 'lijst'], ['beschrijving', 'Beschrijving', 'lang'], ['zon', 'Zon'], ['maat', 'Maat'], ['m2', 'Oppervlak (m²)'], ['grond', 'Grond'], ['mulch', 'Mulch'], ['water_per_week', 'Water per week'], ['thema', 'Thema']] },
-  plant: { tab: 'Planten', naam: 'nl', velden: [['nl', 'Naam'], ['latijn', 'Latijnse naam'], ['emoji', 'Emoji'], ['soort', 'Soort', 'lijst'], ['levensduur', 'Levensduur', 'lijst'], ['familie', 'Familie'], ['hoogte', 'Hoogte'], ['bloei', 'Bloei'], ['plantafstand', 'Plantafstand'], ['plantmoment', 'Plantmoment'], ['beschrijving', 'Beschrijving', 'lang'], ['tip', 'Tip', 'lang'], ['onderhoud', 'Onderhoud', 'lang'], ['link_url', 'Link naar meer informatie']] }
+  plant: { tab: 'Planten', naam: 'nl', velden: [['nl', 'Naam'], ['latijn', 'Latijnse naam'], ['emoji', 'Emoji'], ['soort', 'Soort', 'soort'], ['levensduur', 'Levensduur', 'lijst'], ['familie', 'Familie'], ['hoogte', 'Hoogte'], ['bloei', 'Bloei'], ['plantafstand', 'Plantafstand'], ['plantmoment', 'Plantmoment'], ['beschrijving', 'Beschrijving', 'lang'], ['tip', 'Tip', 'lang'], ['onderhoud', 'Onderhoud', 'lang'], ['link_url', 'Link naar meer informatie']] }
 };
 const slug = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'nieuw';
 function rijForm(soort, arg) {
@@ -776,7 +794,7 @@ function rijForm(soort, arg) {
   const teken2 = () => {
     dlg.innerHTML = `<div class="taakform"><h3>${rij ? esc(rij[c.naam] || '') + ' bewerken' : 'Nieuwe ' + woord}</h3>
       ${rij ? `<div class="sub">${esc((D.Locaties.find(l => l.id === f.loc) || {}).naam || f.loc)}</div>` : `<label>Waar</label><div class="seg" role="group" aria-label="Locatie">${locs().map(l => `<button type="button" class="${f.loc === l.id ? 'aan' : ''}" data-rl="${esc(l.id)}" aria-pressed="${f.loc === l.id}">${esc(l.naam)}</button>`).join('')}</div>`}
-      ${c.velden.map(([k, lab, t]) => `<label for="v-${k}">${lab}</label>${t === 'lang' ? `<textarea id="v-${k}" rows="2">${esc(f[k])}</textarea>` : `<input id="v-${k}" value="${esc(f[k])}"${t === 'lijst' ? ` list="l-${k}"` : ''}>${t === 'lijst' ? `<datalist id="l-${k}">${[...new Set(alle.map(x => x[k]).filter(Boolean))].sort().map(v => `<option value="${esc(v)}">`).join('')}</datalist>` : ''}`}`).join('')}
+      ${c.velden.map(([k, lab, t]) => `<label for="v-${k}">${lab}</label>${t === 'soort' ? `<select id="v-${k}"><option value="">Kies een soort</option>${soorten().map(g => `<optgroup label="${g.groep}">${g.lijst.map(x => `<option value="${esc(x.naam)}"${x.naam === String(f[k]).toLowerCase() ? ' selected' : ''}>${x.emoji} ${esc(cap(x.naam))}</option>`).join('')}</optgroup>`).join('')}${f[k] && !soortInfo(f[k]) ? `<option value="${esc(f[k])}" selected>${esc(f[k])}</option>` : ''}</select>` : t === 'lang' ? `<textarea id="v-${k}" rows="2">${esc(f[k])}</textarea>` : `<input id="v-${k}" value="${esc(f[k])}"${t === 'lijst' ? ` list="l-${k}"` : ''}>${t === 'lijst' ? `<datalist id="l-${k}">${[...new Set(alle.map(x => x[k]).filter(Boolean))].sort().map(v => `<option value="${esc(v)}">`).join('')}</datalist>` : ''}`}`).join('')}
       <div class="knoppen">${rij ? '<button type="button" class="knopje vervallen" data-d="weg">Vervallen</button>' : '<span></span>'}<span style="display:flex;gap:8px"><button type="button" class="knopje" data-d="sluit">Annuleren</button><button type="button" class="knopje primair" data-d="ok">${rij ? 'Opslaan' : 'Toevoegen'}</button></span></div></div>`;
   };
   const opslaan = () => {
@@ -858,7 +876,7 @@ const ZON = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4
 function themaKeuze() { const t = document.documentElement.dataset.thema || ''; return `<div class="seg" role="group" aria-label="Weergave">${[['', 'Automatisch'], ['licht', svg(ZON, 16, 2) + ' Licht'], ['donker', svg(MAAN, 16, 2) + ' Donker']].map(([k, l]) => `<button class="${t === k ? 'aan' : ''}" data-modus="${k}" aria-pressed="${t === k}" style="display:inline-flex;align-items:center;justify-content:center;gap:6px">${l}</button>`).join('')}</div>`; }
 function teken() {
   route = (decodeURIComponent(location.hash.slice(1)) || 'taken').split('/');
-  opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie }); opslag.set('filterdag', vandaag());
+  opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie, psoort: S.psoort }); opslag.set('filterdag', vandaag());
   const hoofd = { taken: 'taken', plekken: 'plekken', plek: 'plekken', planten: 'planten', plant: 'planten', jaar: 'jaar', info: 'meer', instellingen: 'meer' }[route[0]] || 'taken';
   $('#nav').innerHTML = [['taken', 'Taken'], ['planten', 'Planten'], ['plekken', 'Plekken'], ['jaar', 'Jaar'], ['info', 'Meer']].map(([h, l]) => { const aan = hoofd === h || (h === 'info' && hoofd === 'meer'); return `<a href="#${h}" class="${aan ? 'aan' : ''}"${aan ? ' aria-current="page"' : ''}><span>${svg(IC[h === 'info' ? 'meer' : h], 22, h === 'info' ? 3 : 1.8)}</span>${l}</a>`; }).join('');
   if (!D) { if (route[0] === 'instellingen') { kop('<div class="rij"><h1>Instellingen</h1></div>'); $('#app').innerHTML = schermInstellingen(); } return; }
@@ -866,13 +884,13 @@ function teken() {
   TK = [];
   const f = { taken: schermTaken, plekken: schermPlekken, plek: () => schermPlek(route[1], route[2]), planten: schermPlanten, plant: () => schermPlant(route[1], route[2]), jaar: schermJaar, info: schermMeer, instellingen: schermMeer }[route[0]] || schermTaken;
   $('#app').innerHTML = f();
-  const fs = $('#filters'); if (fs.open) fs.innerHTML = filterSheet();
+  const fs = $('#filters'); if (fs.open) fs.innerHTML = route[0] === 'planten' ? plantFilterSheet() : filterSheet();
   $('#tc').content = getComputedStyle(document.documentElement).getPropertyValue(hoofd === 'taken' ? '--kop' : '--bg').trim();
 }
 addEventListener('hashchange', () => { teken(); scrollTo(0, 0); });
 document.addEventListener('click', ev => {
   if (ev.target.id === 'filters') { const r = ev.target.getBoundingClientRect(); if (ev.clientY < r.top || ev.clientY > r.bottom || ev.clientX < r.left || ev.clientX > r.right) return ev.target.close(); }
-  const el = ev.target.closest('[data-modus],[data-verplaats],[data-taak],[data-nieuwtaak],[data-nieuwplek],[data-nieuwplant],[data-bewerkplek],[data-bewerkplant],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
+  const el = ev.target.closest('[data-modus],[data-verplaats],[data-taak],[data-nieuwtaak],[data-nieuwplek],[data-nieuwplant],[data-bewerkplek],[data-bewerkplant],[data-fotoweg],[data-fotoplus],[data-filters],[data-psoort],[data-pwis],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
   if (!el || el.closest('#dlg')) return;
   const d = el.dataset;
   if (d.modus != null) { if (d.modus) document.documentElement.dataset.thema = d.modus; else delete document.documentElement.dataset.thema; opslag.set('thema', d.modus); return teken(); }
@@ -885,7 +903,9 @@ document.addEventListener('click', ev => {
   if (d.bewerkplant != null) return rijForm('plant', d.bewerkplant);
   if (d.fotoweg != null) { const [soort, loc, id, i] = d.fotoweg.split('|'); return fotoWeg(soort, loc, id, +i); }
   if (d.fotoplus != null) { const [soort, loc, id] = d.fotoplus.split('|'); return fotoPlus(soort, loc, id); }
-  if (d.filters != null) { const fs = $('#filters'); fs.innerHTML = filterSheet(); return fs.showModal(); }
+  if (d.filters != null) { const fs = $('#filters'); fs.innerHTML = route[0] === 'planten' ? plantFilterSheet() : filterSheet(); return fs.showModal(); }
+  if (d.psoort != null) { const ps = S.psoort || []; S.psoort = ps.includes(d.psoort) ? ps.filter(x => x !== d.psoort) : [...ps, d.psoort]; return teken(); }
+  if (d.pwis != null) { S.psoort = []; return teken(); }
   if (d.sluitfilter != null) return $('#filters').close();
   if (d.wisfilter != null) { S.loc = ''; S.plek = ''; S.actie = ''; }
   if (d.vink != null) return vink(TK[+d.vink]);

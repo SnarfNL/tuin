@@ -33,6 +33,7 @@ Bron van waarheid: de Google Sheet "Tuinapp". De app (`index.html`) leest en sch
 
 **Planten**
 - Altijd: `id`, `nl`, `latijn`, `soort`
+- `soort`: een waarde uit `Instellingen.soorten_sier` of `soorten_eetbaar` (bijv. `vaste plant`, `kruid`, `kool`); de app filtert en groepeert hierop (Sier, Eetbaar)
 - `levensduur`:
   - `zaaien`: eenjarig of tweejarig, elk jaar zaaien
   - `kort`: kortlevend
