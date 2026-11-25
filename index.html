@@ -516,12 +516,12 @@ function zoekTaken() {
   const f = S.loc || S.plek || S.actie ? ', binnen de filters' : '';
   return `<p class="sub" style="margin:12px 0 0">${n} ${n === 1 ? 'taak' : 'taken'} in ${S.jaar}${f}</p>` + (h || '<p class="leeg">Geen taken gevonden.</p>');
 }
-function standHtml(e, metPlek) {
+function standHtml(e, metPlek, zonderLink) {
   const pl = D.plant[e.locatie + '|' + e.plant] || {}, f = fotosVan('plant', e.locatie, e.plant, pl.fotos);
   return `<div class="kaart plantrij" data-bewerk="${esc(e.key)}"><span class="dot ${esc(e.status)}"></span>${f.length ? mini(f, '') : ''}<div class="tk">
     <div class="naam">${esc(plantNaam(e.locatie, e.plant, e.naam))} ${e.aantal ? `<span class="sub">× ${esc(e.aantal)}</span>` : ''}</div>
     <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(statusLabel(e.status))}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
-  </div><span class="bewerk">${svg(IC.pen, 16)}Bewerken</span></div>`;
+  </div>${zonderLink ? '' : `<span class="bewerk">${svg(IC.pen, 16)}Bewerken</span>`}</div>`;
 }
 function schermPlekken() {
   kop(`<div class="rij"><h1>Plekken</h1></div><div class="rij">${locSeg()}</div>`);
@@ -577,11 +577,11 @@ function schermPlant(loc, id) {
   const velden = [['Hoogte', p.hoogte], ['Plantafstand', p.plantafstand], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
   const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
-  return `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
-    ${fotoStrook('plant', loc, id, fotos)}
+  const knoppen = `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>`;
+  return `${fotoStrook('plant', loc, id, fotos)}
     <p>${soortTag(p.soort, true)} <i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
     ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
-    <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}
+    <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}${knoppen}
     ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
     ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div>${p.bron_bloei ? `<div class="sub">${esc(p.bron_bloei)}</div>` : ''}</div>` : ''}
     ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
