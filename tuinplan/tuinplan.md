@@ -6,6 +6,8 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **Bijgewerkt 25 november 2026:** de bollen gaan naar najaar 2027 (het vriest al, te laat voor 2026); de druif staat niet in onze tuin maar groeit van het erf van de buren door de schutting; de kabelbuis vervalt (er ligt al een elektrakabel naar het terras bij de kas); de waterhardheid is bekend (7,7 °dH, zacht); de keuze welke soorten in de volle zones komen, maken de eigenaars zelf bij het kopen van de planten.
 
+**Vervallen (25 november 2026):** de klimroos *Rosa* 'New Dawn' (zone B) en het vergeet-mij-nietje (*Myosotis*, zone D) zijn uit het plan gehaald; in de Sheet staan ze op vervallen. De bermzegge (*Carex divulsa*) staat nu nergens gepland, maar krijgt waarschijnlijk nog een plek. De plantenlijst telt nu 48 soorten. De plantplek en mest per zone zijn hierop bijgewerkt.
+
 **Levensduur:** ⏳ = verwachte levensduur korter dan 3 jaar (eenjarig of tweejarig; blijft in het plan, zaait zich meestal uit of moet worden herzaaid) · ⏱ = kortlevend, ongeveer 2–4 jaar (grensgeval; op klei vaak korter, vervang of deel tijdig). Besluit 18 oktober 2026: de ⏳-soorten in zone D (Centaurea en de tweejarigen) blijven; eenjarigen worden herzaaid en tweejarigen mogen uitzaaien. De ⏱-soorten blijven ook; in jaar 3–4 worden ze gecontroleerd en zo nodig gedeeld of bijgeplant.
 
 **Bollen en vlinderplanten (besloten 14 november 2026):** voor kleur in de vroege lente komen er bollen in de zones A, B, C en D: sneeuwklokje, boerenkrokus, krokus 'Cream Beauty', kievitsbloem, wilde narcis, Oosterse sterhyacint en druifhyacint (de druifhyacint komt terug van de reservelijst). In zone S komt de bosaster (*Aster divaricatus*) voor witte herfstbloei. Als vlinderplanten komen er 3 stuks *Liatris spicata* in zone C (2 'Floristan Violett' en 1 'Floristan Weiß') en 1 aster 'Purple Dome' in zone B. De aantallen bollen per zone staan onder *Bollen per zone*; het zijn eigen schattingen. De bollen gaan in najaar 2027 de grond in (besloten 25 november 2026: voor 2026 te laat door de vorst). Niet gekozen: narcis 'Tête-à-tête' en de paddenlelie (geen Nederlandse bron over bijenwaarde gevonden) en de wilde marjolein (de liatris is ervoor in de plaats gekomen). De plantenlijst telt nu 50 soorten, de reservelijst 16.
@@ -14,9 +16,9 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **Vervallen soorten (besloten 14 november 2026):** *Phacelia tanacetifolia* (bijenvoer, zone D), *Anemone japonica* (Japanse anemoon, zone A) en *Campsis radicans* (trompetbloem, zone C) zijn uit het plan gehaald, zonder reserveplek. *Allium hollandicum* (sierui, zone B) blijft. De plantenlijst telde daarna 40 soorten.
 
-**Tuinkas:** de glazen achthoek op de plattegrond is een tuinkas en blijft staan (besloten 18 oktober 2026). Het houten frame vervalt. De tuinkas hoort bij de achtertuin en dus bij dit plan. Planten die in de tuinkas worden opgekweekt of staan, mogen wel naar de moestuin worden verplaatst (besloten 24 november 2026). Wat er daarna in de moestuin met die planten gebeurt, valt onder het moestuinplan.
+**Tuinkas:** de glazen achthoek op de plattegrond is een tuinkas en blijft staan (besloten 18 oktober 2026). Het houten frame vervalt. De tuinkas hoort bij de achtertuin en dus bij dit plan. Planten die in de tuinkas worden opgekweekt of staan, mogen wel naar de moestuin worden verplaatst (besloten 24 november 2026). Wat er daarna in de moestuin met die planten gebeurt, valt onder het moestuinplan. De planten in de tuinkas komen in potten, niet in de volle grond (besloten 25 november 2026); er is nog geen teeltplanning.
 
-**Grassen:** alle grassen blijven maximaal 60 cm hoog, inclusief pluimen (besloten 18 oktober 2026). In D komt *Pennisetum alopecuroides* 'Little Bunny' (±40–45 cm); in A en B *Carex divulsa* (bermzegge). *Stipa* en *Stipa gigantea* vervallen (zie de reservelijst). *Briza media* (hartjesgras) is definitief vervallen (besloten 22 oktober 2026) en komt niet op de reservelijst.
+**Grassen:** alle grassen blijven maximaal 60 cm hoog, inclusief pluimen (besloten 18 oktober 2026). In D komt *Pennisetum alopecuroides* 'Little Bunny' (±40–45 cm); de bermzegge (*Carex divulsa*, stond in A en B) krijgt waarschijnlijk nog een plek; welke plek is nog te kiezen (25 november 2026). *Stipa* en *Stipa gigantea* vervallen (zie de reservelijst). *Briza media* (hartjesgras) is definitief vervallen (besloten 22 oktober 2026) en komt niet op de reservelijst.
 
 **Zonlicht:** volle zon = ongeveer 6 uur of meer directe zon per dag in het groeiseizoen; halfschaduw (in dit plan ook "half-zon") = ongeveer 3–6 uur, vaak ochtend- of avondzon of gefilterd licht; schaduw = minder dan ongeveer 3 uur. Aanname 18 oktober 2026: alleen de tuinkas en zone D hebben meer dan 6 uur zon. De zones A, B en C zitten dan op 3–6 uur (halfschaduw) en zone S op minder dan 3 uur (schaduw, bevestigd 18 oktober). Zone C is daarom aangepast van volle zon naar halfschaduw. De uren moeten in het groeiseizoen worden gemeten.
 
@@ -57,7 +59,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 | 🌱 Lente | Aquilegia vulgaris ⏱, Heuchera (blad), Fritillaria meleagris (kievitsbloem, apr–mei), 🌳 Cornus florida (boom: schutbladeren) |
 | ☀️ Zomer | Heuchera (blad + bloei), Astrantia major 'Rubra' of 'Sparkling Stars Red', Geranium 'Rozanne', Digitalis purpurea ⏳, 🌳 Cornus florida (boom: blad) |
 | 🍂 Herfst | Liriope muscari (leliegras), Heuchera (blad), 🌳 Cornus florida (boom: herfstkleur + bessen) |
-| ❄️ Winter | Helleborus orientalis (enkelbloemig), Galanthus nivalis (sneeuwklokje, feb–mrt), Crocus tommasinianus (boerenkrokus, feb–mrt), Heuchera (groenblijvend), Carex divulsa (siergras), Liriope muscari (groenblijvend), 🌳 Cornus florida (boom: etagevertakking) |
+| ❄️ Winter | Helleborus orientalis (enkelbloemig), Galanthus nivalis (sneeuwklokje, feb–mrt), Crocus tommasinianus (boerenkrokus, feb–mrt), Heuchera (groenblijvend), Liriope muscari (groenblijvend), 🌳 Cornus florida (boom: etagevertakking) |
 
 **🌳 Boom:** *Cornus florida 'Rubra'* (Amerikaanse kornoelje), struikvorm (Directplant, geen halfstam).
 
@@ -77,11 +79,11 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 | Seizoen | Planten |
 |---|---|
 | 🌱 Lente | Lunaria annua (judaspenning) ⏳, Allium hollandicum, Narcissus pseudonarcissus (wilde narcis, mrt–apr) |
-| ☀️ Zomer | Geranium 'Rozanne', Nepeta 'Six Hills Giant', ↑ Rosa 'New Dawn' (klimroos), ↑ Lonicera periclymenum, ↑ Trachelospermum |
+| ☀️ Zomer | Geranium 'Rozanne', Nepeta 'Six Hills Giant', ↑ Lonicera periclymenum, ↑ Trachelospermum |
 | 🍂 Herfst | Rudbeckia fulgida, Aster 'Purple Dome' (aug–okt) |
-| ❄️ Winter | Helleborus orientalis (enkelbloemig), Crocus tommasinianus (boerenkrokus, feb–mrt), Crocus chrysanthus 'Cream Beauty' (feb–mrt), Carex divulsa (siergras), ↑ Trachelospermum (groen) |
+| ❄️ Winter | Helleborus orientalis (enkelbloemig), Crocus tommasinianus (boerenkrokus, feb–mrt), Crocus chrysanthus 'Cream Beauty' (feb–mrt), ↑ Trachelospermum (groen) |
 
-**🌿 Klimplanten muur:** Rosa 'New Dawn', Lonicera periclymenum, Trachelospermum jasminoides (geurig, semi-evergreen; tegen de beschutte woningmuur).
+**🌿 Klimplanten muur:** Lonicera periclymenum, Trachelospermum jasminoides (geurig, semi-evergreen; tegen de beschutte woningmuur).
 
 **📍 Plantplek en mest zone B** (bijgewerkt 25 november 2026; per soort ook in de Sheet, kolom *grondwens*):
 - **Mest:** zone B is de **enige zone waar organische mest mag**; de muurgrond is droog en arm. Het geplande mengsel (met 10% organische mest) is niet uitgevoerd: B is gevuld met oude tuingrond. Daarom alleen wat organische mest in het plantgat van de kamperfoelie, en verder compost als mulchlaag (december en feb–mrt).
@@ -124,7 +126,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 | Seizoen | Planten |
 |---|---|
-| 🌱 Lente | Muscari armeniacum (druifhyacint, apr–mei), Centaurea cyanus (korenbloem) ⏳, Myosotis (vergeet-mij-niet) ⏳ |
+| 🌱 Lente | Muscari armeniacum (druifhyacint, apr–mei), Centaurea cyanus (korenbloem) ⏳ |
 | ☀️ Zomer | Lavandula angustifolia, Knautia macedonica ⏱, Echium vulgare ⏳, Agastache ⏱ |
 | 🍂 Herfst | Verbena bonariensis ⏱, ↑ Vitis vinifera (druiven; groeit van het erf van de buren door de schutting), Pennisetum alopecuroides 'Little Bunny' (pluimen) |
 | ❄️ Winter | Crocus tommasinianus (boerenkrokus, feb–mrt), Crocus chrysanthus 'Cream Beauty' (feb–mrt), Pennisetum (siergras), ↑ Vitis vinifera (kale ranken) |
@@ -237,7 +239,6 @@ Bronnen: [Cropaia – How to lower soil pH](https://cropaia.com/blog/how-to-lowe
 | Kamperfoelie | Lonicera periclymenum | B | Geurig, klimplant; vooral bezocht door hommels en nachtvlinders | 1 | 4 (e) | Bijen: Imkerpedia N1/P0 (vooral hommels en nachtvlinders, eigen kennis). Vogels: lijst klimplanten Vogelbescherming; bessen | – | [Wikipedia](https://nl.wikipedia.org/wiki/Gewone_kamperfoelie) |
 | Klimhortensia | Hydrangea anomala petiolaris | S | Bloeit zelfs in diepe schaduw, zelfhechtend | 3 | 3 (e) | Bijen: Imkerpedia N3/P3. Vogels: lijst klimplanten Vogelbescherming | – | [Wikipedia](https://en.wikipedia.org/wiki/Hydrangea_anomala) |
 | Sterjasmijn | Trachelospermum jasminoides | B | Geurig, semi-evergreen, warmste muurpositie | 3 (e) | 2 (e) | Bijen: niet in Imkerpedia; Ebben noemt bijen. Vogels: groenblijvende dekking | – | [Wikipedia](https://en.wikipedia.org/wiki/Trachelospermum_jasminoides) |
-| Klimroos | Rosa 'New Dawn' | B | Lichtroze, herhaalbloeiend, geurig | 2 (e) | 2 (e) | Bijen: niet in Imkerpedia; halfgevulde bloem; Belle Epoque zet hem bij rozen voor bijen. Vogels: Vogelbescherming noemt alleen ramblerrozen | – | [Wikipedia](https://en.wikipedia.org/wiki/Rosa_%27New_Dawn%27) |
 | Druif | Vitis vinifera | D | Klimmer van de buren die door de schutting groeit (staat niet in onze tuin): sierlijk blad en druiven in de herfst | 2 | 4 (e) | Bijen: Imkerpedia N2/P2. Vogels: Ebben (vogels, druiven) | – | [Wikipedia](https://en.wikipedia.org/wiki/Vitis_vinifera) |
 | Clematis | Clematis 'Ville de Lyon' | C | Klimmer met karmijnrode bloemen, bloeit laat in de zomer | 1 (e) | 1 (e) | Bijen: niet in Imkerpedia; Clematis-soorten daar N0/P1–4 (vooral stuifmeel) | – | [Wikipedia](https://en.wikipedia.org/wiki/Clematis) |
 | Klimop | Hedera helix | S | Groenblijvende muurklimmer, nestplaats voor vogels; de late bloei is voedsel voor insecten | 5 | 5 (e) | Bijen: Imkerpedia N5/P5. Vogels: Ebben (vogels, bessen) en lijst klimplanten Vogelbescherming; nestplaats | – | [Wikipedia](https://en.wikipedia.org/wiki/Hedera_helix) |
@@ -253,8 +254,7 @@ Bronnen: [Cropaia – How to lower soil pH](https://cropaia.com/blog/how-to-lowe
 | Longkruid | Pulmonaria officinalis | S | Vroege roze-blauwe bloemen, gevlekt blad, houdt van schaduw | 1 | 1 (e) | Bijen: Imkerpedia N1/P1 (honingbij; vroege hommels en sachembijen, eigen kennis) | – | [Wikipedia](https://en.wikipedia.org/wiki/Pulmonaria_officinalis) |
 | Ooievaarsbek | Geranium 'Rozanne' | A, B | Blauwpaarse bloemen van juni tot de vorst | 3 (e) | 1 (e) | Bijen: niet in Imkerpedia (andere Geranium-soorten vaak N3/P3); Ebben noemt bijen | – | [Wikipedia](https://en.wikipedia.org/wiki/Geranium_%27Rozanne%27) |
 | Vingerhoedskruid | Digitalis purpurea | A | Hoge bloemtorens in de zomer, tweejarig, zaait zichzelf uit | 2 (e) | 3 (e) | Bijen: niet in Imkerpedia; Radar/FLORON: populair bij hommels. Vogels: lijst vaste planten Vogelbescherming | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Digitalis_purpurea) |
-| Bermzegge | Carex divulsa | A, B | Inheemse, groenblijvende zegge van ±40 cm voor structuur in de winter; zon tot schaduw, ook op klei | 0 (e) | 1 (e) | Bijen: windbestoven zegge (eigen inschatting) | – | [RHS](https://www.rhs.org.uk/plants/128685/wd/details) |
-| Vergeet-mij-nietje | Myosotis | D | Lichtblauwe lentebloeier, zaait zichzelf uit | 3 | 1 (e) | Bijen: Imkerpedia M. sylvatica N3/P0 | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Myosotis) |
+| Bermzegge | Carex divulsa | plek nog te kiezen | Inheemse, groenblijvende zegge van ±40 cm voor structuur in de winter; zon tot schaduw, ook op klei | 0 (e) | 1 (e) | Bijen: windbestoven zegge (eigen inschatting) | – | [RHS](https://www.rhs.org.uk/plants/128685/wd/details) |
 | Judaspenning | Lunaria annua | B | Paarse lentebloemen, daarna zilverkleurige ronde zaaddozen ('penningen') die tot in de winter blijven staan; tweejarig, zaait zichzelf uit | 3 | 3 (e) | Bijen: Imkerpedia N3/P3. Vogels: lijst vaste planten Vogelbescherming | ⏳ tweejarig, laat uitzaaien | [Wikipedia](https://en.wikipedia.org/wiki/Lunaria_annua) |
 | Sierui | Allium hollandicum | B | Paarse bolvormige bloemen in mei-juni | 3 (e) | 1 (e) | Bijen: niet in Imkerpedia (A. giganteum N4/P4); Ecoflora: bijen- en vlinderplant | – | [Wikipedia](https://en.wikipedia.org/wiki/Allium_hollandicum) |
 | Kattenkruid | Nepeta 'Six Hills Giant' | B, C | Lavendelblauwe wolken, lang bloeiend, bijenmagneet | 3 (e) | 1 (e) | Bijen: Imkerpedia N. × faassenii N3/P3 (cultivar zelf niet in de lijst) | – | [Wikipedia](https://en.wikipedia.org/wiki/Nepeta) |
@@ -298,7 +298,6 @@ De bloeimaanden komen uit de bron in de laatste kolom; *Plan* betekent dat ze ee
 | Kamperfoelie (*Lonicera periclymenum*) | B | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Bes | – | – | Imkerpedia (bloei jun–okt); bessen eigen inschatting |
 | Klimhortensia (*Hydrangea anomala petiolaris*) | S | Win | Win | Win | Blad | Blad | Bloei | Bloei | Zaad | Zaad | Zaad | Win | Win | Imkerpedia (bloei jun–jul) |
 | Sterjasmijn (*Trachelospermum jasminoides*) | B | Win | Win | Blad | Blad | Blad | Bloei | Bloei | Blad | Blad | Blad | Blad | Win | Plan (bloei jun–jul) |
-| Klimroos (*Rosa 'New Dawn'*) | B | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | Bes | – | Belle Epoque (bloei jun–okt); bottels eigen inschatting |
 | Druif (*Vitis vinifera*) | D | Win | Win | – | Blad | Blad | Blad | Blad | Blad | Bes | Bes | Blad | Win | Imkerpedia (bloei jun, onopvallend); Ebben (herfstkleur) |
 | Clematis (*Clematis 'Ville de Lyon'*) | C | – | – | – | Blad | Blad | Blad | Bloei | Bloei | Bloei | Blad | – | – | RHS, Engelstalig (bloei jul–sep) |
 | Klimop (*Hedera helix*) | S | Bes | Bes | Bes | Bes | Blad | Blad | Blad | Blad | Bloei | Bloei | Bloei | Win | Ebben (bloei sep–nov, blauwzwarte bessen); rijpe bessen jan–apr eigen inschatting |
@@ -314,8 +313,7 @@ De bloeimaanden komen uit de bron in de laatste kolom; *Plan* betekent dat ze ee
 | Longkruid (*Pulmonaria officinalis*) | S | – | – | Bloei | Bloei | Bloei | Blad | Blad | Blad | Blad | Blad | – | – | Imkerpedia (bloei mrt–mei) |
 | Ooievaarsbek (*Geranium 'Rozanne'*) | A, B | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | – | – | Plan ("juni tot de vorst") |
 | Vingerhoedskruid (*Digitalis purpurea*) | A | – | – | – | Blad | Blad | Bloei | Bloei | Bloei | Zaad | – | – | – | Radar/FLORON (bloei eind mei–sep) |
-| Bermzegge (*Carex divulsa*) | A, B | Win | Win | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Win | groenblijvend (plan); bloei onopvallend |
-| Vergeet-mij-nietje (*Myosotis*) | D | – | – | – | Blad | Bloei | Bloei | – | – | – | – | – | – | Imkerpedia (M. sylvatica mei–jun) |
+| Bermzegge (*Carex divulsa*) | plek nog te kiezen | Win | Win | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Blad | Win | groenblijvend (plan); bloei onopvallend |
 | Judaspenning (*Lunaria annua*) | B | Zaad | Zaad | Blad | Blad | Bloei | Bloei | Zaad | Zaad | Zaad | Zaad | Zaad | Zaad | Imkerpedia (bloei mei–jun); zaaddozen plan |
 | Sierui (*Allium hollandicum*) | B | – | – | – | Blad | Bloei | Bloei | Zaad | Zaad | – | – | – | – | Plan (bloei mei–jun); Ecoflora (zaaddozen) |
 | Kattenkruid (*Nepeta 'Six Hills Giant'*) | B, C | – | – | – | Blad | Bloei | Bloei | Bloei | Bloei | Bloei | Blad | – | – | Imkerpedia (N. × faassenii mei–sep) |
@@ -380,7 +378,7 @@ Zie *Planning & stappen vanaf 31 oktober* voor de volledige stappenlijst met dat
 
 - Trachelospermum: plant tegen de beschutte muur van de woning
 - Lonicera periclymenum: snoei na de bloei (aug)
-- Klimroos en Clematis 'Ville de Lyon': snoei in feb–mrt
+- Clematis 'Ville de Lyon': snoei in feb–mrt
 - Druif (Vitis, zone D; van de buren, groeit door de schutting): snoei het deel aan onze kant in dec–jan, niet in maart (bloedt)
 
 ### 🪱 Klei — advies
@@ -393,7 +391,7 @@ Zie *Planning & stappen vanaf 31 oktober* voor de volledige stappenlijst met dat
 ### 📅 Jaarlijks onderhoud
 
 - **Dec–jan:** Druif snoeien (het deel aan onze kant van de schutting); verder vogels genieten
-- **Feb–mrt:** Klimroos en Clematis 'Ville de Lyon' snoeien; vaste planten terugknippen, mulchen
+- **Feb–mrt:** Clematis 'Ville de Lyon' snoeien; vaste planten terugknippen, mulchen
 - **Maart:** schorspad (en de schorsringen om de bomen) controleren en aanvullen als de laag dunner is dan 5 cm (zie *Schorspad*)
 - **April–mei:** Planten, zaaien zone D; blad van de uitgebloeide bollen laten afsterven
 - **Jun–aug:** Genieten, met de hand water geven bij droogte volgens *Water geven (indicatie per zone)*; kamperfoelie en klimhortensia snoeien na de bloei
@@ -414,12 +412,11 @@ Legenda: ✂️ snoeien / terugknippen · 🌱 planten / zaaien · 🪴 delen / 
 | A | Ooievaarsbek 'Rozanne' (*Geranium 'Rozanne'*) |  |  | ✂️🪴 |  |  |  | ✂️ |  |  |  |  |  | Na de eerste bloei terugknippen voor nabloei. |
 | A | Vingerhoedskruid (*Digitalis purpurea*) ⏳ |  |  |  |  |  | 🌱 | 🌱 |  |  |  |  |  | Tweejarig: zaai in juni–juli, laat de zaaddozen staan. |
 | A | Kerstroos (oosterse) (*Helleborus orientalis*) | ✂️ | ✂️ |  |  |  |  |  |  | 🌱 | 🌱 |  |  | Oude bladeren vóór de bloei verwijderen. |
-| A | Bermzegge (*Carex divulsa*) |  |  | ✂️ | 🪴 |  |  |  |  |  |  |  |  | Uitkammen of terugknippen in het voorjaar. |
+| – | Bermzegge (*Carex divulsa*, plek nog te kiezen) |  |  | ✂️ | 🪴 |  |  |  |  |  |  |  |  | Uitkammen of terugknippen in het voorjaar. |
 | A | Leliegras (*Liriope muscari*) |  |  | ✂️ | 🪴 |  |  |  |  |  |  |  |  | Oud blad in het voorjaar terugknippen; delen in het voorjaar. |
 | A | Sneeuwklokje (*Galanthus nivalis*) |  |  |  |  |  |  |  |  |  | 🌱 | 🌱 |  | Bolletjes zo snel mogelijk planten (Groei & Bloei). Blad na de bloei laten afsterven. |
 | A | Kievitsbloem (*Fritillaria meleagris*) |  |  |  |  |  |  |  |  | 🌱 | 🌱 | 🌱 |  | Zo snel mogelijk planten, op de vochtigste, licht beschaduwde plek. Blad na de bloei laten afsterven. |
 | A, B, C, D | Boerenkrokus (*Crocus tommasinianus*) |  |  |  |  |  |  |  |  |  | 🌱 | 🌱 | 🌱 | Bollen poten tot half december, na de grondbehandeling. Blad na de bloei laten afsterven; mag verwilderen. |
-| B | Klimroos (*Rosa 'New Dawn'*) |  | ✂️ | ✂️🌱 |  |  |  | 🥀 | 🥀 | 🥀 |  | 🌱 |  | Hoofdsnoei feb–mrt: zijtakken terug tot 2–3 ogen. |
 | B | Kamperfoelie (*Lonicera periclymenum ↑*) |  |  |  |  |  |  |  | ✂️ |  |  |  |  | Snoeien na de bloei. |
 | B | Sterjasmijn (*Trachelospermum jasminoides ↑*) |  |  |  | ✂️🌱 | 🌱 |  |  |  |  |  |  |  | Lichte snoei in het voorjaar; beschut tegen de woningmuur. |
 | B | Judaspenning (*Lunaria annua*) ⏳ |  |  |  |  |  | 🌱 | 🌱 |  |  |  |  |  | Tweejarig: zaai in juni–juli en laat de zaaddozen (zilveren 'penningen') staan voor sierwaarde in de winter; zaait zichzelf uit. |
@@ -427,7 +424,6 @@ Legenda: ✂️ snoeien / terugknippen · 🌱 planten / zaaien · 🪴 delen / 
 | B | Kattenkruid (*Nepeta 'Six Hills Giant'*) |  |  | ✂️🪴 |  |  |  | ✂️ |  |  |  |  |  | Na de eerste bloei terugknippen. |
 | B | Rudbeckia (*Rudbeckia fulgida*) |  |  | ✂️🪴 |  |  |  |  |  |  |  |  |  | Terugknippen in het voorjaar. |
 | B | Kerstroos (*Helleborus*) | ✂️ | ✂️ |  |  |  |  |  |  | 🌱 | 🌱 |  |  | Oude bladeren vóór de bloei verwijderen. |
-| B | Bermzegge (*Carex divulsa*) |  |  | ✂️ | 🪴 |  |  |  |  |  |  |  |  | Uitkammen of terugknippen in het voorjaar. |
 | B | Aster 'Purple Dome' (*Symphyotrichum novae-angliae*) |  |  | ✂️ | 🌱 | 🌱 |  |  |  |  |  |  |  | Oude stengels in maart terugknippen. 1 plant op de zonnigste plek, 45–60 cm ruimte, geen extra mest. |
 | B, C, D | Krokus 'Cream Beauty' (*Crocus chrysanthus*) |  |  |  |  |  |  |  |  |  | 🌱 | 🌱 | 🌱 | Bollen 5 cm diep poten (Nijssen), tot half december. Blad na de bloei laten afsterven. |
 | B, C | Wilde narcis (*Narcissus pseudonarcissus*) |  |  |  |  |  |  |  |  |  | 🌱 | 🌱 | 🌱 | Bollen poten tot half december. Blad na de bloei laten afsterven. |
@@ -443,7 +439,6 @@ Legenda: ✂️ snoeien / terugknippen · 🌱 planten / zaaien · 🪴 delen / 
 | C | Oosterse sterhyacint (*Scilla siberica*) |  |  |  |  |  |  |  |  |  | 🌱 | 🌱 | 🌱 | Bollen poten tot half december. Blad na de bloei laten afsterven. |
 | D | Korenbloem (*Centaurea cyanus*) ⏳ |  |  | 🌱 | 🌱 |  |  |  |  | 🌱 |  |  |  | Zaaien in het voorjaar of in september. |
 | D | Druif (*Vitis vinifera ↑*) | ✂️ |  |  |  |  |  | ✂️ |  |  |  |  | ✂️ | Groeit van het erf van de buren door de schutting: niet planten, geen compost, mulch of water. Wintersnoei dec–jan van het deel aan onze kant (niet in maart: bloedt); zomer bladschoten inkorten. Rankdraden op de schutting. |
-| D | Vergeet-mij-nietje (*Myosotis*) ⏳ |  |  | 🌱 |  |  | 🌱 | ✂️ |  |  |  |  |  | Zaaien langs de schutting onder de druif; na het uitzaaien opruimen. Houdt van wat vochtiger grond en lichte schaduw; valt hij tegen, dan zone B proberen. |
 | D | Knautia (*Knautia macedonica*) ⏱ |  |  | ✂️🪴 |  |  |  |  | ✂️ |  |  |  |  | Terugknippen na de bloei voor nabloei. |
 | D | Slangenkruid (*Echium vulgare*) ⏳ |  |  |  |  | 🌱 | 🌱 |  |  |  |  |  |  | Tweejarig: zaai in mei–juni. |
 | D | IJzerhard (*Verbena bonariensis*) ⏱ |  |  | ✂️ | ✂️🌱 | 🌱 |  |  |  |  |  |  |  | Zaait zichzelf uit. |
@@ -635,7 +630,7 @@ Totaal ongeveer **€170 tot €733** (€205 tot €768 als de kornoelje de sta
 | 9 | Steun plaatsen: rankdraden of rooster op de muur in zone C (besloten), rankdraden in B en S, rankdraden op de schutting in D voor de druif van de buren | Jan–feb | Stap 5 | Roestvrijstalen draad, muurbeugels of rooster | Open |
 | 10 | Klimplanten en vaste planten en zaad bestellen, ook de liatris (3 stuks), de aster 'Purple Dome' (1) en de bosaster (1–2); bij het kopen kiezen de eigenaars welke soorten in de volle zones A, D en S komen | Jan–feb | Levensduur-check | Alle planten en zaden | Open |
 | 11 | Klimplanten planten in B, C en S (de druif in D groeit al door de schutting) | Mrt–apr | Stap 9 | — | Open |
-| 12 | Vaste planten planten, ook de liatris (C), de aster 'Purple Dome' (B) en de bosaster (S); zone D zaaien (Centaurea, Myosotis langs de schutting onder de druif) | Apr–mei | Stap 11 | — | Open |
+| 12 | Vaste planten planten, ook de liatris (C), de aster 'Purple Dome' (B) en de bosaster (S); zone D zaaien (Centaurea) | Apr–mei | Stap 11 | — | Open |
 | 13 | 5 cm mulchen (niet in zone D, zie *Mulchen*) | Apr–mei | Stap 12 | Mulch | Open |
 | 13a | Subsidie aanvragen bij gemeente Urk na uitvoering: factuur, foto's voor en na, inmeting; binnen zes maanden na aankoop én realisatie. Of in één keer of per maatregel (bomen, ontstenen, klimsteun) hangt af van het antwoord van de gemeente (zie *Subsidie*) | Na stap 6, 9 en 12; mogelijk per maatregel eerder | Antwoord gemeente; stap 6, 9, 12 | Facturen en foto's bewaren | Gedaan (aangevraagd, gemeld 24 nov: ontstenen 39,6 m² en de krentenboom; groene gevel niet in deze aanvraag) |
 | 14 | Elektrakabel naar het terras bij de kas aansluiten in de veranda (de kabel ligt er, nog zonder stroom); verlichting plaatsen | Later, nog te plannen | Besluit verlichting | Armaturen, trafo of stroompunt | Open (verlichting volgt later) |
@@ -682,7 +677,7 @@ Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 20
 - Stroom en verlichting (25 november 2026): bij de ton is stroom. Er ligt één elektrakabel naar het terras bij de kas, nog zonder stroom; die moet in de veranda worden aangesloten. Geen kabelbuis. Verlichting volgt later.
 - pH kornoelje (bijgewerkt 24 november 2026): gemeten pH 7 met vrije kalk; er is een zure plantplek gemaakt met DCM Vivimus Rhodo en de kornoelje is geplant. Nog te doen: in het voorjaar de pH van de plantplek meten en noteren, en bij voorkeur regenwater geven. De waterhardheid is bekend: 7,7 °dH, zacht (25 november 2026).
 - Actiepunt: meet de zonuren op de plek midden in de tuin waar Aster amellus, Salvia nemorosa en Liatris spicata komen (zone C). De schutting in zone D staat op het zuiden (eigenaar, 22 oktober 2026): geen controle meer nodig voor de druif.
-- Actiepunt: *Myosotis* in zone D zit op een wat droge, zonnige plek; hij wil meer vocht en lichte schaduw (RHS). Valt hij tegen na het eerste voorjaar, dan terug naar zone B.
+- Bermzegge (*Carex divulsa*): krijgt waarschijnlijk nog een plek; welke plek is nog te kiezen (25 november 2026).
 - Subsidie: aangevraagd (gemeld 24 november 2026) voor ontstenen en de krentenboom. Wacht op het besluit (binnen 8 weken). De groene gevel kan eventueel later apart, als de gemeente dat toestaat.
 - Actiepunt: beslis over de fasering in drie stappen. Herfst 2026 het skelet (tegels weg, ondergrond, bomen, klimsteun, kale grond afdekken; de bollen zijn verschoven naar najaar 2027). Voorjaar 2027 de beplanting (klimplanten en vaste planten in A, B en C, zone D zaaien, mulch). Najaar 2027 en 2028 de rest (zone S, aanvullen, verlichting). Daarna de planning aanpassen. Let op de zes-maandentermijn van de subsidie (zie *Subsidie*).
 - De zones zijn uitgezet en de plantvakken zijn gevuld (24 november 2026). De oppervlaktes van 22 oktober 2026 (±27 m²) blijven het uitgangspunt voor mulch en water geven.
