@@ -504,7 +504,7 @@ function standHtml(e, metPlek) {
   const pl = D.plant[e.locatie + '|' + e.plant] || {};
   return `<div class="kaart plantrij" data-bewerk="${esc(e.key)}"><span class="dot ${esc(e.status)}"></span><div class="tk">
     <div class="naam">${esc(plantNaam(e.locatie, e.plant, e.naam))} ${e.aantal ? `<span class="sub">× ${esc(e.aantal)}</span>` : ''}</div>
-    <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(e.status)}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
+    <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(statusLabel(e.status))}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
   </div><span class="bewerk">${svg(IC.pen, 16)}Bewerken</span></div>`;
 }
 function schermPlekken() {
@@ -547,7 +547,7 @@ function plantenLijst() {
     const bep = beplanting(p.locatie, NUJ).filter(e => e.plant === p.id && e.status !== 'weg');
     const waar = [...new Set(bep.map(e => plekNaam(p.locatie, e.plek)))].join(', ');
     const st = bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
-    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${st}</span>` : ''}</div></div>`;
+    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${statusLabel(st)}</span>` : ''}</div></div>`;
   }).join('') || '<p class="leeg">Geen planten gevonden.</p>';
 }
 function schermPlant(loc, id) {
@@ -608,7 +608,9 @@ function schermInstellingen() {
 
 /* ---------- dialoog: stand bijwerken ---------- */
 function plekOpties(loc, gekozen) { return D.Plekken.filter(p => p.locatie === loc).map(p => `<option value="${esc(p.id)}" ${p.id === gekozen ? 'selected' : ''}>${esc(p.naam)}</option>`).join(''); }
-function statusOpties(g) { return ['gepland', 'geplant', 'weg'].map(s => `<option ${s === g ? 'selected' : ''}>${s}</option>`).join(''); }
+const STATUS_LABEL = { gepland: 'Plan', geplant: 'In de grond', weg: 'Weg' };
+const statusLabel = s => STATUS_LABEL[s] || s;
+function statusOpties(g) { return ['gepland', 'geplant', 'weg'].map(s => `<option value="${s}" ${s === g ? 'selected' : ''}>${statusLabel(s)}</option>`).join(''); }
 function bewerk(key) {
   const e = beplanting('', NUJ).find(x => x.key === key);
   if (!e) return;
