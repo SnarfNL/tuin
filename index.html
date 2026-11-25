@@ -32,6 +32,7 @@ header .midden .sub{margin:0}
 .seg{flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);background:var(--vlak);border-radius:12px;padding:3px;min-height:44px}
 .seg button{border:0;border-radius:9px;background:none;font-size:14px;color:var(--tekst2);cursor:pointer;padding:0 6px}
 .seg button.aan{background:var(--kaart);color:var(--tekst);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.14)}
+.kaart .seg button.aan{background:var(--groen2);color:var(--groentekst)}
 .filterknop{position:relative;width:44px;height:44px;border-radius:12px;border:1px solid var(--rand);background:var(--kaart);display:grid;place-items:center;cursor:pointer;flex:none}
 .filterknop .stip{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:7px;background:var(--oker);border:2px solid var(--bg)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
@@ -50,10 +51,6 @@ header.held{background:var(--kop);color:var(--opkop);border-radius:0 0 24px 24px
 .held .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .chip.aan{background:var(--opkop);border-color:var(--opkop);color:var(--kop)}
 .held .voortgang .tekst{color:var(--kopzacht)}.held .voortgang b{color:var(--opkop)}
 .held .balk{background:rgba(255,255,255,.16)}.held .balk div{background:var(--kopaccent)}
-.koplabel{flex:1;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kopzacht)}
-.tg{display:flex;gap:2px;padding:3px;border-radius:22px;background:rgba(255,255,255,.12)}
-.tg button{width:42px;height:38px;border:0;border-radius:19px;background:none;color:var(--kopzacht);display:grid;place-items:center;cursor:pointer}
-.tg button[aria-pressed=true]{background:var(--opkop);color:var(--kop)}
 main{padding:4px 16px 16px;max-width:1200px;margin:0 auto}
 h2{display:flex;align-items:center;gap:8px;font-size:13px;margin:20px 4px 8px;color:var(--tekst2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 h2.laat{color:var(--rood)}
@@ -446,7 +443,7 @@ function schermTaken() {
   const ts = filter(takenMaand(S.jaar, S.maand)), isNu = S.jaar === NUJ && S.maand === NUM;
   const achter = isNu ? filter(achterstand(S.jaar, S.maand)) : [];
   const taken = ts.filter(t => t.soort === 'taak'), klaar = taken.filter(isKlaar).length;
-  kop(`<div class="rij"><div class="koplabel">Onze tuinen</div>${themaKnop()}</div><div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
+  kop(`<div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
   let h = '';
   if (achter.length) h += `<h2 class="laat">Te laat <span class="tel">${achter.length}</span></h2><div class="lijst laat">${achter.map(taakHtml).join('')}</div>`;
   h += groepen(ts) || '<p class="leeg">Geen taken voor deze selectie.</p>';
@@ -554,6 +551,7 @@ function schermInstellingen() {
     <label for="i-api">URL van het Apps Script (eindigt op /exec)</label><input id="i-api" value="${esc(opslag.get('api', '') || API_STANDAARD)}" placeholder="https://script.google.com/macros/s/…/exec">
     <label for="i-sleutel">Sleutel om af te vinken en de stand bij te werken</label><input id="i-sleutel" type="password" value="${esc(opslag.get('sleutel', ''))}" autocomplete="off">
     <div class="knoppen"><button class="knopje primair" data-opslaan>Opslaan en laden</button></div></div>
+    <h2>Weergave</h2><div class="kaart"><div class="rij" style="display:flex">${themaKeuze()}</div><p class="sub">Geldt voor dit toestel. Automatisch volgt de instelling van je telefoon of computer.</p></div>
     <h2>Status</h2><div class="kaart"><dl>
       <dt>Gegevens van</dt><dd>${laadtijd ? esc(new Date(laadtijd).toLocaleString('nl-NL')) : 'nog niet geladen'}</dd>
       <dt>Nog te versturen</dt><dd>${wachtrij.length} ${wachtrij.length ? '<button class="link" data-wissen>wissen</button>' : ''}</dd></dl>
@@ -637,8 +635,7 @@ function kop(h) { $('#kop').innerHTML = h; }
 function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
 function ga(h) { location.hash = h; }
 const ZON = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>', MAAN = '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>';
-const donker = () => (document.documentElement.dataset.thema || (matchMedia('(prefers-color-scheme: dark)').matches ? 'donker' : 'licht')) === 'donker';
-function themaKnop() { const dk = donker(); return `<div class="tg" role="group" aria-label="Weergave"><button data-modus="licht" aria-label="Lichte modus" aria-pressed="${!dk}">${svg(ZON, 18, 2)}</button><button data-modus="donker" aria-label="Donkere modus" aria-pressed="${dk}">${svg(MAAN, 18, 2)}</button></div>`; }
+function themaKeuze() { const t = document.documentElement.dataset.thema || ''; return `<div class="seg" role="group" aria-label="Weergave">${[['', 'Automatisch'], ['licht', svg(ZON, 16, 2) + ' Licht'], ['donker', svg(MAAN, 16, 2) + ' Donker']].map(([k, l]) => `<button class="${t === k ? 'aan' : ''}" data-modus="${k}" aria-pressed="${t === k}" style="display:inline-flex;align-items:center;justify-content:center;gap:6px">${l}</button>`).join('')}</div>`; }
 function teken() {
   route = (decodeURIComponent(location.hash.slice(1)) || 'taken').split('/');
   opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie }); opslag.set('filterdag', vandaag());
@@ -658,7 +655,7 @@ document.addEventListener('click', ev => {
   const el = ev.target.closest('[data-modus],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
   if (!el || el.closest('#dlg')) return;
   const d = el.dataset;
-  if (d.modus != null) { document.documentElement.dataset.thema = d.modus; opslag.set('thema', d.modus); return teken(); }
+  if (d.modus != null) { if (d.modus) document.documentElement.dataset.thema = d.modus; else delete document.documentElement.dataset.thema; opslag.set('thema', d.modus); return teken(); }
   if (d.fotoweg != null) { const [soort, loc, id, i] = d.fotoweg.split('|'); return fotoWeg(soort, loc, id, +i); }
   if (d.fotoplus != null) { const [soort, loc, id] = d.fotoplus.split('|'); return fotoPlus(soort, loc, id); }
   if (d.filters != null) { const fs = $('#filters'); fs.innerHTML = filterSheet(); return fs.showModal(); }
