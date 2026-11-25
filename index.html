@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f5f2ea" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#161b13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" id="tc" content="#1f3d24">
+<script>try{var t=JSON.parse(localStorage.getItem('tuin.thema')||'""');if(t)document.documentElement.dataset.thema=t}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <title>Tuin</title>
 <style>
-:root{--bg:#f5f2ea;--kaart:#fff;--tekst:#1f2a1c;--zacht:#5e6a57;--lijn:#e1dbcc;--rand:#d9d3c4;--vlak:#e8e3d6;--groen:#2f5a24;--groen2:#dcebd3;--opgroen:#fff;--rood:#8a3a1c;--rood2:#f6ddd0;--geel:#f3e6c4;--geeltekst:#6b5410;--schaduw:0 1px 0 rgba(31,42,28,.06);color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root{--bg:#161b13;--kaart:#20271c;--tekst:#e6eadf;--zacht:#a3ad99;--lijn:#323a2c;--rand:#3e4836;--vlak:#2a3224;--groen:#9cc583;--groen2:#2e3d27;--opgroen:#10200b;--rood:#f0a58c;--rood2:#3d2620;--geel:#3a3320;--geeltekst:#e6cf8a;--schaduw:none}}
+:root{--bg:#f4f1ea;--kaart:#fff;--vlak:#e9e4d7;--tekst:#1b2419;--tekst2:#46523f;--zacht:#5f6959;--lijn:#e3ddcf;--rand:#cdc5b3;--groen:#2f6b35;--groen2:#ddedd8;--groentekst:#24552a;--opgroen:#fff;--oker:#9a5b00;--opoker:#fff;--geel:#fbe9c8;--geeltekst:#744400;--rood:#b3261e;--rood2:#f9dedc;--kop:#1f3d24;--opkop:#f4f1ea;--kopzacht:#b9cdb3;--kopaccent:#f2b552;--schaduw:0 1px 2px rgba(27,36,25,.08),0 2px 8px rgba(27,36,25,.05);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-thema=licht]){--bg:#111611;--kaart:#1b221b;--vlak:#262e25;--tekst:#e7ece3;--tekst2:#bcc6b6;--zacht:#98a492;--lijn:#2b342a;--rand:#3e493c;--groen:#8fd18f;--groen2:#24402a;--groentekst:#a9e0a6;--opgroen:#0e2410;--oker:#f2b552;--opoker:#2b1a00;--geel:#3d2e12;--geeltekst:#f7c978;--rood:#ff8a80;--rood2:#3f1f1c;--kop:#17301c;--opkop:#e8f0e4;--kopzacht:#a3ba9e;--kopaccent:#f2b552;--schaduw:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}:root:not([data-thema=licht]) .actie,:root:not([data-thema=licht]) .mini{background:color-mix(in srgb,var(--at) 40%,var(--kaart));color:var(--ab)}}
+:root[data-thema=donker]{--bg:#111611;--kaart:#1b221b;--vlak:#262e25;--tekst:#e7ece3;--tekst2:#bcc6b6;--zacht:#98a492;--lijn:#2b342a;--rand:#3e493c;--groen:#8fd18f;--groen2:#24402a;--groentekst:#a9e0a6;--opgroen:#0e2410;--oker:#f2b552;--opoker:#2b1a00;--geel:#3d2e12;--geeltekst:#f7c978;--rood:#ff8a80;--rood2:#3f1f1c;--kop:#17301c;--opkop:#e8f0e4;--kopzacht:#a3ba9e;--kopaccent:#f2b552;--schaduw:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}:root[data-thema=donker] .actie,:root[data-thema=donker] .mini{background:color-mix(in srgb,var(--at) 40%,var(--kaart));color:var(--ab)}
 *{box-sizing:border-box}
 body{margin:0;font:15px/1.4 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tekst);padding-bottom:calc(76px + env(safe-area-inset-bottom))}
 a{color:var(--groen)}
@@ -25,14 +26,14 @@ header .midden{flex:1;text-align:center}header .midden h1{font-size:28px}
 header .midden .sub{margin:0}
 .knopje{min-height:44px;border:1px solid var(--rand);background:var(--kaart);border-radius:12px;padding:0 14px;cursor:pointer;font-weight:500}
 .knopje.primair{background:var(--groen);color:var(--opgroen);border-color:var(--groen);font-weight:600}
-.knopje.rand{background:none;border-color:var(--groen);color:var(--groen);font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.knopje.rand{background:var(--geel);border-color:var(--geel);color:var(--geeltekst);font-weight:600;display:inline-flex;align-items:center;gap:8px}
 .rond{width:44px;height:44px;border-radius:22px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tekst);flex:none}
 .rond:hover{background:var(--vlak)}
 .seg{flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);background:var(--vlak);border-radius:12px;padding:3px;min-height:44px}
-.seg button{border:0;border-radius:9px;background:none;font-size:14px;color:var(--zacht);cursor:pointer;padding:0 6px}
+.seg button{border:0;border-radius:9px;background:none;font-size:14px;color:var(--tekst2);cursor:pointer;padding:0 6px}
 .seg button.aan{background:var(--kaart);color:var(--tekst);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.14)}
 .filterknop{position:relative;width:44px;height:44px;border-radius:12px;border:1px solid var(--rand);background:var(--kaart);display:grid;place-items:center;cursor:pointer;flex:none}
-.filterknop .stip{position:absolute;top:7px;right:7px;width:8px;height:8px;border-radius:4px;background:var(--groen)}
+.filterknop .stip{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:7px;background:var(--oker);border:2px solid var(--bg)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
 .chips.rol{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.chips.rol::-webkit-scrollbar{display:none}
 .chip{flex:none;min-height:40px;border:1px solid var(--rand);background:var(--kaart);border-radius:20px;padding:0 14px;font-size:14px;cursor:pointer;white-space:nowrap}
@@ -40,11 +41,23 @@ header .midden .sub{margin:0}
 .chip.klein{min-height:32px;font-size:13px;padding:0 10px 0 12px;display:inline-flex;align-items:center;gap:4px}
 .voortgang{display:flex;flex-direction:column;gap:6px}
 .voortgang .tekst{display:flex;justify-content:space-between;font-size:13px;color:var(--zacht)}.voortgang b{color:var(--tekst);font-weight:600}
-.balk{height:6px;border-radius:3px;background:var(--lijn);overflow:hidden}.balk div{height:100%;background:var(--groen);border-radius:3px}
+.balk{height:8px;border-radius:4px;background:var(--lijn);overflow:hidden}.balk div{height:100%;background:var(--oker);border-radius:4px}
+header.held{background:var(--kop);color:var(--opkop);border-radius:0 0 24px 24px;padding-bottom:16px}
+.held h1{color:var(--opkop)}.held .sub{color:var(--kopzacht)}.held .link{color:var(--opkop)}
+.held .rond{color:var(--opkop);background:rgba(255,255,255,.08)}.held .rond:hover{background:rgba(255,255,255,.16)}
+.held .seg{background:rgba(255,255,255,.12)}.held .seg button{color:var(--kopzacht)}.held .seg button.aan{background:var(--opkop);color:var(--kop)}
+.held .filterknop{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .filterknop .stip{border-color:var(--kop)}
+.held .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .chip.aan{background:var(--opkop);border-color:var(--opkop);color:var(--kop)}
+.held .voortgang .tekst{color:var(--kopzacht)}.held .voortgang b{color:var(--opkop)}
+.held .balk{background:rgba(255,255,255,.16)}.held .balk div{background:var(--kopaccent)}
+.koplabel{flex:1;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kopzacht)}
+.tg{display:flex;gap:2px;padding:3px;border-radius:22px;background:rgba(255,255,255,.12)}
+.tg button{width:42px;height:38px;border:0;border-radius:19px;background:none;color:var(--kopzacht);display:grid;place-items:center;cursor:pointer}
+.tg button[aria-pressed=true]{background:var(--opkop);color:var(--kop)}
 main{padding:4px 16px 16px;max-width:1200px;margin:0 auto}
-h2{display:flex;align-items:center;gap:8px;font-size:13px;margin:20px 4px 8px;color:var(--zacht);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+h2{display:flex;align-items:center;gap:8px;font-size:13px;margin:20px 4px 8px;color:var(--tekst2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 h2.laat{color:var(--rood)}
-.tel{font-size:12px;font-weight:600;background:var(--vlak);color:var(--tekst);border-radius:10px;padding:1px 8px;letter-spacing:0}
+.tel{font-size:12px;font-weight:700;background:var(--groen2);color:var(--groentekst);border-radius:10px;padding:1px 8px;letter-spacing:0}
 h2.laat .tel{background:var(--rood2);color:var(--rood)}
 h3{margin:0 0 6px;font-size:18px}
 .lijst{display:grid;gap:8px}
@@ -52,7 +65,7 @@ h3{margin:0 0 6px;font-size:18px}
 .groep{display:grid;background:var(--kaart);border-radius:16px;overflow:hidden;box-shadow:var(--schaduw)}
 .groep>.kaart{border-radius:0;box-shadow:none;border-bottom:1px solid var(--lijn)}.groep>.kaart:last-child{border-bottom:0}
 .taak{display:flex;gap:4px;align-items:flex-start;padding-left:6px}
-.taak.klaar .tk{opacity:.55}.taak.klaar .titel{text-decoration:line-through}
+.taak.klaar .tk{opacity:.7}.taak.klaar .titel{text-decoration:line-through;color:var(--zacht)}
 .vink{flex:none;width:44px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-items:center;margin:-8px 0 -8px;padding:0;color:var(--opgroen)}
 .vink span{width:26px;height:26px;border-radius:13px;border:2px solid var(--groen);display:grid;place-items:center}
 .taak.klaar .vink span{background:var(--groen)}
@@ -60,7 +73,7 @@ h3{margin:0 0 6px;font-size:18px}
 .ico{flex:none;width:44px;text-align:center;font-size:18px}
 .tk{flex:1;min-width:0}
 .kop{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:12.5px;color:var(--zacht)}
-.actie{border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600}
+.actie{border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600;background:var(--ab);color:var(--at)}
 .titel{font-weight:600;font-size:16px;margin-top:2px}
 .sub{font-size:13px;color:var(--zacht);margin-top:2px}
 .suggestie{background:var(--geel)}
@@ -75,7 +88,7 @@ details{margin-top:4px;font-size:13.5px}summary{cursor:pointer;color:var(--groen
 .foto{width:100%;border-radius:16px;display:block;max-height:340px;object-fit:cover;background:var(--lijn)}
 .fotos{display:flex;gap:8px;overflow-x:auto;margin:4px 0 8px}.fotos figure{position:relative;margin:0;flex:none}.fotos img{height:180px;max-width:80vw;border-radius:12px;display:block;object-fit:cover;background:var(--lijn)}
 .fotoweg{position:absolute;top:6px;right:6px;width:36px;height:36px;background:rgba(20,26,18,.6);color:#fff}.fotoweg:hover{background:rgba(20,26,18,.8)}
-.fotoplus{flex:none;width:130px;height:180px;border-radius:12px;border:2px dashed var(--rand);background:none;color:var(--groen);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:13px;font-weight:600}
+.fotoplus{flex:none;width:130px;height:180px;border-radius:12px;border:2px dashed var(--rand);background:var(--geel);color:var(--geeltekst);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:13px;font-weight:600}
 .mini-foto{flex:none;width:48px;height:48px;border-radius:12px;object-fit:cover;background:var(--vlak);display:grid;place-items:center;color:var(--groen);font-size:22px}
 .plekkaart{display:flex;gap:12px;align-items:center}.plekkaart .mini-foto{width:56px;height:56px}
 #d-voorbeeld{width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-top:10px;display:none}
@@ -84,7 +97,7 @@ dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;font
 .plantrij .naam{font-weight:600}.plantrij .lat{font-style:italic;color:var(--zacht);font-size:13px}
 .dot{flex:none;width:10px;height:10px;border-radius:5px;background:var(--groen)}.dot.gepland{background:none;border:2px solid var(--geeltekst)}.dot.weg{background:var(--rand)}
 .bewerk{display:inline-flex;align-items:center;gap:4px;color:var(--groen);font-size:13px;font-weight:600}
-.status{font-size:12px;font-weight:600;border-radius:6px;padding:1px 7px;background:var(--groen2);color:var(--groen)}
+.status{font-size:12px;font-weight:600;border-radius:6px;padding:1px 7px;background:var(--groen2);color:var(--groentekst)}
 .status.gepland{background:var(--geel);color:var(--geeltekst)}.status.weg{background:var(--vlak);color:var(--zacht);text-decoration:line-through}
 .sier{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:6px 0;font-size:10px;text-align:center}
 .sier div{border-radius:4px;padding:4px 0 2px;color:#1f2a1c}
@@ -92,11 +105,11 @@ dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;font
 .jaar td,.jaar th{padding:9px 8px;border-bottom:1px solid var(--lijn);text-align:left;vertical-align:top}
 .jaar{width:100%;border-collapse:collapse;background:var(--kaart);border-radius:16px;overflow:hidden}
 .jaar tr{cursor:pointer}.jaar .nu{background:var(--groen2)}
-.mini{display:inline-block;border-radius:5px;padding:0 5px;margin:1px;font-size:12px}
+.mini{display:inline-block;border-radius:5px;padding:0 5px;margin:1px;font-size:12px;background:var(--ab);color:var(--at)}
 nav{position:fixed;bottom:0;left:0;right:0;z-index:6;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--kaart);border-top:1px solid var(--lijn);padding:6px 4px calc(8px + env(safe-area-inset-bottom))}
 nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;font-size:11.5px;color:var(--zacht);text-decoration:none}
 nav a span{display:grid;place-items:center;padding:3px 16px;border-radius:14px}
-nav a.aan{color:var(--groen);font-weight:600}nav a.aan span{background:var(--groen2)}
+nav a.aan{color:var(--groentekst);font-weight:700}nav a.aan span{background:var(--groen2)}
 label{display:block;margin:12px 0 4px;font-size:13px;color:var(--zacht);font-weight:500}
 input,select,textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--rand);border-radius:12px;background:var(--kaart)}
 dialog{border:0;border-radius:20px;padding:18px;width:min(440px,94vw);background:var(--bg);color:var(--tekst)}
@@ -375,7 +388,7 @@ function vink(t) {
 let TK = [];
 function actieLabel(id) {
   const a = D.actie[id];
-  return a ? `<span class="actie" style="background:${esc(a.kleur_achtergrond)};color:${esc(a.kleur_tekst)}">${esc(a.label)}</span>` : '';
+  return a ? `<span class="actie" style="--ab:${esc(a.kleur_achtergrond)};--at:${esc(a.kleur_tekst)}">${esc(a.label)}</span>` : '';
 }
 function taakHtml(t) {
   const i = TK.push(t) - 1, klaar = isKlaar(t);
@@ -409,7 +422,7 @@ function filterSheet() {
   const lo = D.Locaties.find(l => l.id === S.loc), basis = takenMaand(S.jaar, S.maand).filter(t => t.soort === 'taak' && (!S.loc || t.loc === S.loc) && (!S.plek || t.plekken.includes(S.plek)));
   const tel = id => basis.filter(t => t.actie === id).length, n = S.actie ? tel(S.actie) : basis.length;
   return `<div class="greep"></div>
-    <div class="rij" style="display:flex;align-items:center"><h3 style="flex:1;margin:0">Filters</h3><button class="knopje" style="border:0;background:none;color:var(--groen)" data-wisfilter>Wissen</button></div>
+    <div class="rij" style="display:flex;align-items:center"><h3 style="flex:1;margin:0">Filters</h3><button class="knopje" style="border:0;border-radius:22px;background:var(--geel);color:var(--geeltekst);font-weight:600" data-wisfilter>Wissen</button></div>
     <div class="stap"><div>1 · Locatie</div>${locSeg()}</div>
     ${lo ? `<div class="stap"><div>2 · ${esc(lo.plekwoord || 'Plek')}</div>${chips([['', 'Alle'], ...D.Plekken.filter(p => p.locatie === S.loc).map(p => [p.id, p.naam])], S.plek, 'plek')}</div>` : ''}
     <div class="stap"><div>${lo ? 3 : 2} · Actie <span style="font-weight:400">· taken in ${MN[S.maand - 1]}</span></div><div class="acties">${D.Acties.map(a => { const k = tel(a.id); return `<button class="${S.actie === a.id ? 'aan' : ''} ${k ? '' : 'nul'}" data-actie="${S.actie === a.id ? '' : esc(a.id)}" aria-pressed="${S.actie === a.id}"><i style="background:${esc(a.kleur_achtergrond)};box-shadow:inset 0 0 0 1.5px ${esc(a.kleur_tekst)}"></i><b>${esc(a.label)}</b><small>${k}</small></button>`; }).join('')}</div></div>
@@ -433,7 +446,7 @@ function schermTaken() {
   const ts = filter(takenMaand(S.jaar, S.maand)), isNu = S.jaar === NUJ && S.maand === NUM;
   const achter = isNu ? filter(achterstand(S.jaar, S.maand)) : [];
   const taken = ts.filter(t => t.soort === 'taak'), klaar = taken.filter(isKlaar).length;
-  kop(`<div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
+  kop(`<div class="rij"><div class="koplabel">Onze tuinen</div>${themaKnop()}</div><div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
   let h = '';
   if (achter.length) h += `<h2 class="laat">Te laat <span class="tel">${achter.length}</span></h2><div class="lijst laat">${achter.map(taakHtml).join('')}</div>`;
   h += groepen(ts) || '<p class="leeg">Geen taken voor deze selectie.</p>';
@@ -518,7 +531,7 @@ function schermJaar() {
     const ts = filter(takenMaand(S.jaar, m)).filter(t => t.soort === 'taak'), per = {};
     ts.forEach(t => per[t.actie] = (per[t.actie] || 0) + 1);
     const k = ts.filter(isKlaar).length;
-    h += `<tr data-naarmaand="${m}" class="${S.jaar === NUJ && m === NUM ? 'nu' : ''}"><th>${MN[m - 1]}</th><td>${D.Acties.filter(a => per[a.id]).map(a => `<span class="mini" style="background:${a.kleur_achtergrond};color:${a.kleur_tekst}">${esc(a.label)} ${per[a.id]}</span>`).join('') || '<span class="sub">–</span>'}</td><td class="sub" style="white-space:nowrap">${k}/${ts.length}</td></tr>`;
+    h += `<tr data-naarmaand="${m}" class="${S.jaar === NUJ && m === NUM ? 'nu' : ''}"><th>${MN[m - 1]}</th><td>${D.Acties.filter(a => per[a.id]).map(a => `<span class="mini" style="--ab:${esc(a.kleur_achtergrond)};--at:${esc(a.kleur_tekst)}">${esc(a.label)} ${per[a.id]}</span>`).join('') || '<span class="sub">–</span>'}</td><td class="sub" style="white-space:nowrap">${k}/${ts.length}</td></tr>`;
   }
   return h + '</tbody></table>';
 }
@@ -623,23 +636,29 @@ function nieuw(arg) {
 function kop(h) { $('#kop').innerHTML = h; }
 function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
 function ga(h) { location.hash = h; }
+const ZON = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>', MAAN = '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>';
+const donker = () => (document.documentElement.dataset.thema || (matchMedia('(prefers-color-scheme: dark)').matches ? 'donker' : 'licht')) === 'donker';
+function themaKnop() { const dk = donker(); return `<div class="tg" role="group" aria-label="Weergave"><button data-modus="licht" aria-label="Lichte modus" aria-pressed="${!dk}">${svg(ZON, 18, 2)}</button><button data-modus="donker" aria-label="Donkere modus" aria-pressed="${dk}">${svg(MAAN, 18, 2)}</button></div>`; }
 function teken() {
   route = (decodeURIComponent(location.hash.slice(1)) || 'taken').split('/');
   opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie }); opslag.set('filterdag', vandaag());
   const hoofd = { taken: 'taken', plekken: 'plekken', plek: 'plekken', planten: 'planten', plant: 'planten', jaar: 'jaar', info: 'meer', instellingen: 'meer' }[route[0]] || 'taken';
   $('#nav').innerHTML = [['taken', 'Taken'], ['plekken', 'Plekken'], ['planten', 'Planten'], ['jaar', 'Jaar'], ['info', 'Meer']].map(([h, l]) => { const aan = hoofd === h || (h === 'info' && hoofd === 'meer'); return `<a href="#${h}" class="${aan ? 'aan' : ''}"${aan ? ' aria-current="page"' : ''}><span>${svg(IC[h === 'info' ? 'meer' : h], 22, h === 'info' ? 3 : 1.8)}</span>${l}</a>`; }).join('');
   if (!D) { if (route[0] === 'instellingen') { kop('<div class="rij"><h1>Instellingen</h1></div>'); $('#app').innerHTML = schermInstellingen(); } return; }
+  $('#kop').classList.toggle('held', hoofd === 'taken');
   TK = [];
   const f = { taken: schermTaken, plekken: schermPlekken, plek: () => schermPlek(route[1], route[2]), planten: schermPlanten, plant: () => schermPlant(route[1], route[2]), jaar: schermJaar, info: schermMeer, instellingen: schermMeer }[route[0]] || schermTaken;
   $('#app').innerHTML = f();
   const fs = $('#filters'); if (fs.open) fs.innerHTML = filterSheet();
+  $('#tc').content = getComputedStyle(document.documentElement).getPropertyValue(hoofd === 'taken' ? '--kop' : '--bg').trim();
 }
 addEventListener('hashchange', () => { teken(); scrollTo(0, 0); });
 document.addEventListener('click', ev => {
   if (ev.target.id === 'filters') { const r = ev.target.getBoundingClientRect(); if (ev.clientY < r.top || ev.clientY > r.bottom || ev.clientX < r.left || ev.clientX > r.right) return ev.target.close(); }
-  const el = ev.target.closest('[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
+  const el = ev.target.closest('[data-modus],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
   if (!el || el.closest('#dlg')) return;
   const d = el.dataset;
+  if (d.modus != null) { document.documentElement.dataset.thema = d.modus; opslag.set('thema', d.modus); return teken(); }
   if (d.fotoweg != null) { const [soort, loc, id, i] = d.fotoweg.split('|'); return fotoWeg(soort, loc, id, +i); }
   if (d.fotoplus != null) { const [soort, loc, id] = d.fotoplus.split('|'); return fotoPlus(soort, loc, id); }
   if (d.filters != null) { const fs = $('#filters'); fs.innerHTML = filterSheet(); return fs.showModal(); }
