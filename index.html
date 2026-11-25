@@ -81,7 +81,7 @@ h3{margin:0 0 6px;font-size:18px}
 .titel{font-weight:600;font-size:16px;margin-top:2px}button.titel{display:block;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;width:100%}
 .fab{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:6;height:56px;padding:0 20px 0 16px;border-radius:18px;border:0;background:var(--groen);color:var(--opgroen);font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .taakform .chip i{width:12px;height:12px;border-radius:4px;display:inline-block;margin-right:6px;vertical-align:-1px}.taakform .chip.aan{background:var(--groen2);color:var(--groentekst);border:2px solid var(--groen)}
-.tweeknop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.tweeknop .knopje{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 8px;font-size:14px;white-space:nowrap}
+.tweeknop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:4px 0 12px}.tweeknop .knopje{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 8px;font-size:14px;white-space:nowrap}
 .taakform .seg button{font-size:13.5px;white-space:nowrap}.taakform .twee{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.taakform .seg{margin-top:6px}.taakform .knoppen{justify-content:space-between}.vervallen{color:var(--rood);border-color:transparent;background:none}
 main{padding-bottom:72px}
 .sub{font-size:13px;color:var(--zacht);margin-top:2px}
@@ -296,7 +296,9 @@ addEventListener('online', verstuur);
 /* ---------- logica ---------- */
 const locs = () => D.Locaties;
 const plekNaam = (loc, id) => (D.plek[loc + '|' + id] || {}).naam || id;
-const plantNaam = (loc, id, naam) => (D.plant[loc + '|' + id] || {}).nl || naam || id;
+const plantRef = (loc, id) => String(id || '').includes(':') ? String(id).split(':') : [loc, id];
+const plantNaam = (loc, id, naam) => { const [l, i] = plantRef(loc, id); return (D.plant[l + '|' + i] || {}).nl || naam || i; };
+const isKas = (loc, plek) => ((D.plek[loc + '|' + plek] || {}).type || '') === 'kas';
 function geldt(b, j) {
   if (b.vanaf && j < +b.vanaf) return false;
   if (b.jaren === 'oneven' && j % 2 === 0) return false;
@@ -531,14 +533,14 @@ function schermPlant(loc, id) {
   kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1>${bewerkKnop('plant', loc, id)}</div>`);
   const fotos = fotosPlant(p), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
   const velden = [['Soort', p.soort], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Hoogte', p.hoogte], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantafstand', p.plantafstand], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
-  const bep = beplanting(loc, NUJ).filter(e => e.plant === id);
+  const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
   const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
-  return `${fotoStrook('plant', loc, id, fotos)}
+  return `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
+    ${fotoStrook('plant', loc, id, fotos)}
     <p><i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
     ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
     ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div><div class="sub">${[...new Set(p.sierwaarde)].filter(c => SIER[c] && c !== '-').map(c => `<span class="mini" style="background:${SIER[c][0]}">${SIER[c][1]}</span>`).join('')} ${esc(p.bron_bloei)}</div></div>` : ''}
     <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}
-    <div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
     ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
     ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
     ${p.link_url ? `<p><a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || 'Meer informatie')}</a></p>` : ''}`;
@@ -590,14 +592,15 @@ function bewerk(key) {
   const dlg = $('#dlg');
   dlg.innerHTML = `<h3>${esc(plantNaam(e.locatie, e.plant, e.naam))}</h3>
     <div class="sub">${e.nieuw ? 'Extra plant (niet in het plan)' : 'Volgens het plan: ' + esc(plekNaam(e.locatie, e.planPlek))}</div>
-    <label>Plek</label><select id="d-plek">${plekOpties(e.locatie, e.plek)}</select>
+    <label>Plek</label><select id="d-plek">${String(e.plant).includes(':') ? `<optgroup label="${esc((D.Locaties.find(l => l.id === e.locatie) || {}).naam)}">${plekOpties(e.locatie, e.plek)}</optgroup><optgroup label="Uitplanten in ${esc((D.Locaties.find(l => l.id === plantRef('', e.plant)[0]) || {}).naam)}">${D.Plekken.filter(p => p.locatie === plantRef('', e.plant)[0]).map(p => `<option value="${esc(plantRef('', e.plant)[0] + ':' + p.id)}">${esc(p.naam)}</option>`).join('')}</optgroup>` : plekOpties(e.locatie, e.plek)}</select>
     <label>Status</label><select id="d-status">${statusOpties(e.status)}</select>
     <label>Aantal</label><input id="d-aantal" value="${esc(e.aantal)}" inputmode="numeric">
     <label>Notitie</label><input id="d-notitie" value="${esc(e.notitie)}">
     <div class="knoppen">${e.uitStand ? `<button class="knopje" data-d="plan">${e.nieuw ? 'Verwijderen' : 'Terug naar plan'}</button>` : ''}<button class="knopje" data-d="sluit">Annuleren</button><button class="knopje primair" data-d="ok">Opslaan</button></div>`;
   dlg.onclick = ev => {
     const d = ev.target.dataset.d; if (!d) return;
-    if (d === 'ok') schrijf([{ op: 'stand_zet', rij: { key: e.key, locatie: e.locatie, plant: e.plant, naam: e.naam || '', plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: e.nieuw ? 'ja' : '', via_regel: '', datum: vandaag() } }]);
+    const pk = $('#d-plek').value, uit = pk.includes(':') ? pk.split(':') : null;
+    if (d === 'ok') schrijf([{ op: 'stand_zet', rij: { key: e.key, locatie: uit ? uit[0] : e.locatie, plant: uit ? plantRef('', e.plant)[1] : e.plant, naam: uit ? '' : e.naam || '', plek: uit ? uit[1] : pk, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: e.nieuw ? 'ja' : '', via_regel: '', datum: vandaag() } }]);
     if (d === 'plan') schrijf([{ op: 'stand_weg', key: e.key }]);
     dlg.close();
   };
@@ -628,7 +631,9 @@ function fotoPlus(soort, loc, id) {
 }
 function nieuw(arg) {
   const [loc, plek, plant] = arg.split('|');
-  const opties = D.Planten.filter(p => p.locatie === loc).sort((a, b) => a.nl.localeCompare(b.nl)).map(p => `<option value="${esc(p.id)}" ${p.id === plant ? 'selected' : ''}>${esc(p.nl)}</option>`).join('');
+  const srt = a => a.sort((x, y) => x.nl.localeCompare(y.nl));
+  let opties = srt(D.Planten.filter(p => p.locatie === loc)).map(p => `<option value="${esc(p.id)}" ${p.id === plant ? 'selected' : ''}>${esc(p.nl)}</option>`).join('');
+  if (isKas(loc, plek)) opties = `<optgroup label="${esc((D.Locaties.find(l => l.id === loc) || {}).naam)}">${opties}</optgroup>` + locs().filter(l => l.id !== loc).map(l => `<optgroup label="${esc(l.naam)} (voorzaaien)">${srt(D.Planten.filter(p => p.locatie === l.id)).map(p => `<option value="${esc(l.id + ':' + p.id)}">${esc(p.nl)}</option>`).join('')}</optgroup>`).join('');
   const dlg = $('#dlg');
   dlg.innerHTML = `<h3>Plant toevoegen</h3><div class="sub">${esc((D.Locaties.find(l => l.id === loc) || {}).naam)}</div>
     <label>Plant</label><select id="d-plant">${opties}<option value="">Andere plant…</option></select>
@@ -645,7 +650,7 @@ function nieuw(arg) {
       const pid = $('#d-plant').value, naam = $('#d-naam').value.trim();
       if (!pid && !naam) { $('#d-naam').focus(); return; }
       const id = pid || 'vrij-' + naam.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      schrijf([{ op: 'stand_zet', rij: { key: loc + '|' + id + '|+' + Date.now(), locatie: loc, plant: id, naam: pid ? '' : naam, plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: 'ja', via_regel: '', datum: vandaag() } }]);
+      schrijf([{ op: 'stand_zet', rij: { key: loc + '|' + id + '|+' + Date.now(), locatie: loc, plant: id, naam: pid ? (pid.includes(':') ? plantNaam(loc, pid) : '') : naam, plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: 'ja', via_regel: '', datum: vandaag() } }]);
     }
     dlg.close();
   };
