@@ -213,13 +213,18 @@ function bouw(j) {
   for (const n of ['Locaties','Acties','Plekken','Planten','Beplanting','Regels','Projecttaken','Info','Stand','Voortgang','Instellingen','Fotos']) D[n] = rijen(t[n]);
   D.inst = {}; D.Instellingen.forEach(r => D.inst[r.sleutel] = r.waarde);
   D.actie = {}; D.Acties.forEach(a => D.actie[a.id] = a);
-  D.Plekken = D.Plekken.filter(p => p.status !== 'vervallen');
-  D.plek = {}; D.Plekken.forEach(p => D.plek[p.locatie + '|' + p.id] = p);
-  D.plant = {}; D.Planten.forEach(p => D.plant[p.locatie + '|' + p.id] = p);
+  D.PlekkenAlle = D.Plekken; D.PlantenAlle = D.Planten; lijsten();
   D.Regels.forEach(prepRegel); D.Projecttaken.forEach(prepProject);
   laadtijd = j.tijd || '';
   pasToe(wachtrij);
 }
+function lijsten() {
+  D.Plekken = D.PlekkenAlle.filter(p => p.status !== 'vervallen'); D.Planten = D.PlantenAlle.filter(p => p.status !== 'vervallen');
+  D.plek = {}; D.PlekkenAlle.forEach(p => D.plek[p.locatie + '|' + p.id] = p);
+  D.plant = {}; D.PlantenAlle.forEach(p => D.plant[p.locatie + '|' + p.id] = p);
+}
+const ALLE = { Plekken: 'PlekkenAlle', Planten: 'PlantenAlle' };
+const plantWeg = (loc, id) => (D.plant[loc + '|' + id] || {}).status === 'vervallen';
 function prepRegel(r) { r.vensters = maanden(r.maanden); r.plekLijst = lijst(r.plekken); r.isKeuze = r.keuze === 'ja'; return r; }
 function prepProject(p) { p.plekLijst = lijst(p.plekken); p.vanN = ymTekst(p.van); p.totN = ymTekst(p.tot) ?? p.vanN; return p; }
 function indexeer() {
@@ -236,7 +241,7 @@ function pasToe(acties) {
     else if (a.op === 'stand_zet') { D.Stand = D.Stand.filter(r => r.key !== a.rij.key); D.Stand.push(a.rij); }
     else if (a.op === 'foto_zet') { D.Fotos = D.Fotos.filter(r => r.key !== a.rij.key); D.Fotos.push(a.rij); }
     else if (a.op === 'stand_weg') D.Stand = D.Stand.filter(r => r.key !== a.key);
-    else if (a.op === 'taak_zet') { const x = D[a.tab].find(r => r.locatie === a.rij.locatie && r.id === a.rij.id); if (x) Object.assign(x, a.rij); else D[a.tab].push(a.rij); (a.tab === 'Regels' ? prepRegel : prepProject)(x || a.rij); }
+    else if (a.op === 'taak_zet' || a.op === 'rij_zet') { const arr = D[ALLE[a.tab] || a.tab], x = arr.find(r => r.locatie === a.rij.locatie && r.id === a.rij.id), y = x ? Object.assign(x, a.rij) : (arr.push(Object.assign({}, a.rij)), arr[arr.length - 1]); if (a.tab === 'Regels') prepRegel(y); else if (a.tab === 'Projecttaken') prepProject(y); else lijsten(); }
     else if (a.op === 'stand_weg_via') D.Stand = D.Stand.filter(r => !a.via_regel || r.via_regel !== a.via_regel);
   }
   indexeer();
@@ -271,7 +276,7 @@ async function verstuur() {
     const r = await fetch(api(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ sleutel, acties: deel }) });
     const j = await r.json();
     if (!j.ok) { melding(j.fout === 'sleutel' ? 'De sleutel klopt niet; kijk bij Instellingen.' : 'Opslaan mislukt: ' + j.fout); bezig = false; return; }
-    if (deel.some(a => a.op === 'taak_zet') && !j.tabs.Regels) { melding('Taak nog niet opgeslagen: het Apps Script moet eerst worden bijgewerkt.'); bezig = false; return; }
+    if (deel.some(a => (a.op === 'taak_zet' || a.op === 'rij_zet') && !j.tabs[a.tab])) { melding('Taak nog niet opgeslagen: het Apps Script moet eerst worden bijgewerkt.'); bezig = false; return; }
     wachtrij.splice(0, deel.length); opslag.set('wachtrij', wachtrij);
     const c = opslag.get('data', { tabs: {} }); Object.assign(c.tabs, j.tabs); opslag.set('data', c);
     bouw(c);
@@ -297,7 +302,7 @@ function beplanting(loc, j) {
   if (memo.has(k)) return memo.get(k);
   const uit = [];
   for (const b of D.Beplanting) {
-    if ((loc && b.locatie !== loc) || b.status === 'vervallen' || !geldt(b, j)) continue;
+    if ((loc && b.locatie !== loc) || b.status === 'vervallen' || plantWeg(b.locatie, b.plant) || !geldt(b, j)) continue;
     const key = b.locatie + '|' + b.plant + '|' + b.plek, s = D.standKey[key];
     const e = { key, locatie: b.locatie, plant: b.plant, plek: b.plek, planPlek: b.plek, status: b.status, aantal: b.aantal, notitie: '', uitStand: false };
     if (s) Object.assign(e, { plek: s.plek || e.plek, status: s.status || e.status, aantal: s.aantal || e.aantal, notitie: s.notitie, via: s.via_regel, datum: s.datum, uitStand: true });
@@ -327,7 +332,7 @@ function regelTaken(J, M) {
   if (memo.has(k)) return memo.get(k);
   const uit = [];
   for (const r of D.Regels) {
-    if (r.status === 'vervallen' || (!D.actie[r.actie] && r.soort === 'taak')) continue;
+    if (r.status === 'vervallen' || (r.plant && plantWeg(r.locatie, r.plant)) || (!D.actie[r.actie] && r.soort === 'taak')) continue;
     for (const v of r.vensters) {
       if (!v.maanden.includes(M)) continue;
       const vj = M < v.start ? J - 1 : J;
@@ -456,7 +461,7 @@ function schermTaken() {
   let h = '';
   if (achter.length) h += `<h2 class="laat">Te laat <span class="tel">${achter.length}</span></h2><div class="lijst laat">${achter.map(taakHtml).join('')}</div>`;
   h += groepen(ts) || '<p class="leeg">Geen taken voor deze selectie.</p>';
-  h += `<button class="fab" data-nieuwetaak>${svg('<path d="M12 5v14M5 12h14"/>', 22, 2.4)}Taak</button>`;
+  h += fab('taak', 'Taak');
   if (isNu) {
     const zd = filter(D.Projecttaken.filter(p => (p.status === 'open' && p.vanN == null) || p.status === 'geparkeerd').map(p => Object.assign(projectTaak(p), { soort: p.status === 'geparkeerd' ? 'suggestie' : 'taak' })));
     if (zd.length) h += `<details style="margin-top:16px"><summary>Zonder datum of geparkeerd (${zd.length})</summary><div class="lijst" style="margin-top:8px">${zd.map(taakHtml).join('')}</div></details>`;
@@ -473,7 +478,7 @@ function standHtml(e, metPlek) {
 function schermPlekken() {
   kop(`<div class="rij"><h1>Plekken</h1></div><div class="rij">${locSeg()}</div>`);
   const ts = takenMaand(NUJ, NUM).filter(t => t.soort === 'taak' && !isKlaar(t));
-  return locs().filter(l => !S.loc || l.id === S.loc).map(l => {
+  return fab('plek', 'Plek') + locs().filter(l => !S.loc || l.id === S.loc).map(l => {
     const bep = beplanting(l.id, NUJ).filter(e => e.status !== 'weg');
     return `<h2>${esc(l.naam)}</h2><div class="raster">${D.Plekken.filter(p => p.locatie === l.id).map(p => {
       const np = bep.filter(e => e.plek === p.id).length, nt = ts.filter(t => t.loc === l.id && t.plekken.includes(p.id)).length;
@@ -484,7 +489,7 @@ function schermPlekken() {
 function schermPlek(loc, id) {
   const p = D.plek[loc + '|' + id];
   if (!p) return '<p class="leeg">Plek niet gevonden.</p>';
-  kop(`<div class="rij">${terug()}<span class="sub" style="flex:1;margin:0">${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)}</span></div><h1 style="font-size:34px;margin:0 4px">${esc(p.naam)}</h1>`);
+  kop(`<div class="rij">${terug()}<span class="sub" style="flex:1;margin:0">${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)}</span>${bewerkKnop('plek', loc, id)}</div><h1 style="font-size:34px;margin:0 4px">${esc(p.naam)}</h1>`);
   const velden = [['Zon', p.zon], ['Thema', p.thema], ['Oppervlak', p.m2 && p.m2 + ' m²'], ['Maat', p.maat], ['Grond (plan)', p.grond], ['Grond (uitgevoerd)', p.grond_uitgevoerd], ['Mulch', p.mulch], ['Water per week', p.water_per_week]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plek === id);
   const ts = takenMaand(NUJ, NUM).filter(t => t.loc === loc && t.plekken.includes(id));
@@ -502,7 +507,7 @@ function schermPlek(loc, id) {
 }
 function schermPlanten() {
   kop(`<div class="rij"><h1>Planten</h1></div><div class="rij">${locSeg()}</div>` + `<input class="zoek" type="search" placeholder="Zoek op naam" value="${esc(S.zoek)}" id="zoek">`);
-  return `<div class="lijst" id="plantlijst">${plantenLijst()}</div>`;
+  return `<div class="lijst" id="plantlijst">${plantenLijst()}</div>` + fab('plant', 'Plant');
 }
 function plantenLijst() {
   const z = S.zoek.toLowerCase();
@@ -516,7 +521,7 @@ function plantenLijst() {
 function schermPlant(loc, id) {
   const p = D.plant[loc + '|' + id];
   if (!p) return '<p class="leeg">Plant niet gevonden.</p>';
-  kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1></div>`);
+  kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1>${bewerkKnop('plant', loc, id)}</div>`);
   const fotos = fotosPlant(p), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
   const velden = [['Soort', p.soort], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Hoogte', p.hoogte], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantafstand', p.plantafstand], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id);
@@ -642,6 +647,8 @@ function nieuw(arg) {
 
 /* ---------- taak toevoegen of bewerken ---------- */
 const nieuwId = () => 'app.' + Date.now().toString(36);
+const fab = (soort, label) => `<button class="fab" data-nieuw${soort}>${svg('<path d="M12 5v14M5 12h14"/>', 22, 2.4)}${label}</button>`;
+const bewerkKnop = (soort, loc, id) => `<button class="rond" data-bewerk${soort}="${esc(loc + '|' + id)}" aria-label="Bewerken">${svg(IC.pen, 20)}</button>`;
 function taakForm(t) {
   const r = t && t.r, p = t && t.p, jaarlijks = !!r;
   const ym2 = x => { const m = /^(\d{4})-(\d{1,2})/.exec(x || ''); return m ? [+m[1], +m[2]] : null; };
@@ -716,6 +723,58 @@ function taakForm(t) {
   dlg.showModal();
 }
 
+/* ---------- plek of plant toevoegen of bewerken ---------- */
+const VELDEN = {
+  plek: { tab: 'Plekken', naam: 'naam', velden: [['naam', 'Naam'], ['type', 'Soort plek', 'lijst'], ['beschrijving', 'Beschrijving', 'lang'], ['zon', 'Zon'], ['maat', 'Maat'], ['m2', 'Oppervlak (m²)'], ['grond', 'Grond'], ['mulch', 'Mulch'], ['water_per_week', 'Water per week'], ['thema', 'Thema']] },
+  plant: { tab: 'Planten', naam: 'nl', velden: [['nl', 'Naam'], ['latijn', 'Latijnse naam'], ['emoji', 'Emoji'], ['soort', 'Soort', 'lijst'], ['levensduur', 'Levensduur', 'lijst'], ['familie', 'Familie'], ['hoogte', 'Hoogte'], ['bloei', 'Bloei'], ['plantafstand', 'Plantafstand'], ['plantmoment', 'Plantmoment'], ['beschrijving', 'Beschrijving', 'lang'], ['tip', 'Tip', 'lang'], ['onderhoud', 'Onderhoud', 'lang'], ['link_url', 'Link naar meer informatie']] }
+};
+const slug = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'nieuw';
+function rijForm(soort, arg) {
+  const c = VELDEN[soort], [l0, id0] = arg ? arg.split('|') : [], rij = arg ? (soort === 'plek' ? D.plek : D.plant)[l0 + '|' + id0] : null;
+  if (arg && !rij) return;
+  const alle = D[ALLE[c.tab]], f = { loc: rij ? rij.locatie : (S.loc || (locs()[0] || {}).id) };
+  c.velden.forEach(([k]) => f[k] = rij ? rij[k] || '' : '');
+  const dlg = $('#dlg'), woord = soort === 'plek' ? 'plek' : 'plant';
+  const lees = () => c.velden.forEach(([k]) => { const e = $('#v-' + k); if (e) f[k] = e.value.trim(); });
+  const teken2 = () => {
+    dlg.innerHTML = `<div class="taakform"><h3>${rij ? esc(rij[c.naam] || '') + ' bewerken' : 'Nieuwe ' + woord}</h3>
+      ${rij ? `<div class="sub">${esc((D.Locaties.find(l => l.id === f.loc) || {}).naam || f.loc)}</div>` : `<label>Waar</label><div class="seg" role="group" aria-label="Locatie">${locs().map(l => `<button type="button" class="${f.loc === l.id ? 'aan' : ''}" data-rl="${esc(l.id)}" aria-pressed="${f.loc === l.id}">${esc(l.naam)}</button>`).join('')}</div>`}
+      ${c.velden.map(([k, lab, t]) => `<label for="v-${k}">${lab}</label>${t === 'lang' ? `<textarea id="v-${k}" rows="2">${esc(f[k])}</textarea>` : `<input id="v-${k}" value="${esc(f[k])}"${t === 'lijst' ? ` list="l-${k}"` : ''}>${t === 'lijst' ? `<datalist id="l-${k}">${[...new Set(alle.map(x => x[k]).filter(Boolean))].sort().map(v => `<option value="${esc(v)}">`).join('')}</datalist>` : ''}`}`).join('')}
+      <div class="knoppen">${rij ? '<button type="button" class="knopje vervallen" data-d="weg">Vervallen</button>' : '<span></span>'}<span style="display:flex;gap:8px"><button type="button" class="knopje" data-d="sluit">Annuleren</button><button type="button" class="knopje primair" data-d="ok">${rij ? 'Opslaan' : 'Toevoegen'}</button></span></div></div>`;
+  };
+  const opslaan = () => {
+    lees();
+    if (!f[c.naam]) return $('#v-' + c.naam).focus();
+    let id = rij ? rij.id : slug(f[c.naam]);
+    if (!rij) { const basis = id; for (let n = 2; alle.some(x => x.locatie === f.loc && x.id === id); n++) id = basis + '-' + n; }
+    const r = { locatie: f.loc, id };
+    c.velden.forEach(([k]) => { if (!rij || f[k] !== (rij[k] || '')) r[k] = f[k]; });
+    if (rij && Object.keys(r).length === 2) return dlg.close();
+    if (!rij) r.status = soort === 'plek' ? 'actief' : '';
+    schrijf([{ op: 'rij_zet', tab: c.tab, rij: r }]); dlg.close();
+    melding(rij ? 'Opgeslagen' : (soort === 'plek' ? 'Plek' : 'Plant') + ' toegevoegd');
+    if (!rij) ga(soort + '/' + f.loc + '/' + id);
+  };
+  const weg = () => {
+    const loc = rij.locatie, id = rij.id, bep = beplanting(loc, NUJ).filter(e => (soort === 'plek' ? e.plek : e.plant) === id && e.status !== 'weg').length;
+    const rg = D.Regels.filter(r => r.locatie === loc && r.status !== 'vervallen' && (soort === 'plek' ? r.plekLijst.includes(id) : r.plant === id)).length;
+    const extra = bep || rg ? `\n\nEr ${bep + rg === 1 ? 'verwijst' : 'verwijzen'} nog ${bep ? bep + (bep === 1 ? ' plant' : ' planten') : ''}${bep && rg ? ' en ' : ''}${rg ? rg + (rg === 1 ? ' taak' : ' taken') : ''} naar deze ${woord}.` : '';
+    if (!confirm(`Deze ${woord} laten vervallen? Hij verdwijnt dan uit de app.${extra}`)) return;
+    schrijf([{ op: 'rij_zet', tab: c.tab, rij: { locatie: loc, id, status: 'vervallen' } }]); dlg.close(); ga(soort === 'plek' ? 'plekken' : 'planten');
+  };
+  dlg.onchange = null;
+  dlg.onclick = ev => {
+    const b = ev.target.closest('button'); if (!b) return;
+    if (b.dataset.rl != null) { lees(); f.loc = b.dataset.rl; return teken2(); }
+    const d = b.dataset.d;
+    if (d === 'sluit') return dlg.close();
+    if (d === 'ok') return opslaan();
+    if (d === 'weg') return weg();
+  };
+  teken2();
+  dlg.showModal();
+}
+
 /* ---------- navigatie ---------- */
 function kop(h) { $('#kop').innerHTML = h; }
 function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
@@ -738,12 +797,16 @@ function teken() {
 addEventListener('hashchange', () => { teken(); scrollTo(0, 0); });
 document.addEventListener('click', ev => {
   if (ev.target.id === 'filters') { const r = ev.target.getBoundingClientRect(); if (ev.clientY < r.top || ev.clientY > r.bottom || ev.clientX < r.left || ev.clientX > r.right) return ev.target.close(); }
-  const el = ev.target.closest('[data-modus],[data-taak],[data-nieuwetaak],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
+  const el = ev.target.closest('[data-modus],[data-taak],[data-nieuwtaak],[data-nieuwplek],[data-nieuwplant],[data-bewerkplek],[data-bewerkplant],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
   if (!el || el.closest('#dlg')) return;
   const d = el.dataset;
   if (d.modus != null) { if (d.modus) document.documentElement.dataset.thema = d.modus; else delete document.documentElement.dataset.thema; opslag.set('thema', d.modus); return teken(); }
   if (d.taak != null) return taakForm(TK[+d.taak]);
-  if (d.nieuwetaak != null) return taakForm(null);
+  if (d.nieuwtaak != null) return taakForm(null);
+  if (d.nieuwplek != null) return rijForm('plek');
+  if (d.nieuwplant != null) return rijForm('plant');
+  if (d.bewerkplek != null) return rijForm('plek', d.bewerkplek);
+  if (d.bewerkplant != null) return rijForm('plant', d.bewerkplant);
   if (d.fotoweg != null) { const [soort, loc, id, i] = d.fotoweg.split('|'); return fotoWeg(soort, loc, id, +i); }
   if (d.fotoplus != null) { const [soort, loc, id] = d.fotoplus.split('|'); return fotoPlus(soort, loc, id); }
   if (d.filters != null) { const fs = $('#filters'); fs.innerHTML = filterSheet(); return fs.showModal(); }

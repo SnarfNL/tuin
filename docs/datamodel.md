@@ -110,3 +110,5 @@ De regels van de achtertuin die niet in een tabel staan, staan in het script (`A
 - *Regels*: kolom `status`. Leeg is actief; `vervallen` verbergt de regel in de app.
 - *Projecttaken*: kolommen `plant` (optioneel, id uit *Planten*) en `toelichting`.
 - De app voegt taken toe en bewerkt ze via het Apps Script (`taak_zet`): eenmalig in *Projecttaken*, elk jaar in *Regels*. Nieuwe id's beginnen met `app.`. Bewerken van een regel geldt voor alle jaren; verwijderen zet `status` op `vervallen`.
+- *Planten*: kolom `status`. Leeg is actief; `vervallen` verbergt de plant, zijn beplanting en zijn regels in de app.
+- De app voegt ook plekken en planten toe en bewerkt ze (`rij_zet` op *Plekken* en *Planten*). Een nieuwe id is de naam in kleine letters met streepjes. Bij bewerken stuurt de app alleen de gewijzigde velden. Locatie en id veranderen niet; vervallen zet `status` op `vervallen`.
