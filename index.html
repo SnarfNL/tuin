@@ -112,6 +112,7 @@ dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;font
 .status.gepland{background:var(--geel);color:var(--geeltekst)}.status.weg{background:var(--vlak);color:var(--zacht);text-decoration:line-through}
 .sier{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:6px 0;font-size:10px;text-align:center}
 .sier div{border-radius:4px;padding:4px 0 2px;color:#1f2a1c}
+.sierjaar{display:grid;grid-template-columns:minmax(84px,1.6fr) repeat(12,1fr);gap:2px;font-size:11px;align-items:center}.sierjaar .c{height:18px;border-radius:3px;background:var(--vlak)}.sierjaar .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;padding-right:4px}.sierjaar .k{text-align:center;color:var(--zacht);font-size:9px}.sierjaar .t{text-align:center;font-weight:600}
 .score{letter-spacing:2px;color:var(--groen)}
 .jaar td,.jaar th{padding:9px 8px;border-bottom:1px solid var(--lijn);text-align:left;vertical-align:top}
 .jaar{width:100%;border-collapse:collapse;background:var(--kaart);border-radius:16px;overflow:hidden}
@@ -579,11 +580,11 @@ function schermPlant(loc, id) {
   return `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
     ${fotoStrook('plant', loc, id, fotos)}
     <p>${soortTag(p.soort, true)} <i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
-    ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
-    ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div><div class="sub">${[...new Set(p.sierwaarde)].filter(c => SIER[c] && c !== '-').map(c => `<span class="mini" style="background:${SIER[c][0]}">${SIER[c][1]}</span>`).join('')} ${esc(p.bron_bloei)}</div></div>` : ''}
+    ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
     <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}
     ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
-    ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
+    ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div>${p.bron_bloei ? `<div class="sub">${esc(p.bron_bloei)}</div>` : ''}</div>` : ''}
+    ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
     ${p.link_url ? `<p><a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || 'Meer informatie')}</a></p>` : ''}`;
 }
 function schermJaar() {
@@ -595,7 +596,19 @@ function schermJaar() {
     const k = ts.filter(isKlaar).length;
     h += `<tr data-naarmaand="${m}" class="${S.jaar === NUJ && m === NUM ? 'nu' : ''}"><th>${MN[m - 1]}</th><td>${D.Acties.filter(a => per[a.id]).map(a => `<span class="mini" style="--ab:${esc(a.kleur_achtergrond)};--at:${esc(a.kleur_tekst)}">${esc(a.label)} ${per[a.id]}</span>`).join('') || '<span class="sub">–</span>'}</td><td class="sub" style="white-space:nowrap">${k}/${ts.length}</td></tr>`;
   }
-  return h + '</tbody></table>';
+  return h + '</tbody></table>' + sierJaar();
+}
+function sierJaar() {
+  const ids = [...new Set(beplanting('achtertuin', S.jaar).filter(e => e.status !== 'weg').map(e => e.plant))];
+  const ps = ids.map(id => D.plant['achtertuin|' + id]).filter(p => p && p.sierwaarde && p.status !== 'vervallen')
+    .map(p => ({ p, s: p.sierwaarde.padEnd(12, '-').slice(0, 12) }))
+    .sort((a, b) => (a.s.search(/[^-]/) + 12) % 24 - (b.s.search(/[^-]/) + 12) % 24 || a.p.nl.localeCompare(b.p.nl));
+  if (!ps.length) return '';
+  const tel = MK.map((_, i) => ps.filter(x => x.s[i] !== '-').length);
+  return `<h2>Sierwaarde achtertuin</h2><div class="kaart"><div class="sierjaar"><div></div>${MK.map(m => `<div class="k">${m}</div>`).join('')}
+    ${ps.map(({ p, s }) => `<div class="n" data-ga="plant/achtertuin/${esc(p.id)}">${esc(p.nl)}</div>${[...s].map((c, i) => `<div class="c" style="${c !== '-' && SIER[c] ? 'background:' + SIER[c][0] : ''}" title="${esc(MK[i] + (SIER[c] && SIER[c][1] ? ': ' + SIER[c][1] : ''))}"></div>`).join('')}`).join('')}
+    <div class="n" style="cursor:default"><b>Aantal</b></div>${tel.map(n => `<div class="t">${n || '–'}</div>`).join('')}</div>
+    <div class="sub" style="margin-top:8px">${Object.entries(SIER).filter(([c]) => c !== '-').map(([, v]) => `<span class="mini" style="background:${v[0]}">${v[1]}</span>`).join('')}</div></div>`;
 }
 function schermMeer() {
   const lid = route[0] === 'info' && locs().some(l => l.id === route[1]) ? route[1] : (locs()[0] || {}).id, hier = route[0] === 'instellingen' ? 'instellingen' : 'info/' + lid;
