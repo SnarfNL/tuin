@@ -2,13 +2,15 @@
 
 Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
-**Vastlegging (sinds 24 november 2026):** het project Tuin beslist over de achtertuin en legt dat vast in dit bestand. Het project Tuin app zet het om naar de app-data. Elke wijziging die planten, zones, onderhoud of planning raakt, staat ook in `overdracht/wijzigingen.md`. De stand van de overdracht staat in `overdracht/tuin.md`.
+**Vastlegging (sinds 25 november 2026):** de Google Sheet "Tuinapp" is de enige bron van waarheid voor planten, plekken, beplanting, onderhoud en taken; de app leest de Sheet rechtstreeks. Dit bestand is de uitleg en het ontwerp van de achtertuin. Het project Tuin legt een besluit in dezelfde werksessie vast in de Sheet (rijen met locatie `achtertuin`) en werkt dit bestand bij zodat het ermee klopt. De eigenaars werken de Sheet ook zelf bij, met de hand of via de app. `overdracht/wijzigingen.md` wordt niet meer bijgehouden.
+
+**Bijgewerkt 25 november 2026:** de bollen gaan naar najaar 2027 (het vriest al, te laat voor 2026); de druif staat niet in onze tuin maar groeit van het erf van de buren door de schutting; de kabelbuis vervalt (er ligt al een elektrakabel naar het terras bij de kas); de waterhardheid is bekend (7,7 °dH, zacht); de keuze welke soorten in de volle zones komen, maken de eigenaars zelf bij het kopen van de planten.
 
 **Levensduur:** ⏳ = verwachte levensduur korter dan 3 jaar (eenjarig of tweejarig; blijft in het plan, zaait zich meestal uit of moet worden herzaaid) · ⏱ = kortlevend, ongeveer 2–4 jaar (grensgeval; op klei vaak korter, vervang of deel tijdig). Besluit 18 oktober 2026: de ⏳-soorten in zone D (Centaurea en de tweejarigen) blijven; eenjarigen worden herzaaid en tweejarigen mogen uitzaaien. De ⏱-soorten blijven ook; in jaar 3–4 worden ze gecontroleerd en zo nodig gedeeld of bijgeplant.
 
-**Bollen en vlinderplanten (besloten 14 november 2026):** voor kleur in de vroege lente komen er bollen in de zones A, B, C en D: sneeuwklokje, boerenkrokus, krokus 'Cream Beauty', kievitsbloem, wilde narcis, Oosterse sterhyacint en druifhyacint (de druifhyacint komt terug van de reservelijst). In zone S komt de bosaster (*Aster divaricatus*) voor witte herfstbloei. Als vlinderplanten komen er 3 stuks *Liatris spicata* in zone C (2 'Floristan Violett' en 1 'Floristan Weiß') en 1 aster 'Purple Dome' in zone B. De aantallen bollen per zone staan onder *Bollen per zone*; het zijn eigen schattingen. Niet gekozen: narcis 'Tête-à-tête' en de paddenlelie (geen Nederlandse bron over bijenwaarde gevonden) en de wilde marjolein (de liatris is ervoor in de plaats gekomen). De plantenlijst telt nu 50 soorten, de reservelijst 16.
+**Bollen en vlinderplanten (besloten 14 november 2026):** voor kleur in de vroege lente komen er bollen in de zones A, B, C en D: sneeuwklokje, boerenkrokus, krokus 'Cream Beauty', kievitsbloem, wilde narcis, Oosterse sterhyacint en druifhyacint (de druifhyacint komt terug van de reservelijst). In zone S komt de bosaster (*Aster divaricatus*) voor witte herfstbloei. Als vlinderplanten komen er 3 stuks *Liatris spicata* in zone C (2 'Floristan Violett' en 1 'Floristan Weiß') en 1 aster 'Purple Dome' in zone B. De aantallen bollen per zone staan onder *Bollen per zone*; het zijn eigen schattingen. De bollen gaan in najaar 2027 de grond in (besloten 25 november 2026: voor 2026 te laat door de vorst). Niet gekozen: narcis 'Tête-à-tête' en de paddenlelie (geen Nederlandse bron over bijenwaarde gevonden) en de wilde marjolein (de liatris is ervoor in de plaats gekomen). De plantenlijst telt nu 50 soorten, de reservelijst 16.
 
-**Kornoelje (besloten 14 november 2026):** de *Cornus florida* 'Rubra' wordt bewust de struikvorm van Directplant ([productpagina](https://www.directplant.nl/amerikaanse-kornoelje-cornus-florida-rubra.html)), geen halfstam. De pagina noemt geen stamvorm of stamomtrek; een productvraag spreekt van "struikvorm, geen boom". De maat (potplant of volle grond) is nog niet gekozen. De krentenboom blijft een halfstam.
+**Kornoelje (besloten 14 november 2026):** de *Cornus florida* 'Rubra' wordt bewust de struikvorm van Directplant ([productpagina](https://www.directplant.nl/amerikaanse-kornoelje-cornus-florida-rubra.html)), geen halfstam. De pagina noemt geen stamvorm of stamomtrek; een productvraag spreekt van "struikvorm, geen boom". Geplant in november 2026 op een zure plantplek (zie *pH-beheer kornoelje*). De krentenboom blijft een halfstam.
 
 **Vervallen soorten (besloten 14 november 2026):** *Phacelia tanacetifolia* (bijenvoer, zone D), *Anemone japonica* (Japanse anemoon, zone A) en *Campsis radicans* (trompetbloem, zone C) zijn uit het plan gehaald, zonder reserveplek. *Allium hollandicum* (sierui, zone B) blijft. De plantenlijst telde daarna 40 soorten.
 
@@ -103,7 +105,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 | 🍂 Herfst | Sedum 'Herbstfreude', Rudbeckia, Aster amellus (Bergaster), 🌳 Amelanchier lamarckii (boom: herfstkleur) |
 | ❄️ Winter | Echinacea (zaadhoofden) ⏱, Crocus tommasinianus (boerenkrokus, feb–mrt), Crocus chrysanthus 'Cream Beauty' (feb–mrt), 🌳 Amelanchier lamarckii (boom: silhouet) |
 
-**🌿 Klimplanten zone C:** Clematis 'Ville de Lyon'. Boom: *Amelanchier lamarckii*. *Vitis vinifera* is op 22 oktober 2026 verplaatst naar zone D (tegen de schutting). De pergola vervalt. Besloten: de klimmers krijgen rankdraden of een rooster op de muur (zie *Planning & stappen*, stap 9).
+**🌿 Klimplanten zone C:** Clematis 'Ville de Lyon'. Boom: *Amelanchier lamarckii*. *Vitis vinifera* is op 22 oktober 2026 verplaatst naar zone D (de druif van de buren die door de schutting groeit, zie zone D). De pergola vervalt. Besloten: de klimmers krijgen rankdraden of een rooster op de muur (zie *Planning & stappen*, stap 9).
 
 **📍 Plantplek en mest zone C:**
 - *Aster amellus* (Bergaster) en *Salvia nemorosa* (steppesalie) komen op de **zonnigste plek, midden in de tuin** (besloten 22 oktober 2026; de eigenaar zorgt dat ze daar komen). Beide willen zon en goed gedraineerde grond.
@@ -125,14 +127,14 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 |---|---|
 | 🌱 Lente | Muscari armeniacum (druifhyacint, apr–mei), Centaurea cyanus (korenbloem) ⏳, Myosotis (vergeet-mij-niet) ⏳ |
 | ☀️ Zomer | Lavandula angustifolia, Knautia macedonica ⏱, Echium vulgare ⏳, Agastache ⏱ |
-| 🍂 Herfst | Verbena bonariensis ⏱, ↑ Vitis vinifera (druiven, tegen de schutting), Pennisetum alopecuroides 'Little Bunny' (pluimen) |
+| 🍂 Herfst | Verbena bonariensis ⏱, ↑ Vitis vinifera (druiven; groeit van het erf van de buren door de schutting), Pennisetum alopecuroides 'Little Bunny' (pluimen) |
 | ❄️ Winter | Crocus tommasinianus (boerenkrokus, feb–mrt), Crocus chrysanthus 'Cream Beauty' (feb–mrt), Pennisetum (siergras), ↑ Vitis vinifera (kale ranken) |
 
 **📍 Plantplek en mest zone D:**
-- **Geen mest en geen compostmulch** in zone D: schrale, goed gedraineerde grond (40% grof zand door de klei). Dat geldt voor lavendel, Agastache, Knautia, Verbena, Echium, Centaurea en Pennisetum.
+- **Geen mest en geen compostmulch** in zone D: schrale, goed gedraineerde grond (40% grof zand door de klei). Dat geldt voor lavendel, Agastache, Knautia, Verbena, Echium, Centaurea en Pennisetum. Er is geen uitzondering meer: de druif wortelt bij de buren.
 - *Centaurea cyanus* (korenbloem): direct zaaien op kale, schrale grond in de volle zon (RHS: korenbloem wil volle zon, vochtige maar goed gedraineerde, liefst arme grond). Niet bemesten, anders veel blad en weinig bloei.
-- *Vitis vinifera* (druif) staat **tegen de schutting** (besloten 22 oktober 2026: daar staat nog niets tegen). Dit is de enige uitzondering op "geen mest in D": een schep rijpe compost in het plantgat (RHS: een beetje compost of mest bij het planten), de rest van de plek schraal houden. Vrij gedraineerd, zonnig en beschut; zuidoost tot zuidwest is het best (RHS), pH 6,5–6,8; de schutting staat op het zuiden. Plantafstand minimaal 30–40 cm van de schutting, rankdraden op de schutting. De eerste winter 5 cm mulch (schors of compost) rond de plant, in het voorjaar weghalen bij de stam. De schutting staat op het zuiden (eigenaar, 22 oktober 2026), dus een goede plek voor de druif.
-- *Myosotis* (vergeet-mij-nietje) wordt gezaaid aan de voet van de druif, waar de grond wat vochtiger en lichter beschaduwd is. Het is een soort die matig vruchtbare, vochtige grond en lichte schaduw verkiest (RHS), dus de kans is groter dat hij het in zone D minder goed doet dan in zone B. Eigen inschatting; vervalt hij, dan is zone B de terugvaloptie.
+- *Vitis vinifera* (druif): **staat niet in onze tuin**. De druif staat op het erf van de buurman en groeit door de schutting heen (eigenaar, 25 november 2026). Hij wordt dus niet geplant, en krijgt van onze kant geen compost, mulch of water. Wat aan onze kant van de schutting groeit, snoeien we zelf (wintersnoei dec–jan, niet in maart: hij bloedt) en leiden we langs rankdraden op de schutting. De schutting staat op het zuiden (eigenaar, 22 oktober 2026).
+- *Myosotis* (vergeet-mij-nietje) wordt gezaaid langs de schutting onder de druif, waar de grond wat vochtiger en lichter beschaduwd is. Het is een soort die matig vruchtbare, vochtige grond en lichte schaduw verkiest (RHS), dus de kans is groter dat hij het in zone D minder goed doet dan in zone B. Eigen inschatting; vervalt hij, dan is zone B de terugvaloptie.
 - Aster amellus en Dipsacus staan niet meer in zone D (Aster is naar C; Dipsacus staat op de reservelijst).
 - **Bollen (14 november 2026):** boerenkrokus, krokus 'Cream Beauty' en druifhyacint tussen de vaste planten, zonder mest. De druifhyacint is terug van de reservelijst. Hij kan zich uitbreiden (eigen inschatting): houd hem in de gaten, want zone D is al vol. Zaai de korenbloem niet op de plekken waar de bollen staan.
 
@@ -160,7 +162,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 ### Bollen per zone (besloten 14 november 2026)
 
-De aantallen zijn een eigen schatting van Claude, geen bronwaarde. De bloeikleuren komen uit eigen kennis, behalve waar een bron is genoemd. Plant de bollen na de grondbehandeling (stap 5), in november tot half december; sneeuwklokje en kievitsbloem zo snel mogelijk.
+De aantallen zijn een eigen schatting van Claude, geen bronwaarde. De bloeikleuren komen uit eigen kennis, behalve waar een bron is genoemd. **Verschoven naar najaar 2027 (besloten 25 november 2026):** het vriest al, dus voor 2026 zijn we te laat. Alle bollen, ook *Allium hollandicum* en de wilde hyacint, gaan in september tot half december 2027 de grond in; sneeuwklokje en kievitsbloem zo vroeg mogelijk in dat venster. Bestel ze in de zomer van 2027 en pas de aantallen dan aan.
 
 | Zone | Bollen (aantal) | Kleur en bloei |
 |---|---|---|
@@ -168,9 +170,9 @@ De aantallen zijn een eigen schatting van Claude, geen bronwaarde. De bloeikleur
 | B | Boerenkrokus ±25, krokus 'Cream Beauty' ±25, wilde narcis ±15 | Lila (feb–mrt), crèmegeel (feb–mrt), geel (mrt–apr) |
 | C | Boerenkrokus ±25, krokus 'Cream Beauty' ±25, Oosterse sterhyacint ±30, wilde narcis ±15 | Lila (feb–mrt), crèmegeel (feb–mrt), blauw (mrt–apr), geel (mrt–apr) |
 | D | Boerenkrokus ±15, krokus 'Cream Beauty' ±15, druifhyacint ±30 | Lila (feb–mrt), crèmegeel (feb–mrt), blauw (apr–mei) |
-| S | Geen nieuwe bollen; de wilde hyacint staat er al | – |
+| S | Wilde hyacint (aantal nog te bepalen; staat er nog niet) | Blauw (apr–mei) |
 
-Totaal ongeveer 295–300 bollen: boerenkrokus ±95, krokus 'Cream Beauty' ±65, sneeuwklokje ±30, kievitsbloem ±15–20, wilde narcis ±30, Oosterse sterhyacint ±30 en druifhyacint ±30.
+Totaal ongeveer 295–300 bollen: boerenkrokus ±95, krokus 'Cream Beauty' ±65, sneeuwklokje ±30, kievitsbloem ±15–20, wilde narcis ±30, Oosterse sterhyacint ±30 en druifhyacint ±30, plus de sierui (B) en de wilde hyacint (S).
 
 Bronnen: [Ebben – boerenkrokus](https://www.ebben.nl/nl/treeebb/crtomass-crocus-tommasinianus/pdf), [Ebben – gele krokus](https://ebben.nl/nl/treeebb/crchrysa-crocus-chrysanthus/pdf), [Nijssen – 'Cream Beauty'](https://www.nijssenbulbs.com/crocus-voorjaarsbloeiend/460-13558-crocus-chrysanthus-cream-beauty-460.html), [WUR Bijenhouden – krokussen en sneeuwklokjes](https://library.wur.nl/ojs/index.php/bijenhouden/article/download/13803/13352/13710), [Stad en Groen – bloembollen](https://stad-en-groen.nl/upload/artikelen/sg120bloembollen.pdf), [Groei & Bloei – Bollen voor bijen](https://UDEN.GROEI.NL/fileadmin/Afdelingen/afdeling_uden/Allerlei/PDF/Bollen_voor_bijen.pdf), [Vroege Vogels – kievitsbloem](https://www.bnnvara.nl/vroegevogels/artikelen/hangend-klokje-van-de-wilde-kievitsbloem-nationale-bloem-verkiezing), [Max Vandaag – bolgewasjes](https://www.maxvandaag.nl/?p=24489), [BNNVARA – Oosterse sterhyacint](https://bnnvara.nl/community/fotos/planten/oosterse-sterhyacint/357779), [Plukkers – druifhyacint](https://plukkers.com/en/products/muscari-blauwe-druifjes-armeniacum-bio), [Landelijke Gilden – wilde narcis](https://landelijkegilden.be/media/4218/download).
 
@@ -214,7 +216,7 @@ Besloten 22 oktober 2026: de pH van de plantplek wordt zelf op de juiste waarde 
 1. **Meten vóór het bestellen:** 3–4 monsters in zone A op 15–25 cm diepte, bij voorkeur door een bodemlab (pH én kalkgehalte), nadat de tegels weg zijn (31 oktober). Eigen aanname, geen bron: de laag onder de tegels kan kalkhoudend zijn door zand of cementresten.
 2. **Beslissen op de uitkomst:** tot pH 6,5 en geen vrije kalk: niets aanpassen, alleen bijhouden. pH 6,5–7,0 zonder kalk: zwavel is mogelijk (stap 3). Boven pH 7,0 of kalkrijk: geen zwavel, maar een zure plantplek van circa 1 m doorsnee en 40–50 cm diep (maat is eigen schatting) met bladcompost of schorscompost, en geen kalkhoudend materiaal in zone A.
 3. **Zwavel (alleen als de uitkomst dat toelaat):** circa 30 g/m² per pH-eenheid in niet-kalkrijke grond (±300 kg/ha), door de bovenste laag mengen, 2–3 maanden wachten en opnieuw meten. Het werkt traag, zeker in de winter.
-4. **Water en mulch:** geef regenwater uit de ton in plaats van kraanwater (hard water verhoogt de pH). De waterhardheid in Dronten is niet gevonden en dus niet geverifieerd: navragen bij Vitens. Mulch met 5–10 cm schors of bladcompost in een ring, vrij van de stam.
+4. **Water en mulch:** geef bij voorkeur regenwater uit de ton (hard water verhoogt de pH). De waterhardheid is 7,7 °dH, zacht (opgegeven door de eigenaar, 25 november 2026). Eigen inschatting: zacht kraanwater verhoogt de pH van de plantplek weinig, dus als de ton leeg is, is kraanwater een goed alternatief. Mulch met 5–10 cm schors of bladcompost in een ring, vrij van de stam.
 5. **Bijhouden:** meten op dezelfde plekken in voorjaar en najaar in de eerste twee jaar, daarna jaarlijks, en de waarden noteren. Gele bladeren met groene nerven wijzen op een te hoge pH; gebruik dan een ijzerchelaat van het type EDDHA (EDTA werkt niet boven pH 7).
 6. **Plantmoment:** de kornoelje wordt pas geplant als de pH op de streefwaarde zit. **Uitgevoerd (november 2026):** de meting gaf pH 7 en vrije kalk (de grond bruiste bij een azijntest; zelf gemeten, niet door een bodemlab). Volgens stap 2 is daarom geen zwavel gebruikt, maar een zure plantplek gemaakt met DCM Vivimus Rhodo, en de kornoelje is daarin geplant. Meet in het voorjaar de pH van de plantplek zelf (stap 5).
 
@@ -236,7 +238,7 @@ Bronnen: [Cropaia – How to lower soil pH](https://cropaia.com/blog/how-to-lowe
 | Klimhortensia | Hydrangea anomala petiolaris | S | Bloeit zelfs in diepe schaduw, zelfhechtend | 3 | 3 (e) | Bijen: Imkerpedia N3/P3. Vogels: lijst klimplanten Vogelbescherming | – | [Wikipedia](https://en.wikipedia.org/wiki/Hydrangea_anomala) |
 | Sterjasmijn | Trachelospermum jasminoides | B | Geurig, semi-evergreen, warmste muurpositie | 3 (e) | 2 (e) | Bijen: niet in Imkerpedia; Ebben noemt bijen. Vogels: groenblijvende dekking | – | [Wikipedia](https://en.wikipedia.org/wiki/Trachelospermum_jasminoides) |
 | Klimroos | Rosa 'New Dawn' | B | Lichtroze, herhaalbloeiend, geurig | 2 (e) | 2 (e) | Bijen: niet in Imkerpedia; halfgevulde bloem; Belle Epoque zet hem bij rozen voor bijen. Vogels: Vogelbescherming noemt alleen ramblerrozen | – | [Wikipedia](https://en.wikipedia.org/wiki/Rosa_%27New_Dawn%27) |
-| Druif | Vitis vinifera | D | Klimmer tegen de schutting: sierlijk blad en druiven in de herfst | 2 | 4 (e) | Bijen: Imkerpedia N2/P2. Vogels: Ebben (vogels, druiven) | – | [Wikipedia](https://en.wikipedia.org/wiki/Vitis_vinifera) |
+| Druif | Vitis vinifera | D | Klimmer van de buren die door de schutting groeit (staat niet in onze tuin): sierlijk blad en druiven in de herfst | 2 | 4 (e) | Bijen: Imkerpedia N2/P2. Vogels: Ebben (vogels, druiven) | – | [Wikipedia](https://en.wikipedia.org/wiki/Vitis_vinifera) |
 | Clematis | Clematis 'Ville de Lyon' | C | Klimmer met karmijnrode bloemen, bloeit laat in de zomer | 1 (e) | 1 (e) | Bijen: niet in Imkerpedia; Clematis-soorten daar N0/P1–4 (vooral stuifmeel) | – | [Wikipedia](https://en.wikipedia.org/wiki/Clematis) |
 | Klimop | Hedera helix | S | Groenblijvende muurklimmer, nestplaats voor vogels; de late bloei is voedsel voor insecten | 5 | 5 (e) | Bijen: Imkerpedia N5/P5. Vogels: Ebben (vogels, bessen) en lijst klimplanten Vogelbescherming; nestplaats | – | [Wikipedia](https://en.wikipedia.org/wiki/Hedera_helix) |
 | Zonnehoed | Echinacea purpurea | C | Bijenmagneet + zaden voor putters | 3 | 2 (e) | Bijen: Imkerpedia N3/P2. Vogels: zaadhoofden; Ebben noemt geen vogels | ⏱ kortlevend (±2–4 jaar), op klei vaak korter | [Wikipedia](https://nl.wikipedia.org/wiki/Rode_zonnehoed) |
@@ -348,9 +350,9 @@ De bloeimaanden komen uit de bron in de laatste kolom; *Plan* betekent dat ze ee
 
 1. Alle tegels verwijderen (za 31 oktober 2026) ✅
 2. Ondergrond beoordelen en zones uitzetten ✅
-3. Eventueel een lege kabelbuis voor verlichting leggen (vóór de grondverbetering; irrigatie is geparkeerd, zie *Mogelijk vervolgproject: irrigatie*)
+3. ~~Lege kabelbuis voor verlichting~~ vervallen (25 november 2026); er ligt al een elektrakabel naar het terras bij de kas (zie *Verlichting*)
 4. Kleibodem per zone behandelen ✅ (plantvakken gevuld)
-5. Bomen planten (half nov–apr, kluitbomen) ✅ en bollen planten (nov–half dec)
+5. Bomen planten (half nov–apr, kluitbomen) ✅; bollen planten in najaar 2027 (sep–half dec)
 6. Klimsteun plaatsen en klimplanten planten (mrt–apr)
 7. Vaste planten inplanten en zone D zaaien (apr–mei)
 8. Mulchen (zie *Mulchen*) en water geven met de hand volgens *Water geven (indicatie per zone)*
@@ -379,7 +381,7 @@ Zie *Planning & stappen vanaf 31 oktober* voor de volledige stappenlijst met dat
 - Trachelospermum: plant tegen de beschutte muur van de woning
 - Lonicera periclymenum: snoei na de bloei (aug)
 - Klimroos en Clematis 'Ville de Lyon': snoei in feb–mrt
-- Druif (Vitis, zone D tegen de schutting): snoei in dec–jan, niet in maart (bloedt)
+- Druif (Vitis, zone D; van de buren, groeit door de schutting): snoei het deel aan onze kant in dec–jan, niet in maart (bloedt)
 
 ### 🪱 Klei — advies
 
@@ -390,7 +392,7 @@ Zie *Planning & stappen vanaf 31 oktober* voor de volledige stappenlijst met dat
 
 ### 📅 Jaarlijks onderhoud
 
-- **Dec–jan:** Druif snoeien; verder vogels genieten
+- **Dec–jan:** Druif snoeien (het deel aan onze kant van de schutting); verder vogels genieten
 - **Feb–mrt:** Klimroos en Clematis 'Ville de Lyon' snoeien; vaste planten terugknippen, mulchen
 - **Maart:** schorspad (en de schorsringen om de bomen) controleren en aanvullen als de laag dunner is dan 5 cm (zie *Schorspad*)
 - **April–mei:** Planten, zaaien zone D; blad van de uitgebloeide bollen laten afsterven
@@ -440,8 +442,8 @@ Legenda: ✂️ snoeien / terugknippen · 🌱 planten / zaaien · 🪴 delen / 
 | C | Liatris (*Liatris spicata*) |  |  | ✂️ | 🌱 | 🌱 |  |  |  |  |  |  |  | Planten in april–mei, iets verhoogd, geen compost tegen de kroon. Blad en stengels pas in het voorjaar terugknippen (Tuinzaden.eu). Niet nat in de winter. |
 | C | Oosterse sterhyacint (*Scilla siberica*) |  |  |  |  |  |  |  |  |  | 🌱 | 🌱 | 🌱 | Bollen poten tot half december. Blad na de bloei laten afsterven. |
 | D | Korenbloem (*Centaurea cyanus*) ⏳ |  |  | 🌱 | 🌱 |  |  |  |  | 🌱 |  |  |  | Zaaien in het voorjaar of in september. |
-| D | Druif (*Vitis vinifera ↑*) | ✂️ |  | 🌱 | 🌱 |  |  | ✂️ |  |  |  |  | ✂️ | Tegen de schutting. Wintersnoei dec–jan (niet in maart: bloedt); zomer bladschoten inkorten. Eerste winter 5 cm mulch, in het voorjaar bij de stam weghalen. Rankdraden op de schutting. |
-| D | Vergeet-mij-nietje (*Myosotis*) ⏳ |  |  | 🌱 |  |  | 🌱 | ✂️ |  |  |  |  |  | Zaaien aan de voet van de druif; na het uitzaaien opruimen. Houdt van wat vochtiger grond en lichte schaduw; valt hij tegen, dan zone B proberen. |
+| D | Druif (*Vitis vinifera ↑*) | ✂️ |  |  |  |  |  | ✂️ |  |  |  |  | ✂️ | Groeit van het erf van de buren door de schutting: niet planten, geen compost, mulch of water. Wintersnoei dec–jan van het deel aan onze kant (niet in maart: bloedt); zomer bladschoten inkorten. Rankdraden op de schutting. |
+| D | Vergeet-mij-nietje (*Myosotis*) ⏳ |  |  | 🌱 |  |  | 🌱 | ✂️ |  |  |  |  |  | Zaaien langs de schutting onder de druif; na het uitzaaien opruimen. Houdt van wat vochtiger grond en lichte schaduw; valt hij tegen, dan zone B proberen. |
 | D | Knautia (*Knautia macedonica*) ⏱ |  |  | ✂️🪴 |  |  |  |  | ✂️ |  |  |  |  | Terugknippen na de bloei voor nabloei. |
 | D | Slangenkruid (*Echium vulgare*) ⏳ |  |  |  |  | 🌱 | 🌱 |  |  |  |  |  |  | Tweejarig: zaai in mei–juni. |
 | D | IJzerhard (*Verbena bonariensis*) ⏱ |  |  | ✂️ | ✂️🌱 | 🌱 |  |  |  |  |  |  |  | Zaait zichzelf uit. |
@@ -479,10 +481,10 @@ Besloten 22 oktober 2026: De eigenaar doet in de eerste fases niets met irrigati
 | A | 4,5 m² | Medium | 12–15 l/m² = 54–68 l | De kornoelje valt hier ook onder, zie bomen. |
 | S | 2,5 m² (2–3) | Medium | 12–15 l/m² = 30–38 l | Moet vochtig blijven (varens, Astilbe); minder gieten maar niet laten uitdrogen. |
 | C | 8 m² | Laag tot medium | Eerste 6–8 weken na planten ±10 l/m² = ±80 l, plus Clematis 15 l = 15 l; daarna nauwelijks | Aster amellus en Salvia nemorosa zijn droogtetolerant: alleen laten aanslaan. |
-| D | 4 m² | Geen | Geen regulier water | Alleen bij het zaaien en laten aanslaan (nieuwe lavendel, Agastache). De druif (*Vitis*) krijgt de eerste jaren ongeveer 15–20 l per week in droge perioden (eigen schatting). |
+| D | 4 m² | Geen | Geen regulier water | Alleen bij het zaaien en laten aanslaan (nieuwe lavendel, Agastache). De druif wortelt bij de buren en krijgt van ons geen water. |
 | Bomen | 2 stuks | Eerste jaren regelmatig | 40–60 l per boom per week in droge perioden, jaar 1–2 (kornoelje eerder en vaker) | Samen 80–120 l. Kornoelje bij voorkeur met regenwater (zie pH-beheer). |
 
-**Totaal in een droge week, jaar 1–2:** ongeveer 400–600 l voor de hele tuin (B 165–220 l, A + S ±85–105 l, C ±80–95 l alleen de eerste 6–8 weken, D ±15–20 l voor de druif, bomen 80–120 l). Over 10–12 droge weken is dat ongeveer 4–7 m³ per seizoen (schatting). Met de slang is het afmeten het makkelijkst: tel de seconden die een emmer van 10 l nodig heeft om vol te lopen en reken dat om per zone.
+**Totaal in een droge week, jaar 1–2:** ongeveer 400–550 l voor de hele tuin (B 165–220 l, A + S ±85–105 l, C ±80–95 l alleen de eerste 6–8 weken, bomen 80–120 l). Over 10–12 droge weken is dat ongeveer 4–6,5 m³ per seizoen (schatting). Met de slang is het afmeten het makkelijkst: tel de seconden die een emmer van 10 l nodig heeft om vol te lopen en reken dat om per zone.
 
 ## Mulchen (de bodem afdekken)
 
@@ -513,7 +515,7 @@ Besloten 22 oktober 2026: De eigenaar doet in de eerste fases niets met irrigati
 | A, B | Compost of bladcompost, ±5 cm | Voedt de borders; dit is de standaard voor de rijkere zones. |
 | S | Bladcompost, ±5 cm | Volgens het plan. Een dikke laag trekt slakken aan: houd de laag niet dikker dan nodig. |
 | C | Compost, ±5 cm | Halfschaduw: de laag houdt de klei vochtig. Voor Echinacea en Sedum een dunnere laag houden. Rond Aster amellus, Salvia nemorosa en Liatris spicata (zonnige plek midden in de tuin) geen compostlaag: houd de plantenhals vrij en gebruik hooguit een dunne laag of grof zand. |
-| D | Niet mulchen met compost | Schrale grond is de bedoeling, en het zaaisel (Centaurea) heeft kale grond nodig. Rond lavendel, Anijsnetel en Pennisetum 'Little Bunny' eventueel grof zand of split, zodat de plantenhals droog blijft; in de winter droog mulchen bij 'Little Bunny'. Uitzondering: rond de druif (*Vitis*) tegen de schutting de eerste winter 5 cm schors of compost, in het voorjaar bij de stam weghalen. (Eigen advies, niet uit een bron, behalve de druif: RHS.) |
+| D | Niet mulchen met compost | Schrale grond is de bedoeling, en het zaaisel (Centaurea) heeft kale grond nodig. Rond lavendel, Anijsnetel en Pennisetum 'Little Bunny' eventueel grof zand of split, zodat de plantenhals droog blijft; in de winter droog mulchen bij 'Little Bunny'. De druif wortelt bij de buren en krijgt geen mulch. (Eigen advies, niet uit een bron.) |
 | Bomen | Schors of houtsnippers, 5–10 cm in een ring | Vrij van de stam. Voor de kornoelje, die zuur tot neutraal wil, is schors geschikt. |
 
 Hoeveelheid: 5 cm over 27 m² is ongeveer 1,35 m³ per ronde (ongeveer 1,15 m³ zonder zone D). Reken op een jaarlijkse aanvulling. Het schorspad valt hierbuiten (zie *Schorspad*).
@@ -532,13 +534,14 @@ Hoeveelheid: 5 cm over 27 m² is ongeveer 1,35 m³ per ronde (ongeveer 1,15 m³ 
 
 ## Verlichting
 
-Nog uit te werken. Hieronder staan de uitgangspunten en de vragen die eerst beantwoord moeten worden. Kabels moeten ook vóór het planten in de grond.
+Geparkeerd; verlichting volgt later. Hieronder staan de uitgangspunten en de vragen die eerst beantwoord moeten worden.
+
+**Stand 25 november 2026:** er komt geen lege kabelbuis (vervallen). Er ligt één elektrakabel naar het terras bij de kas, nog zonder stroom; die moet nog in de veranda worden aangesloten.
 
 **Uitgangspunten**
 
 - Warm-wit (≤2700 K), laag en gericht, met timer of schemerschakelaar: weinig verstoring voor insecten, vleermuizen en vogels.
 - Mogelijke accenten: bomen (kornoelje, krentenboom), de muurklimmers in B en S, het pad en de zitplek.
-- Nu al meenemen bij het graven: een lege kabelbuis (32–40 mm), zodat later geen bestrating of border open hoeft.
 
 **Gewenste sfeer en lichtbron**
 
@@ -555,7 +558,7 @@ Nog uit te werken. Hieronder staan de uitgangspunten en de vragen die eerst bean
 
 **Eerst beantwoorden**
 
-- Stroom is er bij de ton. Is er ook stroom bij de zones waar verlichting komt, of loopt de kabel vanaf de ton (lege kabelbuis meenemen)?
+- Stroom is er bij de ton, en er ligt een kabel (nog zonder stroom) naar het terras bij de kas. Is er stroom nodig bij andere plekken waar verlichting komt?
 - Laagspanning (12/24 V, eenvoudig en veilig) of 230 V (installateur nodig)?
 - Welke elementen moeten verlicht worden en welke sfeer is gewenst?
 
@@ -614,7 +617,7 @@ Totaal ongeveer **€170 tot €733** (€205 tot €768 als de kornoelje de sta
 
 ## Planning & stappen vanaf 31 oktober
 
-**Stand 24 november 2026:** de tegels zijn weg, de zones zijn uitgezet als licht verhoogde plantvakken met een rand en gevuld, beide bomen staan erin met boomsteun en een ring van schors, het schorspad ligt er en de subsidie is aangevraagd. Stap 1, 1a, 2, 3, 5, 6 en 13a zijn gedaan. De overige data zijn een voorstel en hangen af van het weer (nooit op natte klei werken) en van de levertijden.
+**Stand 25 november 2026:** de tegels zijn weg, de zones zijn uitgezet als licht verhoogde plantvakken met een rand en gevuld, beide bomen staan erin met boomsteun en een ring van schors, het schorspad ligt er en de subsidie is aangevraagd. Stap 1, 1a, 2, 3, 5, 6 en 13a zijn gedaan. Stap 4 en 7a vervallen; de bollen (stap 7) gaan naar najaar 2027. De taken staan in de Sheet (tabblad *Projecttaken*). De overige data zijn een voorstel en hangen af van het weer (nooit op natte klei werken) en van de levertijden.
 
 | # | Stap | Wanneer | Afhankelijk van | Bestellen / regelen | Status |
 |---|---|---|---|---|---|
@@ -623,19 +626,19 @@ Totaal ongeveer **€170 tot €733** (€205 tot €768 als de kornoelje de sta
 | 1a | Subsidie voorbereiden: foto's van alle tegels en een inmeting van het te verwijderen oppervlak maken; vragen stellen aan gemeente Urk (zie *Subsidie*) | Nu t/m 30 okt | Stap 1 | Meetlint, foto's | Gedaan (foto's en inmeting voor de aanvraag) |
 | 2 | Bestaande tegels verwijderen | Za 31 okt | Droog weer, afvoer geregeld | — | Gedaan (tegels weg, stand 7 nov) |
 | 3 | Ondergrond beoordelen: zandlaag en fundering, verdichting, waterafvoer en afschot; pH en kalkgehalte van zone A laten meten | 1–8 nov | Stap 2 | Hoeveelheden compost, zand, perliet bepalen; bodemlab voor pH en kalk | Gedaan (pH op de plek van de kornoelje zelf gemeten: pH 7, bruiste bij de azijntest (vrije kalk), 21 nov) |
-| 4 | Alleen als verlichting wordt gekozen: lege kabelbuis leggen (irrigatie is geparkeerd) | 9–15 nov | Stap 3, besluit verlichting | Kabelbuis | Open |
+| 4 | ~~Lege kabelbuis leggen~~ | — | — | — | Vervallen (25 nov: geen kabelbuis; er ligt al een elektrakabel naar het terras bij de kas) |
 | 5 | Kleibodem per zone behandelen, alleen op droge dagen (A, B, C, D, S) | 16–30 nov | Stap 4 | Compost, scherp zand, perliet, potgrond, bladcompost | Gedaan (alle plantvakken gevuld, 24 nov) |
 | 6 | Krentenboom planten met boompaal en ring in C; kornoelje (struikvorm, Directplant) in A zodra de pH op de streefwaarde zit | Krentenboom half nov – begin dec; kornoelje half nov – eind apr, verwacht mrt–apr als zwavel en hermeten nodig zijn | Stap 5; pH-meting en -correctie (kornoelje), zie pH-beheer kornoelje | Krentenboom nu te bestellen; kornoelje (Directplant, struikvorm; maat en pot of volle grond nog te kiezen) pas na de pH-meting; krentenboom: stamomtrek minimaal 12 cm (subsidie) | Gedaan (beide bomen geplant, met boomsteun en een ring van schors; krentenboom 21 nov, kornoelje op een zure plantplek met DCM Vivimus Rhodo) |
-| 7 | Voorjaarsbollen planten: Allium en Hyacinthoides, en de bollen van 14 november (sneeuwklokje, boerenkrokus, krokus 'Cream Beauty', kievitsbloem, wilde narcis, Oosterse sterhyacint, druifhyacint); aantallen per zone staan onder *Bollen per zone* | Nov – half dec; sneeuwklokje en kievitsbloem zo snel mogelijk | Stap 5 | Bollen nu bestellen: ±295–300 stuks (eigen schatting) plus Allium en Hyacinthoides | Open |
-| 7a | Terugvaloptie bollen (eigen advies): is de grond half december nog niet behandeld of te nat, plant de bollen dan tijdelijk in potten buiten en zet ze na de bloei uit, of stel het planten uit tot najaar 2027 | Half dec | Stap 5 en 7 | Potten en potgrond | Open |
-| 8 | Kale grond afdekken met bladcompost of mulch voor de winter | Dec | Stap 5–7 | Mulch | Open |
-| 9 | Steun plaatsen: rankdraden of rooster op de muur in zone C (besloten), rankdraden in B en S, rankdraden op de schutting in D voor de druif | Jan–feb | Stap 5 | Roestvrijstalen draad, muurbeugels of rooster | Open |
-| 10 | Klimplanten en vaste planten en zaad bestellen, ook de liatris (3 stuks), de aster 'Purple Dome' (1) en de bosaster (1–2) | Jan–feb | Plantkeuze en levensduur-check | Alle planten en zaden | Open |
-| 11 | Klimplanten planten (de druif in D met een schep compost in het plantgat) | Mrt–apr | Stap 9 | — | Open |
-| 12 | Vaste planten planten, ook de liatris (C), de aster 'Purple Dome' (B) en de bosaster (S); zone D zaaien (Centaurea, Myosotis aan de voet van de druif) | Apr–mei | Stap 11 | — | Open |
+| 7 | Voorjaarsbollen planten: Allium en de wilde hyacint, en de bollen van 14 november (sneeuwklokje, boerenkrokus, krokus 'Cream Beauty', kievitsbloem, wilde narcis, Oosterse sterhyacint, druifhyacint); aantallen per zone staan onder *Bollen per zone* | Najaar 2027: sep – half dec; sneeuwklokje en kievitsbloem zo vroeg mogelijk | Stap 5 | Bollen bestellen in de zomer van 2027: ±295–300 stuks (eigen schatting) plus Allium en wilde hyacint | Open (verschoven, 25 nov: in 2026 te laat door de vorst) |
+| 7a | ~~Terugvaloptie bollen (potten of uitstellen)~~ | — | — | — | Vervallen (25 nov: de bollen gaan naar najaar 2027) |
+| 8 | Kale grond afdekken met bladcompost of mulch voor de winter | Dec | Stap 5 | Mulch | Open |
+| 9 | Steun plaatsen: rankdraden of rooster op de muur in zone C (besloten), rankdraden in B en S, rankdraden op de schutting in D voor de druif van de buren | Jan–feb | Stap 5 | Roestvrijstalen draad, muurbeugels of rooster | Open |
+| 10 | Klimplanten en vaste planten en zaad bestellen, ook de liatris (3 stuks), de aster 'Purple Dome' (1) en de bosaster (1–2); bij het kopen kiezen de eigenaars welke soorten in de volle zones A, D en S komen | Jan–feb | Levensduur-check | Alle planten en zaden | Open |
+| 11 | Klimplanten planten in B, C en S (de druif in D groeit al door de schutting) | Mrt–apr | Stap 9 | — | Open |
+| 12 | Vaste planten planten, ook de liatris (C), de aster 'Purple Dome' (B) en de bosaster (S); zone D zaaien (Centaurea, Myosotis langs de schutting onder de druif) | Apr–mei | Stap 11 | — | Open |
 | 13 | 5 cm mulchen (niet in zone D, zie *Mulchen*) | Apr–mei | Stap 12 | Mulch | Open |
 | 13a | Subsidie aanvragen bij gemeente Urk na uitvoering: factuur, foto's voor en na, inmeting; binnen zes maanden na aankoop én realisatie. Of in één keer of per maatregel (bomen, ontstenen, klimsteun) hangt af van het antwoord van de gemeente (zie *Subsidie*) | Na stap 6, 9 en 12; mogelijk per maatregel eerder | Antwoord gemeente; stap 6, 9, 12 | Facturen en foto's bewaren | Gedaan (aangevraagd, gemeld 24 nov: ontstenen 39,6 m² en de krentenboom; groene gevel niet in deze aanvraag) |
-| 14 | Verlichting plaatsen (kabel ligt er al) | Apr–mei of later | Besluit verlichting | Armaturen, trafo of stroompunt | Open |
+| 14 | Elektrakabel naar het terras bij de kas aansluiten in de veranda (de kabel ligt er, nog zonder stroom); verlichting plaatsen | Later, nog te plannen | Besluit verlichting | Armaturen, trafo of stroompunt | Open (verlichting volgt later) |
 | 15 | Eerste jaar: met de hand water geven volgens *Water geven (indicatie per zone)* | Apr–sept | Stap 13 | — | Open |
 | 16 | Zone D onderhouden: Centaurea herzaaien, tweejarigen laten uitzaaien (zaadhoofden laten staan) | Jaarlijks vanaf 2028 | Stap 12 | Zaad | Open |
 | 17 | Levensduur-check van de ⏱-soorten (Aquilegia, Knautia, Verbena, Agastache, Echinacea): delen, bijplanten of laten uitzaaien | Herfst 2029 | Stap 12 | Planten of zaad | Open |
@@ -668,21 +671,20 @@ Soorten die uit de definitieve plantenlijst zijn gevallen (besluit 19 oktober 20
 - Actiepunt: meet de zonuren in het groeiseizoen (aanname: alleen de tuinkas en zone D hebben meer dan 6 uur zon).
 - Actiepunt: controleer hoogte en zonbehoefte per soort in de definitieve lijst (nu indicatief uit eigen kennis) en voeg een hoogtekolom met bronnen toe. De bijen- en vogelscores zijn op 24 november 2026 met bronnen aangevuld (zie *Alle planten*); de links in die tabel wijzen nog deels naar Engelstalige pagina's (Wikipedia, RHS).
 - Grondverbetering (24 november 2026): in alle zones wijkt de uitvoering af van het geplande mengsel (A, B en S oude tuingrond; C en D zand op klei met tuinaarde). Nog na te gaan wat er per zone in zit (compost, perliet, mest). Voorgesteld: niet meer spitten maar verbeteren met een mulchlaag (zie de zones en *Mulchen*).
-- Na het nameten van de oppervlaktes (22 oktober 2026) is de plantenlijst te vol voor de kleine zones. Stand na het besluit van 14 november 2026 (bollen en vlinderplanten): zone A 9 soorten (incl. boom) plus 3 bolsoorten op 4,5 m², zone B 11 soorten plus 3 bolsoorten op 8 m², zone C 9 soorten (incl. boom) plus 4 bolsoorten op 8 m², zone D 9 soorten (incl. de druif) plus 3 bolsoorten op 4 m² en zone S 10 soorten op 2–3 m². Bollen staan tussen en onder de vaste planten en vragen weinig eigen ruimte (eigen inschatting). Zone D, S en A zijn nog te vol; nog te beslissen welke soorten blijven; beoordeel ook de plantafstanden bij het uitzetten.
-- Zone S (14 november 2026): met de bosaster 10 soorten op 2–3 m². Beslis of er een soort uit moet, en kies de soort of cultivar van de bosaster.
-- Bollen (14 november 2026): de aantallen per zone zijn een eigen schatting; pas ze aan bij het bestellen. De bollen kunnen pas de grond in na de grondbehandeling (stap 5) en uiterlijk half december; zie stap 7a voor de terugvaloptie.
-- Kievitsbloem (14 november 2026): het antwoord "ja op alles" op de vraag "nu planten of overslaan" is gelezen als nu planten. Nog te bevestigen door de eigenaar; controleer ook of de bollen in november nog te koop zijn.
-- Druifhyacint (14 november 2026): kan zich in zone D uitbreiden (eigen inschatting), terwijl zone D al vol is. Na het eerste voorjaar beoordelen.
+- Volle zones (bijgewerkt 25 november 2026): zone A, D en S hebben meer soorten dan er ruimte is (stand 14 november: A 9 soorten plus 3 bolsoorten op 4,5 m², D 9 plus 3 op 4 m², S 10 op 2–3 m²). De eigenaars houden dit zelf bij en kiezen welke soorten er komen als ze de planten kopen. Beoordeel ook de plantafstanden bij het uitzetten.
+- Bollen (bijgewerkt 25 november 2026): voor 2026 te laat door de vorst; alle bollen gaan in september tot half december 2027 de grond in. De aantallen per zone zijn een eigen schatting; pas ze aan bij het bestellen in de zomer van 2027.
+- Kievitsbloem (14 november 2026, bijgewerkt 25 november): "ja op alles" was gelezen als nu planten; dat is niet meer aan de orde. Bevestig bij het bestellen in 2027 of de kievitsbloem erin blijft.
+- Druifhyacint (14 november 2026): kan zich in zone D uitbreiden (eigen inschatting), terwijl zone D al vol is. Na de eerste bloei beoordelen (voorjaar 2028, omdat de bollen in najaar 2027 de grond in gaan).
 - Liatris (14 november 2026): de bronnen over wegrotten op natte winterbodem zijn Engelstalig (Tuinzaden.eu, Gardenia); een Nederlandse bron is niet gevonden. Plant iets verhoogd in het zandmengsel. De verdeling 2 'Floristan Violett' en 1 'Floristan Weiß' is een voorstel van Claude, bevestigd met de open voorstellen.
-- Aster 'Purple Dome' (14 november 2026): bloeit het rijkst met minstens 6 uur zon (RHS); zone B heeft 3–6 uur. Meet de zonuren; valt de bloei tegen, dan naar zone C.
+- Aster 'Purple Dome' (14 november 2026): bloeit het rijkst met minstens 6 uur zon (RHS); zone B heeft 3–6 uur. Meet de zonuren; valt de bloei tegen (beoordelen oktober 2027), dan in maart–april 2028 naar zone C.
 - Bloeikleuren (14 november 2026): het plan legt de bloeikleur niet per plant vast; de kleuren in de analyse en de impressies komen uit eigen kennis. Nog te kiezen: de cultivar van Heuchera, de kleur van Helleborus en de cultivar van Agastache.
 - Kornoelje: geplant in november 2026 op een zure plantplek, met boomsteun en een ring van schors. Houd de afstand tot het pad in de gaten (takken vanaf de grond).
-- Stroom voor verlichting: bij de ton is stroom aanwezig; bij de zones zelf nog uit te werken.
-- pH kornoelje (bijgewerkt 24 november 2026): gemeten pH 7 met vrije kalk; er is een zure plantplek gemaakt met DCM Vivimus Rhodo en de kornoelje is geplant. Nog te doen: in het voorjaar de pH van de plantplek meten en noteren, geef regenwater, en vraag bij Vitens na hoe hard het water in Dronten is.
+- Stroom en verlichting (25 november 2026): bij de ton is stroom. Er ligt één elektrakabel naar het terras bij de kas, nog zonder stroom; die moet in de veranda worden aangesloten. Geen kabelbuis. Verlichting volgt later.
+- pH kornoelje (bijgewerkt 24 november 2026): gemeten pH 7 met vrije kalk; er is een zure plantplek gemaakt met DCM Vivimus Rhodo en de kornoelje is geplant. Nog te doen: in het voorjaar de pH van de plantplek meten en noteren, en bij voorkeur regenwater geven. De waterhardheid is bekend: 7,7 °dH, zacht (25 november 2026).
 - Actiepunt: meet de zonuren op de plek midden in de tuin waar Aster amellus, Salvia nemorosa en Liatris spicata komen (zone C). De schutting in zone D staat op het zuiden (eigenaar, 22 oktober 2026): geen controle meer nodig voor de druif.
 - Actiepunt: *Myosotis* in zone D zit op een wat droge, zonnige plek; hij wil meer vocht en lichte schaduw (RHS). Valt hij tegen na het eerste voorjaar, dan terug naar zone B.
 - Subsidie: aangevraagd (gemeld 24 november 2026) voor ontstenen en de krentenboom. Wacht op het besluit (binnen 8 weken). De groene gevel kan eventueel later apart, als de gemeente dat toestaat.
-- Actiepunt: beslis over de fasering in drie stappen. Herfst 2026 het skelet (tegels weg, ondergrond, bomen, bollen, eventueel een kabelbuis, klimsteun, kale grond afdekken). Voorjaar 2027 de beplanting (klimplanten en vaste planten in A, B en C, zone D zaaien, mulch). Najaar 2027 en 2028 de rest (zone S, aanvullen, verlichting). Daarna de planning aanpassen. Let op de zes-maandentermijn van de subsidie (zie *Subsidie*).
+- Actiepunt: beslis over de fasering in drie stappen. Herfst 2026 het skelet (tegels weg, ondergrond, bomen, klimsteun, kale grond afdekken; de bollen zijn verschoven naar najaar 2027). Voorjaar 2027 de beplanting (klimplanten en vaste planten in A, B en C, zone D zaaien, mulch). Najaar 2027 en 2028 de rest (zone S, aanvullen, verlichting). Daarna de planning aanpassen. Let op de zes-maandentermijn van de subsidie (zie *Subsidie*).
 - De zones zijn uitgezet en de plantvakken zijn gevuld (24 november 2026). De oppervlaktes van 22 oktober 2026 (±27 m²) blijven het uitgangspunt voor mulch en water geven.
 - Verlichting (voorlopig geparkeerd): kies de armatuur (maatwerk of een kant-en-klare lantaarn zoals de Marlow, levering naar Nederland navragen), controleer de Ampoule-lampen en kies laagspanning of 230 V.
 - Schorspad (3 november 2026; het pad ligt er sinds 14 november, de ring van schors om de bomen sinds november): leg vast aan welke zones het pad grenst en wat de lengte en breedte zijn. Reken daarna de hoeveelheid schors (0,05–0,10 m³ per m²) en het doek uit en neem het pad mee in de planning. Doe ook de natte-zandtest met het Jogetex 17/16 (zie *Schorspad*).
