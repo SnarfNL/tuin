@@ -104,3 +104,9 @@ De app is dynamisch: er staan geen planten, plekken of taken in de code. Alles k
 - **Moestuin** (`moestuinplan.md`): §1 tot en met §6.
 
 De regels van de achtertuin die niet in een tabel staan, staan in het script (`ALG_ACHTERTUIN`), met de sectie als `bron`. Wat het script mist of niet kan plaatsen, schrijft het in `data/AANVULLEN.md`.
+
+## Aanvullingen in de Sheet (25 november 2026)
+
+- *Regels*: kolom `status`. Leeg is actief; `vervallen` verbergt de regel in de app.
+- *Projecttaken*: kolommen `plant` (optioneel, id uit *Planten*) en `toelichting`.
+- De app voegt taken toe en bewerkt ze via het Apps Script (`taak_zet`): eenmalig in *Projecttaken*, elk jaar in *Regels*. Nieuwe id's beginnen met `app.`. Bewerken van een regel geldt voor alle jaren; verwijderen zet `status` op `vervallen`.

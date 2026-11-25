@@ -69,9 +69,14 @@ h3{margin:0 0 6px;font-size:18px}
 .laat .vink span{border-color:var(--rood)}.laat .taak:not(.klaar) .sub{color:var(--rood)}
 .ico{flex:none;width:44px;text-align:center;font-size:18px}
 .tk{flex:1;min-width:0}
-.kop{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:12.5px;color:var(--zacht)}
+.kop{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--zacht)}.kop .waar{flex:1;min-width:0;padding-top:1px}.kop .actie{flex:none;white-space:nowrap}
+.plantlink{background:none;border:0;padding:0;color:var(--groentekst);font-weight:600;cursor:pointer;font-size:inherit}
 .actie{border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600;background:var(--ab);color:var(--at)}
-.titel{font-weight:600;font-size:16px;margin-top:2px}
+.titel{font-weight:600;font-size:16px;margin-top:2px}button.titel{display:block;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;width:100%}
+.fab{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:6;height:56px;padding:0 20px 0 16px;border-radius:18px;border:0;background:var(--groen);color:var(--opgroen);font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.taakform .chip i{width:12px;height:12px;border-radius:4px;display:inline-block;margin-right:6px;vertical-align:-1px}.taakform .chip.aan{background:var(--groen2);color:var(--groentekst);border:2px solid var(--groen)}
+.taakform .seg button{font-size:13.5px;white-space:nowrap}.taakform .twee{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.taakform .seg{margin-top:6px}.taakform .knoppen{justify-content:space-between}.vervallen{color:var(--rood);border-color:transparent;background:none}
+main{padding-bottom:72px}
 .sub{font-size:13px;color:var(--zacht);margin-top:2px}
 .suggestie{background:var(--geel)}
 .waarschuwing{box-shadow:inset 0 0 0 1px var(--rood)}.waarschuwing .titel{color:var(--rood)}
@@ -131,6 +136,7 @@ dialog h3{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:22px}
  header>*{max-width:1144px;width:100%;margin:0 auto}
  #filters{margin:auto;max-width:520px;border-radius:24px}
  #melding{bottom:24px}
+ .fab{bottom:24px;right:28px}
 }
 </style>
 </head>
@@ -210,11 +216,12 @@ function bouw(j) {
   D.Plekken = D.Plekken.filter(p => p.status !== 'vervallen');
   D.plek = {}; D.Plekken.forEach(p => D.plek[p.locatie + '|' + p.id] = p);
   D.plant = {}; D.Planten.forEach(p => D.plant[p.locatie + '|' + p.id] = p);
-  D.Regels.forEach(r => { r.vensters = maanden(r.maanden); r.plekLijst = lijst(r.plekken); r.isKeuze = r.keuze === 'ja'; });
-  D.Projecttaken.forEach(p => { p.plekLijst = lijst(p.plekken); p.vanN = ymTekst(p.van); p.totN = ymTekst(p.tot) ?? p.vanN; });
+  D.Regels.forEach(prepRegel); D.Projecttaken.forEach(prepProject);
   laadtijd = j.tijd || '';
   pasToe(wachtrij);
 }
+function prepRegel(r) { r.vensters = maanden(r.maanden); r.plekLijst = lijst(r.plekken); r.isKeuze = r.keuze === 'ja'; return r; }
+function prepProject(p) { p.plekLijst = lijst(p.plekken); p.vanN = ymTekst(p.van); p.totN = ymTekst(p.tot) ?? p.vanN; return p; }
 function indexeer() {
   D.klaar = new Map(); D.Voortgang.forEach(v => D.klaar.set(v.jaar + '|' + v.taak, v));
   D.klaarP = new Map(); D.Voortgang.filter(v => v.taak.startsWith('p:')).forEach(v => D.klaarP.set(v.taak, v));
@@ -229,6 +236,7 @@ function pasToe(acties) {
     else if (a.op === 'stand_zet') { D.Stand = D.Stand.filter(r => r.key !== a.rij.key); D.Stand.push(a.rij); }
     else if (a.op === 'foto_zet') { D.Fotos = D.Fotos.filter(r => r.key !== a.rij.key); D.Fotos.push(a.rij); }
     else if (a.op === 'stand_weg') D.Stand = D.Stand.filter(r => r.key !== a.key);
+    else if (a.op === 'taak_zet') { const x = D[a.tab].find(r => r.locatie === a.rij.locatie && r.id === a.rij.id); if (x) Object.assign(x, a.rij); else D[a.tab].push(a.rij); (a.tab === 'Regels' ? prepRegel : prepProject)(x || a.rij); }
     else if (a.op === 'stand_weg_via') D.Stand = D.Stand.filter(r => !a.via_regel || r.via_regel !== a.via_regel);
   }
   indexeer();
@@ -263,9 +271,10 @@ async function verstuur() {
     const r = await fetch(api(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ sleutel, acties: deel }) });
     const j = await r.json();
     if (!j.ok) { melding(j.fout === 'sleutel' ? 'De sleutel klopt niet; kijk bij Instellingen.' : 'Opslaan mislukt: ' + j.fout); bezig = false; return; }
+    if (deel.some(a => a.op === 'taak_zet') && !j.tabs.Regels) { melding('Taak nog niet opgeslagen: het Apps Script moet eerst worden bijgewerkt.'); bezig = false; return; }
     wachtrij.splice(0, deel.length); opslag.set('wachtrij', wachtrij);
     const c = opslag.get('data', { tabs: {} }); Object.assign(c.tabs, j.tabs); opslag.set('data', c);
-    D.Stand = rijen(j.tabs.Stand); D.Voortgang = rijen(j.tabs.Voortgang); pasToe(wachtrij);
+    bouw(c);
     bezig = false; teken();
     if (wachtrij.length) verstuur();
   } catch (e) { bezig = false; melding('Niet verstuurd; wordt opnieuw geprobeerd zodra er verbinding is.'); }
@@ -318,7 +327,7 @@ function regelTaken(J, M) {
   if (memo.has(k)) return memo.get(k);
   const uit = [];
   for (const r of D.Regels) {
-    if (!D.actie[r.actie] && r.soort === 'taak') continue;
+    if (r.status === 'vervallen' || (!D.actie[r.actie] && r.soort === 'taak')) continue;
     for (const v of r.vensters) {
       if (!v.maanden.includes(M)) continue;
       const vj = M < v.start ? J - 1 : J;
@@ -341,7 +350,7 @@ function regelTaken(J, M) {
   return uit;
 }
 function projectTaak(p) {
-  return { type: 'p', key: 'p:' + p.id, p, loc: p.locatie, actie: p.actie, soort: 'taak', titel: p.titel, plekken: p.plekLijst,
+  return { type: 'p', key: 'p:' + p.id, p, loc: p.locatie, actie: p.actie, soort: 'taak', titel: p.titel, plekken: p.plekLijst, plant: p.plant || '',
     groep: p.deel || 'hele', sub: [p.wanneer, p.uiterlijk && 'uiterlijk ' + p.uiterlijk, p.afhankelijk_van && 'eerst: ' + p.afhankelijk_van].filter(Boolean).join(' · ') };
 }
 function takenMaand(J, M) {
@@ -390,13 +399,13 @@ function actieLabel(id) {
 function taakHtml(t) {
   const i = TK.push(t) - 1, klaar = isKlaar(t);
   const waar = t.plekken.map(p => esc(plekNaam(t.loc, p))).join(', ');
-  const plant = t.plant ? ` · <button class="link" data-plant="${esc(t.loc + '|' + t.plant)}">${esc(plantNaam(t.loc, t.plant))}</button>` : '';
-  const r = t.r || {}, meer = [r.toelichting, r.waar && 'Waar: ' + r.waar, r.meting && 'Meting: ' + r.meting, (t.p || r).bron && 'Bron: ' + (t.p || r).bron].filter(Boolean);
+  const plant = t.plant ? `<button class="plantlink" data-plant="${esc(t.loc + '|' + t.plant)}">${esc(plantNaam(t.loc, t.plant))}</button> · ` : '';
+  const r = t.r || {}, meer = [r.toelichting || (t.p || {}).toelichting, r.waar && 'Waar: ' + r.waar, r.meting && 'Meting: ' + r.meting, (t.p || r).bron && 'Bron: ' + (t.p || r).bron].filter(Boolean);
   const v = klaar ? (t.type === 'p' ? D.klaarP.get(t.key) : D.klaar.get(t.vj + '|' + t.key)) : null;
   const knop = t.soort === 'taak' ? `<button class="vink" data-vink="${i}" aria-label="${klaar ? 'Ongedaan maken' : 'Afvinken'}: ${esc(t.titel)}"><span>${klaar ? svg(IC.vink, 16, 3) : ''}</span></button>` : `<span class="ico">${t.soort === 'suggestie' ? '💡' : '⚠️'}</span>`;
   return `<div class="kaart taak ${klaar ? 'klaar' : ''} ${t.soort}">${knop}<div class="tk">
-    <div class="kop">${actieLabel(t.actie)}<span>${S.loc ? '' : esc((D.Locaties.find(l => l.id === t.loc) || {}).naam || t.loc) + ' · '}${waar}${plant}</span></div>
-    <div class="titel">${esc(t.titel)}</div>
+    <div class="kop"><span class="waar">${plant}${S.loc ? '' : esc((D.Locaties.find(l => l.id === t.loc) || {}).naam || t.loc) + (waar ? ' · ' : '')}${waar}</span>${actieLabel(t.actie)}</div>
+    <button class="titel" data-taak="${i}" aria-label="Bewerken: ${esc(t.titel)}">${esc(t.titel)}</button>
     ${t.sub || t.achter ? `<div class="sub">${t.achter && t.v ? 'Van ' + MK[t.v.start - 1] + (t.vj !== S.jaar ? ' ' + t.vj : '') + ' · ' : ''}${esc(t.sub)}</div>` : ''}
     ${v ? `<div class="sub">Gedaan op ${esc(v.datum)}${v.meting ? ' · ' + esc(v.meting) : ''}</div>` : ''}
     ${meer.length ? `<details><summary>Meer</summary>${meer.map(x => `<p>${esc(x)}</p>`).join('')}</details>` : ''}
@@ -447,6 +456,7 @@ function schermTaken() {
   let h = '';
   if (achter.length) h += `<h2 class="laat">Te laat <span class="tel">${achter.length}</span></h2><div class="lijst laat">${achter.map(taakHtml).join('')}</div>`;
   h += groepen(ts) || '<p class="leeg">Geen taken voor deze selectie.</p>';
+  h += `<button class="fab" data-nieuwetaak>${svg('<path d="M12 5v14M5 12h14"/>', 22, 2.4)}Taak</button>`;
   if (isNu) {
     const zd = filter(D.Projecttaken.filter(p => (p.status === 'open' && p.vanN == null) || p.status === 'geparkeerd').map(p => Object.assign(projectTaak(p), { soort: p.status === 'geparkeerd' ? 'suggestie' : 'taak' })));
     if (zd.length) h += `<details style="margin-top:16px"><summary>Zonder datum of geparkeerd (${zd.length})</summary><div class="lijst" style="margin-top:8px">${zd.map(taakHtml).join('')}</div></details>`;
@@ -630,6 +640,82 @@ function nieuw(arg) {
   dlg.showModal();
 }
 
+/* ---------- taak toevoegen of bewerken ---------- */
+const nieuwId = () => 'app.' + Date.now().toString(36);
+function taakForm(t) {
+  const r = t && t.r, p = t && t.p, jaarlijks = !!r;
+  const ym2 = x => { const m = /^(\d{4})-(\d{1,2})/.exec(x || ''); return m ? [+m[1], +m[2]] : null; };
+  const pv = p && ym2(p.van), pt = p && ym2(p.tot);
+  const f = {
+    titel: t ? (r ? r.detail : p.titel) : '', actie: t ? t.actie : '', loc: t ? t.loc : (S.loc || (locs()[0] || {}).id),
+    plek: t ? (r ? r.plekken : p.plekken) : (S.plek || ''), plant: t ? ((r ? r.plant : p.plant) || '') : '',
+    herh: t ? (jaarlijks ? 'jaar' : 'een') : 'een', deel: t ? ((r ? r.deel_start : p.deel) || '') : '',
+    van: r ? (r.vensters[0] || {}).start || S.maand : (p ? (pv ? pv[1] : 0) : S.maand),
+    tot: r ? (r.vensters[0] || {}).eind || S.maand : (p ? (pt ? pt[1] : (pv ? pv[1] : 0)) : S.maand),
+    mnd: r && r.vensters.length > 1 ? r.maanden : '', jaar: pv ? pv[0] : S.jaar, toel: t ? ((r ? r.toelichting : p.toelichting) || '') : ''
+  };
+  const dlg = $('#dlg');
+  const lees = () => {
+    if (!$('#t-titel')) return;
+    f.titel = $('#t-titel').value.trim(); f.plek = $('#t-plek').value; f.plant = $('#t-plant').value; f.toel = $('#t-toel').value.trim();
+    if ($('#t-mnd')) f.mnd = $('#t-mnd').value.trim(); else { f.van = +$('#t-van').value; f.tot = +$('#t-tot').value; }
+  };
+  const mOpties = (g, leeg) => (leeg ? `<option value="0" ${!g ? 'selected' : ''}>zonder datum</option>` : '') + MN.map((m, i) => `<option value="${i + 1}" ${g === i + 1 ? 'selected' : ''}>${m}</option>`).join('');
+  const teken2 = () => {
+    const plekken = D.Plekken.filter(x => x.locatie === f.loc), meerdere = f.plek.includes(',');
+    const planten = D.Planten.filter(x => x.locatie === f.loc).sort((a, b) => (a.nl || '').localeCompare(b.nl || ''));
+    dlg.innerHTML = `<div class="taakform"><h3>${t ? 'Taak bewerken' : 'Nieuwe taak'}</h3>
+      <label for="t-titel">Wat moet er gebeuren?</label><input id="t-titel" value="${esc(f.titel)}" placeholder="Bijv. knoflook planten">
+      <label>Actie</label><div class="chips">${D.Acties.map(a => `<button type="button" class="chip ${f.actie === a.id ? 'aan' : ''}" data-ta="${esc(a.id)}" aria-pressed="${f.actie === a.id}"><i style="background:${esc(a.kleur_achtergrond)};outline:1.5px solid ${esc(a.kleur_tekst)}"></i>${esc(a.label)}</button>`).join('')}</div>
+      <label>Waar</label><div class="seg" role="group" aria-label="Locatie">${locs().map(l => `<button type="button" class="${f.loc === l.id ? 'aan' : ''}" data-tl="${esc(l.id)}" aria-pressed="${f.loc === l.id}">${esc(l.naam)}</button>`).join('')}</div>
+      <div class="twee"><div><label for="t-plek">${esc((D.Locaties.find(l => l.id === f.loc) || {}).plekwoord || 'Plek')}</label><select id="t-plek"><option value="">${f.plant ? 'Waar de plant staat' : '–'}</option>${meerdere ? `<option value="${esc(f.plek)}" selected>${esc(lijst(f.plek).map(x => plekNaam(f.loc, x)).join(', '))}</option>` : ''}${plekken.map(x => `<option value="${esc(x.id)}" ${x.id === f.plek ? 'selected' : ''}>${esc(x.naam)}</option>`).join('')}</select></div>
+      <div><label for="t-plant">Plant (optioneel)</label><select id="t-plant"><option value="">Geen</option>${planten.map(x => `<option value="${esc(x.id)}" ${x.id === f.plant ? 'selected' : ''}>${esc(x.nl || x.id)}</option>`).join('')}</select></div></div>
+      <label>Wanneer</label><div class="seg" role="group" aria-label="Herhaling">${[['een', 'Eenmalig'], ['jaar', 'Elk jaar']].map(([k, l]) => `<button type="button" class="${f.herh === k ? 'aan' : ''}" data-th="${k}" aria-pressed="${f.herh === k}">${l}</button>`).join('')}</div>
+      ${f.mnd && f.herh === 'jaar' ? `<label for="t-mnd">Maanden</label><input id="t-mnd" value="${esc(f.mnd)}"><div class="sub">Meerdere periodes, bijv. mrt, sep of okt-nov.</div>`
+        : `<div class="twee"><div><label for="t-van">Van${f.herh === 'een' ? ' (' + f.jaar + ')' : ''}</label><select id="t-van">${mOpties(f.van, f.herh === 'een')}</select></div><div><label for="t-tot">Tot en met</label><select id="t-tot">${mOpties(f.tot)}</select></div></div>`}
+      <div class="seg" role="group" aria-label="Deel van de maand">${[['', 'Hele maand'], ['begin', 'Begin'], ['midden', 'Midden'], ['eind', 'Eind']].map(([k, l]) => `<button type="button" class="${f.deel === k ? 'aan' : ''}" data-tdl="${k}" aria-pressed="${f.deel === k}">${l}</button>`).join('')}</div>
+      <label for="t-toel">Toelichting</label><textarea id="t-toel" rows="2" placeholder="Optioneel">${esc(f.toel)}</textarea>
+      <div class="knoppen">${t ? '<button type="button" class="knopje vervallen" data-d="weg">Vervallen</button>' : '<span></span>'}<span style="display:flex;gap:8px"><button type="button" class="knopje" data-d="sluit">Annuleren</button><button type="button" class="knopje primair" data-d="ok">${t ? 'Opslaan' : 'Toevoegen'}</button></span></div></div>`;
+  };
+  const pad = n => String(n).padStart(2, '0');
+  const opslaan = () => {
+    lees();
+    if (!f.titel) return $('#t-titel').focus();
+    if (!f.actie) return melding('Kies een actie.');
+    if (!f.plek && !(f.plant && f.herh === 'jaar')) return melding('Kies een plek' + (f.herh === 'jaar' ? ' of een plant.' : '.'));
+    const acts = [], oudTab = t ? (r ? 'Regels' : 'Projecttaken') : '', tab = f.herh === 'jaar' ? 'Regels' : 'Projecttaken';
+    const zelfde = t && oudTab === tab && t.loc === f.loc, id = zelfde ? (r || p).id : nieuwId();
+    if (t && !zelfde) acts.push({ op: 'taak_zet', tab: oudTab, rij: { locatie: t.loc, id: (r || p).id, status: 'vervallen' } });
+    if (tab === 'Regels') {
+      const mnd = f.mnd && $('#t-mnd') ? f.mnd : (f.van === f.tot ? MK[f.van - 1] : MK[f.van - 1] + '-' + MK[f.tot - 1]);
+      const rij = { locatie: f.loc, id, plant: f.plant, plekken: f.plek, actie: f.actie, detail: f.titel, maanden: mnd, deel_start: f.deel, toelichting: f.toel };
+      if (!zelfde) Object.assign(rij, { soort: 'taak', herhaling: 'jaarlijks', keuze: '', status: '' });
+      acts.push({ op: 'taak_zet', tab, rij });
+    } else {
+      const van = f.van ? f.jaar + '-' + pad(f.van) : '', tot = f.van ? (f.tot < f.van ? f.jaar + 1 : f.jaar) + '-' + pad(f.tot || f.van) : '';
+      const rij = { locatie: f.loc, id, titel: f.titel, actie: f.actie, plekken: f.plek, plant: f.plant, van, tot, deel: f.deel, toelichting: f.toel };
+      if (!zelfde) Object.assign(rij, { status: 'open', wanneer: '' });
+      else if (van !== (p.van || '') || tot !== (p.tot || '')) rij.wanneer = '';
+      acts.push({ op: 'taak_zet', tab, rij });
+    }
+    schrijf(acts); dlg.close(); melding(t ? 'Taak opgeslagen' : 'Taak toegevoegd');
+  };
+  dlg.onclick = ev => {
+    const b = ev.target.closest('button'); if (!b) return;
+    const d = b.dataset;
+    if (d.ta != null) { lees(); f.actie = d.ta; return teken2(); }
+    if (d.tl != null) { lees(); if (f.loc !== d.tl) { f.loc = d.tl; f.plek = ''; f.plant = ''; } return teken2(); }
+    if (d.th != null) { lees(); f.herh = d.th; if (f.herh === 'jaar' && !f.van) f.van = f.tot = S.maand; return teken2(); }
+    if (d.tdl != null) { lees(); f.deel = d.tdl; return teken2(); }
+    if (d.d === 'sluit') return dlg.close();
+    if (d.d === 'ok') return opslaan();
+    if (d.d === 'weg' && confirm('Deze taak laten vervallen? Hij verdwijnt dan uit de app.')) { schrijf([{ op: 'taak_zet', tab: r ? 'Regels' : 'Projecttaken', rij: { locatie: t.loc, id: (r || p).id, status: 'vervallen' } }]); dlg.close(); }
+  };
+  dlg.onchange = ev => { if (ev.target.id === 't-plant') { lees(); teken2(); } };
+  teken2();
+  dlg.showModal();
+}
+
 /* ---------- navigatie ---------- */
 function kop(h) { $('#kop').innerHTML = h; }
 function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
@@ -652,10 +738,12 @@ function teken() {
 addEventListener('hashchange', () => { teken(); scrollTo(0, 0); });
 document.addEventListener('click', ev => {
   if (ev.target.id === 'filters') { const r = ev.target.getBoundingClientRect(); if (ev.clientY < r.top || ev.clientY > r.bottom || ev.clientX < r.left || ev.clientX > r.right) return ev.target.close(); }
-  const el = ev.target.closest('[data-modus],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
+  const el = ev.target.closest('[data-modus],[data-taak],[data-nieuwetaak],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
   if (!el || el.closest('#dlg')) return;
   const d = el.dataset;
   if (d.modus != null) { if (d.modus) document.documentElement.dataset.thema = d.modus; else delete document.documentElement.dataset.thema; opslag.set('thema', d.modus); return teken(); }
+  if (d.taak != null) return taakForm(TK[+d.taak]);
+  if (d.nieuwetaak != null) return taakForm(null);
   if (d.fotoweg != null) { const [soort, loc, id, i] = d.fotoweg.split('|'); return fotoWeg(soort, loc, id, +i); }
   if (d.fotoplus != null) { const [soort, loc, id] = d.fotoplus.split('|'); return fotoPlus(soort, loc, id); }
   if (d.filters != null) { const fs = $('#filters'); fs.innerHTML = filterSheet(); return fs.showModal(); }

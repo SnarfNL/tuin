@@ -1,7 +1,8 @@
 /**
  * Tuinapp – webapp-endpoint op de Google Sheet "Tuinapp".
  * GET  : alle tabbladen die de app nodig heeft, als weergegeven tekst.
- * POST : afvinken (Voortgang), werkelijke stand (Stand) en eigen foto's (Fotos). Vereist de sleutel
+ * POST : afvinken (Voortgang), werkelijke stand (Stand), eigen foto's (Fotos) en taken toevoegen of bewerken
+ *        (Regels, Projecttaken). Vereist de sleutel
  *        uit Scripteigenschappen (SLEUTEL). Installatie: zie README.md.
  */
 const LEES = ['Locaties', 'Acties', 'Plekken', 'Planten', 'Beplanting', 'Regels', 'Projecttaken', 'Info', 'Stand', 'Voortgang', 'Instellingen', 'Fotos'];
@@ -25,7 +26,7 @@ function doPost(e) {
     const ss = SpreadsheetApp.getActive();
     (b.acties || []).forEach(a => voerUit_(ss, a));
     SpreadsheetApp.flush();
-    return uit_({ ok: true, tijd: new Date().toISOString(), tabs: { Stand: waarden_(ss, 'Stand'), Voortgang: waarden_(ss, 'Voortgang'), Fotos: waarden_(ss, 'Fotos') } });
+    return uit_({ ok: true, tijd: new Date().toISOString(), tabs: { Stand: waarden_(ss, 'Stand'), Voortgang: waarden_(ss, 'Voortgang'), Fotos: waarden_(ss, 'Fotos'), Regels: waarden_(ss, 'Regels'), Projecttaken: waarden_(ss, 'Projecttaken') } });
   } catch (x) {
     return uit_({ ok: false, fout: String(x) });
   } finally {
@@ -41,8 +42,25 @@ function voerUit_(ss, a) {
     case 'stand_zet': verwijder_(ss, 'Stand', r => r.key === a.rij.key); voegToe_(ss, 'Stand', a.rij); break;
     case 'stand_weg': verwijder_(ss, 'Stand', r => r.key === a.key); break;
     case 'foto_zet': verwijder_(ss, 'Fotos', r => r.key === a.rij.key); voegToe_(ss, 'Fotos', a.rij); break;
+    case 'taak_zet': if (TAKEN.indexOf(a.tab) >= 0 && a.rij && a.rij.locatie && a.rij.id) zetRij_(ss, a.tab, a.rij); break;
     case 'stand_weg_via': if (a.via_regel) verwijder_(ss, 'Stand', r => r.via_regel === a.via_regel); break;
   }
+}
+
+const TAKEN = ['Regels', 'Projecttaken'];
+
+// Werkt de rij met dezelfde locatie en id bij (alleen de meegegeven kolommen), of voegt hem toe.
+function zetRij_(ss, naam, rij) {
+  const sh = ss.getSheetByName(naam);
+  const w = sh.getDataRange().getDisplayValues(), kop = w[0];
+  const iL = kop.indexOf('locatie'), iI = kop.indexOf('id');
+  for (let i = 1; i < w.length; i++) {
+    if (w[i][iL] === rij.locatie && w[i][iI] === rij.id) {
+      kop.forEach((k, j) => { if (k && k !== 'locatie' && k !== 'id' && rij[k] != null) sh.getRange(i + 1, j + 1).setNumberFormat('@').setValue(String(rij[k])); });
+      return;
+    }
+  }
+  voegToe_(ss, naam, rij);
 }
 
 function waarden_(ss, naam) {
