@@ -61,17 +61,18 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **🌳 Boom:** *Cornus florida 'Rubra'* (Amerikaanse kornoelje), struikvorm (Directplant, geen halfstam).
 
-**📍 Plantplek en mest zone A:**
-- **Kornoelje:** eigen zure plantplek, geen kalk en geen kalkhoudend materiaal in de buurt (zie *pH-beheer kornoelje*). Compost of bladcompost in het plantgat, geen verse mest. Bescherm tegen felle middagzon en droge wind.
-- Vaste planten (Astrantia, Geranium, Heuchera, Aquilegia, Liriope, Helleborus): op de halfschaduwplekken, in het mengsel van zone A (met compost, geen extra mest). Astrantia wil vochtige grond; Liriope en Heuchera zijn tolerant.
+**📍 Plantplek en mest zone A** (bijgewerkt 25 november 2026; per soort ook in de Sheet, kolom *grondwens*):
+- **Mest:** geen extra mest in zone A. Het geplande mengsel (tuinaarde, compost, perliet) is niet uitgevoerd; de oude tuingrond wordt verbeterd met een mulchlaag van compost of bladcompost (december en feb–mrt), buiten de zure plantplek van de kornoelje.
+- **Kornoelje:** staat sinds november 2026 in een eigen zure plantplek met DCM Vivimus Rhodo, met boomsteun en een ring van schors. Geen kalk en geen kalkhoudend materiaal in de buurt, geen verse mest, regenwater geven (zie *pH-beheer kornoelje*). Bescherm tegen felle middagzon en droge wind.
+- Vaste planten (Astrantia, Geranium, Heuchera, Aquilegia, Liriope, *Helleborus orientalis*): op de halfschaduwplekken, zonder extra mest. Astrantia wil vochtige grond; Liriope en Heuchera zijn tolerant.
 - *Digitalis* en *Aquilegia* zaaien zich uit; geen mest, anders worden ze te lang en vallen ze om.
-- **Bollen (14 november 2026):** sneeuwklokje, boerenkrokus en kievitsbloem tussen de vaste planten, in het mengsel van zone A, zonder mest. De kievitsbloem komt op de vochtigste, licht beschaduwde plek. Plant de bollen buiten de plantplek van de kornoelje, zodat daar later niet gegraven hoeft te worden (eigen opmerking).
+- **Bollen (najaar 2027):** sneeuwklokje, boerenkrokus en kievitsbloem tussen de vaste planten, zonder mest. De kievitsbloem komt op de vochtigste, licht beschaduwde plek. Plant de bollen buiten de zure plantplek van de kornoelje, zodat daar later niet gegraven hoeft te worden (eigen opmerking).
 
 ### Zone B — Half-zon · Klimplanten muur · Landelijk
 
 **Grondsoort (plan):** 60% potgrond/compost, 30% lichte klei, 10% organische mest. Muren zijn droog — extra compost essentieel.
 
-**Grondverbetering, uitgevoerd (stand 24 november 2026):** licht verhoogd plantvak met rand, gevuld met oude tuingrond (16 november); op 18 november was de verwachting dat ook B nog met tuinaarde wordt aangevuld. Of er compost, potgrond of organische mest door is gemengd: onbekend. Het plan klopt hier dus niet meer met de uitvoering. Voorgesteld (eigen inschatting): compost als mulchlaag (december en feb–mrt) en de organische mest alleen in de plantgaten van de klimplanten, vooral de roos.
+**Grondverbetering, uitgevoerd (stand 24 november 2026):** licht verhoogd plantvak met rand, gevuld met oude tuingrond (16 november); op 18 november was de verwachting dat ook B nog met tuinaarde wordt aangevuld. Of er compost, potgrond of organische mest door is gemengd: onbekend. Het plan klopt hier dus niet meer met de uitvoering. Voorgesteld (eigen inschatting): compost als mulchlaag (december en feb–mrt) en de organische mest alleen in het plantgat van de kamperfoelie.
 
 | Seizoen | Planten |
 |---|---|
@@ -82,15 +83,15 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **🌿 Klimplanten muur:** Rosa 'New Dawn', Lonicera periclymenum, Trachelospermum jasminoides (geurig, semi-evergreen; tegen de beschutte woningmuur).
 
-**📍 Plantplek en mest zone B:**
-- Zone B is de **enige zone met organische mest** (10% in het mengsel); de muurgrond is droog en arm. Klimplanten minimaal 30–40 cm van de muur planten, met de plantkuil iets schuin naar de muur.
-- *Rosa* 'New Dawn' en *Lonicera*: rijke grond, wortels koel en vochtig houden (mulch, voet in de schaduw). Roos: wat extra organische mest in het plantgat, niet op een plek waar eerder een roos stond.
-- *Trachelospermum*: tegen de beschutte, zonnigste woningmuur; liever geen extra mest, wel goed gedraineerd.
-- *Nepeta*, *Geranium* 'Rozanne', *Rudbeckia*: voorin de rand, zonder extra mest bovenop het mengsel.
-- *Lunaria* (judaspenning) en *Allium hollandicum*: halfschaduw, matig voedselrijk; *Lunaria* mag uitzaaien.
-- *Salvia nemorosa* staat niet in zone B (alleen in zone C); *Myosotis* is naar zone D verplaatst.
-- **Aster 'Purple Dome' (14 november 2026):** 1 plant op de zonnigste plek van zone B, met 45–60 cm ruimte, zonder extra mest. De RHS noemt zon of lichte schaduw, met de rijkste bloei bij minstens 6 uur zon; in zone B (3–6 uur) kan hij dus minder rijk bloeien. Valt dat tegen, dan gaat hij naar zone C.
-- **Bollen (14 november 2026):** boerenkrokus, krokus 'Cream Beauty' en wilde narcis voorin de rand en tussen de vaste planten, niet tegen de droge muurvoet. Geen extra mest bij de bollen.
+**📍 Plantplek en mest zone B** (bijgewerkt 25 november 2026; per soort ook in de Sheet, kolom *grondwens*):
+- **Mest:** zone B is de **enige zone waar organische mest mag**; de muurgrond is droog en arm. Het geplande mengsel (met 10% organische mest) is niet uitgevoerd: B is gevuld met oude tuingrond. Daarom alleen wat organische mest in het plantgat van de kamperfoelie, en verder compost als mulchlaag (december en feb–mrt).
+- Klimplanten (kamperfoelie en sterjasmijn): minimaal 30–40 cm van de muur, met de plantkuil iets schuin naar de muur.
+- *Lonicera* (kamperfoelie): rijke grond, wortels koel en vochtig houden (mulch, voet in de schaduw); wat organische mest in het plantgat.
+- *Trachelospermum* (sterjasmijn): tegen de beschutte, zonnigste woningmuur; liever geen extra mest, wel goed gedraineerd.
+- *Nepeta*, *Geranium* 'Rozanne' en *Rudbeckia*: voorin de rand, zonder extra mest. *Helleborus orientalis*: op een halfschaduwplek, zonder extra mest.
+- *Lunaria* (judaspenning) en *Allium hollandicum* (sierui): halfschaduw, matig voedselrijk; *Lunaria* mag uitzaaien. De sierui gaat in najaar 2027 de grond in.
+- **Aster 'Purple Dome':** 1 plant op de zonnigste plek van zone B, met 45–60 cm ruimte, zonder extra mest. De RHS noemt zon of lichte schaduw, met de rijkste bloei bij minstens 6 uur zon; in zone B (3–6 uur) kan hij dus minder rijk bloeien. Valt dat tegen, dan gaat hij naar zone C.
+- **Bollen (najaar 2027):** boerenkrokus, krokus 'Cream Beauty' en wilde narcis voorin de rand en tussen de vaste planten, niet tegen de droge muurvoet. Geen mest bij de bollen.
 
 ### Zone C — Half-zon · Klimplanten · Landelijk
 
@@ -107,15 +108,13 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **🌿 Klimplanten zone C:** Clematis 'Ville de Lyon'. Boom: *Amelanchier lamarckii*. *Vitis vinifera* is op 22 oktober 2026 verplaatst naar zone D (de druif van de buren die door de schutting groeit, zie zone D). De pergola vervalt. Besloten: de klimmers krijgen rankdraden of een rooster op de muur (zie *Planning & stappen*, stap 9).
 
-**📍 Plantplek en mest zone C:**
-- *Aster amellus* (Bergaster) en *Salvia nemorosa* (steppesalie) komen op de **zonnigste plek, midden in de tuin** (besloten 22 oktober 2026; de eigenaar zorgt dat ze daar komen). Beide willen zon en goed gedraineerde grond.
-- **Geen mest** bij Aster en Salvia, ook geen dikke laag compost eromheen: ze bloeien beter en blijven steviger op schrale tot matig voedselrijke grond. Wel het zand-compostmengsel van zone C (40% scherp zand + 30% compost door de klei), met de plantkuil iets verhoogd zodat water wegloopt.
-- *Salvia nemorosa* staat alleen in zone C (besloten 22 oktober 2026), niet in zone B.
-- *Echinacea*, *Sedum*, *Rudbeckia* en *Nepeta* mogen op de overige plekken in C; ze zijn minder kritisch.
+**📍 Plantplek en mest zone C** (bijgewerkt 25 november 2026; per soort ook in de Sheet, kolom *grondwens*):
+- **Mest:** geen mest in zone C. Compost alleen als mulchlaag en in het plantgat van de Clematis; rond Aster, Salvia en Liatris geen compost.
+- *Aster amellus* (Bergaster) en *Salvia nemorosa* (steppesalie) komen op de **zonnigste plek, midden in de tuin** (besloten 22 oktober 2026; de eigenaar zorgt dat ze daar komen). Beide willen zon en goed gedraineerde grond (RHS). Geen mest en geen dikke laag compost eromheen: ze bloeien beter en blijven steviger op schrale tot matig voedselrijke grond. Plant ze met de plantkuil iets verhoogd: het zand ligt op de klei in plaats van erdoor, en op de overgang kan water blijven staan (eigen inschatting).
+- **Liatris spicata:** 3 stuks (2 'Floristan Violett', 1 'Floristan Weiß') op de zonnige kant van zone C, bij Aster en Salvia. Plantago noemt zon of halfzon en alle grondsoorten; de RHS noemt volle zon en goed gedraineerde grond. Hij verdraagt geen natte winterbodem (Tuinzaden.eu) en kan in zware grond wegrotten (Gardenia): plant hem iets verhoogd, zonder compost tegen de kroon en zonder mest. Planten in april–mei.
+- *Echinacea*, *Sedum*, *Rudbeckia* en *Nepeta*: op de overige plekken in C; ze zijn minder kritisch. Voor Echinacea en Sedum een dunnere compostlaag.
 - *Clematis*: plantgat minimaal 60 cm diep, wat compost in de plantkuil, geen verse mest. De voet in de schaduw (laag plantmateriaal ervoor).
-- **Liatris spicata (14 november 2026):** 3 stuks (2 'Floristan Violett', 1 'Floristan Weiß') op de zonnige kant van zone C, bij Aster en Salvia. Plantago noemt zon of halfzon en alle grondsoorten; de RHS noemt volle zon en goed gedraineerde grond. Hij verdraagt geen natte winterbodem (Tuinzaden.eu) en kan in zware grond wegrotten (Gardenia): plant hem iets verhoogd in het zandmengsel, zonder compost tegen de kroon en zonder mest. Planten in april–mei.
-- **Bollen (14 november 2026):** boerenkrokus, krokus 'Cream Beauty', Oosterse sterhyacint en wilde narcis tussen de vaste planten en onder de krentenboom. Geen mest.
-- Bron zonbehoefte en grond: RHS-plantpagina's van *Aster amellus* (volle zon, goed gedraineerd, elke grondsoort) en *Salvia nemorosa* (volle zon, goed gedraineerd, droogtetolerant).
+- **Bollen (najaar 2027):** boerenkrokus, krokus 'Cream Beauty', Oosterse sterhyacint en wilde narcis tussen de vaste planten en onder de krentenboom. Geen mest.
 
 ### Zone D — Volle zon · Jardin Sauvage
 
@@ -130,13 +129,12 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 | 🍂 Herfst | Verbena bonariensis ⏱, ↑ Vitis vinifera (druiven; groeit van het erf van de buren door de schutting), Pennisetum alopecuroides 'Little Bunny' (pluimen) |
 | ❄️ Winter | Crocus tommasinianus (boerenkrokus, feb–mrt), Crocus chrysanthus 'Cream Beauty' (feb–mrt), Pennisetum (siergras), ↑ Vitis vinifera (kale ranken) |
 
-**📍 Plantplek en mest zone D:**
-- **Geen mest en geen compostmulch** in zone D: schrale, goed gedraineerde grond (40% grof zand door de klei). Dat geldt voor lavendel, Agastache, Knautia, Verbena, Echium, Centaurea en Pennisetum. Er is geen uitzondering meer: de druif wortelt bij de buren.
-- *Centaurea cyanus* (korenbloem): direct zaaien op kale, schrale grond in de volle zon (RHS: korenbloem wil volle zon, vochtige maar goed gedraineerde, liefst arme grond). Niet bemesten, anders veel blad en weinig bloei.
+**📍 Plantplek en mest zone D** (bijgewerkt 25 november 2026; per soort ook in de Sheet, kolom *grondwens*):
+- **Mest:** geen mest en geen compostmulch in zone D; schrale, goed gedraineerde grond is de bedoeling. Er ligt zand op de klei met tuinaarde erop, en tuinaarde is voedselrijker dan het plan wil (eigen inschatting); houd daarom vast aan geen mest en geen compost. Dat geldt voor lavendel, Agastache, Knautia, Verbena, Echium, Centaurea en Pennisetum.
+- Lavendel, Agastache en *Pennisetum* 'Little Bunny': grof zand of split rond de plantenhals, zodat die droog blijft. 'Little Bunny' goed gedraineerd planten en in de winter droog mulchen (grensgeval winterhard, RHS).
+- *Centaurea cyanus* (korenbloem): direct zaaien op kale, schrale grond in de volle zon (RHS: volle zon, vochtige maar goed gedraineerde, liefst arme grond). Niet bemesten, anders veel blad en weinig bloei. Niet zaaien op de plekken waar de bollen staan.
 - *Vitis vinifera* (druif): **staat niet in onze tuin**. De druif staat op het erf van de buurman en groeit door de schutting heen (eigenaar, 25 november 2026). Hij wordt dus niet geplant, en krijgt van onze kant geen compost, mulch of water. Wat aan onze kant van de schutting groeit, snoeien we zelf (wintersnoei dec–jan, niet in maart: hij bloedt) en leiden we langs rankdraden op de schutting. De schutting staat op het zuiden (eigenaar, 22 oktober 2026).
-- *Myosotis* (vergeet-mij-nietje) wordt gezaaid langs de schutting onder de druif, waar de grond wat vochtiger en lichter beschaduwd is. Het is een soort die matig vruchtbare, vochtige grond en lichte schaduw verkiest (RHS), dus de kans is groter dat hij het in zone D minder goed doet dan in zone B. Eigen inschatting; vervalt hij, dan is zone B de terugvaloptie.
-- Aster amellus en Dipsacus staan niet meer in zone D (Aster is naar C; Dipsacus staat op de reservelijst).
-- **Bollen (14 november 2026):** boerenkrokus, krokus 'Cream Beauty' en druifhyacint tussen de vaste planten, zonder mest. De druifhyacint is terug van de reservelijst. Hij kan zich uitbreiden (eigen inschatting): houd hem in de gaten, want zone D is al vol. Zaai de korenbloem niet op de plekken waar de bollen staan.
+- **Bollen (najaar 2027):** boerenkrokus, krokus 'Cream Beauty' en druifhyacint tussen de vaste planten, zonder mest. De druifhyacint kan zich uitbreiden (eigen inschatting): houd hem in de gaten, want zone D is al vol.
 
 ### Zone S — Schaduw · Klimplanten muur · Jardin Sauvage
 
@@ -153,12 +151,14 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 **🌿 Klimplanten schaduwmuur:** Hydrangea anomala petiolaris (bloeit in diepe schaduw), Hedera helix (klimop, klimmende vorm).
 
-**📍 Plantplek en mest zone S:**
-- Humusrijke, vochtige plek in de schaduw (minder dan 3 uur zon): 50% bladcompost, **geen zand en geen kunstmest**; jaarlijks mulchen met bladcompost.
+**📍 Plantplek en mest zone S** (bijgewerkt 25 november 2026; per soort ook in de Sheet, kolom *grondwens*):
+- **Mest:** **geen zand en geen kunstmest**; de plek moet humusrijk en vochtig zijn (minder dan 3 uur zon). Het geplande mengsel (50% bladcompost) is niet uitgevoerd: S is gevuld met oude tuingrond. Maak de grond humusrijker met een mulchlaag van bladcompost in december en daarna jaarlijks; niet dikker dan nodig, want een dikke laag trekt slakken aan.
 - Varens (*Dryopteris*), Astilbe en Primula op de vochtigste plekken, niet tegen de droge muurvoet. Astilbe mag niet uitdrogen.
-- *Hydrangea petiolaris* en *Hedera*: klimplanten 30–40 cm van de muur, goed aanslaan met water de eerste twee jaar.
+- *Hydrangea petiolaris* en *Hedera*: klimplanten 30–40 cm van de muur; de eerste twee jaar goed water geven zodat ze aanslaan.
 - *Sarcococca* en *Helleborus niger*: bij het pad of de ingang, zodat de wintergeur te ruiken is.
-- **Bosaster (14 november 2026):** 1–2 planten *Aster divaricatus* voor witte bloei in augustus–oktober. Ebben noemt hem geschikt voor halfschaduw en waardevol voor bijen en vlinders; Arjan Schepers noemt hem voor halfschaduw en schaduw. Zone S komt hiermee op 10 soorten op 2–3 m² (zie *Open punten*).
+- **Bosaster:** 1–2 planten *Aster divaricatus* voor witte bloei in augustus–oktober. Ebben noemt hem geschikt voor halfschaduw en waardevol voor bijen en vlinders; Arjan Schepers noemt hem voor halfschaduw en schaduw.
+- **Wilde hyacint (najaar 2027):** bollen tussen de vaste planten, zonder mest; aantal nog te bepalen.
+- Zone S telt 10 soorten op 2–3 m² (zie *Open punten*).
 
 ### Bollen per zone (besloten 14 november 2026)
 
@@ -477,7 +477,7 @@ Besloten 22 oktober 2026: De eigenaar doet in de eerste fases niets met irrigati
 
 | Zone | Oppervlak | Waterbehoefte | Per week | Opmerking |
 |---|---|---|---|---|
-| B | 8 m² | Hoog: droge muurzone, regenschaduw | 15–20 l/m² = 120–160 l, plus 15–20 l per klimplant (3 stuks) = 45–60 l | Meest watergevoelige zone; klimplanten extra, ook in de winter bij vorstloze droogte controleren. |
+| B | 8 m² | Hoog: droge muurzone, regenschaduw | 15–20 l/m² = 120–160 l, plus 15–20 l per klimplant (2 stuks: kamperfoelie en sterjasmijn) = 30–40 l | Meest watergevoelige zone; klimplanten extra, ook in de winter bij vorstloze droogte controleren. |
 | A | 4,5 m² | Medium | 12–15 l/m² = 54–68 l | De kornoelje valt hier ook onder, zie bomen. |
 | S | 2,5 m² (2–3) | Medium | 12–15 l/m² = 30–38 l | Moet vochtig blijven (varens, Astilbe); minder gieten maar niet laten uitdrogen. |
 | C | 8 m² | Laag tot medium | Eerste 6–8 weken na planten ±10 l/m² = ±80 l, plus Clematis 15 l = 15 l; daarna nauwelijks | Aster amellus en Salvia nemorosa zijn droogtetolerant: alleen laten aanslaan. |
