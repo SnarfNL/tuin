@@ -667,7 +667,7 @@ function taakForm(t) {
   const pv = p && ym2(p.van), pt = p && ym2(p.tot);
   const f = {
     titel: t ? (r ? r.detail : p.titel) : '', actie: t ? t.actie : '', loc: t ? t.loc : (S.loc || (locs()[0] || {}).id),
-    plek: t ? (r ? r.plekken : p.plekken) : (S.plek || ''), plant: t ? ((r ? r.plant : p.plant) || '') : '',
+    plek: t ? (r ? r.plekken : p.plekken) : (S.plek || (D.plek[(S.loc || (locs()[0] || {}).id) + '|algemeen'] ? 'algemeen' : '')), plant: t ? ((r ? r.plant : p.plant) || '') : '',
     herh: t ? (jaarlijks ? 'jaar' : 'een') : 'een', deel: t ? ((r ? r.deel_start : p.deel) || '') : '',
     van: r ? (r.vensters[0] || {}).start || S.maand : (p ? (pv ? pv[1] : 0) : S.maand),
     tot: r ? (r.vensters[0] || {}).eind || S.maand : (p ? (pt ? pt[1] : (pv ? pv[1] : 0)) : S.maand),
@@ -723,7 +723,7 @@ function taakForm(t) {
     const b = ev.target.closest('button'); if (!b) return;
     const d = b.dataset;
     if (d.ta != null) { lees(); f.actie = d.ta; return teken2(); }
-    if (d.tl != null) { lees(); if (f.loc !== d.tl) { f.loc = d.tl; f.plek = ''; f.plant = ''; } return teken2(); }
+    if (d.tl != null) { lees(); if (f.loc !== d.tl) { f.loc = d.tl; f.plek = D.plek[d.tl + '|algemeen'] ? 'algemeen' : ''; f.plant = ''; } return teken2(); }
     if (d.th != null) { lees(); f.herh = d.th; if (f.herh === 'jaar' && !f.van) f.van = f.tot = S.maand; return teken2(); }
     if (d.tdl != null) { lees(); f.deel = d.tdl; return teken2(); }
     if (d.d === 'sluit') return dlg.close();
@@ -826,7 +826,8 @@ function verplaats(arg) {
 
 /* ---------- navigatie ---------- */
 function kop(h) { $('#kop').innerHTML = h; }
-function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
+let MELD = null;
+function melding(t) { const m = MELD || (MELD = $('#melding')); (document.querySelector('dialog[open]') || document.body).appendChild(m); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
 function ga(h) { location.hash = h; }
 const ZON = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>', MAAN = '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>';
 function themaKeuze() { const t = document.documentElement.dataset.thema || ''; return `<div class="seg" role="group" aria-label="Weergave">${[['', 'Automatisch'], ['licht', svg(ZON, 16, 2) + ' Licht'], ['donker', svg(MAAN, 16, 2) + ' Donker']].map(([k, l]) => `<button class="${t === k ? 'aan' : ''}" data-modus="${k}" aria-pressed="${t === k}" style="display:inline-flex;align-items:center;justify-content:center;gap:6px">${l}</button>`).join('')}</div>`; }
