@@ -1,114 +1,118 @@
-# Datamodel Tuinapp (schema 2)
+# Datamodel Tuinapp
 
-De app is dynamisch: er staan geen planten, plekken of taken in de code. Alles komt uit `data/`. Die map wordt **gebouwd** uit de leesbare plannen met `python3 -I scripts/bouw_data.py`, en gecontroleerd met `python3 -I scripts/check_data.py`.
+Bron van waarheid: de Google Sheet "Tuinapp". De app (`index.html`) leest en schrijft de Sheet via het Apps Script in `appsscript/Code.gs`. Er staan geen planten, plekken of taken in de code. Werkwijze en afspraken: tabblad *Leesmij* en `CLAUDE.md`.
 
-## Bronnen en eigenaars
+`data/` is de bevroren stand van 24 november 2026 (schema 2, JSON). De app gebruikt die map niet meer.
 
-| Pad | Wat | Wie beslist / schrijft |
-|---|---|---|
-| `tuinplan/tuinplan.md` | Achtertuin: zones, planten, kalenders, onderhoud, planning | project Tuin |
-| `tuinplan/index.html`, `tuinplan/images/` | Interactieve weergave; de app haalt hier emoji, kleur en foto-sleutels uit | project Tuin |
-| `moestuin/moestuinplan.md` | Moestuin: bakken, teeltplan, gewassen, taken | project Moestuin |
-| `overdracht/wijzigingen.md` | Eén regel per wijziging die de app raakt | Tuin en Moestuin |
-| `overdracht/tuin.md`, `overdracht/moestuin.md` | Overdracht van 24 november 2026 (open taken met datum) | Tuin en Moestuin |
-| `data/` (behalve `stand.json` en `voortgang/`), `scripts/`, `docs/`, `index.html`, `CLAUDE.md`, `README.md` | App en afgeleide data | project Tuin app |
-| `data/<locatie>/stand.json`, `data/voortgang/<jaar>.json` | Werkelijke stand en afvinken | de app zelf (GitHub-API) |
+## Algemeen
 
-- **Bij twijfel:** voor wat de bedoeling is, wint het plan. Voor waar een plant nu staat, wint `stand.json`.
-- **Verwijderen doe je niet.** Wat vervalt, krijgt `status: "vervallen"`.
-- **Geen namen:** de repo is openbaar. Afvinken en de werkelijke stand bewaren alleen de datum.
+- **Eén rij per record.** De meeste tabbladen beginnen met `locatie` (`achtertuin` of `moestuin`) en `id`.
+- **Lijsten** in een cel scheid je met komma's (`A, B, S`). Uitzonderingen: `Fotos.urls` (spaties) en `Plekken.plantplek_en_mest` (` • `).
+- **Maanden** schrijf je als tekst: `feb`, `mrt-apr`, `mrt, sep`, `dec-jan`. Elk deel is één venster.
+- **Ja/nee**-velden: `ja` of leeg.
+- **Verwijderen doe je niet**, en id's veranderen niet. Wat vervalt, krijgt `status` = `vervallen`. Leeg is actief.
+- **Een plant uit een andere locatie** gebruik je als `locatie:id` (bijvoorbeeld `moestuin:tomaat` in de tuinkas).
+- **Geen namen:** afvinken en stand bewaren alleen een datum.
+- **Controle:** het tabblad *Controle* staat na elke wijziging op 0.
 
-## data/index.json
+## Vaste tabbladen (project Tuin app)
 
-- `locaties[]`: `id`, `naam`, `map`, `plekwoord` ("Zone" of "Bak"), `bron`, `beslist_in`
-- `acties[]`: de 8 filters: `snoeien`, `mulchen`, `mest`, `planten` (Planten & zaaien), `oogsten` (Oogsten & rooien), `water`, `opruimen`, `onderhoud`
-- `sierwaarde_codes`: B bloei, L blad, E bes of vrucht, Z zaadhoofden, W wintersilhouet, - geen
-- `geen_achterstand_voor` ("2026-11"): taken uit maanden vóór de start van de app tellen niet als "nog open"
+- **Locaties:** `id`, `naam`, `plekwoord` ("Zone" of "Bak"), `beslist_in`
+- **Acties:** de filters, met `id`, `label`, `kleur_achtergrond` en `kleur_tekst`. Ids: `snoeien`, `mulchen`, `mest`, `planten`, `oogsten`, `water`, `opruimen`, `onderhoud`.
+- **Instellingen:** `sleutel`, `waarde`, `uitleg`
+  - `geen_achterstand_voor` (jjjj-mm): taken van vóór deze maand tellen niet als nog open
+  - `achterstand_maanden`: hoeveel maanden terug de app open taken toont
+  - `sierwaarde_codes`: B bloei, L blad, E bes of vrucht, Z zaadhoofden, W wintersilhouet, - geen
 
-## Per locatie: data/<locatie>/
+## Plan (projecten Tuin en Moestuin, per locatie)
 
-**plekken.json**
-- Altijd: `id`, `naam`, `type` (`zone`, `bak`, `kas`, `boomgaard`, `fruit`, `algemeen`) en `status`.
-- Optioneel: `zon`, `zonklasse` (`vol`/`half`/`schaduw`), `thema`, `m2`, `maat`, `beschrijving` en `foto`.
-- Grond: `grond` is tekst, of een object met `plan` en `uitgevoerd`.
-- Alleen bij de achtertuin: `plantplek[]` (de punten uit *Plantplek en mest*), `mulch`, `water` {`behoefte`, `per_week`, `opmerking`}.
+**Plekken**
+- `id`, `naam`, `type` (`zone`, `bak`, `kas`, `boomgaard`, `fruit`, `algemeen`)
+- Licht: `zon` (tekst) en `zonklasse` (`vol`, `half` of `schaduw`)
+- Overig: `thema`, `m2`, `maat`, `grond`, `grond_uitgevoerd`, `mulch`, `water_per_week`, `plantplek_en_mest`, `beschrijving`, `foto` en `status`
 
-**planten.json**
-- Altijd: `id` (blijft gelijk, want de voortgang verwijst ernaar), `nl`, `latijn` en `soort`.
+**Planten**
+- Altijd: `id`, `nl`, `latijn`, `soort`
 - `levensduur`:
   - `zaaien`: eenjarig of tweejarig, elk jaar zaaien
   - `kort`: kortlevend
-  - `seizoen`: moestuingewas; alle regels gelden elk jaar, ook als het gewas nog "gepland" staat
+  - `seizoen`: moestuingewas; alle regels gelden elk jaar, ook als het op Plan staat
 - Achtertuin:
-  - scores: `bijen` en `vogels` (0–5), `score_eigen[]` (welke score een eigen inschatting is), `bron_scores`
-  - verder: `beschrijving`, `link` {`label`, `url`}, `emoji`, `kleur[2]`, `fotos[]`, `onderhoud` (de toelichting uit de onderhoudskalender)
-  - sierwaarde: `sierwaarde` (12 tekens, jan–dec) en `bron_bloei`
-  - alleen bomen: `vorm`, `hoogte`, `plantmoment`, `seizoenstekst`, `grondwens`, `tip`
-- Moestuin: `familie`, `plantgoed`, `plantafstand`, `bloei`, `beschrijving`.
+  - `bijen` en `vogels` (0–5), `score_eigen`, `bron_scores`
+  - tekst en link: `beschrijving`, `link_label`, `link_url`
+  - bloei: `sierwaarde` (12 tekens, jan–dec) en `bron_bloei`
+  - `onderhoud`
+- Moestuin: `familie`, `plantgoed`, `plantafstand`, `bloei`
+- Bomen: `vorm`, `hoogte`, `plantmoment`, `grondwens`, `tip`, en per seizoen `lente`, `zomer`, `herfst` en `winter`
+- Weergave: `emoji`, `kleur` (twee hex-waarden), `fotos`, `status`
 
-**beplanting.json**
-- `plant`, `plek`, `status` (`gepland`, `geplant` of `vervallen`), optioneel `aantal`.
+**Beplanting**
+- `plant`, `plek`, `status` en `aantal`. Een plant in twee plekken staat er twee keer in.
+- `status`:
+
+  | Waarde | Label in de app |
+  |---|---|
+  | `gepland` | Plan |
+  | `geplant` | In de grond |
+  | `vervallen` | – |
+
 - Moestuin: `vanaf` (jaar) en `jaren` (`oneven` of `even`) voor de wisselteelt. Bak 1↔4 en 2↔3 ruilen elk jaar; 2027 is oneven.
 
-**regels.json**
-- `id`, `actie` en `detail`.
-- `plant`: de regel geldt in alle plekken waar die plant dat jaar staat. Of `plekken[]`: dan geldt hij op die plekken.
-- `soort`: `taak`, `suggestie` (alleen tonen) of `waarschuwing` (niet doen).
-- `vensters`: een lijst van maandreeksen. `[[3],[7]]` is twee momenten; `[[12,1]]` is één venster over de jaarwisseling.
-- `keuze: true`: één van de vensters is genoeg.
-- `herhaling`: `jaarlijks`, of `tot_geplant` (alleen zolang de plant gepland staat).
-- Optioneel:
-  - timing: `deel` {`start`, `eind`: `begin`/`midden`/`eind`} en `uiterlijk` {`maand`, `deel`}
-  - voorwaarde en meting: `voorwaarde`, `meting` {`eenheid`, `streef`}
-  - beschrijving: `toelichting`, `waar` (tekst uit het plan, bijvoorbeeld "Alle lege bakken")
-  - herkomst: `bron` (de sectie in het plan, bij regels die niet uit een tabel komen) en `eigen_inschatting`
-- Onderhoud van een vaste plant verschijnt pas als die plant `geplant` is; aanplanttaken alleen zolang hij gepland is.
+**Regels** (terugkerende taken)
+- `id`, `actie`, `detail`
+- Waar: `plant` (de regel geldt op alle plekken waar die plant staat) en/of `plekken`
+- `soort`: `taak`, `suggestie` (alleen tonen) of `waarschuwing` (niet doen)
+- `maanden`: de vensters. `keuze` = `ja`: één van de vensters is genoeg.
+- `herhaling`:
+  - `jaarlijks`: de regel geldt pas als de plant In de grond staat
+  - `tot_geplant`: de regel geldt alleen zolang de plant op Plan staat
+- Timing: `deel_start` en `deel_eind` (`begin`, `midden` of `eind`), `uiterlijk`
+- Overig: `voorwaarde`, `meting`, `toelichting`, `waar`, `bron` en `status`
 
-**projecttaken.json**
-- `id`, `titel`, `actie`, `plekken[]`, `wanneer` (tekst), `status` (`open`, `geparkeerd` of `vervallen`), `bron`.
-- `periode` {`van`, `tot` als "2026-11", optioneel `deel` en `uiterlijk`}. Zonder periode valt de taak onder "Zonder datum".
-- Optioneel `afhankelijk_van`.
+**Projecttaken** (eenmalige taken)
+- `id`, `titel`, `actie`, `plekken`, `plant`, `toelichting`
+- Planning: `wanneer` (tekst uit het plan), `van` en `tot` (jjjj-mm), `deel` en `uiterlijk`. Zonder `van` staat de taak onder "Zonder datum".
+- `status`: `open`, `geparkeerd` of `vervallen`
+- `afhankelijk_van` en `bron`
 
-**info.json**
-- Achtertuin: `titel`, `ondertitel`, `themas[]`, `tips[]` en `impressies[]` (de vier seizoensfoto's van de hele tuin).
-- Moestuin: `titel`, `ondertitel` en `open_punten[]`.
+**Info**
+- `soort`, `id`, `titel`, `tekst`, `extra`: titel, thema's, tips en impressies (achtertuin) of open punten (moestuin).
 
-**stand.json** (de app schrijft dit)
+## Wat de app schrijft
 
-```json
-{ "items": [
-  { "key": "achtertuin|geranium|A", "plant": "geranium", "plek": "B", "status": "geplant", "aantal": "", "notitie": "", "datum": "2026-11-24" },
-  { "key": "achtertuin|vrij-zaailing|+1764000000", "plant": "vrij-zaailing", "naam": "Zaailing", "plek": "B", "status": "geplant", "nieuw": true, "datum": "2026-11-24" }
-]}
-```
+**Stand** (de werkelijke stand, los van het plan)
+- `key`: `<locatie>|<plant>|<plek uit het plan>`, of `<locatie>|<plant>|+<id>` voor een plant die er extra staat (`nieuw` = `ja`). Een plant die niet in het plan staat, krijgt een id `vrij-…` en een `naam`.
+- `plek`, `status`, `aantal`, `notitie`, `datum`
+- `status`:
 
-- `key`: `<locatie>|<plant>|<plek uit het plan>`, of `…|+<id>` voor een plant die er extra staat.
-- `status`: `gepland`, `geplant` of `weg`.
-- `viaRegel`: het record is ontstaan door een aanplanttaak af te vinken. Wordt die taak weer uitgevinkt, dan verdwijnt het record.
-- **Terug naar het plan** verwijdert het record.
-- **Effectieve beplanting** = het plan met de stand eroverheen. Taken, plekken en de kalender gebruiken die; wat `weg` is telt niet mee.
+  | Waarde | Label in de app |
+  |---|---|
+  | `gepland` | Plan |
+  | `geplant` | In de grond |
+  | `weg` | Weg |
 
-## data/voortgang/<jaar>.json (de app schrijft dit)
+- `via_regel`: het record is ontstaan door een aanplanttaak (`tot_geplant`) af te vinken. Vink je die taak uit, dan verdwijnt het record.
+- **Effectieve beplanting** is het plan met de stand eroverheen. Taken, plekken en de kalender gebruiken die. Wat `weg` is, telt niet mee.
+- **Bij twijfel:** voor waar een plant nu staat, wint de stand. Voor wat de bedoeling is, wint het plan.
 
-`{ "jaar": 2026, "items": [ { "taak": "r:astrantia.snoeien:A:3", "datum": "2026-03-14", "notitie": "", "meting": null } ] }`
+**Voortgang**
+- `jaar`, `taak`, `datum`, `notitie`, `meting`
+- Taaksleutel: `r:<regel>:<plek>:<startmaand van het venster>` of `p:<projecttaak>`
+- Een venster over de jaarwisseling (dec–jan) telt in het jaar waarin het begint.
 
-- **Taaksleutel:** `r:<regel>:<plek>:<startmaand van het venster>`, of `p:<projecttaak>`.
-- **Venster over de jaarwisseling:** dec–jan telt in het jaar waarin het venster begint.
-- **Afvinken** is een commit via de contents-API, met de `sha` van het bestand. Bij een conflict leest de app het bestand opnieuw en probeert het nog een keer.
-- **Token:** fine-grained, per persoon, met alleen schrijfrechten op deze repo.
+**Fotos**
+- `key`, `soort` (plant of plek), `locatie`, `id`, `urls`, `datum`
+- Een rij hier gaat voor de `fotos` of `foto` uit het plan.
 
-## Bouwen
+## Apps Script
 
-`scripts/bouw_data.py` leest de tabellen uit de plannen:
-- **Achtertuin** (`tuinplan.md`): *Alle planten*, *Jaarkalender*, *Onderhoudskalender*, *Bollen per zone*, de zones, *Bomen*, *Water geven* en *Mulchen*.
-- **Moestuin** (`moestuinplan.md`): §1 tot en met §6.
-
-De regels van de achtertuin die niet in een tabel staan, staan in het script (`ALG_ACHTERTUIN`), met de sectie als `bron`. Wat het script mist of niet kan plaatsen, schrijft het in `data/AANVULLEN.md`.
-
-## Aanvullingen in de Sheet (25 november 2026)
-
-- *Regels*: kolom `status`. Leeg is actief; `vervallen` verbergt de regel in de app.
-- *Projecttaken*: kolommen `plant` (optioneel, id uit *Planten*) en `toelichting`.
-- De app voegt taken toe en bewerkt ze via het Apps Script (`taak_zet`): eenmalig in *Projecttaken*, elk jaar in *Regels*. Nieuwe id's beginnen met `app.`. Bewerken van een regel geldt voor alle jaren; verwijderen zet `status` op `vervallen`.
-- *Planten*: kolom `status`. Leeg is actief; `vervallen` verbergt de plant, zijn beplanting en zijn regels in de app.
-- De app voegt ook plekken en planten toe en bewerkt ze (`rij_zet` op *Plekken* en *Planten*). Een nieuwe id is de naam in kleine letters met streepjes. Bij bewerken stuurt de app alleen de gewijzigde velden. Locatie en id veranderen niet; vervallen zet `status` op `vervallen`.
+- `doGet` levert de leesbare tabbladen (optioneel alleen `?tabs=A,B`).
+- `doPost` vraagt de sleutel uit de scripteigenschap `SLEUTEL` en werkt met een lock. Operaties:
+  - `voortgang_aan`, `voortgang_uit`
+  - `stand_zet`, `stand_weg`, `stand_weg_via`
+  - `foto_zet`
+  - `taak_zet` en `rij_zet`: alleen op Regels, Projecttaken, Plekken en Planten. Locatie en id veranderen niet.
+- Nieuw door de app:
+  - taken: id begint met `app.`
+  - plekken en planten: id is de naam in kleine letters met streepjes
+  - bewerken stuurt alleen de gewijzigde velden
