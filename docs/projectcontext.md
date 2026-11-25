@@ -115,7 +115,7 @@ Volgorde van aanleg (huidig): tegels weg → ondergrond beoordelen en zones uitz
 - Bomen: het plan bevat twee bomen (*Cornus florida* in A, *Amelanchier lamarckii* in C), de krentenboom halfstam en de kornoelje een struikvorm (Directplant); eerdere keuzes met Cercis en meidoorn zijn vervallen. Beide bomen zijn in november 2026 geplant (zie Status).
 - Illustraties onder *Seizoensindrukken* in de HTML zijn nog van de oude plantenlijst en kunnen afwijken.
 - **HTML is bijgewerkt (22 okt en 14 nov, op verzoek van de eigenaar):** de HTML bevat de besluiten van 22 okt (halfstam, plantvenster half nov–eind apr, pH-beheer kornoelje, oppervlaktes in planning en mulch), zonuren per zone, levensduur-legenda in *Planten & Links* en de opmerkingen over tuinkas en grassen zijn uit de HTML gehaald (in `tuinplan.md` blijven ze staan). Op 14 nov zijn Phacelia, Japanse anemoon en Campsis ook uit de HTML gehaald en is de kornoelje als struikvorm bijgewerkt (afbeeldingsverwijzingen in de beeldtabellen zijn blijven staan en worden niet gebruikt). De latere besluiten van 14 nov (bollen en vlinderplanten) staan er nog niet in. Bijwerken blijft alleen op verzoek van de eigenaar.
-- Thematekst *Landelijk* noemt nog lavendel bij zones B en C; lavendel staat nu in D.
+- Thematekst *Landelijk* bijgewerkt (25 nov): kamperfoelie, sterjasmijn, kattenkruid, zonnehoed en asters (klimroos vervallen, lavendel staat in D, ridderspoor niet in het plan).
 
 ## Mogelijk vervolgproject: irrigatie
 

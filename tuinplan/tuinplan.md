@@ -42,7 +42,7 @@ Vijf zones · Drie thema's · Vier seizoenen · Vogels & Bijen
 
 ## De drie thema's
 
-- 🌷 **Landelijk** — Warme nostalgische uitstraling. Klimrozen, lavendel, ridderspoor. Zones B en C.
+- 🌷 **Landelijk** — Warme nostalgische uitstraling. Kamperfoelie, sterjasmijn, kattenkruid, zonnehoed en asters. Zones B en C.
 - 🍃 **Natuurlijk** — Zachte borders met vaste planten. Textuur, structuur en sereniteit. Heuchera als kleuraccent. Zone A.
 - 🌾 **Jardin Sauvage** — Wilde schoonheid, veel inheemse en wilde soorten, zaadhoofden. Paradijs voor bijen en vogels. Zones D en S.
 
