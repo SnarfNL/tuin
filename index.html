@@ -81,6 +81,7 @@ h3{margin:0 0 6px;font-size:18px}
 .titel{font-weight:600;font-size:16px;margin-top:2px}button.titel{display:block;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;width:100%}
 .fab{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:6;height:56px;padding:0 20px 0 16px;border-radius:18px;border:0;background:var(--groen);color:var(--opgroen);font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .taakform .chip i{width:12px;height:12px;border-radius:4px;display:inline-block;margin-right:6px;vertical-align:-1px}.taakform .chip.aan{background:var(--groen2);color:var(--groentekst);border:2px solid var(--groen)}
+.tweeknop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.tweeknop .knopje{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 8px;font-size:14px;white-space:nowrap}
 .taakform .seg button{font-size:13.5px;white-space:nowrap}.taakform .twee{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.taakform .seg{margin-top:6px}.taakform .knoppen{justify-content:space-between}.vervallen{color:var(--rood);border-color:transparent;background:none}
 main{padding-bottom:72px}
 .sub{font-size:13px;color:var(--zacht);margin-top:2px}
@@ -537,7 +538,7 @@ function schermPlant(loc, id) {
     ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
     ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div><div class="sub">${[...new Set(p.sierwaarde)].filter(c => SIER[c] && c !== '-').map(c => `<span class="mini" style="background:${SIER[c][0]}">${SIER[c][1]}</span>`).join('')} ${esc(p.bron_bloei)}</div></div>` : ''}
     <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}
-    <p><button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">+ Ergens toevoegen</button></p>
+    <div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
     ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
     ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
     ${p.link_url ? `<p><a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || 'Meer informatie')}</a></p>` : ''}`;
@@ -781,6 +782,43 @@ function rijForm(soort, arg) {
   dlg.showModal();
 }
 
+/* ---------- plant naar de andere tuin verplaatsen ---------- */
+function verplaats(arg) {
+  const [loc, id] = arg.split('|'), pl = D.plant[loc + '|' + id];
+  if (!pl) return;
+  const doelen = locs().filter(l => l.id !== loc);
+  let doel = doelen[0].id;
+  const dlg = $('#dlg');
+  const teken2 = () => {
+    const lo = D.Locaties.find(l => l.id === doel) || {};
+    dlg.innerHTML = `<div class="taakform"><h3>${esc(pl.nl)} verplaatsen</h3><div class="sub">Van ${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)}</div>
+      <label>Naar</label><div class="seg" role="group" aria-label="Tuin">${doelen.map(l => `<button type="button" class="${doel === l.id ? 'aan' : ''}" data-vl="${esc(l.id)}" aria-pressed="${doel === l.id}">${esc(l.naam)}</button>`).join('')}</div>
+      <label for="d-plek">${esc(lo.plekwoord || 'Plek')}</label><select id="d-plek">${plekOpties(doel, '')}</select>
+      <label for="d-status">Status</label><select id="d-status">${statusOpties('geplant')}</select>
+      <label for="d-aantal">Aantal</label><input id="d-aantal" inputmode="numeric">
+      <div class="sub" style="margin-top:12px">De plant verdwijnt uit ${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)} (status vervallen). Zijn jaarlijkse taken gaan mee.</div>
+      <div class="knoppen"><span></span><span style="display:flex;gap:8px"><button type="button" class="knopje" data-d="sluit">Annuleren</button><button type="button" class="knopje primair" data-d="ok">Verplaatsen</button></span></div></div>`;
+  };
+  dlg.onchange = null;
+  dlg.onclick = ev => {
+    const b = ev.target.closest('button'); if (!b) return;
+    if (b.dataset.vl != null) { doel = b.dataset.vl; return teken2(); }
+    if (b.dataset.d === 'sluit') return dlg.close();
+    if (b.dataset.d !== 'ok') return;
+    const acts = [], plek = $('#d-plek').value;
+    if (!plek) return melding('Kies een plek.');
+    const bestaand = D.plant[doel + '|' + id];
+    if (!bestaand || bestaand.status === 'vervallen') { const kopie = Object.assign({}, pl); for (const k of Object.keys(kopie)) if (typeof kopie[k] !== 'string') delete kopie[k]; acts.push({ op: 'rij_zet', tab: 'Planten', rij: Object.assign(kopie, { locatie: doel, id, status: '' }) }); }
+    if (!D.Regels.some(r => r.locatie === doel && r.plant === id && r.status !== 'vervallen'))
+      D.Regels.filter(r => r.locatie === loc && r.plant === id && !r.plekken && r.status !== 'vervallen').forEach((r, i) => acts.push({ op: 'rij_zet', tab: 'Regels', rij: { locatie: doel, id: nieuwId() + '.' + i, plant: id, plekken: '', actie: r.actie, detail: r.detail, soort: r.soort, maanden: r.maanden, keuze: r.keuze, herhaling: r.herhaling, deel_start: r.deel_start, deel_eind: r.deel_eind, uiterlijk: r.uiterlijk, voorwaarde: r.voorwaarde, meting: r.meting, toelichting: r.toelichting, bron: 'verplaatst uit ' + loc, status: '' } }));
+    acts.push({ op: 'stand_zet', rij: { key: doel + '|' + id + '|+' + Date.now(), locatie: doel, plant: id, naam: '', plek, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: 'verplaatst uit ' + ((D.Locaties.find(l => l.id === loc) || {}).naam || loc), nieuw: 'ja', via_regel: '', datum: vandaag() } });
+    acts.push({ op: 'rij_zet', tab: 'Planten', rij: { locatie: loc, id, status: 'vervallen' } });
+    schrijf(acts); dlg.close(); melding('Plant verplaatst'); ga('plant/' + doel + '/' + id);
+  };
+  teken2();
+  dlg.showModal();
+}
+
 /* ---------- navigatie ---------- */
 function kop(h) { $('#kop').innerHTML = h; }
 function melding(t) { const m = $('#melding'); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
@@ -803,10 +841,11 @@ function teken() {
 addEventListener('hashchange', () => { teken(); scrollTo(0, 0); });
 document.addEventListener('click', ev => {
   if (ev.target.id === 'filters') { const r = ev.target.getBoundingClientRect(); if (ev.clientY < r.top || ev.clientY > r.bottom || ev.clientX < r.left || ev.clientX > r.right) return ev.target.close(); }
-  const el = ev.target.closest('[data-modus],[data-taak],[data-nieuwtaak],[data-nieuwplek],[data-nieuwplant],[data-bewerkplek],[data-bewerkplant],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
+  const el = ev.target.closest('[data-modus],[data-verplaats],[data-taak],[data-nieuwtaak],[data-nieuwplek],[data-nieuwplant],[data-bewerkplek],[data-bewerkplant],[data-fotoweg],[data-fotoplus],[data-filters],[data-wisfilter],[data-sluitfilter],[data-vink],[data-loc],[data-plek],[data-actie],[data-maand],[data-jaar],[data-naarmaand],[data-ga],[data-terug],[data-plant],[data-bewerk],[data-nieuw],[data-opslaan],[data-verversen],[data-wissen]');
   if (!el || el.closest('#dlg')) return;
   const d = el.dataset;
   if (d.modus != null) { if (d.modus) document.documentElement.dataset.thema = d.modus; else delete document.documentElement.dataset.thema; opslag.set('thema', d.modus); return teken(); }
+  if (d.verplaats != null) return verplaats(d.verplaats);
   if (d.taak != null) return taakForm(TK[+d.taak]);
   if (d.nieuwtaak != null) return taakForm(null);
   if (d.nieuwplek != null) return rijForm('plek');
