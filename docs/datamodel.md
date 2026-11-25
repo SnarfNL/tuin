@@ -93,6 +93,8 @@ Bron van waarheid: de Google Sheet "Tuinapp". De app (`index.html`) leest en sch
 
 - `via_regel`: het record is ontstaan door een aanplanttaak (`tot_geplant`) af te vinken. Vink je die taak uit, dan verdwijnt het record.
 - **Effectieve beplanting** is het plan met de stand eroverheen. Taken, plekken en de kalender gebruiken die. Wat `weg` is, telt niet mee.
+- **Afwijking** is een andere plek dan in het plan, `weg`, een ander aantal of een plant die niet in het plan staat.
+- **Terug naar het plan** verwijdert het record.
 - **Bij twijfel:** voor waar een plant nu staat, wint de stand. Voor wat de bedoeling is, wint het plan.
 
 **Voortgang**
@@ -103,6 +105,16 @@ Bron van waarheid: de Google Sheet "Tuinapp". De app (`index.html`) leest en sch
 **Fotos**
 - `key`, `soort` (plant of plek), `locatie`, `id`, `urls`, `datum`
 - Een rij hier gaat voor de `fotos` of `foto` uit het plan.
+
+## Taaklogica in de app
+
+- **Maandoverzicht:**
+  - alle `taak`-regels waarvan de maand in een venster valt, per plek
+  - plus de projecttaken waarvan de periode die maand raakt
+  - een taak uit een eerder venster die nog niet is afgevinkt, staat onder "Nog open" (zie Instellingen)
+- **Suggesties** staan in een aparte, ingeklapte groep.
+- **Waarschuwingen** staan bij de plek en de maand.
+- **Afvinken van een aanplanttaak** (`tot_geplant`) zet de plant in de stand op In de grond, met `via_regel`. Daarna verschijnt het onderhoud.
 
 ## Apps Script
 
