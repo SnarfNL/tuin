@@ -33,7 +33,7 @@ header .midden .sub{margin:0}
 .knopje{min-height:44px;border:1px solid var(--rand);background:var(--kaart);border-radius:12px;padding:0 14px;cursor:pointer;font-weight:500}
 .knopje.primair{background:var(--groen);color:var(--opgroen);border-color:var(--groen);font-weight:600}
 .knopje.rand{background:var(--geel);border-color:var(--geel);color:var(--geeltekst);font-weight:600;display:inline-flex;align-items:center;gap:8px}
-.rond{width:44px;height:44px;border-radius:22px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tekst);flex:none}
+.rond{width:44px;height:44px;border-radius:22px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tekst);flex:none}.rond.pil{width:auto;display:inline-flex;align-items:center;gap:6px;padding:0 16px 0 12px;font:inherit;font-weight:600;font-size:15px}
 .rond:hover{background:var(--vlak)}
 .seg{flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);background:var(--vlak);border-radius:12px;padding:3px;min-height:44px}
 .seg button{border:0;border-radius:9px;background:none;font-size:14px;color:var(--tekst2);cursor:pointer;padding:0 6px}
@@ -572,7 +572,7 @@ function plantenLijst() {
 function schermPlant(loc, id) {
   const p = D.plant[loc + '|' + id];
   if (!p) return '<p class="leeg">Plant niet gevonden.</p>';
-  kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1>${bewerkKnop('plant', loc, id)}</div>`);
+  kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1>${bewerkKnop('plant', loc, id, true)}</div>`);
   const fotos = fotosPlant(p), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
   const velden = [['Hoogte', p.hoogte], ['Plantafstand', p.plantafstand], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
@@ -716,7 +716,7 @@ function nieuw(arg) {
 /* ---------- taak toevoegen of bewerken ---------- */
 const nieuwId = () => 'app.' + Date.now().toString(36);
 const fab = (soort, label) => `<button class="fab" data-nieuw${soort}>${svg('<path d="M12 5v14M5 12h14"/>', 22, 2.4)}${label}</button>`;
-const bewerkKnop = (soort, loc, id) => `<button class="rond" data-bewerk${soort}="${esc(loc + '|' + id)}" aria-label="Bewerken">${svg(IC.pen, 20)}</button>`;
+const bewerkKnop = (soort, loc, id, tekst) => tekst ? `<button class="rond pil" data-bewerk${soort}="${esc(loc + '|' + id)}">${svg(IC.pen, 18)}Bewerk</button>` : `<button class="rond" data-bewerk${soort}="${esc(loc + '|' + id)}" aria-label="Bewerken">${svg(IC.pen, 20)}</button>`;
 function taakForm(t) {
   const r = t && t.r, p = t && t.p, jaarlijks = !!r;
   const ym2 = x => { const m = /^(\d{4})-(\d{1,2})/.exec(x || ''); return m ? [+m[1], +m[2]] : null; };
