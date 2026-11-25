@@ -33,7 +33,7 @@ header .midden .sub{margin:0}
 .knopje{min-height:44px;border:1px solid var(--rand);background:var(--kaart);border-radius:12px;padding:0 14px;cursor:pointer;font-weight:500}
 .knopje.primair{background:var(--groen);color:var(--opgroen);border-color:var(--groen);font-weight:600}
 .knopje.rand{background:var(--geel);border-color:var(--geel);color:var(--geeltekst);font-weight:600;display:inline-flex;align-items:center;gap:8px}
-.rond{width:44px;height:44px;border-radius:22px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tekst);flex:none}.rond.pil{width:auto;display:inline-flex;align-items:center;gap:6px;padding:0 16px 0 12px;font:inherit;font-weight:600;font-size:15px}
+.rond{width:44px;height:44px;border-radius:22px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tekst);flex:none}.kopknop{flex:none;display:inline-flex;align-items:center;gap:6px;font-size:14px}.plekplus{display:inline-flex;align-items:center;gap:6px}
 .rond:hover{background:var(--vlak)}
 .seg{flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);background:var(--vlak);border-radius:12px;padding:3px;min-height:44px}
 .seg button{border:0;border-radius:9px;background:none;font-size:14px;color:var(--tekst2);cursor:pointer;padding:0 6px}
@@ -516,12 +516,13 @@ function zoekTaken() {
   const f = S.loc || S.plek || S.actie ? ', binnen de filters' : '';
   return `<p class="sub" style="margin:12px 0 0">${n} ${n === 1 ? 'taak' : 'taken'} in ${S.jaar}${f}</p>` + (h || '<p class="leeg">Geen taken gevonden.</p>');
 }
-function standHtml(e, metPlek, zonderLink) {
+function standHtml(e, metPlek, knoppen) {
   const pl = D.plant[e.locatie + '|' + e.plant] || {}, f = fotosVan('plant', e.locatie, e.plant, pl.fotos);
-  return `<div class="kaart plantrij" data-bewerk="${esc(e.key)}"><span class="dot ${esc(e.status)}"></span>${f.length ? mini(f, '') : ''}<div class="tk">
+  const rij = knoppen ? '<div class="plantrij" style="cursor:default">' : `<div class="kaart plantrij" data-bewerk="${esc(e.key)}">`;
+  return `${knoppen ? '<div class="kaart">' : ''}${rij}<span class="dot ${esc(e.status)}"></span>${f.length ? mini(f, '') : ''}<div class="tk">
     <div class="naam">${esc(plantNaam(e.locatie, e.plant, e.naam))} ${e.aantal ? `<span class="sub">× ${esc(e.aantal)}</span>` : ''}</div>
     <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(statusLabel(e.status))}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
-  </div>${zonderLink ? '' : `<span class="bewerk">${svg(IC.pen, 16)}Bewerken</span>`}</div>`;
+  </div>${knoppen ? '' : `<span class="bewerk">${svg(IC.pen, 16)}Bewerken</span>`}</div>${knoppen ? `<div class="tweeknop" style="margin:10px 0 0">${knoppen(e)}</div></div>` : ''}`;
 }
 function schermPlekken() {
   kop(`<div class="rij"><h1>Plekken</h1></div><div class="rij">${locSeg()}</div>`);
@@ -577,11 +578,11 @@ function schermPlant(loc, id) {
   const velden = [['Hoogte', p.hoogte], ['Plantafstand', p.plantafstand], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
   const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
-  const knoppen = `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>`;
+  const knoppen = e => `<button class="knopje primair" data-bewerk="${esc(e.key)}">${svg(IC.pen, 18)} Plek bewerken</button>${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}`;
   return `${fotoStrook('plant', loc, id, fotos)}
     <p>${soortTag(p.soort, true)} <i>${esc(p.latijn)}</i></p>${p.beschrijving ? `<p>${esc(p.beschrijving)}</p>` : ''}
     ${velden.length ? `<h2>Kenmerken</h2><div class="kaart"><dl>${velden.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>` : ''}
-    <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true, true)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}${knoppen}
+    <h2>Waar staat hij (${NUJ})</h2>${bep.length ? `<div class="groep">${bep.map(e => standHtml(e, true, knoppen)).join('')}</div>` : '<p class="leeg">Staat nergens in het plan.</p>'}<div class="chips" style="margin:8px 0 4px"><button class="chip plekplus" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.plus, 16)}Plek toevoegen</button></div>
     ${rg.length ? `<h2>Kalender</h2><div class="kaart">${rg.map(r => `<p>${actieLabel(r.actie)} <b>${esc(r.maanden)}</b> · ${esc(r.detail)}${r.soort !== 'taak' ? ' <span class="sub">(' + esc(r.soort) + ')</span>' : ''}</p>`).join('')}</div>` : ''}
     ${p.sierwaarde ? `<h2>Sierwaarde</h2><div class="kaart"><div class="sier">${[...p.sierwaarde.padEnd(12, '-').slice(0, 12)].map((c, i) => `<div style="background:${(SIER[c] || SIER['-'])[0]}" title="${(SIER[c] || ['', ''])[1]}">${MK[i]}</div>`).join('')}</div>${p.bron_bloei ? `<div class="sub">${esc(p.bron_bloei)}</div>` : ''}</div>` : ''}
     ${p.bijen || p.vogels ? `<div class="kaart"><dl>${p.bijen ? `<dt>Bijen</dt><dd class="score">${score(p.bijen)}</dd>` : ''}${p.vogels ? `<dt>Vogels</dt><dd class="score">${score(p.vogels)}</dd>` : ''}</dl>${p.bron_scores ? `<div class="sub">${esc(p.bron_scores)}${p.score_eigen ? ' · eigen inschatting: ' + esc(p.score_eigen) : ''}</div>` : ''}</div>` : ''}
@@ -716,7 +717,7 @@ function nieuw(arg) {
 /* ---------- taak toevoegen of bewerken ---------- */
 const nieuwId = () => 'app.' + Date.now().toString(36);
 const fab = (soort, label) => `<button class="fab" data-nieuw${soort}>${svg('<path d="M12 5v14M5 12h14"/>', 22, 2.4)}${label}</button>`;
-const bewerkKnop = (soort, loc, id, tekst) => tekst ? `<button class="rond pil" data-bewerk${soort}="${esc(loc + '|' + id)}">${svg(IC.pen, 18)}Bewerk</button>` : `<button class="rond" data-bewerk${soort}="${esc(loc + '|' + id)}" aria-label="Bewerken">${svg(IC.pen, 20)}</button>`;
+const bewerkKnop = (soort, loc, id, tekst) => tekst ? `<button class="knopje primair kopknop" data-bewerk${soort}="${esc(loc + '|' + id)}">${svg(IC.pen, 18)}Bewerk</button>` : `<button class="rond" data-bewerk${soort}="${esc(loc + '|' + id)}" aria-label="Bewerken">${svg(IC.pen, 20)}</button>`;
 function taakForm(t) {
   const r = t && t.r, p = t && t.p, jaarlijks = !!r;
   const ym2 = x => { const m = /^(\d{4})-(\d{1,2})/.exec(x || ''); return m ? [+m[1], +m[2]] : null; };
