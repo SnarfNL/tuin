@@ -43,8 +43,9 @@ Bron van waarheid: de Google Sheet "Tuinapp". De app (`index.html`) leest en sch
   - tekst en link: `beschrijving`, `link_label`, `link_url`
   - bloei: `sierwaarde` (12 tekens, jan–dec) en `bron_bloei`
   - `onderhoud`
-- Moestuin: `familie`, `plantgoed`, `plantafstand`, `bloei`
-- Bomen: `vorm`, `hoogte`, `plantmoment`, `grondwens`, `tip`, en per seizoen `lente`, `zomer`, `herfst` en `winter`
+- Alle planten: `hoogte` (bijv. `60–90 cm`) en `plantafstand` (bijv. `40 cm · 7 per m²`), voor het uitzetten bij het planten
+- Moestuin: `familie`, `plantgoed`, `bloei`
+- Bomen: `vorm`, `plantmoment`, `grondwens`, `tip`, en per seizoen `lente`, `zomer`, `herfst` en `winter`
 - Weergave: `emoji`, `kleur` (twee hex-waarden), `fotos`, `status`
 
 **Beplanting**

@@ -573,7 +573,7 @@ function schermPlant(loc, id) {
   if (!p) return '<p class="leeg">Plant niet gevonden.</p>';
   kop(`<div class="rij">${terug()}<h1>${esc(p.emoji || '')} ${esc(p.nl)}</h1>${bewerkKnop('plant', loc, id)}</div>`);
   const fotos = fotosPlant(p), score = n => n === '' || n == null ? '' : '●'.repeat(+n) + '○'.repeat(5 - +n);
-  const velden = [['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Hoogte', p.hoogte], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantafstand', p.plantafstand], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
+  const velden = [['Hoogte', p.hoogte], ['Plantafstand', p.plantafstand], ['Levensduur', p.levensduur], ['Familie', p.familie], ['Vorm', p.vorm], ['Bloei', p.bloei], ['Plantgoed', p.plantgoed], ['Plantmoment', p.plantmoment], ['Grondwens', p.grondwens], ['Lente', p.lente], ['Zomer', p.zomer], ['Herfst', p.herfst], ['Winter', p.winter], ['Tip', p.tip], ['Onderhoud', p.onderhoud]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plant === id).concat(beplanting('', NUJ).filter(e => e.plant === loc + ':' + id));
   const rg = D.Regels.filter(r => r.locatie === loc && r.plant === id);
   return `<div class="tweeknop">${(() => { const b = bep.filter(e => e.status !== 'weg'); return b.length === 1 ? `<button class="knopje primair" data-bewerk="${esc(b[0].key)}">${svg(IC.pen, 18)} Plek bewerken</button>` : `<button class="knopje primair" data-nieuw="${esc(loc + '||' + id)}">${svg(IC.pen, 18)} Plek bewerken</button>`; })()}${locs().length > 1 ? `<button class="knopje rand" data-verplaats="${esc(loc + '|' + id)}">${svg(IC.r, 18)}Verplaats naar tuin</button>` : ''}</div>
@@ -781,7 +781,7 @@ function taakForm(t) {
 /* ---------- plek of plant toevoegen of bewerken ---------- */
 const VELDEN = {
   plek: { tab: 'Plekken', naam: 'naam', velden: [['naam', 'Naam'], ['type', 'Soort plek', 'lijst'], ['beschrijving', 'Beschrijving', 'lang'], ['zon', 'Zon'], ['maat', 'Maat'], ['m2', 'Oppervlak (m²)'], ['grond', 'Grond'], ['mulch', 'Mulch'], ['water_per_week', 'Water per week'], ['thema', 'Thema']] },
-  plant: { tab: 'Planten', naam: 'nl', velden: [['nl', 'Naam'], ['latijn', 'Latijnse naam'], ['emoji', 'Emoji'], ['soort', 'Soort', 'soort'], ['levensduur', 'Levensduur', 'lijst'], ['familie', 'Familie'], ['hoogte', 'Hoogte'], ['bloei', 'Bloei'], ['plantafstand', 'Plantafstand'], ['plantmoment', 'Plantmoment'], ['beschrijving', 'Beschrijving', 'lang'], ['tip', 'Tip', 'lang'], ['onderhoud', 'Onderhoud', 'lang'], ['link_url', 'Link naar meer informatie']] }
+  plant: { tab: 'Planten', naam: 'nl', velden: [['nl', 'Naam'], ['latijn', 'Latijnse naam'], ['emoji', 'Emoji'], ['soort', 'Soort', 'soort'], ['levensduur', 'Levensduur', 'lijst'], ['hoogte', 'Hoogte'], ['plantafstand', 'Plantafstand'], ['familie', 'Familie'], ['bloei', 'Bloei'], ['plantmoment', 'Plantmoment'], ['beschrijving', 'Beschrijving', 'lang'], ['tip', 'Tip', 'lang'], ['onderhoud', 'Onderhoud', 'lang'], ['link_url', 'Link naar meer informatie']] }
 };
 const slug = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'nieuw';
 function rijForm(soort, arg) {
