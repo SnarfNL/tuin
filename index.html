@@ -516,8 +516,8 @@ function zoekTaken() {
   return `<p class="sub" style="margin:12px 0 0">${n} ${n === 1 ? 'taak' : 'taken'} in ${S.jaar}${f}</p>` + (h || '<p class="leeg">Geen taken gevonden.</p>');
 }
 function standHtml(e, metPlek) {
-  const pl = D.plant[e.locatie + '|' + e.plant] || {};
-  return `<div class="kaart plantrij" data-bewerk="${esc(e.key)}"><span class="dot ${esc(e.status)}"></span><div class="tk">
+  const pl = D.plant[e.locatie + '|' + e.plant] || {}, f = fotosVan('plant', e.locatie, e.plant, pl.fotos);
+  return `<div class="kaart plantrij" data-bewerk="${esc(e.key)}"><span class="dot ${esc(e.status)}"></span>${f.length ? mini(f, '') : ''}<div class="tk">
     <div class="naam">${esc(plantNaam(e.locatie, e.plant, e.naam))} ${e.aantal ? `<span class="sub">× ${esc(e.aantal)}</span>` : ''}</div>
     <div class="sub">${metPlek ? esc(plekNaam(e.locatie, e.plek)) + ' · ' : ''}<span class="status ${esc(e.status)}">${esc(statusLabel(e.status))}</span>${e.uitStand ? ' · bijgewerkt ' + esc(e.datum || '') : ''}${e.plek !== e.planPlek && e.planPlek ? ' · plan: ' + esc(plekNaam(e.locatie, e.planPlek)) : ''}${e.notitie ? ' · ' + esc(e.notitie) : ''}</div>
   </div><span class="bewerk">${svg(IC.pen, 16)}Bewerken</span></div>`;
