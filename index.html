@@ -56,6 +56,7 @@ header.held{background:var(--kop);color:var(--opkop);border-radius:0 0 24px 24px
 .held .filterknop{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .filterknop .stip{border-color:var(--kop)}
 .held .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .chip.aan{background:var(--opkop);border-color:var(--opkop);color:var(--kop)}
 .held .voortgang .tekst{color:var(--kopzacht)}.held .voortgang b{color:var(--opkop)}
+.held .zoek{margin-top:10px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .zoek::placeholder{color:var(--kopzacht)}
 .held .balk{background:rgba(255,255,255,.16)}.held .balk div{background:var(--kopaccent)}
 main{padding:4px 16px 16px;max-width:1200px;margin:0 auto}
 h2{display:flex;align-items:center;gap:8px;font-size:13px;margin:20px 4px 8px;color:var(--tekst2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
@@ -195,7 +196,7 @@ const ymTekst = s => { const m = /^(\d{4})-(\d{1,2})/.exec(s || ''); return m ? 
 
 let D = null, laadtijd = '', bezig = false, memo = new Map();
 let wachtrij = opslag.get('wachtrij', []);
-const S = Object.assign({ jaar: NUJ, maand: NUM, loc: '', plek: '', actie: '', zoek: '', ploc: '' }, opslag.get('filters', {}));
+const S = Object.assign({ jaar: NUJ, maand: NUM, loc: '', plek: '', actie: '', zoek: '', ploc: '', tzoek: '' }, opslag.get('filters', {}));
 if (opslag.get('filterdag', '') !== vandaag()) { S.jaar = NUJ; S.maand = NUM; }
 let route = ['taken'];
 
@@ -464,9 +465,14 @@ function groepen(ts) {
 }
 function schermTaken() {
   const ts = filter(takenMaand(S.jaar, S.maand)), isNu = S.jaar === NUJ && S.maand === NUM;
-  const achter = isNu ? filter(achterstand(S.jaar, S.maand)) : [];
   const taken = ts.filter(t => t.soort === 'taak'), klaar = taken.filter(isKlaar).length;
-  kop(`<div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
+  kop(`<div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}<input class="zoek" type="search" placeholder="Zoek een taak in alle maanden" value="${esc(S.tzoek)}" id="tzoek" aria-label="Zoek taak">${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
+  return takenInhoud();
+}
+function takenInhoud() {
+  if (S.tzoek.trim()) return zoekTaken() + fab('taak', 'Taak');
+  const ts = filter(takenMaand(S.jaar, S.maand)), isNu = S.jaar === NUJ && S.maand === NUM;
+  const achter = isNu ? filter(achterstand(S.jaar, S.maand)) : [];
   let h = '';
   if (achter.length) h += `<h2 class="laat">Te laat <span class="tel">${achter.length}</span></h2><div class="lijst laat">${achter.map(taakHtml).join('')}</div>`;
   h += groepen(ts) || '<p class="leeg">Geen taken voor deze selectie.</p>';
@@ -476,6 +482,23 @@ function schermTaken() {
     if (zd.length) h += `<details style="margin-top:16px"><summary>Zonder datum of geparkeerd (${zd.length})</summary><div class="lijst" style="margin-top:8px">${zd.map(taakHtml).join('')}</div></details>`;
   }
   return h;
+}
+function zoekTaken() {
+  const z = S.tzoek.trim().toLowerCase(), gezien = new Set(), per = {};
+  const past = t => [t.titel, t.plant && plantNaam(t.loc, t.plant), ...t.plekken.map(x => plekNaam(t.loc, x)), (t.r || {}).toelichting, (t.p || {}).toelichting].join(' ').toLowerCase().includes(z);
+  const ao = id => D.Acties.findIndex(a => a.id === id);
+  const sort = a => a.sort((x, y) => isKlaar(x) - isKlaar(y) || ao(x.actie) - ao(y.actie) || x.titel.localeCompare(y.titel));
+  for (let m = 1; m <= 12; m++) for (const t of filter(takenMaand(S.jaar, m))) {
+    const k = t.key + '|' + (t.v ? t.vj + '-' + t.v.start : '');
+    if (t.soort !== 'taak' || gezien.has(k) || !past(t)) continue;
+    gezien.add(k); (per[m] = per[m] || []).push(t);
+  }
+  const zd = filter(D.Projecttaken.filter(p => (p.status === 'open' && p.vanN == null) || p.status === 'geparkeerd').map(projectTaak)).filter(past);
+  let h = '', n = zd.length;
+  for (let m = 1; m <= 12; m++) if (per[m]) { n += per[m].length; h += `<h2><button class="link" data-naarmaand="${m}">${MN[m - 1][0].toUpperCase() + MN[m - 1].slice(1)}</button> <span class="tel">${per[m].length}</span></h2><div class="lijst">${sort(per[m]).map(taakHtml).join('')}</div>`; }
+  if (zd.length) h += `<h2>Zonder datum of geparkeerd <span class="tel">${zd.length}</span></h2><div class="lijst">${sort(zd).map(taakHtml).join('')}</div>`;
+  const f = S.loc || S.plek || S.actie ? ', binnen de filters' : '';
+  return `<p class="sub" style="margin:12px 0 0">${n} ${n === 1 ? 'taak' : 'taken'} in ${S.jaar}${f}</p>` + (h || '<p class="leeg">Geen taken gevonden.</p>');
 }
 function standHtml(e, metPlek) {
   const pl = D.plant[e.locatie + '|' + e.plant] || {};
@@ -869,7 +892,7 @@ document.addEventListener('click', ev => {
   else if (d.actie != null) S.actie = d.actie;
   else if (d.maand != null) { if (+d.maand === 0) { S.jaar = NUJ; S.maand = NUM; } else { const x = ym(S.jaar, S.maand) + +d.maand; S.jaar = Math.floor(x / 12); S.maand = x % 12 + 1; } }
   else if (d.jaar != null) S.jaar += +d.jaar;
-  else if (d.naarmaand != null) { S.maand = +d.naarmaand; return ga('taken'); }
+  else if (d.naarmaand != null) { S.maand = +d.naarmaand; S.tzoek = ''; if (route[0] === 'taken') { teken(); return scrollTo(0, 0); } return ga('taken'); }
   else if (d.ga != null) return ga(d.ga);
   else if (d.terug != null) return history.length > 1 ? history.back() : ga('taken');
   else if (d.plant != null) { const [l, p] = d.plant.split('|'); return ga('plant/' + l + '/' + p); }
@@ -880,7 +903,10 @@ document.addEventListener('click', ev => {
   else if (d.wissen != null) { if (confirm('Niet-verstuurde wijzigingen wissen?')) { wachtrij = []; opslag.set('wachtrij', []); laad(true); } return; }
   teken();
 });
-document.addEventListener('input', ev => { if (ev.target.id === 'zoek') { S.zoek = ev.target.value; $('#plantlijst').innerHTML = plantenLijst(); } });
+document.addEventListener('input', ev => {
+  if (ev.target.id === 'zoek') { S.zoek = ev.target.value; $('#plantlijst').innerHTML = plantenLijst(); }
+  if (ev.target.id === 'tzoek') { S.tzoek = ev.target.value; TK = []; $('#app').innerHTML = takenInhoud(); }
+});
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && D) laad(true); });
 teken();
 laad(true);
