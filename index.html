@@ -860,7 +860,7 @@ function teken() {
   route = (decodeURIComponent(location.hash.slice(1)) || 'taken').split('/');
   opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie }); opslag.set('filterdag', vandaag());
   const hoofd = { taken: 'taken', plekken: 'plekken', plek: 'plekken', planten: 'planten', plant: 'planten', jaar: 'jaar', info: 'meer', instellingen: 'meer' }[route[0]] || 'taken';
-  $('#nav').innerHTML = [['taken', 'Taken'], ['plekken', 'Plekken'], ['planten', 'Planten'], ['jaar', 'Jaar'], ['info', 'Meer']].map(([h, l]) => { const aan = hoofd === h || (h === 'info' && hoofd === 'meer'); return `<a href="#${h}" class="${aan ? 'aan' : ''}"${aan ? ' aria-current="page"' : ''}><span>${svg(IC[h === 'info' ? 'meer' : h], 22, h === 'info' ? 3 : 1.8)}</span>${l}</a>`; }).join('');
+  $('#nav').innerHTML = [['taken', 'Taken'], ['planten', 'Planten'], ['plekken', 'Plekken'], ['jaar', 'Jaar'], ['info', 'Meer']].map(([h, l]) => { const aan = hoofd === h || (h === 'info' && hoofd === 'meer'); return `<a href="#${h}" class="${aan ? 'aan' : ''}"${aan ? ' aria-current="page"' : ''}><span>${svg(IC[h === 'info' ? 'meer' : h], 22, h === 'info' ? 3 : 1.8)}</span>${l}</a>`; }).join('');
   if (!D) { if (route[0] === 'instellingen') { kop('<div class="rij"><h1>Instellingen</h1></div>'); $('#app').innerHTML = schermInstellingen(); } return; }
   $('#kop').classList.toggle('held', hoofd === 'taken');
   TK = [];
