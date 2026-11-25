@@ -94,6 +94,7 @@ Bron van waarheid: de Google Sheet "Tuinapp". De app (`index.html`) leest en sch
   | `weg` | Weg |
 
 - `via_regel`: het record is ontstaan door een aanplanttaak (`tot_geplant`) af te vinken. Vink je die taak uit, dan verdwijnt het record.
+- **Geen dubbelen:** voeg je een plant toe (of verplaats je hem) naar een plek waar het plan die plant dat jaar al heeft, dan werkt de app de planregel bij; een eigen regel gaat naar `weg`. Bestaande dubbelen toont de app als één regel. Een eigen regel met `weg` verbergt niets uit het plan. Controle: *Stand: nieuw dubbel met Beplanting*.
 - **Effectieve beplanting** is het plan met de stand eroverheen. Taken, plekken en de kalender gebruiken die. Wat `weg` is, telt niet mee.
 - **Afwijking** is een andere plek dan in het plan, `weg`, een ander aantal of een plant die niet in het plan staat.
 - **Terug naar het plan** verwijdert het record.

@@ -320,8 +320,13 @@ function beplanting(loc, j) {
     if (s) Object.assign(e, { plek: s.plek || e.plek, status: s.status || e.status, aantal: s.aantal || e.aantal, notitie: s.notitie, via: s.via_regel, datum: s.datum, uitStand: true });
     uit.push(e);
   }
-  for (const s of D.Stand) if (s.nieuw === 'ja' && (!loc || s.locatie === loc))
+  for (const s of D.Stand) if (s.nieuw === 'ja' && (!loc || s.locatie === loc)) {
+    // Eigen toevoeging op een plek waar het plan dezelfde plant al heeft: samenvoegen. Status weg verbergt niets.
+    const p = s.status !== 'weg' && uit.find(e => !e.nieuw && !e.dubbel && e.locatie === s.locatie && e.plant === s.plant && e.plek === s.plek);
+    if (p && !p.uitStand) { Object.assign(p, { status: s.status || p.status, aantal: s.aantal || p.aantal, notitie: s.notitie, datum: s.datum, dubbel: s.key, uitStand: true }); continue; }
+    if (p && p.status !== 'weg') { p.dubbel = s.key; continue; }
     uit.push({ key: s.key, locatie: s.locatie, plant: s.plant, naam: s.naam, plek: s.plek, status: s.status, aantal: s.aantal, notitie: s.notitie, datum: s.datum, nieuw: true, uitStand: true });
+  }
   memo.set(k, uit);
   return uit;
 }
@@ -657,6 +662,16 @@ function schermInstellingen() {
 }
 
 /* ---------- dialoog: stand bijwerken ---------- */
+// Eigen toevoeging op een plek waar het plan die plant al heeft: werk de planregel bij in plaats van een nieuwe regel.
+function standActies(rij, oudKey) {
+  const p = rij.nieuw === 'ja' && beplanting(rij.locatie, NUJ).find(e => !e.nieuw && e.key !== oudKey && e.plant === rij.plant && e.plek === rij.plek);
+  if (!p) return [{ op: 'stand_zet', rij }];
+  const acts = [{ op: 'stand_zet', rij: Object.assign({}, rij, { key: p.key, naam: '', nieuw: '' }) }];
+  for (const k of new Set([oudKey, p.dubbel])) if (k && k !== p.key && D.standKey[k]) acts.push(wegActie(k));
+  melding('Bijgewerkt in het plan');
+  return acts;
+}
+const wegActie = k => ({ op: 'stand_zet', rij: Object.assign({}, D.standKey[k], { status: 'weg', datum: vandaag() }) });
 function plekOpties(loc, gekozen) { return D.Plekken.filter(p => p.locatie === loc).map(p => `<option value="${esc(p.id)}" ${p.id === gekozen ? 'selected' : ''}>${esc(p.naam)}</option>`).join(''); }
 const STATUS_LABEL = { gepland: 'Plan', geplant: 'In de grond', weg: 'Weg' };
 const statusLabel = s => STATUS_LABEL[s] || s;
@@ -675,8 +690,9 @@ function bewerk(key) {
   dlg.onclick = ev => {
     const d = ev.target.dataset.d; if (!d) return;
     const pk = $('#d-plek').value, uit = pk.includes(':') ? pk.split(':') : null;
-    if (d === 'ok') schrijf([{ op: 'stand_zet', rij: { key: e.key, locatie: uit ? uit[0] : e.locatie, plant: uit ? plantRef('', e.plant)[1] : e.plant, naam: uit ? '' : e.naam || '', plek: uit ? uit[1] : pk, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: e.nieuw ? 'ja' : '', via_regel: '', datum: vandaag() } }]);
-    if (d === 'plan') schrijf([{ op: 'stand_weg', key: e.key }]);
+    const dub = e.dubbel && D.standKey[e.dubbel] ? [wegActie(e.dubbel)] : [];
+    if (d === 'ok') schrijf(standActies({ key: e.key, locatie: uit ? uit[0] : e.locatie, plant: uit ? plantRef('', e.plant)[1] : e.plant, naam: uit ? '' : e.naam || '', plek: uit ? uit[1] : pk, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: e.nieuw ? 'ja' : '', via_regel: '', datum: vandaag() }, e.key).concat(dub));
+    if (d === 'plan') schrijf((D.standKey[e.key] ? [{ op: 'stand_weg', key: e.key }] : []).concat(dub));
     dlg.close();
   };
   dlg.showModal();
@@ -725,7 +741,7 @@ function nieuw(arg) {
       const pid = $('#d-plant').value, naam = $('#d-naam').value.trim();
       if (!pid && !naam) { $('#d-naam').focus(); return; }
       const id = pid || 'vrij-' + naam.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      schrijf([{ op: 'stand_zet', rij: { key: loc + '|' + id + '|+' + Date.now(), locatie: loc, plant: id, naam: pid ? (pid.includes(':') ? plantNaam(loc, pid) : '') : naam, plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: 'ja', via_regel: '', datum: vandaag() } }]);
+      schrijf(standActies({ key: loc + '|' + id + '|+' + Date.now(), locatie: loc, plant: id, naam: pid ? (pid.includes(':') ? plantNaam(loc, pid) : '') : naam, plek: $('#d-plek').value, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: $('#d-notitie').value.trim(), nieuw: 'ja', via_regel: '', datum: vandaag() }));
     }
     dlg.close();
   };
@@ -895,7 +911,7 @@ function verplaats(arg) {
     if (!bestaand || bestaand.status === 'vervallen') { const kopie = Object.assign({}, pl); for (const k of Object.keys(kopie)) if (typeof kopie[k] !== 'string') delete kopie[k]; acts.push({ op: 'rij_zet', tab: 'Planten', rij: Object.assign(kopie, { locatie: doel, id, status: '' }) }); }
     if (!D.Regels.some(r => r.locatie === doel && r.plant === id && r.status !== 'vervallen'))
       D.Regels.filter(r => r.locatie === loc && r.plant === id && !r.plekken && r.status !== 'vervallen').forEach((r, i) => acts.push({ op: 'rij_zet', tab: 'Regels', rij: { locatie: doel, id: nieuwId() + '.' + i, plant: id, plekken: '', actie: r.actie, detail: r.detail, soort: r.soort, maanden: r.maanden, keuze: r.keuze, herhaling: r.herhaling, deel_start: r.deel_start, deel_eind: r.deel_eind, uiterlijk: r.uiterlijk, voorwaarde: r.voorwaarde, meting: r.meting, toelichting: r.toelichting, bron: 'verplaatst uit ' + loc, status: '' } }));
-    acts.push({ op: 'stand_zet', rij: { key: doel + '|' + id + '|+' + Date.now(), locatie: doel, plant: id, naam: '', plek, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: 'verplaatst uit ' + ((D.Locaties.find(l => l.id === loc) || {}).naam || loc), nieuw: 'ja', via_regel: '', datum: vandaag() } });
+    acts.push(...standActies({ key: doel + '|' + id + '|+' + Date.now(), locatie: doel, plant: id, naam: '', plek, status: $('#d-status').value, aantal: $('#d-aantal').value.trim(), notitie: 'verplaatst uit ' + ((D.Locaties.find(l => l.id === loc) || {}).naam || loc), nieuw: 'ja', via_regel: '', datum: vandaag() }));
     acts.push({ op: 'rij_zet', tab: 'Planten', rij: { locatie: loc, id, status: 'vervallen' } });
     schrijf(acts); dlg.close(); melding('Plant verplaatst'); ga('plant/' + doel + '/' + id);
   };
