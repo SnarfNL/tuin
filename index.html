@@ -537,7 +537,7 @@ function schermPlekken() {
 function schermPlek(loc, id) {
   const p = D.plek[loc + '|' + id];
   if (!p) return '<p class="leeg">Plek niet gevonden.</p>';
-  kop(`<div class="rij">${terug()}<span class="sub" style="flex:1;margin:0">${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)}</span>${bewerkKnop('plek', loc, id)}</div><h1 style="font-size:34px;margin:0 4px">${esc(p.naam)}</h1>`);
+  kop(`<div class="rij">${terug()}<span class="sub" style="flex:1;margin:0">${esc((D.Locaties.find(l => l.id === loc) || {}).naam || loc)}</span>${bewerkKnop('plek', loc, id, true)}</div><h1 style="font-size:34px;margin:0 4px">${esc(p.naam)}</h1>`);
   const velden = [['Zon', p.zon], ['Thema', p.thema], ['Oppervlak', p.m2 && p.m2 + ' m²'], ['Maat', p.maat], ['Grond (plan)', p.grond], ['Grond (uitgevoerd)', p.grond_uitgevoerd], ['Mulch', p.mulch], ['Water per week', p.water_per_week]].filter(x => x[1]);
   const bep = beplanting(loc, NUJ).filter(e => e.plek === id);
   const ts = takenMaand(NUJ, NUM).filter(t => t.loc === loc && t.plekken.includes(id));
