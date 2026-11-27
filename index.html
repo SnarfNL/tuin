@@ -57,6 +57,7 @@ header.held{background:var(--kop);color:var(--opkop);border-radius:0 0 24px 24px
 .held .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .chip.aan{background:var(--opkop);border-color:var(--opkop);color:var(--kop)}
 .held .voortgang .tekst{color:var(--kopzacht)}.held .voortgang b{color:var(--opkop)}
 .held .zoek{margin-top:10px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--opkop)}.held .zoek::placeholder{color:var(--kopzacht)}
+.merk{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kopzacht);margin:0 4px 4px}.merk svg{flex:none;color:var(--opkop)}nav .merk{display:none}
 .held .balk{background:rgba(255,255,255,.16)}.held .balk div{background:var(--kopaccent)}
 main{padding:4px 16px 16px;max-width:1200px;margin:0 auto}
 h2{display:flex;align-items:center;gap:8px;font-size:13px;margin:20px 4px 8px;color:var(--tekst2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
@@ -140,6 +141,7 @@ dialog h3{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:22px}
 @media (min-width:900px){.plantrij .tk>.soort{order:2;margin-top:0}
  body{padding:0 0 0 200px}
  nav{top:0;bottom:0;right:auto;width:200px;display:flex;flex-direction:column;gap:2px;border-top:0;border-right:1px solid var(--lijn);padding:16px 10px}
+ nav .merk{display:flex;gap:10px;margin:0;padding:4px 6px 14px;color:var(--tekst2);--logoblad:var(--groen)}nav .merk svg{color:var(--tekst)}
  nav a{flex-direction:row;justify-content:flex-start;gap:10px;min-height:44px;padding:0 6px;font-size:15px}nav a span{padding:4px 10px}
  .lijst{grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
  header{padding:18px 28px 12px}main{padding:4px 28px 24px}
@@ -502,7 +504,7 @@ function groepen(ts) {
 function schermTaken() {
   const ts = filter(takenMaand(S.jaar, S.maand)), isNu = S.jaar === NUJ && S.maand === NUM;
   const taken = ts.filter(t => t.soort === 'taak'), klaar = taken.filter(isKlaar).length;
-  kop(`<div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}<input class="zoek" type="search" placeholder="Zoek een taak in alle maanden" value="${esc(S.tzoek)}" id="tzoek" aria-label="Zoek taak">${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
+  kop(`${MERK}<div class="rij"><button class="rond" data-maand="-1" aria-label="Vorige maand">${svg(IC.l)}</button><div class="midden"><h1>${MN[S.maand - 1][0].toUpperCase() + MN[S.maand - 1].slice(1)}</h1><div class="sub">${S.jaar}${isNu ? ' · deze maand' : ` · <button class="link" data-maand="0">naar nu</button>`}</div></div><button class="rond" data-maand="1" aria-label="Volgende maand">${svg(IC.r)}</button></div>${filterbalk(true)}<input class="zoek" type="search" placeholder="Zoek een taak in alle maanden" value="${esc(S.tzoek)}" id="tzoek" aria-label="Zoek taak">${taken.length ? `<div class="voortgang"><div class="tekst"><span><b>${klaar} van ${taken.length}</b> gedaan</span><span>${taken.length - klaar} te gaan</span></div><div class="balk"><div style="width:${Math.round(100 * klaar / taken.length)}%"></div></div></div>` : ''}`);
   return takenInhoud();
 }
 function takenInhoud() {
@@ -920,6 +922,8 @@ function verplaats(arg) {
 }
 
 /* ---------- navigatie ---------- */
+const LOGO = '<svg width="28" height="28" viewBox="106 106 300 300" aria-hidden="true"><circle cx="352" cy="168" r="44" fill="var(--kopaccent)"/><path d="M256 392V256" stroke="currentColor" stroke-width="26" stroke-linecap="round" fill="none"/><path d="M256 268c0-72-46-112-120-112 0 76 46 112 120 112z" fill="var(--logoblad,#8FD18F)"/><path d="M256 304c0-62 42-98 112-98 0 66-42 98-112 98z" fill="currentColor"/><path d="M160 392h192" stroke="currentColor" stroke-width="18" stroke-linecap="round" opacity=".45"/></svg>';
+const MERK = `<div class="merk">${LOGO}<span>Onze tuinen</span></div>`;
 function kop(h) { $('#kop').innerHTML = h; }
 let MELD = null;
 function melding(t) { const m = MELD || (MELD = $('#melding')); (document.querySelector('dialog[open]') || document.body).appendChild(m); m.textContent = t; m.style.display = 'block'; clearTimeout(melding.t); melding.t = setTimeout(() => m.style.display = 'none', 3500); }
@@ -930,7 +934,7 @@ function teken() {
   route = (decodeURIComponent(location.hash.slice(1)) || 'taken').split('/');
   opslag.set('filters', { jaar: S.jaar, maand: S.maand, loc: S.loc, plek: S.plek, actie: S.actie, psoort: S.psoort }); opslag.set('filterdag', vandaag());
   const hoofd = { taken: 'taken', plekken: 'plekken', plek: 'plekken', planten: 'planten', plant: 'planten', jaar: 'jaar', info: 'meer', instellingen: 'meer' }[route[0]] || 'taken';
-  $('#nav').innerHTML = [['taken', 'Taken'], ['planten', 'Planten'], ['plekken', 'Plekken'], ['jaar', 'Jaar'], ['info', 'Meer']].map(([h, l]) => { const aan = hoofd === h || (h === 'info' && hoofd === 'meer'); return `<a href="#${h}" class="${aan ? 'aan' : ''}"${aan ? ' aria-current="page"' : ''}><span>${svg(IC[h === 'info' ? 'meer' : h], 22, h === 'info' ? 3 : 1.8)}</span>${l}</a>`; }).join('');
+  $('#nav').innerHTML = MERK + [['taken', 'Taken'], ['planten', 'Planten'], ['plekken', 'Plekken'], ['jaar', 'Jaar'], ['info', 'Meer']].map(([h, l]) => { const aan = hoofd === h || (h === 'info' && hoofd === 'meer'); return `<a href="#${h}" class="${aan ? 'aan' : ''}"${aan ? ' aria-current="page"' : ''}><span>${svg(IC[h === 'info' ? 'meer' : h], 22, h === 'info' ? 3 : 1.8)}</span>${l}</a>`; }).join('');
   if (!D) { if (route[0] === 'instellingen') { kop('<div class="rij"><h1>Instellingen</h1></div>'); $('#app').innerHTML = schermInstellingen(); } return; }
   $('#kop').classList.toggle('held', hoofd === 'taken');
   TK = [];
