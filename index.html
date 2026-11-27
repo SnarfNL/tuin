@@ -104,7 +104,7 @@ details{margin-top:4px;font-size:13.5px}summary{cursor:pointer;color:var(--groen
 #d-voorbeeld{width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-top:10px;display:none}
 dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;font-size:14px}dt{color:var(--zacht)}dd{margin:0}
 .plantrij{display:flex;gap:12px;align-items:center;cursor:pointer;min-height:56px}
-.plantrij .naam{font-weight:600}.plantrij .lat{font-style:italic;color:var(--zacht);font-size:13px}
+.plantrij .tk{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px}.plantrij .naam{font-weight:600;order:1;min-width:0}.plantrij .tk>.soort{order:4;margin-top:3px}.plantrij .lat{font-style:italic;color:var(--zacht);font-size:13px;order:3;flex-basis:100%}
 .dot{flex:none;width:10px;height:10px;border-radius:5px;background:var(--groen)}.dot.gepland{background:none;border:2px solid var(--geeltekst)}.dot.weg{background:var(--rand)}
 .bewerk{display:inline-flex;align-items:center;gap:4px;color:var(--groen);font-size:13px;font-weight:600}
 .soort{font-style:normal;display:inline-block;font-size:12px;border-radius:6px;padding:1px 7px;background:var(--vlak);color:var(--tekst2);white-space:nowrap}
@@ -137,7 +137,7 @@ dialog h3{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:22px}
 .acties i{width:14px;height:14px;border-radius:4px;flex:none}.acties b{flex:1;font-weight:inherit}.acties small{color:var(--zacht);font-size:12.5px}
 .knoppen{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;justify-content:flex-end}
 #melding{position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:9;background:var(--tekst);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;display:none;max-width:92vw}
-@media (min-width:900px){
+@media (min-width:900px){.plantrij .tk>.soort{order:2;margin-top:0}
  body{padding:0 0 0 200px}
  nav{top:0;bottom:0;right:auto;width:200px;display:flex;flex-direction:column;gap:2px;border-top:0;border-right:1px solid var(--lijn);padding:16px 10px}
  nav a{flex-direction:row;justify-content:flex-start;gap:10px;min-height:44px;padding:0 6px;font-size:15px}nav a span{padding:4px 10px}
@@ -589,7 +589,7 @@ function plantenLijst() {
     if (!bep.length) { bep = toekomstLijst().filter(e => e.locatie === p.locatie && e.plant === p.id); if (bep.length) lab = 'voor ' + Math.min(...bep.map(e => e.toekomst)); }
     const waar = [...new Set(bep.map(e => plekNaam(p.locatie, e.plek)))].join(', ');
     const st = lab ? 'gepland' : bep.some(e => e.status === 'geplant') ? 'geplant' : bep.length ? 'gepland' : '';
-    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div><div class="lat">${soortTag(p.soort)} ${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${lab ? 'gepland ' + lab : statusLabel(st)}</span>` : ''}</div></div>`;
+    return `<div class="kaart plantrij" data-ga="plant/${esc(p.locatie)}/${esc(p.id)}">${mini(fotosPlant(p), esc(p.emoji || '🌱'))}<div class="tk"><div class="naam">${esc(p.nl)}</div>${soortTag(p.soort)}<div class="lat">${esc(p.latijn)}</div></div><div class="sub" style="text-align:right">${esc(waar)}${st ? `<br><span class="status ${st}">${lab ? 'gepland ' + lab : statusLabel(st)}</span>` : ''}</div></div>`;
   }).join('') || '<p class="leeg">Geen planten gevonden.</p>';
 }
 function schermPlant(loc, id) {
